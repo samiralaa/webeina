@@ -1,0 +1,111 @@
+:root{
+    --maincolor:#F4F5F7;
+    --main-text:#000;
+    --s-text:#a7a6a6;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color:var(--maincolor);
+    
+}
+
+/* Sidebar Styling */
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background-color: #343a40;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+.sidebar a:hover {
+    border-radius: 8px;
+    background-color:#076767;
+    color: #343a40;
+}
+
+
+.sidebar i {
+    margin-right: 10px; /* Add some space between icon and text */
+}
+
+/* Body Content Styling */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .sidebar a {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .navbar {
+        margin-left: 0;
+    }
+}
+
+/* Navbar styling */
+.navbar {
+    margin-left: 250px;
+}
+
+.navbar h4{
+    color: rgb(168, 168, 168);
+}
+
+.navbar h4 span{
+    color: white;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        margin-left: 0;
+    }
+}
+
+/* Dropdown menu in sidebar */
+.dropdown-menu {
+    width: 250px; /* Match the width of the sidebar */
+}
+
+
+.content .hi h2{
+    color: #a7a6a6;
+}
+.content .hi button{
+    padding: 10px 10px;
+    background: #343a40;
+    border: none; 
+    border-radius: 8px;
+    color: white;
+    text-transform: capitalize;   
+    font-weight:600px   ;
+}
+.content .hi button:hover{
+    background-color: #076767;
+    color: #ffffff;
+}
