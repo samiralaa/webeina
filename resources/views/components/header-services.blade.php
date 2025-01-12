@@ -108,7 +108,7 @@
                                 <ul class="navbar__sub-menu">
                                     @foreach ($services as $service)
                                     <li>
-                                        <a href="">
+                                        <a href="{{ route('serves.details', ['id' => $service->id]) }}">
 
 
                                             {{ $service->name[app()->getLocale()] }}
