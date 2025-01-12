@@ -89,13 +89,6 @@
             </a>
         </div>
 
-        <div class="lines d-none d-lg-flex">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
     </section>
     @endif
     <!-- ==== / banner end ==== -->
