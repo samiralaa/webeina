@@ -77,9 +77,9 @@ class HomeController extends Controller
                     return response()->json(['error' => 'One or more uploaded files are invalid.'], 400);
                 }
 
-                $imageName = time() . '_' . $image->getClientOriginalName(); 
-                $image->storeAs('home', $imageName, 'public'); 
-                $imagePaths[] = 'storage/home/' . $imageName; 
+                $imageName = time() . '_' . $image->getClientOriginalName();
+                $image->storeAs('home', $imageName, 'public');
+                $imagePaths[] = 'storage/home/' . $imageName;
             }
 
             foreach ($imagePaths as $path) {
@@ -163,6 +163,7 @@ class HomeController extends Controller
         $sections =  Section::with(['section_info', 'images', 'sliders'])
             ->orderBy('order', 'asc') // ترتيب تصاعدي (قم بتغيير asc إلى desc إذا كنت تريد تنازلياً)
             ->get();
+
         // dd($sections);
         return view('website.index', compact('sections'));
     }
