@@ -7,11 +7,12 @@ use App\Http\Controllers\Admin\Content\ContentCotroller;
 
 use App\Http\Controllers\Admin\CustomFiled\CustomController;
 use App\Http\Controllers\Admin\CustomFiled\CustomFildDataController;
+use App\Http\Controllers\Admin\FAQ\FAQController;
 use App\Http\Controllers\Admin\HomePage\HomePageController;
+
 use App\Http\Controllers\Admin\Package\PackageController as AdmniPackageController;
 
 use App\Http\Controllers\Admin\Package\PackageRequestController;
-
 use App\Http\Controllers\Admin\Quiz\AnswerController;
 use App\Http\Controllers\Admin\Quiz\QuizQuestionController;
 use App\Http\Controllers\Admin\Quiz\ResultController;
@@ -29,12 +30,13 @@ use App\Http\Controllers\Web\Front\HomeController;
 use App\Http\Controllers\Web\Package\PackageController;
 use App\Http\Controllers\Web\Setting\LanguageController;
 use App\Http\Controllers\Web\User\UserProfileController;
-use App\Models\Content;
 
+use App\Models\Content;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -180,7 +182,11 @@ Route::get('/package/edit/{id}', [AdmniPackageController::class, 'edit'])->name(
 Route::put('/package/update/{id}', [AdmniPackageController::class, 'update'])->name('package.update');
 Route::delete('/package/delete/{id}', [AdmniPackageController::class, 'destroy'])->name('package.delete');
 
+// route serves
 
+Route::get('admin/fqa',[FAQController::class, 'index'])->name('fqa.index');
+Route::get('admin/fqa/create',[FAQController::class, 'create'])->name('faq.create');
+Route::post('admin/fqa/store',[FAQController::class, 'store'])->name('faqs.store');
 
 // website.package.order
 Route::prefix('services')->group(function () {
