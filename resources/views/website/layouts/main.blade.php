@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/magnific-popup/css/magnific-popup.css') }}" />
     <!-- slick css -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/slick/css/slick.css') }}" />
+    <!--  normalize css  -->
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor/normalize') }}" />
     <!-- ==== / css dependencies end ==== -->
     <!-- main css -->
     <link rel="stylesheet" href="{{ asset('assets/css/main.min.css') }}" />
