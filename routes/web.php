@@ -184,7 +184,7 @@ Route::delete('/package/delete/{id}', [AdmniPackageController::class, 'destroy']
 
 // route serves
 
-Route::get('admin/fqa',[FAQController::class, 'index'])->name('fqa.index');
+Route::get('admin/fqa',[FAQController::class, 'index'])->name('faq.index');
 Route::get('admin/fqa/create',[FAQController::class, 'create'])->name('faq.create');
 Route::post('admin/fqa/store',[FAQController::class, 'store'])->name('faqs.store');
 

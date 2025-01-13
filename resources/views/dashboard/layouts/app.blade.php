@@ -165,7 +165,13 @@
                     <span>Home Page</span>
                 </a>
             </li>
-
+{{-- faq routs --}}
+            <li>
+                <a href="{{ route('faq.index') }}">
+                    <i class="fas fa-question"></i> <!-- Icon for FAQ -->
+                    <span>FAQ</span>
+                </a>
+            </li>
             <!-- Services -->
             <li>
                 <a href="#" data-bs-toggle="collapse" data-bs-target="#servicesMenu" aria-expanded="false"

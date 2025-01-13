@@ -15,19 +15,18 @@
                     data-bs-target="#collapse{{ $faq['id'] }}" aria-expanded="false"
                     aria-controls="collapse{{ $faq['id'] }}">
 
-
-                    {{ $faq->question[app()->getLocale()] ?? 'N/A' }}</li>
+                    {{ json_decode($faq->question, true)['en'] }}
                 </button>
             </h2>
             <div id="collapse{{ $faq['id'] }}" class="accordion-collapse collapse"
                 aria-labelledby="heading{{ $faq['id'] }}" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                    {{ $faq['answer'] }}
+                    {{ json_decode($faq->answer, true)['en'] }}
                 </div>
             </div>
         </div>
         @endforeach
-        
+
     </div>
 </div>
 @endsection

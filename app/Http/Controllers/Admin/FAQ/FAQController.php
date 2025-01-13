@@ -7,6 +7,8 @@ use App\Models\FAQ;
 use App\Services\FQA\FQAService;
 use Illuminate\Http\Request;
 
+use function PHPSTORM_META\map;
+
 class FAQController extends Controller
 {
 
@@ -18,16 +20,7 @@ class FAQController extends Controller
     public function index()
     {
         $faqs = $this->faqService->getAllFAQ();
-
-        // Iterate through the collection to decode the `question` and `answer` for each FAQ
-        $faqs = $faqs->map(function ($faq) {
-            return [
-                'question' => json_decode($faq->question),
-                'answer' => json_decode($faq->answer),
-                'id' => $faq->id,
-            ];
-        });
-
+        //
         return view('admin.faq.index', compact('faqs'));
     }
 
@@ -56,6 +49,6 @@ class FAQController extends Controller
         $faq = $this->faqService->create($data);
 
         // Redirect to the FAQ index page with a success message
-        return redirect()->route('fqa.index')->with('success', 'FAQ added successfully!');
+        return redirect()->route('faq.index')->with('success', 'FAQ added successfully!');
     }
 }
