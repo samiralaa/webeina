@@ -531,9 +531,7 @@
 
 
         {{-- new sections  --}}
-        <div class="space" style="height: 500px"></div>
-
-
+    
 
 
         {{-- start article --}}
