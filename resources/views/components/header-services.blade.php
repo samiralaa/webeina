@@ -25,12 +25,12 @@
                         <nav class="navbar p-0">
                             <!-- Logo Section -->
                             <div class="navbar__logo">
-                                <a href="{{ route('home') }}" aria-label="go to home" class="img">
-                                    <img class="img-logo"    src="{{ asset('/assets/images/webenia - logo final-02-01.png') }}" alt="Logo" width="250px" height="100px">
+                                <a href="{{ route('home') }}" aria-label="go to home">
+                                    <img class="img-logo"    src="{{ asset('/assets/images/logo.png') }}" alt="Logo" width="250px" height="100px">
                                 </a>
                             </div>
                             <!-- Menu Section -->
-                            <div class="navbar__menu">
+                            <div class="navbar__menu mt-2">
                                 <ul>
                                     <li class="navbar__item nav-fade">
                                         <a href="{{ route('home') }}">Home</a>
@@ -77,38 +77,41 @@
                             </div>
                             <!-- Request a Quote -->
                             <div class="navbar__options">
-                                <a class="btn-br bg-btn3 lnk">
-                                    Request a Quote
-                                    <span class="circle"></span>
-                                </a>
+                                <button class="quote">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                    </svg>
+                                    <div class="tquote">Request a Quote</div>
+                                </button>
                             </div>
                         </nav>
                     </div>
                 </div>
             </div>
+
         </div>
         <!-- Mobile Menu -->
-        <div class="mobile-menu">
-            <nav class="mobile-menu__wrapper">
-                <div class="mobile-menu__header nav-fade">
-                    <div class="logo">
-                        <a href="{{ route('home') }}">
-                            <img class="img-logo" src="{{ asset('assets/images/webenia-logo-final-02-01.png') }}" alt="Logo">
-                        </a>
-                    </div>
-                    <a href="javascript:void(0)" class="close-mobile-menu">
-                        <i class="fa-light fa-xmark-large"></i>
-                    </a>
-                </div>
-                <div class="mobile-menu__list"></div>
-                <div class="mobile-menu__social social nav-fade">
-                    <a href="https://www.facebook.com/webenia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://x.com/webeniaAgency" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/webenia/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://www.instagram.com/webeniaagency/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </nav>
-        </div>
+<!--        <div class="mobile-menu">-->
+<!--            <nav class="mobile-menu__wrapper">-->
+<!--                <div class="mobile-menu__header nav-fade">-->
+<!--                    <div class="logo">-->
+<!--                        <a href="{{ route('home') }}">-->
+<!--                            <img class="img-logo" src="{{ asset('assets/images/webenia-logo-final-02-01.png') }}" alt="Logo">-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                    <a href="javascript:void(0)" class="close-mobile-menu">-->
+<!--                        <i class="fa-light fa-xmark-large"></i>-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--                <div class="mobile-menu__list"></div>-->
+<!--                <div class="mobile-menu__social social nav-fade">-->
+<!--                    <a href="https://www.facebook.com/webenia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>-->
+<!--                    <a href="https://x.com/webeniaAgency" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>-->
+<!--                    <a href="https://www.linkedin.com/company/webenia/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>-->
+<!--                    <a href="https://www.instagram.com/webeniaagency/" target="_blank"><i class="fa-brands fa-instagram"></i></a>-->
+<!--                </div>-->
+<!--            </nav>-->
+<!--        </div>-->
     </header>
 
 <!--     ==== Header End ==== -->
