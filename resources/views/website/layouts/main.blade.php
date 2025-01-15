@@ -36,7 +36,6 @@
     <!-- ==== / css dependencies end ==== -->
     <!-- main css -->
     <link rel="stylesheet" href="{{ asset('assets/css/main.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}" />
 </head>
 
 <body>

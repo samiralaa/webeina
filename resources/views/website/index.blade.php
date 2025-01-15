@@ -715,7 +715,15 @@
       </div>
 
 
-
+        {{-- Partners --}}
+            <div class="lines d-none d-lg-flex">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
 
         <div class="space" style="height: 500px"></div>
         {{-- end new sections   --}}

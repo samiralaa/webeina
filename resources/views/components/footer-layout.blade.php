@@ -24,6 +24,21 @@
                     <div class="col-lg-4 col-sm-6 d-flex flex-column ftr-brand-pp">
                         <a class="navbar-brand align-self-start " href="#"> <img src="{{ asset('/assets/images/logo.png') }}" alt="Logo" width="100"></a>
                         <p><span class="webenia text-radius bg-b">WEBENIA</span>  is a virtual department that can help your organization expand its business by enhancing the quantity and quality of leads and sales generated from your website, with a focus on maximizing return on investment (ROI).</p>
+                        <h5 class="head location">Locations</h5>
+                        <div class="locations d-flex flex-column">
+                            <a href="https://maps.app.goo.gl/32MvC2fBcoVZseD1A">
+                                <span">
+                                    <i class="fa-solid fa-location-dot fa-lg"></i>
+                                    Cairo Branch
+                                </span>
+                            </a>
+                            <a href="">
+                                <span>
+                                    <i class="fa-solid fa-location-dot fa-lg"></i>
+                                    Dubai Branch
+                                </span>
+                            </a>
+                        </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
                         <h5 class="head">Webenia Contacts</h5>
