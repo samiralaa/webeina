@@ -530,10 +530,22 @@
 
 
 
-        {{-- new sections  --}}
-        <div class="space" playsinline="true" muted="true" loop="true" autoplay="true" class="cover-slider video-js vjs-default-skin vjs-big-play-centered vjs-fluid video-dimensions vjs-controls-disabled vjs-workinghover vjs-v6 vjs-has-started vjs-user-inactive vjs-playing" style="height: 600px">
-
-            <video  src="{{asset('assets/videos/B-works-Schweiz-Video.mp4')}}"  playsinline="true" muted="true" loop="true" autoplay="true" class="cover-slider video-js vjs-default-skin vjs-big-play-centered vjs-fluid video-dimensions vjs-controls-disabled vjs-workinghover vjs-v6 vjs-has-started vjs-user-inactive vjs-playing" style="background-size: auto"></video>
+        {{-- hero  --}}
+        <div class="container--0-">
+            <video autoplay muted loop class="background-video">
+                <source src="{{ asset('assets/Videos/B-works-Schweiz-Video.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="container-0-1-0">
+                <div class="container-1-2-0">
+                    <div class="text-2-3-0">Transform Your Ideas into Digital Reality</div>
+                    <div class="text-2-3-1">
+                        Our innovative platform empowers you to create stunning websites
+                        effortlessly. Experience seamless design and functionality tailored to
+                        your unique vision.
+                    </div>
+                </div>
+            </div>
         </div>
 
 
