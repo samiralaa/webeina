@@ -29,20 +29,17 @@
     }
   }
 /* end descripation couunt*/
-/*
-.itemCard__image {
-    e
+
+.itemCard__imageWrap {
+    display: flex;
+    overflow: hidden;
 }
+
 .elementor img {
-    height: auto;
+    height: 200px;
     max-width: 100%;
     border: none;
     border-radius: 0;
     box-shadow: none;
-} */
-
-.our_solution .servsis{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+    width: ;
 }
