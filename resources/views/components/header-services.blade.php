@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/normalize/normalize.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
     <title>Document</title>
 </head>
 
@@ -16,103 +17,174 @@
 
     <!-- ==== Header Start ==== -->
 
-
-<header class="header">
-        <div class="primary-navbar">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="navbar p-0">
-                            <!-- Logo Section -->
-                            <div class="navbar__logo">
-                                <a href="{{ route('home') }}" aria-label="go to home">
-                                    <img class="img-logo"    src="{{ asset('/assets/images/logo.png') }}" alt="Logo" width="250px" height="100px">
-                                </a>
-                            </div>
-                            <!-- Menu Section -->
-                            <div class="navbar__menu mt-2">
-                                <ul>
-                                    <li class="navbar__item nav-fade">
-                                        <a href="{{ route('home') }}">Home</a>
-                                    </li>
-                                    <li class="dropdown navbar__item nav-fade">
-                                        <button class="dropbtn">
-                                            Services
-                                            <i class="fa fa-caret-down"></i>
-                                        </button>
-                                        <div class="dropdown-content">
-                                            <a href="#">Digital Transformation</a>
-                                            <a href="#">Web Solutions</a>
-                                            <a href="#">Digital Marketing</a>
-                                            <a href="#">Mobile Solutions</a>
-                                            <a href="#">Digital Content</a>
-                                        </div>
-                                    </li>
-                                    <li class="navbar__item nav-fade">
-                                        <a href="{{ route('about-us') }}">Partners</a>
-                                    </li>
-                                    <li class="dropdown navbar__item">
-                                            <button class="dropbtn">
-                                                Company
-                                                <i class="fa fa-caret-down"></i>
-                                            </button>
-                                            <div class="dropdown-content">
-                                                <a href="#">Contact</a>
-                                                <a href="#">Dubai Branch</a>
-                                                <a href="#">Cairo Branch</a>
-                                            </div>
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="{{ asset('/assets/images/logo.png') }}" alt="Logo" class="img-logo">
+                </a>
 
-                                    </li>
-                                    <li class="navbar__item nav-fade">
-                                        <a href="#">Contact</a>
-                                    </li>
-                                    <li class="navbar__item nav-fade">
-                                        @if (app()->getLocale() === 'ar')
-                                            <a href="{{ route('language.change', ['locale' => 'en']) }}">en</a>
-                                        @else
-                                            <a href="{{ route('language.change', ['locale' => 'ar']) }}">ع</a>
-                                        @endif
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- Request a Quote -->
-                            <div class="navbar__options">
-                                <button class="quote">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                                    </svg>
-                                    <div class="tquote">Request a Quote</div>
-                                </button>
-                            </div>
-                        </nav>
-                    </div>
+                <!-- Toggler for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link bl" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bl" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item bl" href="#">Digital Transformation</a></li>
+                                <li><a class="dropdown-item bl" href="#">Web Solutions</a></li>
+                                <li><a class="dropdown-item bl" href="#">Digital Marketing</a></li>
+                                <li><a class="dropdown-item bl" href="#">Mobile Solutions</a></li>
+                                <li><a class="dropdown-item bl" href="#">Digital Content</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bl" href="#">Partners</a>
+                        </li>
+                        <li class="nav-item dropdown bl">
+                            <a class="nav-link dropdown-toggle bl" href="#" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Company
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="companyDropdown">
+                                <li><a class="dropdown-item bl" href="#">About Us</a></li>
+                                <li><a class="dropdown-item bl" href="#">Contact</a></li>
+                                <li><a class="dropdown-item bl" href="#">Dubai Branch</a></li>
+                                <li><a class="dropdown-item bl" href="#">Cairo Branch</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link bl" href="#">Contact</a>
+                        </li>
+                        <li class="nav_item">
+                            @if (app()->getLocale() === 'ar')
+                                <a href="{{ route('language.change', ['locale' => 'en']) }}" class="nav-link bl">en</a>
+                            @else
+                                <a href="{{ route('language.change', ['locale' => 'ar']) }}" class="nav-link bl">ع</a>
+                            @endif
+                        </li>
+                        <li class="nav-item">
+                            <a href="request-quote.html" class="request-quote-btn">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                                </svg>
+                                <span>Request a Quote</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-        </div>
-        <!-- Mobile Menu -->
-<!--        <div class="mobile-menu">-->
-<!--            <nav class="mobile-menu__wrapper">-->
-<!--                <div class="mobile-menu__header nav-fade">-->
-<!--                    <div class="logo">-->
-<!--                        <a href="{{ route('home') }}">-->
-<!--                            <img class="img-logo" src="{{ asset('assets/images/webenia-logo-final-02-01.png') }}" alt="Logo">-->
-<!--                        </a>-->
-<!--                    </div>-->
-<!--                    <a href="javascript:void(0)" class="close-mobile-menu">-->
-<!--                        <i class="fa-light fa-xmark-large"></i>-->
-<!--                    </a>-->
-<!--                </div>-->
-<!--                <div class="mobile-menu__list"></div>-->
-<!--                <div class="mobile-menu__social social nav-fade">-->
-<!--                    <a href="https://www.facebook.com/webenia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>-->
-<!--                    <a href="https://x.com/webeniaAgency" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>-->
-<!--                    <a href="https://www.linkedin.com/company/webenia/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>-->
-<!--                    <a href="https://www.instagram.com/webeniaagency/" target="_blank"><i class="fa-brands fa-instagram"></i></a>-->
-<!--                </div>-->
-<!--            </nav>-->
-<!--        </div>-->
+        </nav>
     </header>
+
+
+
+<!--    <header class="header">-->
+<!--        <div class="primary-navbar">-->
+<!--            <div class="container">-->
+<!--                <div class="row">-->
+<!--                    <div class="col-12">-->
+<!--                        <nav class="navbar p-0">-->
+<!--                            <!-- Logo Section -->-->
+<!--                            <div class="navbar__logo">-->
+<!--                                <a href="{{ route('home') }}" aria-label="go to home">-->
+<!--                                    <img class="img-logo"    src="{{ asset('/assets/images/logo.png') }}" alt="Logo" width="250px" height="100px">-->
+<!--                                </a>-->
+<!--                            </div>-->
+<!--                            <!-- Menu Section -->-->
+<!--                            <div class="navbar__menu mt-2">-->
+<!--                                <ul>-->
+<!--                                    <li class="navbar__item nav-fade">-->
+<!--                                        <a href="{{ route('home') }}">Home</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="dropdown navbar__item nav-fade">-->
+<!--                                        <button class="dropbtn">-->
+<!--                                            Services-->
+<!--                                            <i class="fa fa-caret-down"></i>-->
+<!--                                        </button>-->
+<!--                                        <div class="dropdown-content">-->
+<!--                                            <a href="#">Digital Transformation</a>-->
+<!--                                            <a href="#">Web Solutions</a>-->
+<!--                                            <a href="#">Digital Marketing</a>-->
+<!--                                            <a href="#">Mobile Solutions</a>-->
+<!--                                            <a href="#">Digital Content</a>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                    <li class="navbar__item nav-fade">-->
+<!--                                        <a href="{{ route('about-us') }}">Partners</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="dropdown navbar__item">-->
+<!--                                            <button class="dropbtn">-->
+<!--                                                Company-->
+<!--                                                <i class="fa fa-caret-down"></i>-->
+<!--                                            </button>-->
+<!--                                            <div class="dropdown-content">-->
+<!--                                                <a href="#">Contact</a>-->
+<!--                                                <a href="#">Dubai Branch</a>-->
+<!--                                                <a href="#">Cairo Branch</a>-->
+<!--                                            </div>-->
+<!---->
+<!--                                    </li>-->
+<!--                                    <li class="navbar__item nav-fade">-->
+<!--                                        <a href="#">Contact</a>-->
+<!--                                    </li>-->
+<!--                                    <li class="navbar__item nav-fade">-->
+<!--                                        @if (app()->getLocale() === 'ar')-->
+<!--                                            <a href="{{ route('language.change', ['locale' => 'en']) }}">en</a>-->
+<!--                                        @else-->
+<!--                                            <a href="{{ route('language.change', ['locale' => 'ar']) }}">ع</a>-->
+<!--                                        @endif-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </div>-->
+<!--                            <!-- Request a Quote -->-->
+<!--                            <div class="navbar__options">-->
+<!--                                <button class="quote">-->
+<!--                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">-->
+<!--                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>-->
+<!--                                    </svg>-->
+<!--                                    <div class="tquote">Request a Quote</div>-->
+<!--                                </button>-->
+<!--                            </div>-->
+<!--                        </nav>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+<!--        </div>-->
+<!--        <!-- Mobile Menu -->-->
+<!--<!--        <div class="mobile-menu">-->-->
+<!--<!--            <nav class="mobile-menu__wrapper">-->-->
+<!--<!--                <div class="mobile-menu__header nav-fade">-->-->
+<!--<!--                    <div class="logo">-->-->
+<!--<!--                        <a href="{{ route('home') }}">-->-->
+<!--<!--                            <img class="img-logo" src="{{ asset('assets/images/webenia-logo-final-02-01.png') }}" alt="Logo">-->-->
+<!--<!--                        </a>-->-->
+<!--<!--                    </div>-->-->
+<!--<!--                    <a href="javascript:void(0)" class="close-mobile-menu">-->-->
+<!--<!--                        <i class="fa-light fa-xmark-large"></i>-->-->
+<!--<!--                    </a>-->-->
+<!--<!--                </div>-->-->
+<!--<!--                <div class="mobile-menu__list"></div>-->-->
+<!--<!--                <div class="mobile-menu__social social nav-fade">-->-->
+<!--<!--                    <a href="https://www.facebook.com/webenia" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>-->-->
+<!--<!--                    <a href="https://x.com/webeniaAgency" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>-->-->
+<!--<!--                    <a href="https://www.linkedin.com/company/webenia/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>-->-->
+<!--<!--                    <a href="https://www.instagram.com/webeniaagency/" target="_blank"><i class="fa-brands fa-instagram"></i></a>-->-->
+<!--<!--                </div>-->-->
+<!--<!--            </nav>-->-->
+<!--<!--        </div>-->-->
+<!--    </header>-->
+
 
 <!--     ==== Header End ==== -->
 
