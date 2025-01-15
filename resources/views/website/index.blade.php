@@ -644,82 +644,62 @@
         </div>
 
 
-{{--
-        <div class="our_servsis container pt-5 pb-5">
-            <h1 class="text-uppercase">our servsis</h1>
 
-        <div class="servsis_items row">
+      <div class="our_servsis container pt-5 pb-5">
+        <h1 class="text-uppercase">our servsis</h1>
 
-            <div class="servsis_item ">
-                <div class="img">
-
-                </div>
-
-                <div class="title">
-                    <h1>SAP-certified experts</h1>
-                </div>
-
-            </div>
-
-            <div class="servsis_item ">
-                <div class="img">
-
-                </div>
-
-                <div class="title">
-                    <h1>SAP-certified experts</h1>
-                </div>
-
-            </div>
-
-            <div class="servsis_item">
-                <div class="img">
-
-                </div>
-
-                <div class="title">
-                    <h1>SAP-certified experts</h1>
-                </div>
-
-            </div>
+        <div class="servsis-items">
 
 
-        </div>
-        </div> --}}
 
-
-      <div class="our_servsis container">
-        <div class="container-fluid container-cutout mb--2">
-			<div class="row">
-								<!-- itemCard -->
-				<div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
-				<div class="">
-					<img  style="overflow: hidden"  src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg" alt="Drupal Entwicklung und Migration">
-				</div>
-					<div class="">
-						<h3 class="">Drupal Entwicklung und Migration</h3>
-							<div class="flex max-w-full flex-col flex-grow"><div class=" flex w-full flex-col items-end gap-2  mt-5"  ><div class="flex w-full flex-col gap-1 "><div class=""><p>Entwickeln Sie mit dem Drupal CMS eine zukunftsichere<strong>&nbsp;Unternehmenswebsite</strong> oder umsatzstarken Webshop mit <strong>Drupal Commerce</strong>. Mit unserer <a href=""><strong>Drupal Migration</strong></a> stellen Sie pünktlich und reibungslos auf Drupal 10 um, steigern die Performance und senken langfristig Ihre Wartungskosten – für messbare Ergebnisse und nachhaltigen Erfolg.</p></div></div></div></div>
-							<a class="btn-link" href="">Drupal Entwicklung <i class="icon-base icon-right-open"></i></a>
-											</div>
-				</div>
-				<!-- /itemCard -->
-
-                					<!-- itemCard -->
-				<div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
-                    <div class="">
-                        <img  style="overflow: hidden ; "  src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg" alt="Drupal Entwicklung und Migration">
-                    </div>
-                        <div class="">
-                            <h3 class="">Drupal Entwicklung und Migration</h3>
-                                <div class="flex max-w-full flex-col flex-grow"><div class=" flex w-full flex-col items-end gap-2  mt-5"  ><div class="flex w-full flex-col gap-1 "><div class=""><p>Entwickeln Sie mit dem Drupal CMS eine zukunftsichere<strong>&nbsp;Unternehmenswebsite</strong> oder umsatzstarken Webshop mit <strong>Drupal Commerce</strong>. Mit unserer <a href=""><strong>Drupal Migration</strong></a> stellen Sie pünktlich und reibungslos auf Drupal 10 um, steigern die Performance und senken langfristig Ihre Wartungskosten – für messbare Ergebnisse und nachhaltigen Erfolg.</p></div></div></div></div>
-                                <a class="btn-link" href="">Drupal Entwicklung <i class="icon-base icon-right-open"></i></a>
+            <div class="container-fluid container-cutout mb--2">
+                <div class="row">
+                                    <!-- itemCard -->
+                    <div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
+                                            <div class="itemCard__imageWrap">
+                            <img  class="itemCard__image  lazyloaded" src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg" alt="Drupal Entwicklung und Migration">
+                        </div>
+                                            <div class="itemCard__header">
+                                                    <h3 class="title title--h5 itemCard__title mt-3 mb-3">Drupal Entwicklung und Migration</h3>
+                                                                            <div class="flex max-w-full flex-col flex-grow"><div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal " dir="auto" ><div class="flex w-full flex-col gap-1 empty:hidden">
+                                                                                <div class="markdown prose w-full break-words dark:prose-invert light">
+                                                                                    <p>Entwickeln Sie mit dem Drupal CMS eine zukunftsichere Unternehmenswebsite oder umsatzstarken Webshop mit Drupal Commerce. Mit unserer  stellen Sie pünktlich und reibungslos auf Drupal 10 um, steigern die Performance und senken langfristig Ihre Wartungskosten – für messbare Ergebnisse und nachhaltigen Erfolg.</p>
+                                                                                </div></div></div></div>
+                                                                            <a class="btn-link" href="https://b-works.io/drupal-agentur-zuerich/">Drupal Entwicklung <i class=" fa-solid fa-arrow-right"></i></a>
                                                 </div>
                     </div>
                     <!-- /itemCard -->
+                                    <!-- itemCard -->
+                    <div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
+                                            <div class="itemCard__imageWrap">
+                            <img decoding="async" class="itemCard__image ls-is-cached lazyloaded" src="https://b-works.io/wp-content/uploads/2023/06/004-2.png" alt="Corporate Website &amp; Digitale Erlebnisse">
+                        </div>
+                                            <div class="itemCard__header">
+                                                    <h3 class="title title--h5 itemCard__title">Corporate Website &amp; Digitale Erlebnisse</h3>
+                                                                            <p>Steigern Sie Ihre Marke, Conversion und Kundenbindung durch unsere Digital Experience Lösungen oder Website Redesign. Mit <strong>individuellem Design und state of the Art CMS</strong>&nbsp;entwickeln wir <strong>Websites, Landing Pages und Kampagnen</strong>, die Ihre Zielgruppe begeistern und messbare Ergebnisse liefern.</p>
+                                                                            <a class="btn-link" href="https://b-works.io/webagentur-zuerich/">Webentwicklung <i class=" fa-solid fa-arrow-right"></i></a>
+                                                </div>
+                    </div>
+                    <!-- /itemCard -->
+                                    <!-- itemCard -->
+                    <div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
+                                            <div class="itemCard__imageWrap">
+                            <img decoding="async" class="itemCard__image ls-is-cached lazyloaded" src="https://b-works.io/wp-content/uploads/2021/04/image-9.png" alt="Software Entwicklung &amp; Digitale Produkte">
+                        </div>
+                                            <div class="itemCard__header">
+                                                    <h3 class="title title--h5 itemCard__title">Software Entwicklung &amp; Digitale Produkte</h3>
+                                                                            <p>Optimieren Sie Ihre Geschäftsabläufe und steigern Sie die Produktivität mit unseren <strong>digitalen Plattformen</strong> und <strong>Webapplikationen</strong>. Unsere skalierbaren Lösungen passen sich an Ihre Anforderungen an und ermöglichen datengestützte Entscheidungen in Echtzeit.</p>
+                                                                            <a class="btn-link" href="https://b-works.io/software-agentur-zuerich/">Software Entwicklung <i class=" fa-solid fa-arrow-right"></i></a>
+                                                </div>
+                    </div>
+                    <!-- /itemCard -->
+                                </div>
+            </div>
 
 
-							</div>
-		</div>
+
+        </div>
+
       </div>
 
 

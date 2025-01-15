@@ -30,16 +30,46 @@
   }
 /* end descripation couunt*/
 
-.itemCard__imageWrap {
-    display: flex;
-    overflow: hidden;
-}
 
-.elementor img {
-    height: 200px;
+
+
+.our_servsis .servsis-items .elementor img {
+    height: auto;
     max-width: 100%;
     border: none;
     border-radius: 0;
     box-shadow: none;
-    width: ;
+}
+.itemCard__image {
+    object-fit: cover;
+    max-height: 500px;
+    height: 272px;
+    width: 100%;
+}
+
+.our_servsis .servsis-items .itemCard__header .btn-link{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+
+}
+.our_servsis .servsis-items .itemCard__header .btn-link::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: black;
+    transition: 0.5s ease-in-out;
+}
+.our_servsis .servsis-items .itemCard__header .btn-link:hover::before{
+    width: 100%;
 }
