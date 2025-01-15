@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
 @endif
 
+<link rel="stylesheet" href="assets\css\index.css">
 <main>
 
     @foreach ($sections as $section)
@@ -515,8 +516,82 @@
 
 
 
+{{-- new sections  --}}
+<div class="space" style="height: 500px"></div>
 
 
+
+
+{{-- start article --}}
+<article class="caption-single container">
+    <div class="row">
+                        <div class="col-12 col-lg-9">
+
+                                                    <h2 class="title"><div class="line " style="display: block; text-align: left; width: 100%; opacity: 1;">Digitalagentur in Zürich, Berlin und Bozen mit Fokus auf </div><div class="line " style="display: block; text-align: left; width: 100%; transform: translateY(0%); opacity: 1;">ROI </div></h2><div class="description " style=" opacity: 1;">
+                <div><div class="flex-1 overflow-hidden"><div ><div ><div class="flex flex-col text-sm pb-9"><div class="w-full " dir="auto" data-testid="conversation-turn-131"><div class="px-4 py-2 justify-center text-base md:gap-6 m-auto"><div class="flex flex-1 text-base mx-auto gap-3 juice:gap-4 juice:md:gap-6 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]"><div class="relative flex w-full min-w-0 flex-col agent-turn"><div class="flex-col gap-1 md:gap-3"><div class="flex flex-grow flex-col max-w-full"><div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto" dir="auto" data-message-author-role="assistant" data-message-id="83858ec7-43b5-4c84-838a-290089c3b8f6"><div class="markdown prose w-full break-words dark:prose-invert light"><p>Seit 2016 entwickeln wir als preisgekrönte Digitalagentur in Zürich, Berlin und Bozen mit nutzerzentriertem Design und moderner Softwareentwicklung innovative Lösungen für Unternehmen und Start-ups. Mit einem Team von 50+ schlauen Köpfen und dem Einsatz moderner Web, Software- und KI-Technologien sind wir der Partner, mit dem Sie Ihre digitale Zukunft gestalten - kosteneffizient, ganzheitlich und stets am Puls der Zeit.</p></div></div></div></div></div></div></div></div></div></div></div></div></div>
+            </div>
+                            </div>
+    </div>
+</article>
+{{-- end article --}}
+
+
+<div class="descripation container pt-5 pb-5">
+<div class="row">
+
+{{-- text section --}}
+    <div class="big_title col-sm-12 col-md-6">
+        <h1 class="text-uppercase " style="font-weight: 900">
+            LeverX Is Your Trusted Partner Within the SAP Ecosystem
+        </h1>
+    </div>
+
+    <div class="sub_title col-sm-12 col-md-6">
+        <p class="text-captilze text-black-50" >
+            LeverX is a global system integrator and a top-tier SAP consultancy
+            dedicated to delivering professional, customer-centric solutions and
+            services. Founded in 2003 on the principles of technological excellence
+            and personalized service, LeverX has established itself as a trusted partner
+            in the digital transformation journey of Fortune 500 clients worldwide.
+        </p>
+    </div>
+
+{{-- count numbers section --}}
+<div class="couunt col-12 d-flex  pt-5 pb-5">
+    <div class="cards-block__item col-sm-3 " >
+        <h1 class="card-block__title fw-bold">950+</h1>
+        <div class="card-block__content">successful projects</div>
+    </div>
+    <div class="cards-block__item col-sm-3  " >
+        <h1 class="card-block__title fw-bold pb-">15+</h1>
+        <div class="card-block__content">offices in 11 countries</div>
+    </div>
+    <div class="cards-block__item col-sm-3 " >
+        <h1 class="card-block__title fw-bold">1,800+</h1>
+        <div class="card-block__content">employees</div>
+    </div>
+    <div class="cards-block__item col-sm-3  " >
+        <h1 class="card-block__title fw-bold">500+</h1>
+        <div class="card-block__content">SAP-certified experts</div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+ </div>
+</div>
+
+
+
+</div>
+
+<div class="space" style="height: 500px"></div>
+{{-- end new sections   --}}
 
 
 
