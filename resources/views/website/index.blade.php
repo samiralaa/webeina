@@ -654,7 +654,89 @@
                 </div>
             </div>
         </div>
+
+
+{{--
+        <div class="our_servsis container pt-5 pb-5">
+            <h1 class="text-uppercase">our servsis</h1>
+
+        <div class="servsis_items row">
+
+            <div class="servsis_item ">
+                <div class="img">
+
+                </div>
+
+                <div class="title">
+                    <h1>SAP-certified experts</h1>
+                </div>
+
+            </div>
+
+            <div class="servsis_item ">
+                <div class="img">
+
+                </div>
+
+                <div class="title">
+                    <h1>SAP-certified experts</h1>
+                </div>
+
+            </div>
+
+            <div class="servsis_item">
+                <div class="img">
+
+                </div>
+
+                <div class="title">
+                    <h1>SAP-certified experts</h1>
+                </div>
+
+            </div>
+
+
         </div>
+        </div> --}}
+
+
+      <div class="our_servsis container">
+        <div class="container-fluid container-cutout mb--2">
+			<div class="row">
+								<!-- itemCard -->
+				<div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
+				<div class="">
+					<img  style="overflow: hidden"  src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg" alt="Drupal Entwicklung und Migration">
+				</div>
+					<div class="">
+						<h3 class="">Drupal Entwicklung und Migration</h3>
+							<div class="flex max-w-full flex-col flex-grow"><div class=" flex w-full flex-col items-end gap-2  mt-5"  ><div class="flex w-full flex-col gap-1 "><div class=""><p>Entwickeln Sie mit dem Drupal CMS eine zukunftsichere<strong>&nbsp;Unternehmenswebsite</strong> oder umsatzstarken Webshop mit <strong>Drupal Commerce</strong>. Mit unserer <a href=""><strong>Drupal Migration</strong></a> stellen Sie pünktlich und reibungslos auf Drupal 10 um, steigern die Performance und senken langfristig Ihre Wartungskosten – für messbare Ergebnisse und nachhaltigen Erfolg.</p></div></div></div></div>
+							<a class="btn-link" href="">Drupal Entwicklung <i class="icon-base icon-right-open"></i></a>
+											</div>
+				</div>
+				<!-- /itemCard -->
+
+                					<!-- itemCard -->
+				<div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
+                    <div class="">
+                        <img  style="overflow: hidden ; "  src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg" alt="Drupal Entwicklung und Migration">
+                    </div>
+                        <div class="">
+                            <h3 class="">Drupal Entwicklung und Migration</h3>
+                                <div class="flex max-w-full flex-col flex-grow"><div class=" flex w-full flex-col items-end gap-2  mt-5"  ><div class="flex w-full flex-col gap-1 "><div class=""><p>Entwickeln Sie mit dem Drupal CMS eine zukunftsichere<strong>&nbsp;Unternehmenswebsite</strong> oder umsatzstarken Webshop mit <strong>Drupal Commerce</strong>. Mit unserer <a href=""><strong>Drupal Migration</strong></a> stellen Sie pünktlich und reibungslos auf Drupal 10 um, steigern die Performance und senken langfristig Ihre Wartungskosten – für messbare Ergebnisse und nachhaltigen Erfolg.</p></div></div></div></div>
+                                <a class="btn-link" href="">Drupal Entwicklung <i class="icon-base icon-right-open"></i></a>
+                                                </div>
+                    </div>
+                    <!-- /itemCard -->
+
+
+							</div>
+		</div>
+      </div>
+
+
+
+
         <div class="space" style="height: 500px"></div>
         {{-- end new sections   --}}
         <script>
