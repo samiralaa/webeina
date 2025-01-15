@@ -533,6 +533,10 @@
         {{-- new sections  --}}
         <div class="space" playsinline="true" muted="true" loop="true" autoplay="true" class="cover-slider video-js vjs-default-skin vjs-big-play-centered vjs-fluid video-dimensions vjs-controls-disabled vjs-workinghover vjs-v6 vjs-has-started vjs-user-inactive vjs-playing" style="height: 600px">
 
+            <video  src="{{asset('assets/videos/B-works-Schweiz-Video.mp4')}}"  playsinline="true" muted="true" loop="true" autoplay="true" class="cover-slider video-js vjs-default-skin vjs-big-play-centered vjs-fluid video-dimensions vjs-controls-disabled vjs-workinghover vjs-v6 vjs-has-started vjs-user-inactive vjs-playing" style="background-size: auto"></video>
+        </div>
+
+
 
 
         {{-- start article --}}
