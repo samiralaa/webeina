@@ -13,8 +13,11 @@ use App\Http\Controllers\Web\Front\HomeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\LinkedInController;
 
-
+Route::get('/linkedin/login', [LinkedInController::class, 'redirectToLinkedIn']);
+Route::get('/linkedin/callback', [LinkedInController::class, 'handleCallback']);
+Route::get('/linkedin/posts', [LinkedInController::class, 'getCompanyPosts']);
 
 
 Route::get('services/mobile/{lang}', [ServiceController::class, 'index']);

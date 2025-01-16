@@ -25,14 +25,8 @@
                 </a>
 
                 <!-- Toggler for mobile view -->
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav"
-                    aria-controls="navbarNav"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
 
@@ -43,22 +37,26 @@
                             <a class="nav-link bl" href="#">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle bl" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle bl" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Services
                             </a>
+
+
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item bl" href="#">Digital Transformation</a></li>
-                                <li><a class="dropdown-item bl" href="#">Web Solutions</a></li>
-                                <li><a class="dropdown-item bl" href="#">Digital Marketing</a></li>
-                                <li><a class="dropdown-item bl" href="#">Mobile Solutions</a></li>
-                                <li><a class="dropdown-item bl" href="#">Digital Content</a></li>
+                                @foreach ($services as $service )
+                                <li><a class="dropdown-item bl" href="#">{{ $service->name[app()->getLocale()] }}</a>
+                                </li>
+                                @endforeach
                             </ul>
+
                         </li>
                         <li class="nav-item">
                             <a class="nav-link bl" href="#">Partners</a>
                         </li>
                         <li class="nav-item dropdown bl">
-                            <a class="nav-link dropdown-toggle bl" href="#" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle bl" href="#" id="companyDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                                 Company
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="companyDropdown">
@@ -91,7 +89,7 @@
 
 
 
-<!--     ==== Header End ==== -->
+    <!--     ==== Header End ==== -->
 
 
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>

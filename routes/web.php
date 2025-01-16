@@ -41,9 +41,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
+use App\Http\Controllers\LinkedInController;
 
-
-
+Route::get('/linkedin/auth', [LinkedInController::class, 'redirectToLinkedIn']);
+Route::get('/linkedin/callback', [LinkedInController::class, 'handleCallback']);
+Route::get('/linkedin/posts', [LinkedInController::class, 'fetchCompanyPosts']);
 
 
 // package routes
@@ -236,3 +238,5 @@ Route::get('/clear-all-cache', function () {
         'config_cache' => $exitCodeConfigCache,
     ]);
 });
+
+
