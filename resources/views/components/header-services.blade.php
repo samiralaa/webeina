@@ -37,10 +37,10 @@
                             <a class="nav-link bl" href="#">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle bl" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle bl" href="{{ route('user-profile') }}" id="navbarDropdown" role="button">
                                 Services
                             </a>
+
 
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
