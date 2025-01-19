@@ -648,7 +648,7 @@
 
 
 
-    <div class="container-fluid container-cutout mb--2">
+    <div class="container-fluid container mb--2">
         <div class="row">
             <!-- itemCard -->
             @if($service)
@@ -689,6 +689,91 @@
             <!-- /itemCard -->
         </div>
     </div>
+
+<div class="linkedin posts container pb-5 pt-5">
+    <h1 class="text-captlize">linked_in posts</h1>
+<div class="main mt-5">
+
+      <div class="post">
+        <div class="head_main">
+          <div class="head-info">
+            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+            <div class="puplish-info">
+              <div class="poplish "><span>webania</span></div>
+              <div class="time"><span>july 8,2025</span></div>
+            </div>
+
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-linkedin "></i>
+          </div>
+        </div>
+
+        <div class="text_content">
+          <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+          <a href="#" class="toggle_link">Read more</a>
+        </div>
+
+        <div class="img_content">
+         <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+
+        <div class="call_to_action">
+          <div class="like">
+            <i class="fa-regular fa-heart"></i>
+
+          </div>
+          <div class="share">
+            <i class="fa-solid fa-share"></i>
+            share
+          </div>
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="head_main">
+          <div class="head-info">
+            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+            <div class="puplish-info">
+              <div class="poplish "><span>webania</span></div>
+              <div class="time"><span>july 8,2025</span></div>
+            </div>
+
+          </div>
+          <div class="icon">
+            <i class="fa-brands fa-linkedin "></i>
+          </div>
+        </div>
+
+        <div class="text_content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+            <a href="#" class="toggle_link">Read more</a>
+          </div>
+
+        <div class="img_content">
+         <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+
+        <div class="call_to_action">
+          <div class="like">
+            <i class="fa-regular fa-heart"></i>
+
+          </div>
+          <div class="share">
+            <i class="fa-solid fa-share"></i>
+            share
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    </div>
+
+
+
+
+
 
 
     {{-- Partners --}}
@@ -1353,7 +1438,42 @@
             }
                                                                                         </script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
 
+    const textContents = document.querySelectorAll(".text_content");
+
+    textContents.forEach((textContent) => {
+      const paragraph = textContent.querySelector("p");
+      const toggleLink = textContent.querySelector(".toggle_link");
+
+
+      const fullText = paragraph.textContent;
+
+
+      const truncatedText = fullText.length > 20 ? fullText.slice(0, 40) + "..." : fullText;
+
+
+      if (fullText.length > 20) {
+        paragraph.textContent = truncatedText;
+      }
+
+
+      toggleLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (paragraph.textContent === truncatedText) {
+
+          paragraph.textContent = fullText;
+          toggleLink.textContent = "Hide";
+        } else {
+
+          paragraph.textContent = truncatedText;
+          toggleLink.textContent = "Read more";
+        }
+      });
+    });
+  });
+</script>
 
 </main>
 @endsection
