@@ -4,6 +4,8 @@
 @section('title', 'Home Page')
 
 @section('content')
+<!-- slick css -->
+<link rel="stylesheet" href="{{ asset('assets/vendor/slick/css/slick.css') }}" >
 <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
 
 @if (app()->getLocale() === 'ar')
@@ -527,7 +529,7 @@
             Your browser does not support the video tag.
         </video>
         <div class="container-0-1-0">
-            <div class="container-1-2-0 mx-5">
+            <div class="container-1-2-0">
                 <div class="text-2-3-0">Transform Your Ideas into Digital Reality</div>
                 <div class="text-2-3-1">
                     Our innovative platform empowers you to create stunning websites
@@ -603,7 +605,6 @@
 
 
     <div class="descripation container pt-5 pb-5">
-
         <div class="row">
 
             {{-- text section --}}
@@ -649,8 +650,7 @@
 
 
 
-    <div class="container-fluid container mb--2">
-        <h1 class="text-captilze mb-5">our services</h1>
+    <div class="container-fluid container-cutout mb--2">
         <div class="row">
             <!-- itemCard -->
             @if($service)
@@ -693,296 +693,29 @@
     </div>
 
 
-    {{-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/> --}}
-
-<style>
-     .slider {
-            width: 80%;
-            margin: auto;
-        }
-
-        .slick-slide {
-            padding: 10px;
-            background: #f4f4f4;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .slick-prev, .slick-next {
-            background-color: #000;
-            border-radius: 50%;
-            color: white;
-        }
-</style>
-
-
-<div class="linkedin  posts container pb-5 pt-5">
-    <h1 class="text-captlize">linked_in posts</h1>
-<div class="main slider  mt-5">
-
-      <div class="post " style="    opacity: inherit; text-align:">
-        <div class="head_main">
-          <div class="head-info">
-            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-            <div class="puplish-info">
-              <div class="poplish "><span>webania</span></div>
-              <div class="time"><span>july 8,2025</span></div>
-            </div>
-
-          </div>
-          <div class="icon">
-            <i class="fa-brands fa-linkedin "></i>
-          </div>
-        </div>
-
-        <div class="text_content">
-          <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
-          <a href="#" class="toggle_link">Read more</a>
-        </div>
-
-        <div class="img_content">
-        <a href="">
-         <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </a></div>
-
-        <div class="call_to_action">
-          <div class="like">
-            <i class="fa-regular fa-heart"></i>
-
-          </div>
-          <div class="share">
-            <i class="fa-solid fa-share"></i>
-            share
-          </div>
-        </div>
-      </div>
-
-      <div class="post " style="    opacity: inherit; text-align:">
-        <div class="head_main">
-          <div class="head-info">
-            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-            <div class="puplish-info">
-              <div class="poplish "><span>webania</span></div>
-              <div class="time"><span>july 8,2025</span></div>
-            </div>
-
-          </div>
-          <div class="icon">
-            <i class="fa-brands fa-linkedin "></i>
-          </div>
-        </div>
-
-        <div class="text_content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
-            <a href="#" class="toggle_link">Read more</a>
-          </div>
-
-        <div class="img_content">
-        <a href="">
-         <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </a>
-        </div>
-
-        <div class="call_to_action">
-          <div class="like">
-            <i class="fa-regular fa-heart"></i>
-
-          </div>
-          <div class="share">
-            <i class="fa-solid fa-share"></i>
-            share
-          </div>
-        </div>
-      </div>
-
-      <div class="post  " style="    opacity: inherit; text-align:">
-        <div class="head_main">
-          <div class="head-info">
-            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-            <div class="puplish-info">
-              <div class="poplish "><span>webania</span></div>
-              <div class="time"><span>july 8,2025</span></div>
-            </div>
-
-          </div>
-          <div class="icon">
-            <i class="fa-brands fa-linkedin "></i>
-          </div>
-        </div>
-
-        <div class="text_content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
-            <a href="#" class="toggle_link">Read more</a>
-          </div>
-
-        <div class="img_content">
-        <a href="">
-         <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </a>
-        </div>
-
-        <div class="call_to_action">
-          <div class="like">
-            <i class="fa-regular fa-heart"></i>
-
-          </div>
-          <div class="share">
-            <i class="fa-solid fa-share"></i>
-            share
-          </div>
-        </div>
-      </div>
-
-
-      <div class="post  " style="    opacity: inherit; text-align:">
-        <div class="head_main">
-          <div class="head-info">
-            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-            <div class="puplish-info">
-              <div class="poplish "><span>webania</span></div>
-              <div class="time"><span>july 8,2025</span></div>
-            </div>
-
-          </div>
-          <div class="icon">
-            <i class="fa-brands fa-linkedin "></i>
-          </div>
-        </div>
-
-        <div class="text_content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
-            <a href="#" class="toggle_link">Read more</a>
-          </div>
-
-        <div class="img_content">
-        <a href="">
-         <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </a>
-        </div>
-
-        <div class="call_to_action">
-          <div class="like">
-            <i class="fa-regular fa-heart"></i>
-
-          </div>
-          <div class="share">
-            <i class="fa-solid fa-share"></i>
-            share
-          </div>
-        </div>
-      </div>
-
-      <div class="post  " style="    opacity: inherit; text-align:">
-        <div class="head_main">
-          <div class="head-info">
-            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-            <div class="puplish-info">
-              <div class="poplish "><span>webania</span></div>
-              <div class="time"><span>july 8,2025</span></div>
-            </div>
-
-          </div>
-          <div class="icon">
-            <i class="fa-brands fa-linkedin "></i>
-          </div>
-        </div>
-
-        <div class="text_content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
-            <a href="#" class="toggle_link">Read more</a>
-          </div>
-
-        <div class="img_content">
-        <a href="">
-         <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </a>
-        </div>
-
-        <div class="call_to_action">
-          <div class="like">
-            <i class="fa-regular fa-heart"></i>
-
-          </div>
-          <div class="share">
-            <i class="fa-solid fa-share"></i>
-            share
-          </div>
-        </div>
-      </div>
-    </div>
-
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Slick JS -->
-    {{-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> --}}
-
-    <script>
-
-
-
-        $(document).ready(function(){
-            // Initialize Slick slider
-            $('.slider').slick({
-
-                prevArrow: '<i class="fa fa-chevron-left  slick-prev"></i>',
-                nextArrow: '<i class="fa fa-chevron-right slick-next"></i>',
-
-                slidesToShow: 3,       // Show 3 slides at once
-                slidesToScroll: 1,     // Scroll 1 slide at a time
-                infinite: true,        // Infinite loop
-                dots: false,            // Show pagination dots
-                arrows: true,          // Show next/prev arrows
-                autoplay: true,        // Auto play slides
-                autoplaySpeed: 8000,   // Speed of auto play
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 2,  // On medium screens show 2 slides
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 1,  // On small screens show 1 slide
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        });
-
-  </script>
-
-
-
     {{-- Partners --}}
-    <div class="partner section pb-5" dir="ltr">
+    <div class="partner section pb-5" style="background-color: #0b0b0b">
         <div class="container-fluid pb-5">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="partner__slider">
                         <div class="partner__slider-item slick-slide">
-                            <img src="assets/partner/odoo.png" alt="Image">
+                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="assets/partner/google.png" alt="Image">
+                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="assets/partner/micro.png" alt="Image">
+                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="assets/partner/odoo.png" alt="Image">
+                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="assets/partner/google.png" alt="Image">
+                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="assets/partner/micro.png" alt="Image">
+                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
                         </div>
                     </div>
                 </div>
@@ -992,10 +725,7 @@
 
 
 
-
-
     <div class="news container pt-5 pb-5">
-
         <h1 class="text-captlize pb-4">Social networking</h1>
 
 
@@ -1625,44 +1355,7 @@
             }
                                                                                         </script>
 
-<script>
 
-
-    document.addEventListener("DOMContentLoaded", () => {
-
-    const textContents = document.querySelectorAll(".text_content");
-
-    textContents.forEach((textContent) => {
-      const paragraph = textContent.querySelector("p");
-      const toggleLink = textContent.querySelector(".toggle_link");
-
-
-      const fullText = paragraph.textContent;
-
-
-      const truncatedText = fullText.length > 20 ? fullText.slice(0, 40) + "..." : fullText;
-
-
-      if (fullText.length > 20) {
-        paragraph.textContent = truncatedText;
-      }
-
-
-      toggleLink.addEventListener("click", (e) => {
-        e.preventDefault();
-        if (paragraph.textContent === truncatedText) {
-
-          paragraph.textContent = fullText;
-          toggleLink.textContent = "Hide";
-        } else {
-
-          paragraph.textContent = truncatedText;
-          toggleLink.textContent = "Read more";
-        }
-      });
-    });
-  });
-</script>
 
 </main>
 @endsection
