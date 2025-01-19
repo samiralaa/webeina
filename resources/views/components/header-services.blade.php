@@ -107,7 +107,7 @@
                             @endforeach
                         </ul>
 
-<<<<<<< Updated upstream
+
                         </li>
                         <li class="nav-item">
                             <a class="nav-link bl" href="#">Partners</a>
@@ -156,7 +156,7 @@
 </body>
 
 </html>
-=======
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link bl" href="#">Partners</a>
@@ -193,4 +193,4 @@
     </nav>
 </header>
 @endif
->>>>>>> Stashed changes
+

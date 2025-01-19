@@ -992,19 +992,18 @@
 
 
 
-<<<<<<< Updated upstream
-    {{-- <div class="news container pt-5 pb-5">
-=======
+
+
 
     <div class="news container pt-5 pb-5">
->>>>>>> Stashed changes
+
         <h1 class="text-captlize pb-4">Social networking</h1>
- --}}
 
 
 
 
-{{--
+
+
         <div class="main">
             <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-e1603c5"
                 data-id="e1603c5" data-element_type="column">
