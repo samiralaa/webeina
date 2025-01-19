@@ -42,6 +42,7 @@ use Illuminate\Support\Facades\Route;
 
 
 use App\Http\Controllers\LinkedInController;
+use App\Http\Controllers\Web\Front\Home\HomeController as HomeHomeController;
 
 Route::get('/linkedin/auth', [LinkedInController::class, 'redirectToLinkedIn']);
 Route::get('/linkedin/callback', [LinkedInController::class, 'handleCallback']);
@@ -211,6 +212,10 @@ Route::post('/admin/serves/store/{id}', [ContentCotroller::class, 'store'])->nam
 Route::get('/admin/serves/edit/{id}', [ContentCotroller::class, 'edit'])->name('serves.edit');
 Route::put('/admin/serves/update/{id}', [ContentCotroller::class, 'update'])->name('serves.update');
 Route::get('/admin/serves/delete/{id}', [ContentCotroller::class, 'destroy'])->name('serves.delete');
+
+
+// faqs front
+Route::get('/faqs', [HomeHomeController::class, 'faqs'])->name('faqs.index');
 
 
 // notofications

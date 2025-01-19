@@ -60,6 +60,7 @@
                                 Company
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="companyDropdown">
+                                <ul><a class="dropdown-item bl" href="{{ route('faqs.index') }}">FAQs</a></ul>
                                 <li><a class="dropdown-item bl" href="#">About Us</a></li>
                                 <li><a class="dropdown-item bl" href="#">Contact</a></li>
                                 <li><a class="dropdown-item bl" href="#">Dubai Branch</a></li>
