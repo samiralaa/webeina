@@ -29,13 +29,13 @@
     <link rel="stylesheet" href="{{ asset('assets/vendor/nice-select/css/nice-select.css') }}" />
     <!-- magnific popup css -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/magnific-popup/css/magnific-popup.css') }}" />
-    <!-- slick css -->
-    <link rel="stylesheet" href="{{ asset('assets/vendor/slick/css/slick.css') }}" />
     <!--  normalize css  -->
     <link rel="stylesheet" href="{{ asset('assets/css/vendor/normalize') }}" />
+    <!-- slick css -->
+    <link rel="stylesheet" href="{{ asset('assets/vendor/slick/css/slick.css') }}" />
     <!-- ==== / css dependencies end ==== -->
     <!-- main css -->
-    <link rel="stylesheet" href="{{ asset('assets/css/main.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
 </head>
 
 <body>
@@ -51,16 +51,22 @@
     {{-- footer-layout.blade --}}
     <x-footer-layout />
 
-    <!-- Include JS Files -->
+    <!-- Mouse Follow Effect -->
+    <div class="mouse">
+        <div class="circle"></div>
+        <div class="dot"></div>
+    </div>
+
+    <!--  jquery js  -->
     <script src="{{ asset('assets/vendor/jquery/jquery-3.7.0.min.js') }}"></script>
+    <!-- slick js -->
+    <script src="{{ asset('assets/vendor/slick/js/slick.min.js') }}"></script>
     <!-- bootstrap five js -->
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- nice select js -->
     <script src="{{ asset('assets/vendor/nice-select/js/jquery.nice-select.min.js') }}"></script>
     <!-- magnific popup js -->
     <script src="{{ asset('assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js') }}"></script>
-    <!-- slick js -->
-    <script src="{{ asset('assets/vendor/slick/js/slick.min.js') }}"></script>
     <!-- image loaded js -->
     <script src="{{ asset('assets/vendor/images-loaded/imagesloaded.pkgd.min.js') }}"></script>
     <!-- isotope js -->
@@ -83,7 +89,7 @@
     <!-- plugins js -->
     <script src="{{ asset('assets/js/plugins.js') }}"></script>
     <!-- main js -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
 </body>
 
 </html>

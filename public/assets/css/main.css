@@ -12,6 +12,7 @@ body {
     padding: 0;
 }
 
+/* Navbar */
 .img-logo {
     height: 50px;
     width: auto;
@@ -156,7 +157,7 @@ body {
 }
 
 .navbar-toggler {
-    background-color: #076767; /* Match brand colors */
+    background-color: #076767;
     border: none;
     padding: 10px 12px;
     border-radius: 5px;
@@ -169,17 +170,17 @@ body {
 
 .navbar-toggler:hover {
     background-color: #18a686;
-    transform: scale(1.05); /* Slight zoom effect */
+    transform: scale(1.05);
 }
 
 .fa-bars {
-    color: #fff; /* Icon color */
-    font-size: 1.5rem; /* Adjust size */
+    color: #fff;
+    font-size: 1.5rem;
     transition: color 0.3s ease;
 }
 
 .navbar-toggler:hover i {
-    color: #f4f4f4; /* Subtle change on hover */
+    color: #f4f4f4;
 }
 
 .navbar-toggler:focus {
@@ -213,6 +214,7 @@ body {
 
 }
 
+/* Footer */
 footer{
     height: fit-content;
     padding: 100px;
@@ -327,4 +329,55 @@ footer .container .navbar-brand{
 
 .locations a:hover{
     color: #18a686;
+}
+
+/* Mouse Follow Effect */
+
+.circle {
+    z-index: 3;
+    --circle-size: 40px;
+    position: fixed;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border: 1px solid #076767;
+    border-radius: 100%;
+    top: calc(var(--circle-size) / 2 * -1);
+    left: calc(var(--circle-size) / 2 * -1);
+    pointer-events: none;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+.dot {
+    z-index: 3;
+    --circle-size: 10px;
+    position: fixed;
+    background-color: #076767;
+    height: var(--circle-size);
+    width: var(--circle-size);
+    border-radius: 100%;
+    top: calc(var(--circle-size) / 2 * -1);
+    left: calc(var(--circle-size) / 2 * -1);
+    pointer-events: none;
+}
+
+.circle.big {
+    transform: scale(1.5);
+    background-color: #076767;
+    opacity: 0.5;
+}
+
+.dot.vanish {
+    opacity: 0;
+}
+
+a:hover .circle,
+button:hover .circle {
+    transform: scale(1.5);
+    background-color: #076767;
+    opacity: 0.5;
+}
+
+a:hover .dot,
+button:hover .dot {
+    opacity: 0;
 }

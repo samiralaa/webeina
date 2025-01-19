@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/normalize/normalize.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
 
     <title>Footer Layout</title>
 </head>
@@ -100,7 +100,7 @@
         </div>
     </footer>
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-
+    <script src="{{ asset('assets/js/scripts.js')}}"></script>
 </body>
 
 </html>

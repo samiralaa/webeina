@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
 @endif
 
-<link rel="stylesheet" href="assets\css\index.css">
+<link rel="stylesheet" href="{{ asset('assets\css\index.css') }}">
 <main>
 
     @foreach ($sections as $section)
@@ -689,6 +689,38 @@
             <!-- /itemCard -->
         </div>
     </div>
+
+
+    {{-- Partners --}}
+    <div class="partner section pb-5">
+        <div class="container-fluid pb-5">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="partner__slider">
+                        <div class="partner__slider-item slick-slide">
+                            <img src="assets/partner/odoo.png" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="assets/partner/google.png" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="assets/partner/micro.png" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="assets/partner/odoo.png" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="assets/partner/google.png" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="assets/partner/micro.png" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <div class="news container pt-5 pb-5">
