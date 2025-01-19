@@ -157,6 +157,7 @@
 
 </html>
 
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link bl" href="#">Partners</a>
@@ -193,4 +194,3 @@
     </nav>
 </header>
 @endif
-
