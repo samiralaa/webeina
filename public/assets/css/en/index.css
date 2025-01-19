@@ -33,7 +33,7 @@ body {
 
 .container-0-1-0 {
     position: relative;
-    max-width: 600px;
+    width: 100%;
     padding: 20px;
     text-align: left;
 }
@@ -41,6 +41,7 @@ body {
 .container-1-2-0 {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
     gap: 20px;
 }
 

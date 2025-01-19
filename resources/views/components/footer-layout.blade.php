@@ -1,23 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/normalize/normalize.css')}}">
-    <link rel="stylesheet" href="{{ asset('assets/css/main.css')}}">
-
-    <title>Footer Layout</title>
-</head>
-
-<body>
-
-
-
-
-
-    <footer>
+ <footer>
         <div class="footer-row1">
             <div class="container">
                 <div class="row justify-content-between">
@@ -43,6 +24,16 @@
                     <div class="col-lg-4 col-sm-6">
                         <h5 class="head">Webenia Contacts</h5>
                         <ul class="footer-address-list ftr-details">
+                            @if (app()->getLocale() === 'ar')
+                            <li class="d-flex">
+                                <span><i class="fas fa-envelope"></i></span>
+                                <p> البريد الالكتروني <span> <a href="mailto:info@webenia.com">info@webenia.com</a></span></p>
+                            </li>
+                            <li class="d-flex">
+                                <span><i class="fab fa-skype"></i></span>
+                                <p> سكايبي <span> <a href="skype:live:.cid.bedd6a433022c5ca?call">webenia</a></span></p>
+                            </li>
+                            @else
                             <li class="d-flex">
                                 <span><i class="fas fa-envelope"></i></span>
                                 <p> Email <span> <a href="mailto:info@webenia.com">info@webenia.com</a></span></p>
@@ -51,6 +42,7 @@
                                 <span><i class="fab fa-skype"></i></span>
                                 <p> skype <span> <a href="skype:live:.cid.bedd6a433022c5ca?call">webenia</a></span></p>
                             </li>
+                            @endif
                         </ul>
                     </div>
 
@@ -99,8 +91,4 @@
             </div>
         </div>
     </footer>
-    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{ asset('assets/js/scripts.js')}}"></script>
-</body>
 
-</html>
