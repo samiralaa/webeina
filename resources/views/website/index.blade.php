@@ -695,7 +695,7 @@
 
     {{-- Partners --}}
     <div class="partner section py-5">
-        <div class="news container pt-5 pb-5">
+        <div class="container pt-5 pb-5">
             <h1 class="text-captlize pb-4">Partners</h1>
         </div>
         <div class="container-fluid pb-5" dir="ltr">
@@ -726,7 +726,71 @@
         </div>
     </div>
 
-
+    <div class="container">
+        <h1 class="text-captlize pb-4">Technologies</h1>
+        <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/python.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Laravel.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/django.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/flutter.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/swift-ios.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Android.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/.net.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/SQL-Server.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/mysql.png') }}" alt="png" style="height: 120px; width: 120px;">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="news container pt-5 pb-5">
         <h1 class="text-captlize pb-4">Social networking</h1>
@@ -1357,6 +1421,14 @@
                 document.getElementById("about").innerText = "about us"; // English text
             }
                                                                                         </script>
+
+
+
+
+
+
+
+
 
 
 

@@ -55,9 +55,7 @@
                         <a class="nav-link" href="#">تواصل معنا</a>
                     </li>
                     <li class="nav-item">
-                        @if (app()->getLocale() === 'ar')
                         <a href="{{ route('language.change', ['locale' => 'en']) }}" class="nav-link lang">en</a>
-                        @endif
                     </li>
                     <li class="nav-item">
                         <a href="#" class="request-quote-btn quote">
@@ -128,9 +126,7 @@
                             <a class="nav-link bl" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
-                            @if (app()->getLocale() === 'ar')
                             <a href="{{ route('language.change', ['locale' => 'ar']) }}" class="nav-link">ع</a>
-                            @endif
                         </li>
                         <li class="nav-item">
                             <a href="#" class="request-quote-btn quote">
