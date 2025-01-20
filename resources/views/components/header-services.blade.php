@@ -52,13 +52,11 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link bl" href="#">تواصل معنا</a>
+                        <a class="nav-link" href="#">تواصل معنا</a>
                     </li>
-                    <li class="nav_item">
+                    <li class="nav-item">
                         @if (app()->getLocale() === 'ar')
                         <a href="{{ route('language.change', ['locale' => 'en']) }}" class="nav-link lang">en</a>
-                        @else
-                        <a href="{{ route('language.change', ['locale' => 'ar']) }}" class="nav-link lang">ع</a>
                         @endif
                     </li>
                     <li class="nav-item">
@@ -129,11 +127,9 @@
                         <li class="nav-item">
                             <a class="nav-link bl" href="#">Contact</a>
                         </li>
-                        <li class="nav_item">
+                        <li class="nav-item">
                             @if (app()->getLocale() === 'ar')
-                            <a href="{{ route('language.change', ['locale' => 'en']) }}" class="nav-link bl">en</a>
-                            @else
-                            <a href="{{ route('language.change', ['locale' => 'ar']) }}" class="nav-link bl">ع</a>
+                            <a href="{{ route('language.change', ['locale' => 'ar']) }}" class="nav-link">ع</a>
                             @endif
                         </li>
                         <li class="nav-item">

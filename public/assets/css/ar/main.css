@@ -68,11 +68,12 @@ body {
     background-color: #f4f4f4;
 }
 
-.navbar.scrolling .container .collapse .navbar-nav .nav-item .nav-link {
+.navbar.scrolling .container .collapse .navbar-nav .nav-item .nav-link,
+.lang {
     color: #333;
 }
 
-.navbar-nav .nav-item .nav-link {
+.navbar-nav .nav-item .nav-link{
     color: #f4f4f4;
     font-size: 16px;
     padding: 10px 20px;
@@ -397,13 +398,15 @@ footer .container .navbar-brand{
 }
 
 a:hover .circle,
-button:hover .circle {
+button:hover .circle,
+.partner__slider-item.slick-slide:hover .circle {
     transform: scale(1.5);
     background-color: #076767;
     opacity: 0.5;
 }
 
 a:hover .dot,
-button:hover .dot {
+button:hover .dot,
+.partner__slider-item.slick-slide:hover .circle {
     opacity: 0;
 }

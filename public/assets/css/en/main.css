@@ -375,13 +375,15 @@ footer .container .navbar-brand{
 }
 
 a:hover .circle,
-button:hover .circle {
+button:hover .circle,
+.partner__slider:hover .circle {
     transform: scale(1.5);
     background-color: #076767;
     opacity: 0.5;
 }
 
 a:hover .dot,
-button:hover .dot {
+button:hover .dot,
+.partner__slider:hover .circle {
     opacity: 0;
 }

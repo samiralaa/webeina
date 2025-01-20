@@ -529,7 +529,7 @@
             Your browser does not support the video tag.
         </video>
         <div class="container-0-1-0">
-            <div class="container-1-2-0">
+            <div class="container-1-2-0 m-5">
                 <div class="text-2-3-0">Transform Your Ideas into Digital Reality</div>
                 <div class="text-2-3-1">
                     Our innovative platform empowers you to create stunning websites
@@ -694,8 +694,11 @@
 
 
     {{-- Partners --}}
-    <div class="partner section pb-5" dir="ltr">
-        <div class="container-fluid pb-5">
+    <div class="partner section py-5">
+        <div class="news container pt-5 pb-5">
+            <h1 class="text-captlize pb-4">Partners</h1>
+        </div>
+        <div class="container-fluid pb-5" dir="ltr">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="partner__slider">
