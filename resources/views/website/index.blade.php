@@ -694,7 +694,7 @@
 
 
     {{-- Partners --}}
-    <div class="partner section pb-5" style="background-color: #0b0b0b">
+    <div class="partner section pb-5" dir="ltr">
         <div class="container-fluid pb-5">
             <div class="row justify-content-center">
                 <div class="col-12">
