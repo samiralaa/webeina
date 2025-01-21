@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Http;
@@ -16,6 +17,9 @@ class LinkedInController extends Controller
         $this->redirectUri = env('LINKEDIN_REDIRECT_URI');
     }
 
+    /**
+     * Redirect to LinkedIn for authorization.
+     */
     public function redirectToLinkedIn()
     {
         $url = "https://www.linkedin.com/oauth/v2/authorization?" . http_build_query([
@@ -28,9 +32,16 @@ class LinkedInController extends Controller
         return redirect($url);
     }
 
+    /**
+     * Handle LinkedIn callback and exchange code for access token.
+     */
     public function handleCallback()
     {
         $code = request('code');
+
+        if (!$code) {
+            return redirect('/linkedin/auth')->with('error', 'Authorization code is missing.');
+        }
 
         $response = Http::asForm()->post('https://www.linkedin.com/oauth/v2/accessToken', [
             'grant_type' => 'authorization_code',
@@ -40,20 +51,33 @@ class LinkedInController extends Controller
             'client_secret' => $this->clientSecret,
         ]);
 
-        $accessToken = $response->json()['access_token'];
+        if ($response->failed()) {
+            return redirect('/linkedin/auth')->with('error', 'Failed to fetch access token: ' . $response->body());
+        }
+
+        $data = $response->json();
+
+        if (!isset($data['access_token'])) {
+            return redirect('/linkedin/auth')->with('error', 'Access token not found in response.');
+        }
+
+        $accessToken = $data['access_token'];
 
         // Save the access token in the session or database
         session(['linkedin_access_token' => $accessToken]);
 
-        return redirect('/linkedin/posts');
+        return redirect('/linkedin/posts')->with('success', 'Access token retrieved successfully!');
     }
 
+    /**
+     * Fetch organization posts from LinkedIn.
+     */
     public function fetchCompanyPosts()
     {
         $accessToken = session('linkedin_access_token');
 
         if (!$accessToken) {
-            return redirect('/linkedin/auth');
+            return redirect('/linkedin/auth')->with('error', 'Access token is missing. Please authenticate again.');
         }
 
         // Replace with your organization's LinkedIn URN
@@ -63,6 +87,10 @@ class LinkedInController extends Controller
             'q' => 'owners',
             'owners' => $organizationId,
         ]);
+
+        if ($response->failed()) {
+            return redirect('/linkedin/auth')->with('error', 'Failed to fetch posts: ' . $response->body());
+        }
 
         $posts = $response->json();
 

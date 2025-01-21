@@ -19,7 +19,7 @@
         <div class="answercont">
             <div class="answer">
                 {{ json_decode($faq->answer, true)[app()->getLocale()] }}
-                <a href="https://blog.codepen.io/documentation/faq/how-do-i-contact-the-creator-of-a-pen/">How to Contact Creator of a Pen Docs</a>
+                <a href="https://blog.codepen.io/documentation/faq/how-do-i-contact-the-creator-of-a-pen/"></a>
             </div>
         </div>
     </div>
