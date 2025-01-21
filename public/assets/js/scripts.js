@@ -119,4 +119,36 @@ question.forEach(question => {
     })
 })
 
+// linkedin //
+// $(document).ready(function(){
+//     $('.slider-nav').slick({
+//         infinite: false,
+//         centerMode: true,
+//         centerPadding: '0',
+//         slidesToShow: 5,
+//         focusOnSelect: true,
+//         autoplay: false,
+//         speed: 600,
+//         variableWidth: false,
+//         arrows: true,
+//         dots: false,
 
+//     });
+// });
+
+
+$(document).ready(function(){
+    $('.slider-nav').slick({
+        infinite: false,
+        centerMode: true,
+        centerPadding: '0',
+        slidesToShow: 5,
+        slidesToScroll: 1, // Ensures smooth slide transitions
+        focusOnSelect: true,
+        autoplay: false,
+        speed: 600, // Transition speed
+        variableWidth: false,
+        arrows: true,
+        dots: false,
+    });
+});
