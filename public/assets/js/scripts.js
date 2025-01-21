@@ -120,6 +120,31 @@ question.forEach(question => {
 })
 
 // linkedin //
+const gallerySlider = new Swiper(".swiper.is-gallery", {
+    slidesPerView: 8,
+    centeredSlides: true,
+    speed: 300,
+    grabCursor: true,
+    parallax: true,
+    mousewheel: {
+        thresholdDelta: 70,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    keyboard: {
+        enabled: true,
+    },
+    slideToClickedSlide: true
+});
+
+
+
 // $(document).ready(function(){
 //     $('.slider-nav').slick({
 //         infinite: false,
