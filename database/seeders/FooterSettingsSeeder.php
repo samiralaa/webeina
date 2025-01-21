@@ -2,10 +2,12 @@
 
 namespace Database\Seeders;
 
+
 use App\Models\Footer;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\FAQ;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class FooterSettingsSeeder extends Seeder
 {
@@ -52,6 +54,6 @@ class FooterSettingsSeeder extends Seeder
                 ]
             ]),
         ]);
-        
+      
     }
 }
