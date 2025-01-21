@@ -21,7 +21,9 @@
     <!-- font awesome six css -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/font-awesome/css/all.css') }}" />
     <!--  normalize css  -->
-    <link rel="stylesheet" href="{{ asset('assets/css/vendor/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/normalize.css') }}" />
+    <!--  normalize css  -->
+    <link rel="stylesheet" href="{{ asset('assets/vendor/swiper/css/swiper-bundle.min.css') }}" />
     <!-- slick css -->
     <link rel="stylesheet" href="{{ asset('assets/vendor/slick/css/slick.css') }}" />
     <!-- ==== / css dependencies end ==== -->
@@ -65,6 +67,8 @@
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- overlay widget js -->
     <script src="{{ asset('assets/vendor/overlay-widget/js/overlay-widget.js') }}"></script>
+    <!-- overlay widget js -->
+    <script src="{{ asset('assets/vendor/swiper/js/swiper-bundle.min.js') }}"></script>
     <!-- ==== / js dependencies end ==== -->
     <!-- main js -->
     <script src="{{ asset('assets/js/scripts.js')}}"></script>

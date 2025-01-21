@@ -599,7 +599,7 @@
 
 
     <div class="our_servsis container-fluid container mb--2 pt-5 pb-5">
-        <h1 class="text-capitalize mb-5 mt-5">our servsis</h1>
+        <h1 class="text-capitalize mb-5 mt-5">our services</h1>
         <div class="row">
             <!-- itemCard -->
             @if($service)
@@ -744,355 +744,317 @@
 
 
 
-    <div class="partner section py-5">
-        <div class="container pt-5 pb-5">
-            <h1 class="text-captlize pb-4">Partners</h1>
-        </div>
-        <div class="container-fluid pb-5" dir="ltr">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="slider-nav">
-                        <div class="partner__slider-item slick-slide">
-                            <div class="main slider  mt-5">
-
+    {{-- Linkedin --}}
+    <div class="main-wrapper">
+        <div class="section slideStyle">
+            <div class="container pt-5">
+                <h1 class="text-captlize pb-4">linkedin</h1>
+            </div>
+            <div class="swiper swiperParallax is-gallery mb-4">
+                <div role="list" class="swiper-wrapper is-gallery">
+                    <div role="listitem" class="swiper-slide is-gallery">
+                        <div class="gallery-img__wrapper">
+                            <div class="main slider  mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
                                 <div class="post ">
-                                  <div class="head_main">
-                                    <div class="head-info">
-                                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-                                      <div class="puplish-info">
-                                        <div class="poplish "><span>webania</span></div>
-                                        <div class="time"><span>july 8,2025</span></div>
-                                      </div>
+                                    <div class="head_main">
+                                        <div class="head-info">
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="puplish-info">
+                                                <div class="poplish "><span>webania</span></div>
+                                                <div class="time"><span>july 8,2025</span></div>
+                                            </div>
 
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-linkedin "></i>
+                                        </div>
                                     </div>
-                                    <div class="icon">
-                                      <i class="fa-brands fa-linkedin "></i>
+
+                                    <div class="text_content">
+                                        <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
+                                        <a href="#" class="toggle_link">Read more</a>
                                     </div>
-                                  </div>
 
-                                  <div class="text_content">
-                                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
-                                    <a href="#" class="toggle_link">Read more</a>
-                                  </div>
+                                    <div class="img_content">
+                                        <a href="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                        </a></div>
 
-                                  <div class="img_content">
-                                  <a href="">
-                                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                  </a></div>
+                                    <div class="call_to_action">
+                                        <div class="like">
+                                            <i class="fa-regular fa-heart"></i>
 
-                                  <div class="call_to_action">
-                                    <div class="like">
-                                      <i class="fa-regular fa-heart"></i>
-
+                                        </div>
+                                        <div class="share">
+                                            <i class="fa-solid fa-share"></i>
+                                            share
+                                        </div>
                                     </div>
-                                    <div class="share">
-                                      <i class="fa-solid fa-share"></i>
-                                      share
-                                    </div>
-                                  </div>
                                 </div>
-
-
-                                </div>
-
-                         </div>
-                        <div class="partner__slider-item slick-slide">
-                            <div class="main slider  mt-5">
-
-                                <div class="post ">
-                                  <div class="head_main">
-                                    <div class="head-info">
-                                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-                                      <div class="puplish-info">
-                                        <div class="poplish "><span>webania</span></div>
-                                        <div class="time"><span>july 8,2025</span></div>
-                                      </div>
-
-                                    </div>
-                                    <div class="icon">
-                                      <i class="fa-brands fa-linkedin "></i>
-                                    </div>
-                                  </div>
-
-                                  <div class="text_content">
-                                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
-                                    <a href="#" class="toggle_link">Read more</a>
-                                  </div>
-
-                                  <div class="img_content">
-                                  <a href="">
-                                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                  </a></div>
-
-                                  <div class="call_to_action">
-                                    <div class="like">
-                                      <i class="fa-regular fa-heart"></i>
-
-                                    </div>
-                                    <div class="share">
-                                      <i class="fa-solid fa-share"></i>
-                                      share
-                                    </div>
-                                  </div>
-                                </div>
-
-
-                                </div>
-
-                         </div>
-                        <div class="partner__slider-item slick-slide">
-                            <div class="main slider  mt-5">
-
-                                <div class="post ">
-                                  <div class="head_main">
-                                    <div class="head-info">
-                                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-                                      <div class="puplish-info">
-                                        <div class="poplish "><span>webania</span></div>
-                                        <div class="time"><span>july 8,2025</span></div>
-                                      </div>
-
-                                    </div>
-                                    <div class="icon">
-                                      <i class="fa-brands fa-linkedin "></i>
-                                    </div>
-                                  </div>
-
-                                  <div class="text_content">
-                                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
-                                    <a href="#" class="toggle_link">Read more</a>
-                                  </div>
-
-                                  <div class="img_content">
-                                  <a href="">
-                                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                  </a></div>
-
-                                  <div class="call_to_action">
-                                    <div class="like">
-                                      <i class="fa-regular fa-heart"></i>
-
-                                    </div>
-                                    <div class="share">
-                                      <i class="fa-solid fa-share"></i>
-                                      share
-                                    </div>
-                                  </div>
-                                </div>
-
-
-                                </div>
-
-                         </div>
-
-
-
-                         <div class="partner__slider-item slick-slide">
-                            <div class="main slider  mt-5">
-
-                                <div class="post ">
-                                  <div class="head_main">
-                                    <div class="head-info">
-                                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-                                      <div class="puplish-info">
-                                        <div class="poplish "><span>webania</span></div>
-                                        <div class="time"><span>july 8,2025</span></div>
-                                      </div>
-
-                                    </div>
-                                    <div class="icon">
-                                      <i class="fa-brands fa-linkedin "></i>
-                                    </div>
-                                  </div>
-
-                                  <div class="text_content">
-                                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
-                                    <a href="#" class="toggle_link">Read more</a>
-                                  </div>
-
-                                  <div class="img_content">
-                                  <a href="">
-                                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                  </a></div>
-
-                                  <div class="call_to_action">
-                                    <div class="like">
-                                      <i class="fa-regular fa-heart"></i>
-
-                                    </div>
-                                    <div class="share">
-                                      <i class="fa-solid fa-share"></i>
-                                      share
-                                    </div>
-                                  </div>
-                                </div>
-
-
-                                </div>
-
-                         </div>
-
-
-
-                         <div class="partner__slider-item slick-slide">
-                            <div class="main slider  mt-5">
-
-                                <div class="post ">
-                                  <div class="head_main">
-                                    <div class="head-info">
-                                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-                                      <div class="puplish-info">
-                                        <div class="poplish "><span>webania</span></div>
-                                        <div class="time"><span>july 8,2025</span></div>
-                                      </div>
-
-                                    </div>
-                                    <div class="icon">
-                                      <i class="fa-brands fa-linkedin "></i>
-                                    </div>
-                                  </div>
-
-                                  <div class="text_content">
-                                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
-                                    <a href="#" class="toggle_link">Read more</a>
-                                  </div>
-
-                                  <div class="img_content">
-                                  <a href="">
-                                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                  </a></div>
-
-                                  <div class="call_to_action">
-                                    <div class="like">
-                                      <i class="fa-regular fa-heart"></i>
-
-                                    </div>
-                                    <div class="share">
-                                      <i class="fa-solid fa-share"></i>
-                                      share
-                                    </div>
-                                  </div>
-                                </div>
-
-
-                                </div>
-
-                         </div>
-
-
-                         <div class="partner__slider-item slick-slide">
-                            <div class="main slider  mt-5">
-
-                                <div class="post ">
-                                  <div class="head_main">
-                                    <div class="head-info">
-                                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-                                      <div class="puplish-info">
-                                        <div class="poplish "><span>webania</span></div>
-                                        <div class="time"><span>july 8,2025</span></div>
-                                      </div>
-
-                                    </div>
-                                    <div class="icon">
-                                      <i class="fa-brands fa-linkedin "></i>
-                                    </div>
-                                  </div>
-
-                                  <div class="text_content">
-                                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
-                                    <a href="#" class="toggle_link">Read more</a>
-                                  </div>
-
-                                  <div class="img_content">
-                                  <a href="">
-                                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                                  </a></div>
-
-                                  <div class="call_to_action">
-                                    <div class="like">
-                                      <i class="fa-regular fa-heart"></i>
-
-                                    </div>
-                                    <div class="share">
-                                      <i class="fa-solid fa-share"></i>
-                                      share
-                                    </div>
-                                  </div>
-                                </div>
-
-
-                                </div>
-
-                         </div>
-
-
-                        {{-- <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
-                        </div>
-                        <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
-                        </div>
-                        <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
-                        </div>
-                        <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
-                        </div>
-                        <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
-                        </div> --}}
-
-                        {{-- <div class="main slider  mt-5">
-
-                            <div class="post ">
-                              <div class="head_main">
-                                <div class="head-info">
-                                  <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
-                                  <div class="puplish-info">
-                                    <div class="poplish "><span>webania</span></div>
-                                    <div class="time"><span>july 8,2025</span></div>
-                                  </div>
-
-                                </div>
-                                <div class="icon">
-                                  <i class="fa-brands fa-linkedin "></i>
-                                </div>
-                              </div>
-
-                              <div class="text_content">
-                                <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
-                                <a href="#" class="toggle_link">Read more</a>
-                              </div>
-
-                              <div class="img_content">
-                              <a href="">
-                               <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                              </a></div>
-
-                              <div class="call_to_action">
-                                <div class="like">
-                                  <i class="fa-regular fa-heart"></i>
-
-                                </div>
-                                <div class="share">
-                                  <i class="fa-solid fa-share"></i>
-                                  share
-                                </div>
-                              </div>
                             </div>
-
-
-                            </div> --}}
-
-
                         </div>
+                    </div>
+                    <div role="listitem" class="swiper-slide is-gallery">
+                        <div class="gallery-img__wrapper">
+                            <div class="main slider  mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                                <div class="post ">
+                                    <div class="head_main">
+                                        <div class="head-info">
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="puplish-info">
+                                                <div class="poplish "><span>webania</span></div>
+                                                <div class="time"><span>july 8,2025</span></div>
+                                            </div>
 
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-linkedin "></i>
+                                        </div>
+                                    </div>
 
+                                    <div class="text_content">
+                                        <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
+                                        <a href="#" class="toggle_link">Read more</a>
+                                    </div>
+
+                                    <div class="img_content">
+                                        <a href="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                        </a></div>
+
+                                    <div class="call_to_action">
+                                        <div class="like">
+                                            <i class="fa-regular fa-heart"></i>
+
+                                        </div>
+                                        <div class="share">
+                                            <i class="fa-solid fa-share"></i>
+                                            share
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="listitem" class="swiper-slide is-gallery">
+                        <div class="gallery-img__wrapper">
+                            <div class="main slider  mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                                <div class="post ">
+                                    <div class="head_main">
+                                        <div class="head-info">
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="puplish-info">
+                                                <div class="poplish "><span>webania</span></div>
+                                                <div class="time"><span>july 8,2025</span></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-linkedin "></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="text_content">
+                                        <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
+                                        <a href="#" class="toggle_link">Read more</a>
+                                    </div>
+
+                                    <div class="img_content">
+                                        <a href="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                        </a></div>
+
+                                    <div class="call_to_action">
+                                        <div class="like">
+                                            <i class="fa-regular fa-heart"></i>
+
+                                        </div>
+                                        <div class="share">
+                                            <i class="fa-solid fa-share"></i>
+                                            share
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="listitem" class="swiper-slide is-gallery">
+                        <div class="gallery-img__wrapper">
+                            <div class="main slider  mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                                <div class="post ">
+                                    <div class="head_main">
+                                        <div class="head-info">
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="puplish-info">
+                                                <div class="poplish "><span>webania</span></div>
+                                                <div class="time"><span>july 8,2025</span></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-linkedin "></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="text_content">
+                                        <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
+                                        <a href="#" class="toggle_link">Read more</a>
+                                    </div>
+
+                                    <div class="img_content">
+                                        <a href="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                        </a></div>
+
+                                    <div class="call_to_action">
+                                        <div class="like">
+                                            <i class="fa-regular fa-heart"></i>
+
+                                        </div>
+                                        <div class="share">
+                                            <i class="fa-solid fa-share"></i>
+                                            share
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="listitem" class="swiper-slide is-gallery">
+                        <div class="gallery-img__wrapper">
+                            <div class="main slider  mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                                <div class="post ">
+                                    <div class="head_main">
+                                        <div class="head-info">
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="puplish-info">
+                                                <div class="poplish "><span>webania</span></div>
+                                                <div class="time"><span>july 8,2025</span></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-linkedin "></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="text_content">
+                                        <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
+                                        <a href="#" class="toggle_link">Read more</a>
+                                    </div>
+
+                                    <div class="img_content">
+                                        <a href="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                        </a></div>
+
+                                    <div class="call_to_action">
+                                        <div class="like">
+                                            <i class="fa-regular fa-heart"></i>
+
+                                        </div>
+                                        <div class="share">
+                                            <i class="fa-solid fa-share"></i>
+                                            share
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="listitem" class="swiper-slide is-gallery">
+                        <div class="gallery-img__wrapper">
+                            <div class="main slider  mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                                <div class="post ">
+                                    <div class="head_main">
+                                        <div class="head-info">
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="puplish-info">
+                                                <div class="poplish "><span>webania</span></div>
+                                                <div class="time"><span>july 8,2025</span></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-linkedin "></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="text_content">
+                                        <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
+                                        <a href="#" class="toggle_link">Read more</a>
+                                    </div>
+
+                                    <div class="img_content">
+                                        <a href="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                        </a></div>
+
+                                    <div class="call_to_action">
+                                        <div class="like">
+                                            <i class="fa-regular fa-heart"></i>
+
+                                        </div>
+                                        <div class="share">
+                                            <i class="fa-solid fa-share"></i>
+                                            share
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="listitem" class="swiper-slide is-gallery">
+                        <div class="gallery-img__wrapper">
+                            <div class="main slider  mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                                <div class="post ">
+                                    <div class="head_main">
+                                        <div class="head-info">
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="puplish-info">
+                                                <div class="poplish "><span>webania</span></div>
+                                                <div class="time"><span>july 8,2025</span></div>
+                                            </div>
+
+                                        </div>
+                                        <div class="icon">
+                                            <i class="fa-brands fa-linkedin "></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="text_content">
+                                        <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad</p>
+                                        <a href="#" class="toggle_link">Read more</a>
+                                    </div>
+
+                                    <div class="img_content">
+                                        <a href="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                        </a></div>
+
+                                    <div class="call_to_action">
+                                        <div class="like">
+                                            <i class="fa-regular fa-heart"></i>
+
+                                        </div>
+                                        <div class="share">
+                                            <i class="fa-solid fa-share"></i>
+                                            share
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination pb-4 mt-4"></div>
         </div>
     </div>
+
 
 
 
