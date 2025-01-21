@@ -1,7 +1,7 @@
 @if (app()->getLocale() === 'ar')
 <!-- ==== Header ar ==== -->
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top sticky-navbar">
+    <nav class="navbar navbar-expand-lg fixed-top sticky-navbar">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="#">
@@ -70,7 +70,7 @@
 @else
 <!-- ==== Header en ==== -->
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top sticky-navbar">
+    <nav class="navbar navbar-expand-lg fixed-top sticky-navbar">
         <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="#">

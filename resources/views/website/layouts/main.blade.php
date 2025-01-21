@@ -63,6 +63,8 @@
     <script src="{{ asset('assets/vendor/slick/js/slick.min.js') }}"></script>
     <!-- bootstrap five js -->
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <!-- overlay widget js -->
+    <script src="{{ asset('assets/vendor/overlay-widget/js/overlay-widget.js') }}"></script>
     <!-- ==== / js dependencies end ==== -->
     <!-- main js -->
     <script src="{{ asset('assets/js/scripts.js')}}"></script>

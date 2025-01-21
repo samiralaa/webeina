@@ -675,9 +675,10 @@
         </div>
     </div>
 
+    {{-- Technologies --}}
     <div class="container">
         <h1 class="text-captlize pb-4">Technologies</h1>
-        <div class="row g-4">
+        <div class="row g-5">
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
                     <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="png" style="height: 120px; width: 120px;">
