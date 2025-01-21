@@ -4,6 +4,12 @@
 @section('title', 'Home Page')
 
 @section('content')
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <!-- slick css -->
 <link rel="stylesheet" href="{{ asset('assets/vendor/slick/css/slick.css') }}" >
 <link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
@@ -543,65 +549,7 @@
 
 
 
-    {{-- start article --}}
-    {{-- <article class="caption-single container">
-        <div class="row">
-            <div class="col-12 col-lg-9">
 
-                <h2 class="title">
-                    <div class="line " style="display: block; text-align: left; width: 100%; opacity: 1;">
-                        Digitalagentur in Zürich, Berlin und Bozen mit Fokus auf </div>
-                    <div class="line "
-                        style="display: block; text-align: left; width: 100%; transform: translateY(0%); opacity: 1;">
-                        ROI </div>
-                </h2>
-                <div class="description " style=" opacity: 1;">
-                    <div>
-                        <div class="flex-1 overflow-hidden">
-                            <div>
-                                <div>
-                                    <div class="flex flex-col text-sm pb-9">
-                                        <div class="w-full " dir="auto" data-testid="conversation-turn-131">
-                                            <div class="px-4 py-2 justify-center text-base md:gap-6 m-auto">
-                                                <div
-                                                    class="flex flex-1 text-base mx-auto gap-3 juice:gap-4 juice:md:gap-6 md:px-5 lg:px-1 xl:px-5 md:max-w-3xl lg:max-w-[40rem] xl:max-w-[48rem]">
-                                                    <div class="relative flex w-full min-w-0 flex-col agent-turn">
-                                                        <div class="flex-col gap-1 md:gap-3">
-                                                            <div class="flex flex-grow flex-col max-w-full">
-                                                                <div class="min-h-[20px] text-message flex flex-col items-start gap-3 whitespace-pre-wrap break-words [.text-message+&amp;]:mt-5 overflow-x-auto"
-                                                                    dir="auto" data-message-author-role="assistant"
-                                                                    data-message-id="83858ec7-43b5-4c84-838a-290089c3b8f6">
-                                                                    <div
-                                                                        class="markdown prose w-full break-words dark:prose-invert light">
-                                                                        <p>Seit 2016 entwickeln wir als preisgekrönte
-                                                                            Digitalagentur in Zürich, Berlin und Bozen
-                                                                            mit nutzerzentriertem Design und moderner
-                                                                            Softwareentwicklung innovative Lösungen für
-                                                                            Unternehmen und Start-ups. Mit einem Team
-                                                                            von 50+ schlauen Köpfen und dem Einsatz
-                                                                            moderner Web, Software- und KI-Technologien
-                                                                            sind wir der Partner, mit dem Sie Ihre
-                                                                            digitale Zukunft gestalten -
-                                                                            kosteneffizient, ganzheitlich und stets am
-                                                                            Puls der Zeit.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </article> --}}
-    {{-- end article --}}
 
 
     <div class="descripation container pt-5 pb-5">
@@ -650,14 +598,15 @@
 
 
 
-    <div class="container-fluid container-cutout mb--2">
+    <div class="our_servsis container-fluid container mb--2 pt-5 pb-5">
+        <h1 class="text-capitalize mb-5 mt-5">our servsis</h1>
         <div class="row">
             <!-- itemCard -->
             @if($service)
             @foreach ($service as $item)
 
 
-            <div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
+            <div class="servsis-items col-12 col-sm-12 col-lg-6 col-xl-4 itemService pb-5 pb-md-3">
                 <div class="itemCard__imageWrap">
                     <img class="itemCard__image  lazyloaded"
                         src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg"
@@ -676,7 +625,7 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn-link" href="https://b-works.io/drupal-agentur-zuerich/">{{
+                    <a class="btn-link" href="">{{
                         $item->name[app()->getLocale()] }} <i class=" fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -792,6 +741,404 @@
         </div>
     </div>
 
+
+
+  <div class="title container pt-5">
+    <h1 class="text-capitalize ">our linkedin</h1>
+  </div>
+  <div style="display:flex ; " id="carouselExampleControlsNoTouching" class="carousel slide container" data-bs-touch="false" data-bs-interval="false">
+
+    <div class="carousel-inner ">
+        <div class="carousel-item   active">
+            <div >
+
+              <div class="main slider  mt-5">
+
+                <div class="post sm-carousel-item">
+                  <div class="head_main">
+                    <div class="head-info">
+                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                      <div class="puplish-info">
+                        <div class="poplish "><span>webania</span></div>
+                        <div class="time"><span>july 8,2025</span></div>
+                      </div>
+
+                    </div>
+                    <div class="icon">
+                      <i class="fa-brands fa-linkedin "></i>
+                    </div>
+                  </div>
+
+                  <div class="text_content">
+                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+                    <a href="#" class="toggle_link">Read more</a>
+                  </div>
+
+                  <div class="img_content">
+                  <a href="">
+                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  </a></div>
+
+                  <div class="call_to_action">
+                    <div class="like">
+                      <i class="fa-regular fa-heart"></i>
+
+                    </div>
+                    <div class="share">
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post  d-none d-md-block">
+                  <div class="head_main">
+                    <div class="head-info">
+                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                      <div class="puplish-info">
+                        <div class="poplish "><span>webania</span></div>
+                        <div class="time"><span>july 8,2025</span></div>
+                      </div>
+
+                    </div>
+                    <div class="icon">
+                      <i class="fa-brands fa-linkedin "></i>
+                    </div>
+                  </div>
+
+                  <div class="text_content">
+                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+                    <a href="#" class="toggle_link">Read more</a>
+                  </div>
+
+                  <div class="img_content">
+                  <a href="">
+                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  </a></div>
+
+                  <div class="call_to_action">
+                    <div class="like">
+                      <i class="fa-regular fa-heart"></i>
+
+                    </div>
+                    <div class="share">
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="post d-none d-lg-block ">
+                  <div class="head_main">
+                    <div class="head-info">
+                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                      <div class="puplish-info">
+                        <div class="poplish "><span>webania</span></div>
+                        <div class="time"><span>july 8,2025</span></div>
+                      </div>
+
+                    </div>
+                    <div class="icon">
+                      <i class="fa-brands fa-linkedin "></i>
+                    </div>
+                  </div>
+
+                  <div class="text_content">
+                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+                    <a href="#" class="toggle_link">Read more</a>
+                  </div>
+
+                  <div class="img_content">
+                  <a href="">
+                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  </a></div>
+
+                  <div class="call_to_action">
+                    <div class="like">
+                      <i class="fa-regular fa-heart"></i>
+
+                    </div>
+                    <div class="share">
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+            </div>
+          </div>
+          <div class="carousel-item   ">
+            <div >
+
+              <div class="main slider  mt-5">
+
+                <div class="post sm-carousel-item">
+                  <div class="head_main">
+                    <div class="head-info">
+                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                      <div class="puplish-info">
+                        <div class="poplish "><span>webania</span></div>
+                        <div class="time"><span>july 8,2025</span></div>
+                      </div>
+
+                    </div>
+                    <div class="icon">
+                      <i class="fa-brands fa-linkedin "></i>
+                    </div>
+                  </div>
+
+                  <div class="text_content">
+                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+                    <a href="#" class="toggle_link">Read more</a>
+                  </div>
+
+                  <div class="img_content">
+                  <a href="">
+                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  </a></div>
+
+                  <div class="call_to_action">
+                    <div class="like">
+                      <i class="fa-regular fa-heart"></i>
+
+                    </div>
+                    <div class="share">
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post d-none d-md-block">
+                  <div class="head_main">
+                    <div class="head-info">
+                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                      <div class="puplish-info">
+                        <div class="poplish "><span>webania</span></div>
+                        <div class="time"><span>july 8,2025</span></div>
+                      </div>
+
+                    </div>
+                    <div class="icon">
+                      <i class="fa-brands fa-linkedin "></i>
+                    </div>
+                  </div>
+
+                  <div class="text_content">
+                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+                    <a href="#" class="toggle_link">Read more</a>
+                  </div>
+
+                  <div class="img_content">
+                  <a href="">
+                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  </a></div>
+
+                  <div class="call_to_action">
+                    <div class="like">
+                      <i class="fa-regular fa-heart"></i>
+
+                    </div>
+                    <div class="share">
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="post d-none d-lg-block">
+                  <div class="head_main">
+                    <div class="head-info">
+                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                      <div class="puplish-info">
+                        <div class="poplish "><span>webania</span></div>
+                        <div class="time"><span>july 8,2025</span></div>
+                      </div>
+
+                    </div>
+                    <div class="icon">
+                      <i class="fa-brands fa-linkedin "></i>
+                    </div>
+                  </div>
+
+                  <div class="text_content">
+                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+                    <a href="#" class="toggle_link">Read more</a>
+                  </div>
+
+                  <div class="img_content">
+                  <a href="">
+                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  </a></div>
+
+                  <div class="call_to_action">
+                    <div class="like">
+                      <i class="fa-regular fa-heart"></i>
+
+                    </div>
+                    <div class="share">
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+            </div>
+          </div>
+          <div class="carousel-item   ">
+            <div >
+
+              <div class="main slider  mt-5">
+
+                <div class="post sm-carousel-item">
+                  <div class="head_main">
+                    <div class="head-info">
+                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                      <div class="puplish-info">
+                        <div class="poplish "><span>webania</span></div>
+                        <div class="time"><span>july 8,2025</span></div>
+                      </div>
+
+                    </div>
+                    <div class="icon">
+                      <i class="fa-brands fa-linkedin "></i>
+                    </div>
+                  </div>
+
+                  <div class="text_content">
+                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+                    <a href="#" class="toggle_link">Read more</a>
+                  </div>
+
+                  <div class="img_content">
+                  <a href="">
+                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  </a></div>
+
+                  <div class="call_to_action">
+                    <div class="like">
+                      <i class="fa-regular fa-heart"></i>
+
+                    </div>
+                    <div class="share">
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </div>
+                  </div>
+                </div>
+
+                <div class="post d-none d-md-block">
+                  <div class="head_main">
+                    <div class="head-info">
+                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                      <div class="puplish-info">
+                        <div class="poplish "><span>webania</span></div>
+                        <div class="time"><span>july 8,2025</span></div>
+                      </div>
+
+                    </div>
+                    <div class="icon">
+                      <i class="fa-brands fa-linkedin "></i>
+                    </div>
+                  </div>
+
+                  <div class="text_content">
+                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+                    <a href="#" class="toggle_link">Read more</a>
+                  </div>
+
+                  <div class="img_content">
+                  <a href="">
+                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  </a></div>
+
+                  <div class="call_to_action">
+                    <div class="like">
+                      <i class="fa-regular fa-heart"></i>
+
+                    </div>
+                    <div class="share">
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="post d-none d-lg-block">
+                  <div class="head_main">
+                    <div class="head-info">
+                      <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                      <div class="puplish-info">
+                        <div class="poplish "><span>webania</span></div>
+                        <div class="time"><span>july 8,2025</span></div>
+                      </div>
+
+                    </div>
+                    <div class="icon">
+                      <i class="fa-brands fa-linkedin "></i>
+                    </div>
+                  </div>
+
+                  <div class="text_content">
+                    <p    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad distinctio maxime amet cum voluptatibus neque at repellendus itaque error temporibus qui, reiciendis ipsam quo assumenda?</p>
+                    <a href="#" class="toggle_link">Read more</a>
+                  </div>
+
+                  <div class="img_content">
+                  <a href="">
+                   <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  </a></div>
+
+                  <div class="call_to_action">
+                    <div class="like">
+                      <i class="fa-regular fa-heart"></i>
+
+                    </div>
+                    <div class="share">
+                      <i class="fa-solid fa-share"></i>
+                      share
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+            </div>
+          </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+        <i class="fa-solid fa-arrow-left"
+        style="
+        background-color: black;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+    "></i>
+
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+        <i class="fa-solid fa-arrow-right" style="
+        background-color: black;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+    "></i>
+    </button>
+  </div>
+
+
+{{-- social madia --}}
+
+
+
+{{--
     <div class="news container pt-5 pb-5">
         <h1 class="text-captlize pb-4">Social networking</h1>
 
@@ -1355,12 +1702,10 @@
                                                                                             </div>
                                                                                         </div>
 
+                                                                                    </div></div></div></div> --}}
 
 
 
-
-                                                                                        <div class="space"
-                                                                                            style="height: 500px"></div>
                                                                                         {{-- end new sections --}}
                                                                                         <script>
                                                                                             var locale = "{{ app()->getLocale() }}"; // Get the locale from PHP
@@ -1433,4 +1778,5 @@
 
 
 </main>
+
 @endsection

@@ -4,7 +4,31 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
-<div class="container-fluid container-cutout mb--2">
+
+<style>
+    .bigtitle h1{
+        font-size: 90px !important;
+        font-weight: 300;
+    }
+    @media (max-width: 767px) {
+      .bigtitle h1{
+        font-size: 60px !important;
+      }
+}
+
+</style>
+<div class="spase" style="height: 120px ;"></div>
+<div class="logo-container" >
+<p style="color: #8d99a7;font-size: 0.87rem;margin-left: 2rem;line-height: 1.6;font-weight: 400;letter-spacing: 0.1rem;margin-top: 0.62rem;margin-bottom: 0.62rem;text-transform: uppercase;"><span><span><a href="" class="text-black-50">Home</a></span> » <span ><strong>services</strong></span></span></p>
+</div>
+
+<div class="bigtitle container mt-5 pt-5 mb-5 pb-4">
+    <h1 class="" >Services</h1>
+</div>
+
+
+
+<div class="container-fluid container mb--2">
     <div class="row">
         <!-- itemCard -->
         @if($serves)
