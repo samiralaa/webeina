@@ -676,67 +676,127 @@
     </div>
 
     {{-- Technologies --}}
-    <div class="container">
+    <div class="container m4">
         <h1 class="text-captlize pb-4">Technologies</h1>
-        <div class="row g-5">
+        <div class="row g-4">
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/python.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Laravel.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/django.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/flutter.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/swift-ios.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Android.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/.net.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/SQL-Server.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/mysql.png') }}" alt="png" style="height: 120px; width: 120px;">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/python.png') }}" alt="Python Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Laravel.png') }}" alt="Laravel Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/django.png') }}" alt="Django Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/flutter.png') }}" alt="Flutter Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/swift-ios.png') }}" alt="Swift Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Android.png') }}" alt="Android Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/.net.png') }}" alt=".NET Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/SQL-Server.png') }}" alt="SQL Server Logo">
+                </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="grid-card p-5 bg-white shadow-sm text-center">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/mysql.png') }}" alt="MySQL Logo">
                 </div>
             </div>
         </div>
@@ -1062,9 +1122,9 @@
 
 
   {{-- <div class="title container pt-5">
-    <h1 class="text-capitalize ">our linkedin</h1>
+    <h1 class="text-capitalize">our Linkedin</h1>
   </div>
-  <div style="display:flex ; " id="carouselExampleControlsNoTouching" class="carousel slide pb-5" data-bs-touch="false" data-bs-interval="false">
+  <div style="display:flex ;" id="carouselExampleControlsNoTouching" class="carousel slide pb-5" data-bs-touch="false" data-bs-interval="false">
 
     <div class="carousel-inner ">
         <div class="carousel-item   active">

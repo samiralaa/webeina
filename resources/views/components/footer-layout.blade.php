@@ -1,94 +1,82 @@
- <footer>
-        <div class="footer-row1">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-4 col-sm-6 d-flex flex-column ftr-brand-pp">
-                        <a class="navbar-brand align-self-start " href="#"> <img src="{{ asset('/assets/images/logo.png') }}" alt="Logo" width="100"></a>
-                        <p><span class="webenia text-radius bg-b">WEBENIA</span>  is a virtual department that can help your organization expand its business by enhancing the quantity and quality of leads and sales generated from your website, with a focus on maximizing return on investment (ROI).</p>
-                        <h5 class="head location">Locations</h5>
-                        <div class="locations d-flex flex-column">
-                            <a href="https://maps.app.goo.gl/32MvC2fBcoVZseD1A">
-                                <span">
-                                    <i class="fa-solid fa-location-dot fa-lg"></i>
-                                    Cairo Branch
-                                </span>
-                            </a>
-                            <a href="">
-                                <span>
-                                    <i class="fa-solid fa-location-dot fa-lg"></i>
-                                    Dubai Branch
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <h5 class="head">Webenia Contacts</h5>
-                        <ul class="footer-address-list ftr-details">
-                            @if (app()->getLocale() === 'ar')
-                            <li class="d-flex">
-                                <span><i class="fas fa-envelope"></i></span>
-                                <p> البريد الالكتروني <span> <a href="mailto:info@webenia.com">info@webenia.com</a></span></p>
-                            </li>
-                            <li class="d-flex">
-                                <span><i class="fab fa-skype"></i></span>
-                                <p> سكايبي <span> <a href="skype:live:.cid.bedd6a433022c5ca?call">webenia</a></span></p>
-                            </li>
-                            @else
-                            <li class="d-flex">
-                                <span><i class="fas fa-envelope"></i></span>
-                                <p> Email <span> <a href="mailto:info@webenia.com">info@webenia.com</a></span></p>
-                            </li>
-                            <li class="d-flex">
-                                <span><i class="fab fa-skype"></i></span>
-                                <p> skype <span> <a href="skype:live:.cid.bedd6a433022c5ca?call">webenia</a></span></p>
-                            </li>
-                            @endif
-                        </ul>
-                    </div>
-
-
-                    <div class="col-lg-4 col-sm-6">
-                        <h5 class="head">QuickLinks</h5>
-                        <ul class="footer-address-list link-hover">
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Digital Trasformation</a></li>
-                            <li><a href="#">Web Solutions</a></li>
-                            <li><a href="#">Digital Marketing</a></li>
-                            <li><a href="#">Mobile Solutions</a></li>
-                            <li><a href="#">Digital Content</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+<footer>
+    <div class="footer-row1">
+        <div class="container">
+            <div class="row justify-content-between gy-4">
+                <div class="col-lg-4 col-md-6 d-flex flex-column">
+                    <a class="navbar-brand align-self-start" href="#">
+                        <img src="{{ asset('/assets/images/logo.png') }}" alt="Logo" width="100">
+                    </a>
+                    <p>
+                        <span class="webenia">WEBENIA</span> is a virtual department that helps organizations expand their business by enhancing leads and sales from their website, focusing on maximizing ROI.
+                    </p>
+                    <h5 class="head">Locations</h5>
+                    <div class="locations">
+                        <a href="https://maps.app.goo.gl/32MvC2fBcoVZseD1A">
+                            <i class="fa-solid fa-location-dot"></i> Cairo Branch
+                        </a>
+                        <a href="#">
+                            <i class="fa-solid fa-location-dot"></i> Dubai Branch
+                        </a>
                     </div>
                 </div>
 
-            </div>
-        </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="head">Webenia Contacts</h5>
+                    <ul class="footer-address-list">
+                        @if (app()->getLocale() === 'ar')
+                        <li>
+                            <i class="fas fa-envelope cicon"></i>
+                            <p>البريد الالكتروني: <a href="mailto:info@webenia.com">info@webenia.com</a></p>
+                        </li>
+                        <li>
+                            <i class="fab fa-skype cicon"></i>
+                            <p>سكايبي: <a href="skype:live:.cid.bedd6a433022c5ca?call">webenia</a></p>
+                        </li>
+                        </li>
+                        @else
+                        <li>
+                            <i class="fas fa-envelope cicon"></i>
+                            <p>Email: <a href="mailto:info@webenia.com">info@webenia.com</a></p>
+                        </li>
+                        <li>
+                            <i class="fab fa-skype cicon"></i>
+                            <p>Skype: <a href="skype:live:.cid.bedd6a433022c5ca?call">webenia</a></p>
+                        </li>
+                        @endif
+                    </ul>
+                </div>
 
-
-        <div class="footer-row2">
-            <div class="copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 footer-right">
-                            <div class="footer-social-media-icons">
-                                <a href="https://www.facebook.com/Webenia-104157055242401" target="blank"><i class="fab fa-facebook"></i></a>
-                                <a href="https://twitter.com/WebeniaAgency" target="blank"><i class="fab fa-twitter"></i></a>
-                                <a href="https://www.instagram.com/webeniaagency/" target="blank"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/company/webenia/" target="blank"><i class="fab fa-linkedin"></i></a>
-                                <a href="https://www.youtube.com/@Webenia" target="_blank"><i class="fab fa-youtube"></i></a>
-                                <a href="https://www.snapchat.com/add/webenia.com?share_id=gHrT75HjgSs&amp;locale=en-US" target="_blank"><i class="fab fa-snapchat"></i></a>
-                                <a href="https://www.tiktok.com/@webenia.com?_t=8qUFX1tUyna&amp;_r=1" target="_blank">
-                                    <i class="fab fa-tiktok"></i>
-                                </a>
-
-                            </div>
-                            <div class="footer-">
-                                <p>Copyright © 2025 <a href="https://webenia.com" target="blank"><span class="webenia text-radius bg-b">WEBENIA</span></a>. All rights reserved. </p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="head">Quick Links</h5>
+                    <ul class="footer-address-list link-hover">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Digital Transformation</a></li>
+                        <li><a href="#">Web Solutions</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Mobile Solutions</a></li>
+                        <li><a href="#">Digital Content</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
+
+    <div class="footer-row2">
+        <div class="container">
+            <div class="footer-social-media-icons">
+                <a href="#" target="_blank"><i class="s-media fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="s-media fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="s-media fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="s-media fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="s-media fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="s-media fab fa-snapchat"></i></a>
+                <a href="#" target="_blank"><i class="s-media fab fa-tiktok"></i></a>
+            </div>
+            <p>
+                &copy; 2025 <a class="webenia" href="https://webenia.com" target="_blank">WEBENIA</a>. All rights reserved.
+            </p>
+        </div>
+    </div>
+</footer>
 
