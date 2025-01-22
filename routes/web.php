@@ -1,60 +1,55 @@
 <?php
 
-use App\Http\Controllers\Admin\About\AboutController;
-use App\Http\Controllers\Admin\Auth\AuthController;
-use App\Http\Controllers\Admin\Contact\ContactController;
-use App\Http\Controllers\Admin\Content\ContentCotroller;
-
-use App\Http\Controllers\Admin\CustomFiled\CustomController;
-use App\Http\Controllers\Admin\CustomFiled\CustomFildDataController;
-use App\Http\Controllers\Admin\FAQ\FAQController;
-use App\Http\Controllers\Admin\HomePage\HomePageController;
-
-use App\Http\Controllers\Admin\Package\PackageController as AdmniPackageController;
-
-use App\Http\Controllers\Admin\Package\PackageRequestController;
-use App\Http\Controllers\Admin\Quiz\AnswerController;
-use App\Http\Controllers\Admin\Quiz\QuizQuestionController;
-use App\Http\Controllers\Admin\Quiz\ResultController;
-use App\Http\Controllers\Admin\Service\ServiceController as AdminServiceController;
-use App\Http\Controllers\Admin\Service\ServiceController;
-use App\Http\Controllers\Admin\Setting\FooterController;
-use App\Http\Controllers\Admin\Users\UserController;
-use App\Http\Controllers\Api\Service\ServiceController as ServiceServiceController;
-use App\Http\Controllers\Api\Service\SubmitServiceController;
-use App\Http\Controllers\Notification\NotificationController;
-use App\Http\Controllers\Notofiction\ExcelController;
-use App\Http\Controllers\Web\ActivityLogService\ActivityLogServiceController;
-use App\Http\Controllers\Web\Auth\UserController as AuthUserController;
-use App\Http\Controllers\Web\Front\HomeController;
-use App\Http\Controllers\Web\Package\PackageController;
-use App\Http\Controllers\Web\Setting\LanguageController;
-use App\Http\Controllers\Web\User\UserProfileController;
-
 use App\Models\Content;
 use App\Models\Service;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\Support\Facades\Route;
-
-
-
-
-
+use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\LinkedInController;
+use App\Http\Controllers\Admin\FAQ\FAQController;
+
+use App\Http\Controllers\Web\Front\HomeController;
+
+use App\Http\Controllers\Admin\Auth\AuthController;
+use App\Http\Controllers\Admin\Users\UserController;
+use App\Http\Controllers\Admin\About\AboutController;
+use App\Http\Controllers\Admin\Quiz\AnswerController;
+use App\Http\Controllers\Admin\Quiz\ResultController;
+use App\Http\Controllers\Notofiction\ExcelController;
+use App\Http\Controllers\Web\Package\PackageController;
+use App\Http\Controllers\Admin\Content\ContentCotroller;
+use App\Http\Controllers\Admin\Setting\FooterController;
+use App\Http\Controllers\Web\Setting\LanguageController;
+use App\Http\Controllers\Web\User\UserProfileController;
+use App\Http\Controllers\Admin\Contact\ContactController;
+use App\Http\Controllers\Admin\Service\ServiceController;
+use App\Http\Controllers\Admin\HomePage\HomePageController;
+use App\Http\Controllers\Admin\Quiz\QuizQuestionController;
+use App\Http\Controllers\Admin\CustomFiled\CustomController;
+use App\Http\Controllers\Api\Service\SubmitServiceController;
+use App\Http\Controllers\Notification\NotificationController;
+
+use App\Http\Controllers\Admin\Package\PackageRequestController;
+use App\Http\Controllers\Admin\CustomFiled\CustomFildDataController;
+use App\Http\Controllers\Web\Auth\UserController as AuthUserController;
+use App\Http\Controllers\Web\ActivityLogService\ActivityLogServiceController;
 use App\Http\Controllers\Web\Front\Home\HomeController as HomeHomeController;
 
-Route::get('/linkedin/auth', [LinkedInController::class, 'redirectToLinkedIn']);
-Route::get('/linkedin/callback', [LinkedInController::class, 'handleCallback']);
-Route::get('/linkedin/posts', [LinkedInController::class, 'fetchCompanyPosts']);
 
 
-// package routes
 
-// Route::get('user-profile', function () {
-//     return view('website.service');
-// })->name('user-profile');
 
+use App\Http\Controllers\Admin\Package\PackageController as AdmniPackageController;
+use App\Http\Controllers\Admin\Service\ServiceController as AdminServiceController;
+
+
+
+// AQU9uUZGYqSwhqp5EGwFYGYIVk6VVY6fcCJng6vCqb4mzEr05xc7PlaDbdpfbE_4rPv6234HsA5Phz20641s179VVE6NSPkTtIaH73SMPZMANaHprvCVcCH1FZ84sVMf3lFfxYop89LPDSvbjBv9hW1bIY0Hmd1P-8N2OQzsGnc-yijVdtKL34gUgZ7LXuF4yNjcCsTbjRXS6tHCVGHF0QMKcZaaWRIrONBOZ-KiOibBRfyz60GDj-ysi-i2DVGLWkst5Y5TNupojmeBiWHFvaPNBqDfjmqqretUXH1HCjKZdnyaV0MJFi_koosZ-k7taRhbfXhiW4qcSlm5hRZ1FYioMxUnbA
+
+
+Route::get('/linkedin/organization-ids', [LinkedInController::class, 'getOrganizationIds']);
 
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/language/{locale}', [LanguageController::class, 'changeLanguage'])->name('language.change');

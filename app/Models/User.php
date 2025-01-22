@@ -26,6 +26,7 @@ class User extends Authenticatable
         'email',
         'password',
         'phone',
+        'linkedin_id',
         'is_admin'
     ];
 
