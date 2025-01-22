@@ -1,136 +1,52 @@
 <!-- resources/views/home.blade.php -->
 @extends('website.layouts.main')
-
-@section('title', 'Home Page')
+<link rel="stylesheet" href="{{ asset('assets/css/about.css') }}">
+@section('title', 'About-Us Page')
 
 @section('content')
-    <main>
-
-        <section class="cmn-banner bg-img">
-            <div class="container">
-                <div class="row gaper align-items-center">
-                    <div class="col-12 col-lg-5 col-xl-7">
-                        <div class="text-center text-lg-start">
-                            <h2 class="title title-anim">About Us</h2>
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item">
-                                        <a href="index.html">
-                                            <i class="fa-solid fa-house"></i>
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li class="breadcrumb-item active" aria-current="page">
-                                        About Us
-                                    </li>
-                                </ol>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-7 col-xl-5">
-                        <div class="text-center text-lg-start">
-                            <p class="primary-text">
-                                We are firm believers in technology , we understand its transformative power, its disruptive
-                                magnitude and how it can be a force for positive change , the possibilities are endless.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="video-modal">
-
-            <div class="section__header text-center modal-bg pt-5  img-s">
-                <div class="container">
-                    <h3 class="title title-anim text-center pt-5 mt-5">
-                        Digital Transformation is part and parcel of everything we do.
-
-                    </h3>
-                    <h3 class="title title-anim text-center pt-4 ">
-                        We believe digital technologies have bridged the gap between imagination and reality.
-                    </h3>
-                    <h3 class="title title-anim text-center pt-4 ">
-
-                        The possibilities are endless.
-                    </h3>
-                </div>
-            </div>
-
+<!-- Hero -->
+<div class="container--0-">
+    <img class="background-img" src="{{ asset('assets/images/hero/about-hero.png') }}" alt="About-Us">
+    <div class="container-0-1-0">
+        <div class="container-1-2-0">
+            <div class="text-2-3-0">About Us</div>
         </div>
+    </div>
+</div>
 
-        <section class="section agency">
-            <div class="container">
-                <div class="row gaper align-items-center">
-                    <div class="col-12 col-lg-6">
-                        <div class="agency__thumb">
-
-                            <img src="assets/images/agency/450 - 584  UAE.png" alt="Image"
-                                class="thumb-one1 fade-left p-3" />
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="agency__content section__content">
-
-                            <h2 class="title title-anim">
-                                Our Vision
-                            </h2>
-                            <div class="paragraph">
-                                <p>
-                                    To spearhead digital transformation in the region.
-                                </p>
-                                <h2 class="title title-anim mt-5">
-                                    Our Mission
-                                </h2>
-                                <div class="paragraph">
-                                    <p>
-                                        To usher businesses into the future enabling and empowering them through
-                                        state-of-the-art
-                                        digital technologies.
-                                        <br>
-                                    <ul style="list-style-type: circle; list-style-position: initial;">
-                                        <li> Help businesses embrace digital transformation</li>
-                                        <li> A digital transformation strategy unique to each business</li>
-                                        <li> A robust and sustainable growth</li>
-                                        <li> We serve organizations in the private and public sector</li>
-                                        <li> To reap maximum value from digital transformation</li>
-                                    </ul>
-                                    </p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <img src="assets/images/star.png" alt="Image" class="star" />
-                <img src="assets/images//agency/dot-large.png" alt="Image" class="dot-large" />
-        </section>
-
-        <section class="cta-s section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="cta__wrapper" data-background="assets/images/cta-bg.png">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-md-10 col-lg-9 col-xl-8 col-xxl-9">
-                                    <div class="section__header text-center">
-                                        <h2 class="title title-anim">
-                                            Stay Ahead With Our Top Notch Digital Services
-                                        </h2>
-                                    </div>
-
-                                    <div class="footer__cta text-center">
-                                        <a href="contact-us.html" class="btn btn--secondary">book a call now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <img src="assets/images/testimonial/star.png" alt="Image" class="star" />
-                            <img src="assets/images/testimonial/star.png" alt="Image" class="star-two" />
-                        </div>
-                    </div>
-                </div>
+<!-- About Section -->
+<section class="pt-5">
+    <div class="about container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h2 class="fw-bold text-success mb-4">Who We Are?</h2>
+                <p class="text-muted">
+                    Seyaha is dedicated to providing unparalleled travel experiences, bringing together adventure, luxury, and culture in unique ways. Our team of travel enthusiasts works tirelessly to curate packages that transform vacations into unforgettable journeys.
+                </p>
+                <p class="text-muted">
+                    Our mission is simple: to inspire and connect people through travel, delivering personalized experiences that create lasting memories.
+                </p>
             </div>
-        </section>
-        <!-- ==== / cta end ==== -->
-    </main>
+            <div class="col-lg-5">
+                <img src="{{ asset('assets/images/who-we-are.png') }}" alt="Our Story" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+    <div class="about container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <img src="{{ asset('assets/images/why-choose-us.png') }}" alt="Our Story" class="img-fluid rounded">
+            </div>
+            <div class="col-lg-7">
+                <h2 class="fw-bold text-success mb-4">Why Choose Us?</h2>
+                <p class="text-muted">
+                    At Webenia, we specialize in combining expert programming and innovative marketing strategies to create customized solutions that deliver results. From cutting-edge technology to user-friendly designs, our work is tailored to meet your unique needs and help your brand stand out in today’s competitive landscape.
+                </p>
+                <p class="text-muted">
+                    With a proven track record and a client-first mindset, we’re committed to your success. Whether it’s building a seamless digital experience or driving data-driven marketing campaigns, Webenia is here to help your business thrive in the digital world.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

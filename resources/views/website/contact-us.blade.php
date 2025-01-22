@@ -6,7 +6,7 @@
 
 <!-- Hero -->
 <div class="container--0-">
-    <img class="background-img" src="{{ asset('assets/images/hero/contact-hero.png') }}" alt="FAQ">
+    <img class="background-img" src="{{ asset('assets/images/hero/contact-hero.png') }}" alt="Contact-Us">
     <div class="container-0-1-0">
         <div class="container-1-2-0">
             <div class="text-2-3-0">Contact Us</div>

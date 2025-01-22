@@ -52,9 +52,6 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">تواصل معنا</a>
-                    </li>
-                    <li class="nav-item">
                         <a href="{{ route('language.change', ['locale' => 'en']) }}" class="nav-link lang">en</a>
                     </li>
                     <li class="nav-item">
@@ -117,13 +114,9 @@
                             <ul class="dropdown-menu" aria-labelledby="companyDropdown">
                                 <li><a class="dropdown-item bl" href="{{ route('faqs.index') }}">FAQs</a></li>
                                 <li><a class="dropdown-item bl" href="#">About Us</a></li>
-                                <li><a class="dropdown-item bl" href="#">Contact</a></li>
                                 <li><a class="dropdown-item bl" href="#">Dubai Branch</a></li>
                                 <li><a class="dropdown-item bl" href="#">Cairo Branch</a></li>
                             </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bl" href="#">Contact</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('language.change', ['locale' => 'ar']) }}" class="nav-link">ع</a>
