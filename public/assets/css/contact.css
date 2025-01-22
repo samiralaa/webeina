@@ -1,5 +1,5 @@
 /* hero */
-.container--0- {
+.container-0- {
     position: relative;
     height: 100vh;
     overflow: hidden;
@@ -19,19 +19,19 @@
     z-index: -1;
 }
 
-.container-0-1-0 {
+.container-0 {
     position: relative;
     width: 100%;
     text-align: center;
 }
 
-.container-1-2-0 {
+.container-1 {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.text-2-3-0 {
+.text-2 {
     font-size: 5rem;
     font-weight: bolder;
     color: #fff;

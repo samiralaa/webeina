@@ -5,11 +5,11 @@
 
 @section('content')
 <!-- Hero -->
-<div class="container--0-">
+<div class="container-0-">
     <img class="background-img" src="{{ asset('assets/images/hero/about-hero.png') }}" alt="About-Us">
-    <div class="container-0-1-0">
-        <div class="container-1-2-0">
-            <div class="text-2-3-0">About Us</div>
+    <div class="container-0">
+        <div class="container-1">
+            <div class="text-2">About Us</div>
         </div>
     </div>
 </div>
