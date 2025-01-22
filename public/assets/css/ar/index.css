@@ -30,8 +30,9 @@
 .container-1-2-0 {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     max-width: 600px;
+    gap: 20px;
+    margin: 50px;
     align-items: right;
 }
 
@@ -50,6 +51,12 @@
     text-align: right;
 }
 
+@media (max-width: 768px) {
+    .container-1-2-0 {
+        line-height: 1;
+        margin: 0;
+    }
+}
 
 /* Partners */
 .partner__slider-item img {

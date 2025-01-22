@@ -3,8 +3,17 @@
 @section('title', 'FAQs Page')
 
 @section('content')
-<div style="height: 70px; background-color: #0b0b0b"></div>
-<h1>FAQs</h1>
+
+
+<!-- Hero -->
+<div class="container-0-">
+    <img class="background-img" src="{{ asset('assets/images/hero/faq-hero.png') }}" alt="FAQ">
+    <div class="container-0">
+        <div class="container-1">
+            <div class="text-2">FAQS</div>
+        </div>
+    </div>
+</div>
 
 <div class="wrapper">
 

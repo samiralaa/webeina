@@ -535,7 +535,7 @@
             Your browser does not support the video tag.
         </video>
         <div class="container-0-1-0">
-            <div class="container-1-2-0 m-5">
+            <div class="container-1-2-0">
                 <div class="text-2-3-0">Transform Your Ideas into Digital Reality</div>
                 <div class="text-2-3-1">
                     Our innovative platform empowers you to create stunning websites
@@ -669,6 +669,51 @@
                         <div class="partner__slider-item slick-slide">
                             <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
                         </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                        </div>
+                        <div class="partner__slider-item slick-slide">
+                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -679,66 +724,6 @@
     <div class="container m4">
         <h1 class="text-captlize pb-4">Technologies</h1>
         <div class="row g-4">
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
-                </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-                <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
-                </div>
-            </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
                     <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
