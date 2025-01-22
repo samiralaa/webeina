@@ -11,12 +11,18 @@
                     </p>
                     <h5 class="head">Locations</h5>
                     <div class="locations">
-                        <a href="https://maps.app.goo.gl/32MvC2fBcoVZseD1A">
-                            <i class="fa-solid fa-location-dot"></i> Cairo Branch
-                        </a>
-                        <a href="#">
-                            <i class="fa-solid fa-location-dot"></i> Dubai Branch
-                        </a>
+                        <div>
+                            <a href="https://maps.app.goo.gl/32MvC2fBcoVZseD1A">
+                                <i class="fa-solid fa-location-dot"></i> Cairo Office
+                            </a>
+                            <p>10 Doctor Hassan El-Sherif- Nasr City- Cairo</p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <i class="fa-solid fa-location-dot"></i> Dubai Office
+                            </a>
+                            <p>Office 43-44, Building of Dubai Municipality, Al-Fahidi, Bur Dubai, UAE</p>
+                        </div>
                     </div>
                 </div>
 
@@ -49,13 +55,13 @@
                 <div class="col-lg-4 col-md-6">
                     <h5 class="head">Quick Links</h5>
                     <ul class="footer-address-list link-hover">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Digital Transformation</a></li>
-                        <li><a href="#">Web Solutions</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                        <li><a href="#">Mobile Solutions</a></li>
-                        <li><a href="#">Digital Content</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a class="lh" href="#">About</a></li>
+                        <li><a class="lh" href="#">Digital Transformation</a></li>
+                        <li><a class="lh" href="#">Web Solutions</a></li>
+                        <li><a class="lh" href="#">Digital Marketing</a></li>
+                        <li><a class="lh" href="#">Mobile Solutions</a></li>
+                        <li><a class="lh" href="#">Digital Content</a></li>
+                        <li><a class="lh" href="#">Contact</a></li>
                     </ul>
                 </div>
             </div>
