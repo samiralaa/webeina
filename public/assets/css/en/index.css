@@ -164,6 +164,8 @@
         flex-direction: row;
         align-items: center;
         display: flex;
+        gap: 40px;
+        justify-content: center;
     }
     .swiper-slide {
         width: 50vw;
@@ -184,7 +186,7 @@
     }
     .gallery-img__wrapper {
         position: relative;
-        overflow: hidden;
+        /* overflow: hidden; */
         width: 100%;
         display: flex;
         justify-content: center;
@@ -291,8 +293,8 @@
     border-radius: 8px;
   }
   .main .post{
-    min-width: 200px;
-    max-width: 200px;
+    min-width: 230px;
+    max-width: 230px;
 
     background-color:#f8f8f8;
     padding: 10px 10px;
@@ -327,8 +329,12 @@
   }
 
   .main .post .head_main .head-info .poplish{
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight:500;
+  }
+
+  .main .post .head_main .head-info .poplish::first-letter{
+    text-transform: uppercase;
   }
   .main .post .head_main .head-info .time{
     font-size: 13px;
@@ -337,6 +343,7 @@
   .main .post .text_content p{
     margin-bottom: 3px;
     margin-top: 5px;
+    font-size: 14px;
 
   }
   .main .post .text_content a{
@@ -345,7 +352,7 @@
     color: rgb(124, 124, 124);
   }
   .main .post .img_content{
-    max-width:200px;
+    max-width:230px;
     margin-top: 10px;
     height: 120px;
     border-radius: 4px;
@@ -372,6 +379,53 @@
     gap: 8px;
   }
 
+
+@media only screen and (max-width: 768px) {
+    .swiperParallax  .gallery-img__wrapper.gallery-img  {
+                /* position: absolute; */
+                top: 0;
+                width: 130%;
+                height: 100%;
+                max-width: none;
+                /* object-fit: cover; */
+                /* opacity: 5; */
+
+        }
+
+        .swiperParallax  .swiper-wrapper{
+                flex-direction: row;
+                align-items: center;
+                display: flex;
+                 gap:0;
+                justify-content: flex-start;
+            }
+
+}
+
+@media (max-width: 768px) {
+    .swiper-slide.is-gallery.swiper-slide-visible.swiper-slide-active {
+        width: 768px;
+        opacity: 1;
+        pointer-events: auto;
+        height: 128vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .swiperParallax {
+        .swiper-slide {
+            &.swiper-slide-active {
+                .gallery-img__wrapper {
+                    opacity: 1;
+                    transform: scale(1);
+                    height: calc(337px + 229px);
+                }
+            }
+        }
+    }
+}
+
+/*swiper-slide is-gallery swiper-slide-visible swiper-slide-active*/
 
 
 /* linked in posts style */
