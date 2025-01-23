@@ -40,11 +40,11 @@
                         <label for="message" class="form-label">Message</label>
                         <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-danger">Send Message</button>
+                    <button type="submit" class="btn btn-success">Send Message</button>
                 </form>
             </div>
         </div>
-        <div class="locations">
+        <div class="our-locations">
             <h2 class="text-center">Our Locations</h2>
             <div class="container" style="min-height: 500px;">
                 <div class="location col-12 col-md-6">
