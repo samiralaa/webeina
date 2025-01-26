@@ -35,9 +35,7 @@ class HomeController extends Controller
 
     public function servesDetails($id)
     {
-        $service = Service::find($id);
-        //  dd($service->contents[4]['questions']);
-        //dd($service->contents);
+        $service = Service::with('contents')->find($id);
         return view('website.serves-details', compact('service'));
     }
 

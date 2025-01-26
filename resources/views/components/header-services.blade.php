@@ -76,7 +76,7 @@
 
             <!-- Toggler for mobile view -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
 
@@ -90,46 +90,40 @@
                         <a class="nav-link dropdown-toggle bl" href="{{ route('user-profile') }}" id="navbarDropdown" role="button">
                             Services
                         </a>
-
-
-
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach ($services as $service )
-                            <li><a class="dropdown-item bl" href="#">{{ $service->name[app()->getLocale()] }}</a>
+                            <li><a class="dropdown-item bl" href="{{ route('serves.details', ['id' => $service->id]) }}">{{ $service->name[app()->getLocale()] }}</a>
                             </li>
                             @endforeach
                         </ul>
-
-
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link bl" href="#">Partners</a>
-                        </li>
-                        <li class="nav-item dropdown bl">
-                            <a class="nav-link dropdown-toggle bl" href="#" id="companyDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Company
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="companyDropdown">
-                                <li><a class="dropdown-item bl" href="{{ route('faqs.index') }}">FAQs</a></li>
-                                <li><a class="dropdown-item bl" href="{{route('about-us')}}">About Us</a></li>
-                                <li><a class="dropdown-item bl" href="#">Dubai Branch</a></li>
-                                <li><a class="dropdown-item bl" href="#">Cairo Branch</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('language.change', ['locale' => 'ar']) }}" class="nav-link">ع</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('contact')}}" class="request-quote-btn quote">
-                                <i class="fa-solid fa-arrow-right"></i>
-                                <span>Get in touch</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-        </nav>
-    </header>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link bl" href="#">Partners</a>
+                    </li>
+                    <li class="nav-item dropdown bl">
+                        <a class="nav-link dropdown-toggle bl" href="#" id="companyDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="companyDropdown">
+                            <li><a class="dropdown-item bl" href="{{ route('faqs.index') }}">FAQs</a></li>
+                            <li><a class="dropdown-item bl" href="{{route('about-us')}}">About Us</a></li>
+                            <li><a class="dropdown-item bl" href="#">Dubai Branch</a></li>
+                            <li><a class="dropdown-item bl" href="#">Cairo Branch</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('language.change', ['locale' => 'ar']) }}" class="nav-link">ع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('contact')}}" class="request-quote-btn quote">
+                            <i class="fa-solid fa-arrow-right"></i>
+                            <span>Get in touch</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+    </nav>
+</header>
 
 @endif

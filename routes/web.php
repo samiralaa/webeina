@@ -49,7 +49,7 @@ use App\Http\Controllers\Admin\Service\ServiceController as AdminServiceControll
 // AQU9uUZGYqSwhqp5EGwFYGYIVk6VVY6fcCJng6vCqb4mzEr05xc7PlaDbdpfbE_4rPv6234HsA5Phz20641s179VVE6NSPkTtIaH73SMPZMANaHprvCVcCH1FZ84sVMf3lFfxYop89LPDSvbjBv9hW1bIY0Hmd1P-8N2OQzsGnc-yijVdtKL34gUgZ7LXuF4yNjcCsTbjRXS6tHCVGHF0QMKcZaaWRIrONBOZ-KiOibBRfyz60GDj-ysi-i2DVGLWkst5Y5TNupojmeBiWHFvaPNBqDfjmqqretUXH1HCjKZdnyaV0MJFi_koosZ-k7taRhbfXhiW4qcSlm5hRZ1FYioMxUnbA
 
 
-Route::get('/linkedin/organization-ids', [LinkedInController::class, 'getOrganizationIds']);
+Route::get('/linkedin/organization-ids', [LinkedInController::class, 'getSpecificCompanyPosts']);
 
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/language/{locale}', [LanguageController::class, 'changeLanguage'])->name('language.change');
@@ -182,9 +182,9 @@ Route::delete('/package/delete/{id}', [AdmniPackageController::class, 'destroy']
 
 // route serves
 
-Route::get('admin/fqa',[FAQController::class, 'index'])->name('faq.index');
-Route::get('admin/fqa/create',[FAQController::class, 'create'])->name('faq.create');
-Route::post('admin/fqa/store',[FAQController::class, 'store'])->name('faqs.store');
+Route::get('admin/fqa', [FAQController::class, 'index'])->name('faq.index');
+Route::get('admin/fqa/create', [FAQController::class, 'create'])->name('faq.create');
+Route::post('admin/fqa/store', [FAQController::class, 'store'])->name('faqs.store');
 
 // website.package.order
 Route::prefix('services')->group(function () {
@@ -217,7 +217,7 @@ Route::get('/faqs', [HomeHomeController::class, 'faqs'])->name('faqs.index');
 Route::get('/admin/notifications', [NotificationController::class, 'index'])->name('notifications.index');
 // emails notification
 Route::get('/admin/emails/notification', [NotificationController::class, 'emailsNotificationIndex'])->name('emails.notification.index');
-Route::post('/send/emails/for/users/byexcel',[ExcelController::class, 'processUpload'])->name('upload-excel');
+Route::post('/send/emails/for/users/byexcel', [ExcelController::class, 'processUpload'])->name('upload-excel');
 Route::get('/show/upload/form/for/emails', [ExcelController::class, 'showUploadForm'])->name('show.uplode.from');
 // i user pages
 Route::get('/clear-all-cache', function () {
@@ -238,5 +238,3 @@ Route::get('/clear-all-cache', function () {
         'config_cache' => $exitCodeConfigCache,
     ]);
 });
-
-
