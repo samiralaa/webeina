@@ -1,24 +1,53 @@
 @extends('website.layouts.main')
-
+<link rel="stylesheet" href="{{ asset('assets/css/service-details.css') }}">
 @section('title', $service->name[app()->getLocale()])
 
 @section('content')
-<div class="container my-5">
-    <!-- Service Title -->
-    <h1 class="text-center mb-4">{{ $service->name[app()->getLocale()] }}</h1>
-    <!-- Service Description -->
-    <p class="text-center">{{ $service->description[app()->getLocale()] }}</p>
-
-    <!-- Contents -->
-    @if ($service->contents->count() > 0)
-        @foreach ($service->contents as $content)
-            <div class="content-item my-4">
-                <!-- Content Title -->
-                <h2 class="text-primary">{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</h2>
-                <!-- Content Description -->
-                <p>{{ $content->description[app()->getLocale()] }}</p>
-            </div>
-        @endforeach
-    @endif
+<!-- Hero -->
+<div class="container-0-">
+    <img class="background-img" src="{{ asset('assets/images/hero/about-hero.png') }}" alt="{{ $service->name[app()->getLocale()] }}">
+    <div class="container-0">
+        <div class="container-1">
+            <div class="text-2">{{ $service->name[app()->getLocale()] }}</div>
+            <div class="text-3">{{ $service->description[app()->getLocale()] }}</div>
+        </div>
+    </div>
 </div>
+
+    <div class="container pt-5 pb-5">
+        <h1 class="text-captlize pb-4">Features</h1>
+    </div>
+<section class="feature-section">
+    <div class="container features">
+        <div class="left-panel">
+            <!-- Dropdown for smaller screens -->
+            <select class="feature-dropdown" aria-label="Select a service" onchange="showDetails(this.value)">
+                @foreach ($service->contents as $content)
+                <option value="details{{ $content->id }}">{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</option>
+                @endforeach
+            </select>
+
+            <!-- Original list for larger screens -->
+            <ul class="feature-list">
+                @foreach ($service->contents as $content)
+                <li onclick="showDetails('details{{ $content->id }}')">{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</li>
+                @endforeach
+            </ul>
+        </div>
+
+    <div class="verticalline">
+        <div class="select"></div>
+    </div>
+
+    <div class="right-panel">
+        @foreach ($service->contents as $content)
+        <div id="details{{ $content->id }}" class="details">
+            <h2>{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</h2>
+            <p>{{ $content->description[app()->getLocale()] ?? $content->description['en'] }}</p>
+        </div>
+        @endforeach
+    </div>
+    </div>
+</section>
+
 @endsection

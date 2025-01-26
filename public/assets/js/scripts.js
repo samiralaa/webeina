@@ -20,7 +20,6 @@ document.addEventListener("scroll", () => {
 
 
 // Mouse Follow Effect //
-
 console.clear();
 
 const circleElement = document.querySelector('.circle');
@@ -429,6 +428,60 @@ $(document).ready(function(){
     });
 });
 
+// Features //
+function showDetails(detailId) {
+    const details = document.querySelectorAll('.details');
+    details.forEach((detail) => {
+        detail.classList.remove('active');
+    });
 
+    const selectedDetail = document.getElementById(detailId);
+    selectedDetail.classList.add('active');
 
+    const items = document.querySelectorAll('.left-panel ul li');
+    items.forEach((item) => {
+        item.classList.remove('active');
+    });
 
+    const activeItem = document.querySelector(`[onclick="showDetails('${detailId}')"]`);
+    activeItem.classList.add('active');
+
+    const caret = document.querySelector('.verticalline .select');
+    const itemOffsetTop = activeItem.offsetTop;
+    const itemHeight = activeItem.offsetHeight;
+
+    const heroHeight = document.querySelector('.container-0-').offsetHeight;
+
+    caret.style.transition = 'top 0.3s ease-in-out';
+    caret.style.top = `${itemOffsetTop - heroHeight + itemHeight /20 - caret.offsetHeight / .115}px`;
+}
+
+const items = document.querySelectorAll('.left-panel ul li');
+items.forEach((item) => {
+    item.setAttribute('tabindex', '0');
+    item.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            const detailId = item.getAttribute('onclick').match(/'(.+)'/)[1];
+            showDetails(detailId);
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const firstItem = document.querySelector('.left-panel ul li');
+    if (firstItem) {
+        const firstDetailId = firstItem.getAttribute('onclick').match(/'(.+)'/)[1];
+        showDetails(firstDetailId);
+    }
+
+    const dropdown = document.querySelector('.feature-dropdown');
+    if (dropdown) {
+        dropdown.addEventListener('change', (event) => {
+            const selectedDetailId = event.target.value;
+            showDetails(selectedDetailId);
+        });
+    } else {
+        console.log("Dropdown not found.");
+    }
+});
