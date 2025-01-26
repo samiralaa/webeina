@@ -54,7 +54,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn-link" href="https://b-works.io/drupal-agentur-zuerich/">{{
+                <a class="btn-link" href="#">{{
                     $item->name[app()->getLocale()] }} <i class=" fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
