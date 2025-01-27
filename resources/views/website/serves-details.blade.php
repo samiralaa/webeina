@@ -48,6 +48,50 @@
         @endforeach
     </div>
     </div>
+
+
+      {{-- start Q-contact --}}
+
+      <div class="Q-contact pt-5 pb-5">
+
+         <div class="row mt-5 d-flex justify-content-center ">
+               {{-- <div class="col-12 col-md-6">
+               <img class="img-fluid" src="{{ asset('assets/images/contact-us.png') }}" alt="">
+               </div> --}}
+
+               <div class="col-12 col-md-6">
+                   <h4 class="text-center text-capitalize">quick contact</h4>
+                   <form action="submit-form.php" method="post">
+                       <div class="mb-3 pt-2 d-flex gap-3 ">
+                           <div class="w-50">
+                               <label for="name" class="form-label text-capitalize fw-bold">Your Name</label>
+                           <input type="text" class="form-control" id="name" name="name" required>
+
+                           </div>
+                           <div class="mb-3 w-50">
+                               <label for="email" class="form-label text-capitalize fw-bold">Your Email</label>
+                               <input type="email" class="form-control" id="email" name="email" required>
+                           </div>
+                       </div>
+                       <div class="mb-3">
+                           <label for="email" class="form-label text-capitalize fw-bold">Business email</label>
+                           <input type="email" class="form-control" id="email" name="email" required>
+                       </div>
+                       <div class="mb-3">
+                           <label for="message" class="form-label text-capitalize fw-bold">Message</label>
+                           <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                       </div>
+                       <button type="submit" class="btn btn-success">Send Message</button>
+                   </form>
+               </div>
+           </div>
+
+       </div>
+
+
+       {{-- end Q-contact --}}
+
+
 </section>
 
 @endsection
