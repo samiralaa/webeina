@@ -61,7 +61,8 @@
 
                <div class="col-12 col-md-6">
                    <h4 class="text-center text-capitalize">quick contact</h4>
-                   <form action="submit-form.php" method="post">
+                   <form action="{{route('contact.store')}}" method="post">
+                   @csrf
                        <div class="mb-3 pt-2 d-flex gap-3 ">
                            <div class="w-50">
                                <label for="name" class="form-label text-capitalize fw-bold">Your Name</label>

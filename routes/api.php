@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\LinkedInController;
 
-Route::get('/linkedin/login', [LinkedInController::class, 'redirectToLinkedIn']);
-Route::get('/linkedin/callback', [LinkedInController::class, 'handleCallback']);
+
+
+Route::get('/linkedin/auth', [LinkedInController::class, 'redirectToLinkedIn']);
+Route::get('/linkedin/callback', [LinkedInController::class, 'handleLinkedInCallback']);
+Route::get('/linkedin/organizations', [LinkedInController::class, 'getOrganizations']);
 Route::get('/linkedin/posts', [LinkedInController::class, 'getCompanyPosts']);
 
 

@@ -3,53 +3,38 @@
 namespace App\Services;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\RequestException;
 
 class LinkedInService
 {
-    protected $accessToken;
-    protected $client;
+    private $client;
 
     public function __construct()
     {
-        $this->accessToken = 'AQU9uUZGYqSwhqp5EGwFYGYIVk6VVY6fcCJng6vCqb4mzEr05xc7PlaDbdpfbE_4rPv6234HsA5Phz20641s179VVE6NSPkTtIaH73SMPZMANaHprvCVcCH1FZ84sVMf3lFfxYop89LPDSvbjBv9hW1bIY0Hmd1P';
         $this->client = new Client([
             'base_uri' => 'https://api.linkedin.com/v2/',
-            'headers' => [
-                'Authorization' => "Bearer {$this->accessToken}",
-                'Content-Type'  => 'application/json',
-                'Accept'        => 'application/json',
-            ],
         ]);
     }
 
-    /**
-     * Get the organization IDs where the user is an administrator.
-     */
-    public function getOrganizationIds()
+    public function getPosts()
     {
+        $accessToken = env('LINKEDIN_ACCESS_TOKEN');
+        $organizationId = env('LINKEDIN_ORGANIZATION_ID');
+
         try {
-            $response = $this->client->get('organizationalEntityAcls', [
+            $response = $this->client->get('ugcPosts', [
+                'headers' => [
+                    'Authorization' => "Bearer $accessToken",
+                ],
                 'query' => [
-                    'q' => 'roleAssignee',
-                    'role' => 'ADMINISTRATOR',
+                    'q' => 'authors',
+                    'authors' => "urn:li:organization:$organizationId",
                 ],
             ]);
 
-            $data = json_decode($response->getBody()->getContents(), true);
-
-            // Extract organization IDs from the response
-            $organizationIds = array_map(function ($element) {
-                // Extract the numeric ID from the "organizationalTarget"
-                return str_replace('urn:li:organization:', '', $element['organizationalTarget']);
-            }, $data['elements']);
-
-            return $organizationIds;
-        } catch (RequestException $e) {
-            return [
-                'error' => $e->getMessage(),
-                'response' => $e->hasResponse() ? $e->getResponse()->getBody()->getContents() : null,
-            ];
+            return json_decode($response->getBody(), true);
+        } catch (\Exception $e) {
+            // لو حصل خطأ، رجّع الرسالة
+            return ['error' => $e->getMessage()];
         }
     }
 }

@@ -49,7 +49,7 @@ use App\Http\Controllers\Admin\Service\ServiceController as AdminServiceControll
 // AQU9uUZGYqSwhqp5EGwFYGYIVk6VVY6fcCJng6vCqb4mzEr05xc7PlaDbdpfbE_4rPv6234HsA5Phz20641s179VVE6NSPkTtIaH73SMPZMANaHprvCVcCH1FZ84sVMf3lFfxYop89LPDSvbjBv9hW1bIY0Hmd1P-8N2OQzsGnc-yijVdtKL34gUgZ7LXuF4yNjcCsTbjRXS6tHCVGHF0QMKcZaaWRIrONBOZ-KiOibBRfyz60GDj-ysi-i2DVGLWkst5Y5TNupojmeBiWHFvaPNBqDfjmqqretUXH1HCjKZdnyaV0MJFi_koosZ-k7taRhbfXhiW4qcSlm5hRZ1FYioMxUnbA
 
 
-Route::get('/linkedin/organization-ids', [LinkedInController::class, 'getSpecificCompanyPosts']);
+Route::get('/linkedin/posts', [LinkedInController::class, 'getCompanyPosts']);
 
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/language/{locale}', [LanguageController::class, 'changeLanguage'])->name('language.change');
