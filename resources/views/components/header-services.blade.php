@@ -30,13 +30,20 @@
                         <a class="nav-link dropdown-toggle bl" href="{{ route('user-profile') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             خدماتنا
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {{-- <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item bl" href="#">التحول الرقمي</a></li>
                             <li><a class="dropdown-item bl" href="#">حلول الويب</a></li>
                             <li><a class="dropdown-item bl" href="#">التسويق الرقمي</a></li>
                             <li><a class="dropdown-item bl" href="#">حلول الجوال</a></li>
                             <li><a class="dropdown-item bl" href="#">المحتوى الرقمي</a></li>
+                        </ul> --}}
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @foreach ($services as $service )
+                            <li><a class="dropdown-item bl" href="{{ route('serves.details', ['id' => $service->id]) }}">{{ $service->name[app()->getLocale()] }}</a>
+                            </li>
+                            @endforeach
                         </ul>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link bl" href="#">شركاؤنا</a>

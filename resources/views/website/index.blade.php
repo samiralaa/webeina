@@ -787,7 +787,124 @@
         </div>
     </div>
 
+{{-- why work with webania --}}
 
+<div class="work pt-5 pb-5 mt-5 mb-5 bg-light">
+    <h2 class="text-capitalize text-center">Why  Webenia</h2>
+    <div class="main-work container pt-5 d-flex justify-content-center">
+        <div class="col-lg-12">
+            <div class="row about-us-section text-white">
+                <!-- Left Column -->
+                <div class="col-md-6 d-flex flex-column align-items-end about-content-hover ">
+                    <!-- Section 1 -->
+                    <div class="col-md-9 col-12 mb-5">
+                        <div class="about-content-section rounded-4 p-4 about-content-first secend-color">
+                            <img alt="Pic" class="mb-2 img-fluid" src="https://www.ipixtechnologies.com/images/web/images/menon.svg">
+                            <h3 class="text-white text-capitalize" >We have a lot of experience</h3>
+                            <p>which means you will get the best results</p>
+                        </div>
+                    </div>
+                    <!-- Section 2 -->
+                    <div class="col-md-9 col-12">
+                        <div class="about-content-section rounded-4 p-4 about-content-third main-color">
+                            <div class="d-flex align-items-center">
+                                <h2 class="text-white counter me-2 odometer" data-target="3000">200</h2>
+                                <b>+</b>
+                            </div>
+                            <h3 class="text-white">Projects Launched</h3>
+                            <p>With all these projects, we guarantee excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column -->
+                <div class="col-md-6 about-content-hover-end">
+                    <!-- Section 3 -->
+                    <div class="col-md-9 col-12 mb-5">
+                        <div class="about-content-section rounded-4 p-4 mt-5 about-content-second  main-color" >
+                            <img alt="Pic" class="mb-2 img-fluid" src="https://www.ipixtechnologies.com/images/web/images/menon-2.png">
+                            <h3 class="text-white text-capitalize">Leading IT Service Firm</h3>
+                            <p>Expertise in serving a wide variety of industries for technological advancement.</p>
+                        </div>
+                    </div>
+                    <!-- Section 4 -->
+                    <div class="col-md-9 col-12">
+                        <div class="about-content-section rounded-4 p-4 about-content-fourth secend-color " >
+                            <h3 class="text-white text-capitalize">We care about the smallest details</h3>
+                            <div class="d-flex align-items-center">
+                                {{-- <h2 class="text-white counter me-2 odometer" data-target="2007">0</h2> --}}
+                            </div>
+                            <p>We care about everything about your product to make it the best in your field</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{{-- <div class="work pt-5 pb-5 mt-5 mb-5 " style="background-color: rgb(221, 221, 221)">
+    <h2 class="text-captlize text-center">why work with  webenia</h2>
+    <div class="main-work container display: flex; justify-content: center; ">
+
+        <div class="col-lg-12 ">
+            <div class="row about-us-section text-white">
+                <div class="col-sm-12 col-md-6 about-content-hover" style="
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+">
+                    <!-- Section 1 -->
+                    <div class="col-md-7 col-12 ">
+                        <div class="about-content-section rounded-4 p-5 about-content-first">
+                            <img alt="Pic" class="mb-2" src="https://www.ipixtechnologies.com/images/web/images/menon.svg">
+                            <h3 class="text-white">IT ARM of Kreston Menon</h3>
+                            <p>The superbrand award winner for 10 consecutive times..!</p>
+                        </div>
+                    </div>
+                    <!-- Section 2 -->
+                    <div class="col-md-7 col-12 ">
+                        <div class="about-content-section rounded-4 p-5 about-content-third">
+                            <div class="d-flex">
+                                <h2 class="text-white counter me-2 odometer" data-target="3000">0</h2>
+                                <b>+</b>
+                            </div>
+                            <h3 class="text-white">Projects Launched</h3>
+                            <p>Completed the projects successfully with a high level of excellence and dedication.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 about-content-hover-end">
+                    <!-- Section 3 -->
+                    <div class="col-md-7 col-12">
+                        <div class="about-content-section rounded-4 p-5 about-content-second">
+                            <img alt="Pic" class="mb-2" src="https://www.ipixtechnologies.com/images/web/images/menon-2.png">
+                            <h3 class="text-white">Leading IT Service Firm</h3>
+                            <p>Expertise in serving a wide variety of industries for technological advancement.</p>
+                        </div>
+                    </div>
+                    <!-- Section 4 -->
+                    <div class="col-md-7 col-12">
+                        <div class="about-content-section rounded-4 p-5 about-content-fourth">
+                            <h3 class="text-white">Serving Industries Since</h3>
+                            <div class="d-flex">
+                                <h2 class="text-white counter me-2 odometer" data-target="2007">0</h2>
+                            </div>
+                            <p>More than a decade of excellence that entitled us as the best IT solutions provider.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div> --}}
+{{-- why work with webania --}}
 
     {{-- Linkedin --}}
     <div class="main-wrapper">

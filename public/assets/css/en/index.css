@@ -479,3 +479,13 @@
 .our_servsis .servsis-items .itemCard__header .btn-link:hover::before{
     width: 100%;
 }
+
+
+
+.secend-color{
+    background-color: #076767;
+}
+
+.main-color{
+    background-color: #18a686;
+}
