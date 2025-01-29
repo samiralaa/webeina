@@ -14,6 +14,77 @@
     </div>
 </div>
 
+<section class="service-description">
+    <div class="container">
+        <h1 class="service-title">Why Choose This Service?</h1>
+        <p class="service-text">
+            Build custom software solutions tailored to your business needs. We ensure secure, scalable, and efficient applications.
+        </p>
+
+        <div class="service-features">
+            <div class="feature-box ">
+                <div style="display: flex; align-items: center; gap: 30px;">
+                    <i class="fas fa-code"></i>
+                    <h2>Agile Development</h2>
+                </div>
+                <p>Flexible and iterative approach for seamless project execution.</p>
+            </div>
+
+            <div class="feature-box ">
+                <div style="display: flex; align-items: center; gap: 30px;">
+                    <i class="fas fa-cloud"></i>
+                    <h2>Cloud-Based Solutions</h2>
+                </div>
+                <p>Scalable and secure cloud infrastructure for high availability.</p>
+            </div>
+
+            <div class="feature-box ">
+                <div style="display: flex; align-items: center; gap: 30px;">
+                    <i class="fas fa-robot"></i>
+                    <h2>AI & Automation</h2>
+                </div>
+                <p>Advanced AI algorithms to enhance productivity and efficiency.</p>
+            </div>
+
+            <div class="feature-box ">
+                <div style="display: flex; align-items: center; gap: 30px;">
+                    <i class="fas fa-lock"></i>
+                    <h2>End-to-End Security</h2>
+                </div>
+                <p>Robust security measures to protect sensitive data.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        <h1 class="section-title">Why Choose This Service?</h1>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-code"></i>
+                <h2>Agile Development</h2>
+                <p>Flexible and iterative approach for seamless project execution.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-cloud"></i>
+                <h2>Cloud-Based Solutions</h2>
+                <p>Scalable and secure cloud infrastructure for high availability.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-robot"></i>
+                <h2>AI & Automation</h2>
+                <p>Advanced AI algorithms to enhance productivity and efficiency.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-lock"></i>
+                <h2>End-to-End Security</h2>
+                <p>Robust security measures to protect sensitive data.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
     <div class="container pt-5 pb-5">
         <h1 class="text-captlize pb-4">Features</h1>
     </div>

@@ -32,10 +32,6 @@ body {
     transform: scale(1.1);
 }
 
-.navbar .container {
-    display: flex;
-}
-
 .navbar {
     z-index: 2;
     position: fixed;
