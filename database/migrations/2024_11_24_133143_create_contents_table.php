@@ -17,7 +17,7 @@ return new class extends Migration
             $table->json('title')->nullable(); // For multilingual titles
             $table->json('description')->nullable(); // For multilingual descriptions
             $table->string('image', 255)->nullable();
-            $table->json('color')->nullable(); // For storing color information
+          
             $table->json('status')->nullable(); // For storing status as an array
             $table->string('type')->nullable(); // For storing content type (e.g. text, image, video, etc.)
             $table->json('sub_title')->nullable(); // For storing video paths

@@ -14,7 +14,6 @@ class Content extends Model
         'service_id',
         'image',
         'questions',
-        'color',
         'type',
         'link',
         'sub_title',
