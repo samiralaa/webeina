@@ -635,13 +635,7 @@
             @endforeach
             <a href="{{ route('user-profile') }}">All services</a>
             @endif
-            <!-- /itemCard -->
-            <!-- itemCard -->
-
-            <!-- /itemCard -->
-            <!-- itemCard -->
-
-            <!-- /itemCard -->
+         
         </div>
     </div>
 
