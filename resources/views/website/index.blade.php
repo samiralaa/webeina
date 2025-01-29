@@ -628,16 +628,14 @@
                     <a class="btn-link" href="">{{
                         $item->name[app()->getLocale()] }} <i class=" fa-solid fa-arrow-right"></i></a>
                 </div>
+
+              
             </div>
+
             @endforeach
+            <a href="{{ route('user-profile') }}">All services</a>
             @endif
-            <!-- /itemCard -->
-            <!-- itemCard -->
-
-            <!-- /itemCard -->
-            <!-- itemCard -->
-
-            <!-- /itemCard -->
+         
         </div>
     </div>
 
