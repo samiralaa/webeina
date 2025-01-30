@@ -51,7 +51,7 @@
             <nav class="offcanvas-menu__wrapper">
                 <div class="offcanvas-menu__header nav-fade">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="{{ route('home') }}">
                             <img class="img-logo" src="https://placehold.co/100x100.png" alt=""
                                 title="" />
                         </a>

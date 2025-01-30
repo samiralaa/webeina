@@ -190,11 +190,10 @@
     gap: 15px;
   }
   .main .post{
-    width: 298px;
-    border-radius: 8px;
-    background-color: rgb(199, 199, 199);
-    padding: 16px;
-
+    min-width: 230px;
+    max-width: 230px;
+    background-color: #f8f8f8;
+    padding: 10px 10px;
   }
   .main .post .head_main{
     display: flex;
@@ -248,12 +247,12 @@
     height: 200px;
     border-radius: 4px;
     overflow: hidden;
-    background-color: red;
+
   }
   .main .post .img_content img{
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: cover;
   }
 
   .main .post .call_to_action{
@@ -270,6 +269,24 @@
     gap: 8px;
   }
 
+  .swiperParallax .swiper-wrapper {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.swiperParallax {
+    & .swiper-wrapper {
+        flex-direction: row;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 90px;
+
+    }
+}
 
 
 /* linked in posts style */
@@ -314,4 +331,68 @@
 }
 .our_servsis .servsis-items .itemCard__header .btn-link:hover::before{
     width: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .swiperParallax  .gallery-img__wrapper.gallery-img  {
+                /* position: absolute; */
+                top: 0;
+                width: 130%;
+                height: 100%;
+                max-width: none;
+                /* object-fit: cover; */
+                /* opacity: 5; */
+
+        }
+
+        .swiperParallax  .swiper-wrapper{
+                flex-direction: row;
+                align-items: center;
+                display: flex;
+                 gap:0;
+                justify-content: flex-start;
+            }
+
+}
+
+@media (max-width: 768px) {
+    .swiper-slide.is-gallery.swiper-slide-visible.swiper-slide-active {
+        width: 768px;
+        opacity: 1;
+        pointer-events: auto;
+        height: 128vh;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .swiperParallax {
+        .swiper-slide {
+            &.swiper-slide-active {
+                .gallery-img__wrapper {
+                    opacity: 1;
+                    transform: scale(1);
+                    height: calc(337px + 229px);
+                }
+            }
+        }
+    }
+}
+
+.swiper-wrapper {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+
+.secend-color{
+    background-color: #076767;
+}
+
+.main-color{
+    background-color: #18a686;
 }

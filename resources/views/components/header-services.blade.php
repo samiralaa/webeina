@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg fixed-top sticky-navbar">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{asset('assets/images/logo.png')}}" alt="Logo" class="img-logo">
             </a>
 
@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link bl" href="#">الرئيسية</a>
+                        <a class="nav-link bl" href="{{ route('home') }}">الرئيسية</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle bl" href="{{ route('user-profile') }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,7 +53,7 @@
                             الشركة
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="companyDropdown">
-                            <li><a class="dropdown-item bl" href="#">معلومات عنا</a></li>
+                            <li><a class="dropdown-item bl" href="{{ route('about-us') }}">معلومات عنا</a></li>
                             <li><a class="dropdown-item bl" href="#">فرع دبي</a></li>
                             <li><a class="dropdown-item bl" href="#">فرع القاهرة</a></li>
                         </ul>
@@ -62,7 +62,7 @@
                         <a href="{{ route('language.change', ['locale' => 'en']) }}" class="nav-link lang">en</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="request-quote-btn quote">
+                        <a href="{{ route('contact') }}" class="request-quote-btn quote">
                             <i class="fa-solid fa-arrow-left"></i>
                             <span>تواصل معنا</span>
                         </a>

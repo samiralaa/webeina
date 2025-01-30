@@ -629,13 +629,13 @@
                         $item->name[app()->getLocale()] }} <i class=" fa-solid fa-arrow-right"></i></a>
                 </div>
 
-              
+
             </div>
 
             @endforeach
             <a href="{{ route('user-profile') }}">All services</a>
             @endif
-         
+
         </div>
     </div>
 
@@ -2243,10 +2243,6 @@
                 document.getElementById("about").innerText = "about us"; // English text
             }
                                                                                         </script>
-
-
-
-
 
 
 
