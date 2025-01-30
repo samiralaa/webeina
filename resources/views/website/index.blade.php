@@ -613,9 +613,11 @@
             </div>
 
             @endforeach
+            <div class="col-12">
             <a href="{{ route('user-profile') }}" class="request-quote-btn quote" style="max-width: 200px">
                 <span>See More</span>
             </a>
+            </div>
             @endif
 
         </div>
