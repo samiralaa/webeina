@@ -153,7 +153,9 @@
                            <label for="message" class="form-label text-capitalize fw-bold">Message</label>
                            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                        </div>
-                       <button type="submit" class="btn btn-success">Send Message</button>
+                       <button type="submit" class="request-quote-btn quote" style="max-width: 200px;margin: 0">
+                           <span">Send Request</span>
+                       </button>
                    </form>
                </div>
            </div>

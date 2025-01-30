@@ -72,8 +72,12 @@ const tick = () => {
 tick();
 
 // Partners //
-$(document).ready(function(){
+$(document).ready(function () {
+    // Check the language of the document
+    var isRTL = $('html').attr('lang') === 'ar';
+
     $('.partner__slider').slick({
+        rtl: isRTL,
         infinite: true,
         centerMode: true,
         centerPadding: '0',
@@ -86,6 +90,13 @@ $(document).ready(function(){
         arrows: false,
         dots: false,
     });
+
+    // Apply additional CSS for RTL if needed
+    if (isRTL) {
+        $('.partner__slider').css('direction', 'rtl');
+    } else {
+        $('.partner__slider').css('direction', 'ltr');
+    }
 });
 
 // FAQ //

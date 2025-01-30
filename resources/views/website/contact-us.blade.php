@@ -9,7 +9,7 @@
     <img class="background-img" src="{{ asset('assets/images/hero/contact-hero.png') }}" alt="Contact-Us">
     <div class="container-0">
         <div class="container-1">
-            <div class="text-2">Contact Us</div>
+            <div class="text-2">{{ __('messages.contact_us') }}</div>
         </div>
     </div>
 </div>
@@ -155,11 +155,12 @@
     </div>
 
                     <div class="mb-3">
-                        <label for="message" class="form-label text-capitalize fw-bold"  >About Your Project</label>
+                        <label for="message" class="form-label text-capitalize fw-bold" >About Your Project</label>
                         <textarea class="form-control" id="message" name="message" rows="3" required placeholder="Tell us more about your project"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-success">Send Request</button>
-
+                    <button type="submit" class="request-quote-btn quote" style="max-width: 200px;margin: 0">
+                        <span">Send Request</span>
+                    </button>
                 </form>
             </div>
         </div>

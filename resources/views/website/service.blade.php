@@ -9,11 +9,11 @@
     <img class="background-img" src="{{ asset('assets/images/services.png') }}" alt="FAQ">
     <div class="container-0">
         <div class="container-1">
-            <div class="text-2">Services</div>
+            <div class="text-2">{{ __('messages.services') }}</div>
         </div>
         <div class="spase" style="height: 120px ;"></div>
         <div class="logo-container" >
-            <p style="color: #8d99a7;font-size: 0.87rem;margin-left: 2rem;line-height: 1.6;font-weight: 400;letter-spacing: 0.1rem;margin-top: 0.62rem;margin-bottom: 0.62rem;text-transform: uppercase;"><span><span><a href="" class="text-white-50">Home</a></span> » <span ><strong>services</strong></span></span></p>
+            <p style="color: #8d99a7;font-size: 0.87rem;margin-left: 2rem;line-height: 1.6;font-weight: 400;letter-spacing: 0.1rem;margin-top: 0.62rem;margin-bottom: 0.62rem;text-transform: uppercase;"><span><span><a href="" class="text-white-50">{{ __('messages.home') }}</a></span> » <span ><strong>{{ __('messages.services') }}</strong></span></span></p>
         </div>
     </div>
 </div>
@@ -35,7 +35,7 @@
 
 
 <div class="bigtitle container mt-5 pt-5 mb-5 pb-4">
-    <h1 class="" >Services</h1>
+
 </div>
 
 

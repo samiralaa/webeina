@@ -9,7 +9,7 @@
                     <p>
                         <span class="webenia">WEBENIA</span> is a virtual department that helps organizations expand their business by enhancing leads and sales from their website, focusing on maximizing ROI.
                     </p>
-                    <h5 class="head">Locations</h5>
+                    <h5 class="head">{{ __('messages.locations') }}</h5>
                     <div class="locations">
                         <div>
                             <a href="https://maps.app.goo.gl/32MvC2fBcoVZseD1A">
@@ -27,19 +27,8 @@
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="head">Webenia Contacts</h5>
+                    <h5 class="head">{{ __('messages.webenia_contacts') }}</h5>
                     <ul class="footer-address-list">
-                        @if (app()->getLocale() === 'ar')
-                        <li>
-                            <i class="fas fa-envelope cicon"></i>
-                            <p>البريد الالكتروني: <a href="mailto:info@webenia.com">info@webenia.com</a></p>
-                        </li>
-                        <li>
-                            <i class="fab fa-skype cicon"></i>
-                            <p>سكايبي: <a href="skype:live:.cid.bedd6a433022c5ca?call">webenia</a></p>
-                        </li>
-                        </li>
-                        @else
                         <li>
                             <i class="fas fa-envelope cicon"></i>
                             <p>Email: <a href="mailto:info@webenia.com">info@webenia.com</a></p>
@@ -48,12 +37,11 @@
                             <i class="fab fa-skype cicon"></i>
                             <p>Skype: <a href="skype:live:.cid.bedd6a433022c5ca?call">webenia</a></p>
                         </li>
-                        @endif
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="head">Quick Links</h5>
+                    <h5 class="head">{{ __('messages.quick_links') }}</h5>
                     <ul class="footer-address-list link-hover">
                         <li><a class="lh" href="#">About</a></li>
                         <li><a class="lh" href="#">Digital Transformation</a></li>

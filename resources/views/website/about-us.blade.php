@@ -9,7 +9,7 @@
     <img class="background-img" src="{{ asset('assets/images/hero/about-hero.png') }}" alt="About-Us">
     <div class="container-0">
         <div class="container-1">
-            <div class="text-2">About Us</div>
+            <div class="text-2">{{ __('messages.about_us') }}</div>
         </div>
     </div>
 </div>

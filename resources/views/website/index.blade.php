@@ -520,12 +520,8 @@
         </video>
         <div class="container-0-1-0">
             <div class="container-1-2-0">
-                <div class="text-2-3-0">Transform Your Ideas into Digital Reality</div>
-                <div class="text-2-3-1">
-                    Our innovative platform empowers you to create stunning websites
-                    effortlessly. Experience seamless design and functionality tailored to
-                    your unique vision.
-                </div>
+                <div class="text-2-3-0">{{ __('messages.hero_title') }}</div>
+                <div class="text-2-3-1">{{ __('messages.hero_subtitle') }}</div>
             </div>
         </div>
     </div>
@@ -583,7 +579,7 @@
 
 
     <div class="our_servsis container-fluid container mb--2 pt-5 pb-5">
-        <h1 class="text-capitalize mb-5 mt-5">our services</h1>
+        <h1 class="text-capitalize mb-5 mt-5">{{ __('messages.our_services') }}</h1>
         <div class="row">
             <!-- itemCard -->
             @if($service)
@@ -629,9 +625,9 @@
     {{-- Partners --}}
     <div class="partner section py-5">
         <div class="container pt-5 pb-5">
-            <h1 class="text-captlize pb-4">Partners</h1>
+            <h1 class="text-captlize pb-4">{{ __('messages.our_partners') }}</h1>
         </div>
-        <div class="container-fluid pb-5" dir="ltr">
+        <div class="container-fluid pb-5">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="partner__slider">
@@ -706,7 +702,7 @@
 
     {{-- Technologies --}}
     <div class="container m4">
-        <h1 class="text-captlize pb-4">Technologies</h1>
+        <h1 class="text-captlize pb-4">{{ __('messages.technologies') }}</h1>
         <div class="row g-4">
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
@@ -774,7 +770,7 @@
 {{-- why work with webenia --}}
 
 <div class="work pt-5 pb-5 mt-5 mb-5 bg-light">
-    <h2 class="text-capitalize text-center">Why  Webenia</h2>
+    <h2 class="text-capitalize text-center">{{ __('messages.why_webenia') }}</h2>
     <div class="main-work container pt-5 d-flex justify-content-center">
         <div class="col-lg-12">
             <div class="row about-us-section text-white">
@@ -894,7 +890,7 @@
     <div class="main-wrapper">
         <div class="section slideStyle">
             <div class="container pt-5">
-                <h1 class="text-captlize pb-4">linkedin</h1>
+                <h1 class="text-captlize pb-4">{{ __('messages.linkedin') }}</h1>
             </div>
             <div class="swiper swiperParallax is-gallery mb-4">
                 <div role="list" class="swiper-wrapper is-gallery">
