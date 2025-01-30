@@ -1,12 +1,26 @@
 const translations = {
     en: {
-        logo: "home",
-
+        logo: "Home",
+        services: "Services",
+        partners: "Partners",
+        company: "Company",
+        faqs: "FAQs",
+        about: "About Us",
+        dubai: "Dubai Branch",
+        cairo: "Cairo Branch",
+        contact: "Get in touch"
     },
     ar: {
-        logo: "آلية",
-
-    },
+        logo: "الصفحة الرئيسية",
+        services: "الخدمات",
+        partners: "الشركاء",
+        company: "الشركة",
+        faqs: "الأسئلة الشائعة",
+        about: "من نحن",
+        dubai: "فرع دبي",
+        cairo: "فرع القاهرة",
+        contact: "اتصل بنا"
+    }
 };
 
 function changeLanguage(lang) {
@@ -31,7 +45,7 @@ function changeLanguage(lang) {
             document.body.style.textAlign = "right";
         }
     } else {
-        console.error(Language "${lang}" not supported.);
+        console.error(`Language "${lang}" not supported.`);
     }
 }
 

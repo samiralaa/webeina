@@ -21,7 +21,7 @@ class ContentsTableSeeder extends Seeder
                 [
                     'service_id' => $service->id, // تعيين ID للخدمة
                     'title' => json_encode([
-                        'en' => 'Web Development', 
+                        'en' => 'Web Development',
                         'ar' => 'تطوير الويب'
                     ]),
                     'description' => json_encode([
@@ -43,7 +43,7 @@ class ContentsTableSeeder extends Seeder
                 [
                     'service_id' => $service->id, // تعيين ID للخدمة
                     'title' => json_encode([
-                        'en' => 'Mobile App Development', 
+                        'en' => 'Mobile App Development',
                         'ar' => 'تطوير تطبيقات الجوال'
                     ]),
                     'description' => json_encode([
@@ -65,7 +65,7 @@ class ContentsTableSeeder extends Seeder
                 [
                     'service_id' => $service->id, // تعيين ID للخدمة
                     'title' => json_encode([
-                        'en' => 'UI/UX Design', 
+                        'en' => 'UI/UX Design',
                         'ar' => 'تصميم تجربة المستخدم وواجهة المستخدم'
                     ]),
                     'description' => json_encode([

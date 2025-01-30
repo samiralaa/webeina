@@ -1,8 +1,4 @@
-
-<!--@if (app()->getLocale() === 'ar')-->
-<!--@else-->
-<!--@endif-->
-<!-- ==== Header en ==== -->
+<!-- ==== Header ==== -->
 <header>
     <nav class="navbar navbar-expand-lg fixed-top sticky-navbar">
         <div class="container">
@@ -25,34 +21,38 @@
                 <ul class="navbar-nav ms-auto" id="navbar">
                 @endif
 
-
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('home')}}" data-lang="logo">Home</a>
+                        <a class="nav-link" href="{{route('home')}}" >
+                            {{ __('messages.home') }}
+                        </a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="{{ route('user-profile') }}" id="navbarDropdown" role="button">
-                            Services
+                            {{ __('messages.services') }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            @foreach ($services as $service )
-                            <li><a class="dropdown-item" href="{{ route('serves.details', ['id' => $service->id]) }}">{{ $service->name[app()->getLocale()] }}</a>
+                            @foreach ($services as $service)
+                            <li>
+                                <a class="dropdown-item" href="{{ route('serves.details', ['id' => $service->id]) }}">
+                                    {{ $service->name[app()->getLocale()] }}
+                                </a>
                             </li>
                             @endforeach
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Partners</a>
+                        <a class="nav-link" href="#">{{ __('messages.partners') }}</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="companyDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Company
+                            {{ __('messages.company') }}
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="companyDropdown">
-                            <li><a class="dropdown-item" href="{{ route('faqs.index') }}">FAQs</a></li>
-                            <li><a class="dropdown-item" href="{{route('about-us')}}">About Us</a></li>
-                            <li><a class="dropdown-item" href="#">Dubai Branch</a></li>
-                            <li><a class="dropdown-item" href="#">Cairo Branch</a></li>
+                            <li><a class="dropdown-item" href="{{ route('faqs.index') }}">{{ __('messages.faqs') }}</a></li>
+                            <li><a class="dropdown-item" href="{{route('about-us')}}">{{ __('messages.about_us') }}</a></li>
+                            <li><a class="dropdown-item" href="#">{{ __('messages.dubai_branch') }}</a></li>
+                            <li><a class="dropdown-item" href="#">{{ __('messages.cairo_branch') }}</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -65,11 +65,10 @@
                     <li class="nav-item">
                         <a href="{{route('contact')}}" class="request-quote-btn quote">
                             <i class="fa-solid fa-arrow-right"></i>
-                            <span>Get in touch</span>
+                            <span>{{ __('messages.get_in_touch') }}</span>
                         </a>
                     </li>
                 </ul>
             </div>
     </nav>
 </header>
-
