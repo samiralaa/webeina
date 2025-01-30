@@ -1,14 +1,4 @@
 // Navbar //
-document.addEventListener('DOMContentLoaded', function () {
-    const toggler = document.querySelector('.navbar-toggler');
-    const navCollapse = document.querySelector('#navbarNav');
-
-    toggler.addEventListener('click', function () {
-        navCollapse.classList.toggle('show');
-
-        toggler.classList.toggle('active');
-    });
-});
 const stickyNavbar = document.querySelector('.navbar.sticky-navbar')
 document.addEventListener("scroll", () => {
     if (window.scrollY > 36) {
@@ -453,7 +443,7 @@ function showDetails(detailId) {
     const heroHeight = document.querySelector('.container-0-').offsetHeight;
 
     caret.style.transition = 'top 0.3s ease-in-out';
-    caret.style.top = `${itemOffsetTop - heroHeight + itemHeight /20 - caret.offsetHeight / .115}px`;
+    caret.style.top = `${itemOffsetTop - heroHeight - 1110 + itemHeight /2 - caret.offsetHeight / .115}px`;
 }
 
 const items = document.querySelectorAll('.left-panel ul li');

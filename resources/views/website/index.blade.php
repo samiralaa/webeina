@@ -1,26 +1,10 @@
 <!-- resources/views/home.blade.php -->
 @extends('website.layouts.main')
-
+<link rel="stylesheet" href="{{ asset('assets/css/index.css') }}" />
 @section('title', 'Home Page')
 
 @section('content')
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<!-- slick css -->
-<link rel="stylesheet" href="{{ asset('assets/vendor/slick/css/slick.css') }}" >
-<link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
-
-@if (app()->getLocale() === 'ar')
-<link rel="stylesheet" href="{{ asset('assets/css/bannerAr.css') }}">
-<link rel="stylesheet" href="{{ asset('assets/css/home.css') }}">
-@endif
-
-<link rel="stylesheet" href="{{ asset('assets\css\index.css') }}">
-<main>
 
     @foreach ($sections as $section)
     @if ($section->type == 'banner')
@@ -633,7 +617,9 @@
             </div>
 
             @endforeach
-            <a href="{{ route('user-profile') }}">All services</a>
+            <a href="{{ route('user-profile') }}" class="request-quote-btn quote" style="max-width: 200px">
+                <span>See More</span>
+            </a>
             @endif
 
         </div>
@@ -785,7 +771,7 @@
         </div>
     </div>
 
-{{-- why work with webania --}}
+{{-- why work with webenia --}}
 
 <div class="work pt-5 pb-5 mt-5 mb-5 bg-light">
     <h2 class="text-capitalize text-center">Why  Webenia</h2>

@@ -29,11 +29,9 @@
     <!-- ==== / css dependencies end ==== -->
     <!-- main css -->
     @if (app()->getLocale() === 'ar')
-    <link rel="stylesheet" href="{{ asset('assets/css/ar/main.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/ar/index.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/main-ar.css') }}" />
     @else
-    <link rel="stylesheet" href="{{ asset('assets/css/en/main.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/en/index.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
     @endif
 </head>
 
@@ -70,8 +68,9 @@
     <!-- overlay widget js -->
     <script src="{{ asset('assets/vendor/swiper/js/swiper-bundle.min.js') }}"></script>
     <!-- ==== / js dependencies end ==== -->
+    <script src="{{ asset('assets/js/lang.js') }}"></script>
     <!-- main js -->
-    <script src="{{ asset('assets/js/scripts.js')}}"></script>
+    <script src="{{ asset('assets/js/scripts.js') }}"></script>
 </body>
 
 </html>

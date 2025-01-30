@@ -23,7 +23,7 @@
     position: relative;
     width: 100%;
     padding: 20px;
-    text-align: left;
+    /*text-align: left;*/
 }
 
 .container-1-2-0 {
@@ -45,7 +45,6 @@
     font-weight: 400;
     color: #ddd;
     line-height: 1.6;
-
 }
 
 @media (max-width: 768px) {

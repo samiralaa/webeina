@@ -80,10 +80,6 @@ body {
     color: #18a686;
 }
 
-.navbar-nav .nav-item .nav-link:focus,
-.navbar.scrolling .container .collapse .navbar-nav .nav-item .nav-link:focus {
-    outline: 2px solid #18a686;
-}
 
 .nav-item.dropdown:hover .dropdown-menu {
     display: block;
