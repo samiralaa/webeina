@@ -18,7 +18,7 @@
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
-
+<th> serves</th>
                             <th>Message</th>
                             <th>Actions</th>
                         </tr>
@@ -28,7 +28,9 @@
                         <tr>
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $contact->name }}</td>
+
                             <td>{{ $contact->email }}</td>
+                            <td>{{$contact->service->name['en']}} </td>
                             <td>{{ Str::limit($contact->message, 50) }}</td>
                             <td>
                                 <a href="{{ route('admin.contact.show', $contact->id) }}" class="btn btn-primary btn-sm">

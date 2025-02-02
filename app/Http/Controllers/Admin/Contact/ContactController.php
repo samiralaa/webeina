@@ -16,7 +16,8 @@ class ContactController extends Controller
     }
     public function index()
     {
-        $contacts = $this->contact->all();
+    
+          $contacts = $this->contact->all();
         return view('admin.contact.index', compact('contacts'));
     }
 

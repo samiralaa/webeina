@@ -35,4 +35,5 @@ class Service extends Model
     {
         return $this->hasMany(ActivityLog::class);
     }
+
 }

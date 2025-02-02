@@ -145,6 +145,7 @@
                                <input type="email" class="form-control" id="email" name="email" required>
                            </div>
                        </div>
+                       <input type="text" name="service_id" value="{{ $service->id }}" hidden>
                        <div class="mb-3">
                            <label for="email" class="form-label text-capitalize fw-bold">Business email</label>
                            <input type="email" class="form-control" id="email" name="email" required>
