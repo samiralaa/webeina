@@ -71,6 +71,7 @@
     <script src="{{ asset('assets/js/lang.js') }}"></script>
     <!-- main js -->
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
-</body>
+</body>                    
 
-</html>
+</html>                                                                           
+
