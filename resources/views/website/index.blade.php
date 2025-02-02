@@ -97,7 +97,7 @@
 
                         @foreach ($section->images as $image)
                         <div class="sponsor__slider-item">
-                            <img src="{{ 'public/' . $image->image_path }}" alt="Image" />
+                            <img src="{{ 'public/' . $image->image_path }}" loading="lazy" alt="Image" />
                         </div>
                         @endforeach
                         {{-- <img src="" alt="Image" class="thumb-one fade-left" />
@@ -326,7 +326,7 @@
         </div>
 
         <div class="other-section d-none">
-            <img class="other-section-image" src="assets/images/testimonial/s-thumb.png" alt="Next Slide Image" />
+            <img class="other-section-image" src="assets/images/testimonial/s-thumb.png" loading="lazy" alt="Next Slide Image" />
         </div>
     </section>
     @endif
@@ -365,7 +365,7 @@
                     <div class="sponsor__slider">
                         @foreach ($section->images as $image)
                         <div class="sponsor__slider-item">
-                            <img src="{{ 'public/' . $image->image_path }}" alt="Image" />
+                            <img src="{{ 'public/' . $image->image_path }}" loading="lazy" alt="Image" />
                         </div>
                         @endforeach
                     </div>
@@ -382,7 +382,7 @@
         @foreach ($section->sliders as $slider)
         <div class="blog pt-5 pb-5 mt-5 mb-5">
             <div class="img">
-                <img class="img-fluid" style="border-radius: 8px;" src="{{ asset('public/storage/' . $slider->image) }}"
+                <img class="img-fluid" style="border-radius: 8px;" loading="lazy" src="{{ asset('public/storage/' . $slider->image) }}"
                     alt="">
             </div>
             <div class="main text"
@@ -408,7 +408,7 @@
         <div class="consultation container pt-5 pb-5">
             <div class="main d-none d-md-block">
                 @foreach ($section->images as $image)
-                <img class="img-fluid " src="{{ 'public/' . $image->image_path }}" alt="" style="border-radius: 20px;">
+                <img class="img-fluid " src="{{ 'public/' . $image->image_path }}" alt="" loading="lazy" style="border-radius: 20px;">
                 @endforeach
                 <div class="text"></div>
                 <div class="contnet text-sm-center text-center text-md-start d-block " style="">
@@ -431,7 +431,7 @@
         <h3 class="text-white-50 text-uppercase text-center pt-5 pb-5">portfolio</h3>
         <div class="list">
             @foreach ($section->images as $image)
-            <div class="item"><a href=""><img src="{{ $image->image_path }}" alt="">
+            <div class="item"><a href=""><img src="{{ $image->image_path }}" loading="lazy" alt="">
                 </a>
             </div>
             @endforeach
@@ -459,7 +459,7 @@
                 </div>
                 <div class="img col-lg-6 col-md-4 d-flex justify-content-end">
                     <img class="img-fluid" style="border-radius: 8px;"
-                        src="{{ asset('public/storage/' . $slider->image) }}" alt="">
+                        src="{{ asset('public/storage/' . $slider->image) }}" loading="lazy" alt="">
                 </div>
             </div>
         </div>
@@ -470,7 +470,7 @@
             <div class=" row">
                 <div class="img col-lg-6 col-md-4 d-flex justify-content-start">
                     <img class="img-fluid" style="border-radius: 8px;"
-                        src="{{ asset('public/storage/' . $slider->image) }}" alt="">
+                        src="{{ asset('public/storage/' . $slider->image) }}" loading="lazy" alt="">
                 </div>
 
                 <div class="text col-lg-6 col-md-4">
@@ -495,7 +495,7 @@
         <h3 class="text-white-50 text-uppercase text-center pt-5 pb-5">portfolio</h3>
         <div class="list">
             @foreach ($section->images as $image)
-            <div class="item"><a href=""><img src="{{ 'public/' . $image->image_path }}" alt="">
+            <div class="item"><a href=""><img src="{{ 'public/' . $image->image_path }}" loading="lazy" alt="">
                 </a>
             </div>
             @endforeach
@@ -588,7 +588,7 @@
 
             <div class="servsis-items col-12 col-sm-12 col-lg-6 col-xl-4 itemService pb-5 pb-md-3">
                 <div class="itemCard__imageWrap">
-                    <img class="itemCard__image  lazyloaded"
+                    <img class="itemCard__image  lazyloaded"  loading="lazy"
                         src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg"
                         alt="Drupal Entwicklung und Migration">
                 </div>
@@ -634,67 +634,67 @@
                 <div class="col-12">
                     <div class="partner__slider">
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/odoo.png') }}"   loading="lazy" alt="odoo-logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/google.png') }}"  loading="lazy" alt="google-logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/micro.png') }}"  loading="lazy" alt="microsoft-logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/odoo.png') }}"  loading="lazy" alt="odoo-logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/google.png') }}"  loading="lazy" alt="google-logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/micro.png') }}"  loading="lazy" alt="microsoft official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/odoo.png') }}"  loading="lazy" alt="odoo official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/google.png') }}"  loading="lazy" alt="google official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/micro.png') }}"  loading="lazy" alt="Microsoft official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/odoo.png') }}"  loading="lazy" alt="odoo official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/google.png') }}"  loading="lazy" alt="google official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/micro.png') }}"  loading="lazy" alt="microsoft official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/odoo.png') }}"  loading="lazy" alt="odoo official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/google.png') }}"  loading="lazy" alt="google official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/micro.png') }}"  loading="lazy" alt="Microsoft official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/odoo.png') }}"  loading="lazy" alt="odoo official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/google.png') }}"  loading="lazy" alt="google official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/micro.png') }}"  loading="lazy" alt="Microsoft official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/odoo.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/odoo.png') }}"  loading="lazy" alt="odoo official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/google.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/google.png') }}"  loading="lazy" alt="google official logo">
                         </div>
                         <div class="partner__slider-item slick-slide">
-                            <img src="{{ asset('assets/partner/micro.png') }}" alt="Image">
+                            <img src="{{ asset('assets/partner/micro.png') }}"  loading="lazy" alt="Microsoft official logo">
                         </div>
                     </div>
                 </div>
@@ -708,62 +708,62 @@
         <div class="row g-4">
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" alt="Vue.js Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Vue.js.png') }}" loading="lazy" alt="Vue.js official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" alt="Angular Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/angular.png') }}" loading="lazy" alt="Angular official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" alt="PHP Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/php.png') }}" loading="lazy" alt="PHP official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/python.png') }}" alt="Python Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/python.png') }}" loading="lazy" alt="Python official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Laravel.png') }}" alt="Laravel Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Laravel.png') }}" loading="lazy" alt="Laravel official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/django.png') }}" alt="Django Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/django.png') }}" loading="lazy" alt="Django official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/flutter.png') }}" alt="Flutter Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/flutter.png') }}" loading="lazy" alt="Flutter official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/swift-ios.png') }}" alt="Swift Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/swift-ios.png') }}" loading="lazy" alt="Swift official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Android.png') }}" alt="Android Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/Android.png') }}" loading="lazy" alt="Android official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/.net.png') }}" alt=".NET Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/.net.png') }}" loading="lazy" alt=".NET official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/SQL-Server.png') }}" alt="SQL Server Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/SQL-Server.png') }}" loading="lazy" alt="SQL-Server official logo">
                 </div>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="grid-card p-5 bg-white shadow-sm text-center">
-                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/mysql.png') }}" alt="MySQL Logo">
+                    <img class="img-fluid my-4" src="{{ asset('assets/technologies/mysql.png') }}" loading="lazy" alt="MySQL official logo">
                 </div>
             </div>
         </div>
@@ -781,7 +781,7 @@
                     <!-- Section 1 -->
                     <div class="col-md-9 col-12 mb-5">
                         <div class="about-content-section rounded-4 p-4 about-content-first secend-color">
-                            <img alt="Pic" class="mb-2 img-fluid" src="https://www.ipixtechnologies.com/images/web/images/menon.svg">
+                            <img alt="Pic" class="mb-2 img-fluid" src="https://www.ipixtechnologies.com/images/web/images/menon.svg"  loading="lazy">
                             <h3 class="text-white text-capitalize" >We have a lot of experience</h3>
                             <p>which means you will get the best results</p>
                         </div>
@@ -803,7 +803,7 @@
                     <!-- Section 3 -->
                     <div class="col-md-9 col-12 mb-5">
                         <div class="about-content-section rounded-4 p-4 mt-5 about-content-second  main-color" >
-                            <img alt="Pic" class="mb-2 img-fluid" src="https://www.ipixtechnologies.com/images/web/images/menon-2.png">
+                            <img alt="Pic" class="mb-2 img-fluid" src="https://www.ipixtechnologies.com/images/web/images/menon-2.png"  loading="lazy">
                             <h3 class="text-white text-capitalize">Leading IT Service Firm</h3>
                             <p>Expertise in serving a wide variety of industries for technological advancement.</p>
                         </div>
@@ -902,7 +902,7 @@
                                 <div class="post ">
                                     <div class="head_main">
                                         <div class="head-info">
-                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" loading="lazy" alt="webenia official logo"></div>
                                             <div class="puplish-info">
                                                 <div class="poplish "><span>webania</span></div>
                                                 <div class="time"><span>july 8,2025</span></div>
@@ -921,7 +921,7 @@
 
                                     <div class="img_content">
                                         <a href="">
-                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"  loading="lazy" alt="post-img">
                                         </a></div>
 
                                     <div class="call_to_action">
@@ -944,7 +944,7 @@
                                 <div class="post ">
                                     <div class="head_main">
                                         <div class="head-info">
-                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png"  loading="lazy" alt="webenia official logo"></div>
                                             <div class="puplish-info">
                                                 <div class="poplish "><span>webania</span></div>
                                                 <div class="time"><span>july 8,2025</span></div>
@@ -963,7 +963,7 @@
 
                                     <div class="img_content">
                                         <a href="">
-                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="webenia-logo">
                                         </a></div>
 
                                     <div class="call_to_action">
@@ -986,7 +986,7 @@
                                 <div class="post ">
                                     <div class="head_main">
                                         <div class="head-info">
-                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" loading="lazy" alt="webenia official logo"></div>
                                             <div class="puplish-info">
                                                 <div class="poplish "><span>webania</span></div>
                                                 <div class="time"><span>july 8,2025</span></div>
@@ -1005,7 +1005,7 @@
 
                                     <div class="img_content">
                                         <a href="">
-                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="">
                                         </a></div>
 
                                     <div class="call_to_action">
@@ -1028,7 +1028,7 @@
                                 <div class="post ">
                                     <div class="head_main">
                                         <div class="head-info">
-                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" loading="lazy" alt="webenia official logo"></div>
                                             <div class="puplish-info">
                                                 <div class="poplish "><span>webania</span></div>
                                                 <div class="time"><span>july 8,2025</span></div>
@@ -1047,7 +1047,7 @@
 
                                     <div class="img_content">
                                         <a href="">
-                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="">
                                         </a></div>
 
                                     <div class="call_to_action">
@@ -1070,7 +1070,7 @@
                                 <div class="post ">
                                     <div class="head_main">
                                         <div class="head-info">
-                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png"loading="lazy" alt="webenia official logo"></div>
                                             <div class="puplish-info">
                                                 <div class="poplish "><span>webania</span></div>
                                                 <div class="time"><span>july 8,2025</span></div>
@@ -1089,7 +1089,7 @@
 
                                     <div class="img_content">
                                         <a href="">
-                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="">
                                         </a></div>
 
                                     <div class="call_to_action">
@@ -1112,7 +1112,7 @@
                                 <div class="post ">
                                     <div class="head_main">
                                         <div class="head-info">
-                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png"loading="lazy" alt="webenia official logo"></div>
                                             <div class="puplish-info">
                                                 <div class="poplish "><span>webania</span></div>
                                                 <div class="time"><span>july 8,2025</span></div>
@@ -1131,7 +1131,7 @@
 
                                     <div class="img_content">
                                         <a href="">
-                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="">
                                         </a></div>
 
                                     <div class="call_to_action">
@@ -1154,7 +1154,7 @@
                                 <div class="post ">
                                     <div class="head_main">
                                         <div class="head-info">
-                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png" alt=""></div>
+                                            <div class="head_img"> <img src="http://127.0.0.1:8000/assets/images/logo.png"loading="lazy" alt="webenia official logo"></div>
                                             <div class="puplish-info">
                                                 <div class="poplish "><span>webania</span></div>
                                                 <div class="time"><span>july 8,2025</span></div>
@@ -1173,7 +1173,7 @@
 
                                     <div class="img_content">
                                         <a href="">
-                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                                            <img src="https://images.unsplash.com/photo-1616161560065-4bbfa1103fde?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" loading="lazy" alt="">
                                         </a></div>
 
                                     <div class="call_to_action">
@@ -1193,6 +1193,8 @@
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+
+
             </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination pb-4 mt-4"></div>

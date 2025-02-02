@@ -326,6 +326,7 @@ function lg() {
         },
         slideToClickedSlide: true,
     });
+
 }
 
 function sm() {
