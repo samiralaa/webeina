@@ -59,27 +59,27 @@
 
 <section class="features-section">
     <div class="container">
-        <h1 class="section-title">Why Choose This Service?</h1>
+        <h1 class="section-title text-capitalize ">get premium industiral services </h1>
         <div class="features-grid">
             <div class="feature-card">
-                <i class="fas fa-code"></i>
-                <h2>Agile Development</h2>
-                <p>Flexible and iterative approach for seamless project execution.</p>
+                <i class="fa-solid fa-industry"></i>
+                <h2>Many Factory</h2>
+                <p>The development of web design has brought about a digital revolution in many</p>
             </div>
             <div class="feature-card">
-                <i class="fas fa-cloud"></i>
-                <h2>Cloud-Based Solutions</h2>
-                <p>Scalable and secure cloud infrastructure for high availability.</p>
+                <i class="fa-solid fa-sparkles"></i>
+                <h2>Digital Marketing</h2>
+                <p>Web design has brought about a major transformation in the marketing industry, as digital</p>
             </div>
             <div class="feature-card">
-                <i class="fas fa-robot"></i>
-                <h2>AI & Automation</h2>
-                <p>Advanced AI algorithms to enhance productivity and efficiency.</p>
+                <i class="fa-solid fa-notes-medical"></i>
+                <h2>Helthing</h2>
+                <p>Design is revolutionizing the medical healthcare sector, where digital detection</p>
             </div>
             <div class="feature-card">
-                <i class="fas fa-lock"></i>
-                <h2>End-to-End Security</h2>
-                <p>Robust security measures to protect sensitive data.</p>
+                <i class="fa-solid fa-plane"></i>
+                <h2>Travellings</h2>
+                <p>Web design has brought about a major digital transformation in the field of travel</p>
             </div>
         </div>
     </div>

@@ -624,6 +624,7 @@
     </div>
 
 
+
     {{-- Partners --}}
     <div class="partner section py-5">
         <div class="container pt-5 pb-5">
