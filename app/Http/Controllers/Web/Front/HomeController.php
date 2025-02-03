@@ -33,9 +33,9 @@ class HomeController extends Controller
         return view('website.service');
     }
 
-    public function servesDetails($id)
+    public function servesDetails($slug)
     {
-        $service = Service::with('contents')->find($id);
+        $service = Service::where('slug',$slug)->with('contents')->first();
         return view('website.serves-details', compact('service'));
     }
 

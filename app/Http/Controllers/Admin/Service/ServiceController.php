@@ -56,6 +56,7 @@ class ServiceController extends Controller
 
     public function show($id)
     {
+        dd("testing");
         $service = Service::with('contents')->findOrFail($id); // This ensures the contents are loaded along with the service
         return view('dashboard.services.show', compact('service'));
     }

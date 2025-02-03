@@ -31,7 +31,7 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @foreach ($services as $service)
                                 <li>
-                                    <a class="dropdown-item" href="{{ route('serves.details', ['id' => $service->id]) }}" title="{{ $service->name[app()->getLocale()] }}">
+                                    <a class="dropdown-item" href="{{ route('serves.details', ['id' => $service->slug]) }}" title="{{ $service->name[app()->getLocale()] }}">
                                         {{ $service->name[app()->getLocale()] }}
                                     </a>
                                 </li>

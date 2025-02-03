@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class ServicesTableSeeder extends Seeder
@@ -16,6 +17,7 @@ class ServicesTableSeeder extends Seeder
         DB::table('services')->insert([
             [
                 'name' => json_encode(['en' => 'Custom Software Development', 'ar' => 'تطوير البرمجيات المخصصة']),
+                'slug' => Str::slug('Custom Software Development'),
                 'icon' => 'fa-laptop-code',
                 'description' => json_encode([
                     'en' => 'Build custom software solutions tailored to your business needs.',
@@ -26,6 +28,7 @@ class ServicesTableSeeder extends Seeder
             ],
             [
                 'name' => json_encode(['en' => 'Mobile App Development', 'ar' => 'تطوير تطبيقات الهاتف المحمول']),
+                'slug' => Str::slug('Mobile App Development'),
                 'icon' => 'fa-mobile-alt',
                 'description' => json_encode([
                     'en' => 'Develop high-quality mobile applications for Android and iOS.',
@@ -36,6 +39,7 @@ class ServicesTableSeeder extends Seeder
             ],
             [
                 'name' => json_encode(['en' => 'Web Application Development', 'ar' => 'تطوير تطبيقات الويب']),
+                'slug' => Str::slug('Web Application Development'),
                 'icon' => 'fa-globe',
                 'description' => json_encode([
                     'en' => 'Create robust and scalable web applications.',
@@ -46,6 +50,7 @@ class ServicesTableSeeder extends Seeder
             ],
             [
                 'name' => json_encode(['en' => 'UI/UX Design', 'ar' => 'تصميم واجهة المستخدم وتجربة المستخدم']),
+                'slug' => Str::slug('UI/UX Design'),
                 'icon' => 'fa-pencil-ruler',
                 'description' => json_encode([
                     'en' => 'Design user-friendly interfaces and experiences.',
@@ -56,6 +61,7 @@ class ServicesTableSeeder extends Seeder
             ],
             [
                 'name' => json_encode(['en' => 'Cloud Solutions', 'ar' => 'حلول السحابة']),
+                'slug' => Str::slug('Cloud Solutions'),
                 'icon' => 'fa-cloud',
                 'description' => json_encode([
                     'en' => 'Implement and manage cloud-based infrastructure.',
@@ -66,6 +72,7 @@ class ServicesTableSeeder extends Seeder
             ],
             [
                 'name' => json_encode(['en' => 'IT Consulting', 'ar' => 'استشارات تقنية المعلومات']),
+                'slug' => Str::slug('IT Consulting'),
                 'icon' => 'fa-headset',
                 'description' => json_encode([
                     'en' => 'Provide expert advice on IT strategies and solutions.',
@@ -76,6 +83,7 @@ class ServicesTableSeeder extends Seeder
             ],
             [
                 'name' => json_encode(['en' => 'E-commerce Development', 'ar' => 'تطوير التجارة الإلكترونية']),
+                'slug' => Str::slug('E-commerce Development'),
                 'icon' => 'fa-shopping-cart',
                 'description' => json_encode([
                     'en' => 'Build secure and scalable e-commerce platforms.',
@@ -86,6 +94,7 @@ class ServicesTableSeeder extends Seeder
             ],
             [
                 'name' => json_encode(['en' => 'AI and Machine Learning', 'ar' => 'الذكاء الاصطناعي وتعلم الآلة']),
+                'slug' => Str::slug('AI and Machine Learning'),
                 'icon' => 'fa-robot',
                 'description' => json_encode([
                     'en' => 'Develop intelligent solutions using AI and machine learning.',
