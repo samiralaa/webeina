@@ -119,187 +119,6 @@ question.forEach(question => {
     })
 })
 
-// linkedin //
-// let gallerySlider = new Swiper(".swiper.is-gallery", {
-
-//     slidesPerView: 8,
-//     centeredSlides: true,
-//     speed: 300,
-//     grabCursor: true,
-//     parallax: true,
-//     mousewheel: {
-//         thresholdDelta: 70,
-//     },
-
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev"
-//     },
-//     pagination: {
-//         el: ".swiper-pagination",
-//         clickable: true,
-//     },
-//     keyboard: {
-//         enabled: true,
-//     },
-//     slideToClickedSlide: true
-// });
-
-// function lg(){
-//     let gallerySlider = new Swiper(".swiper.is-gallery", {
-
-//         slidesPerView: 8,
-//         centeredSlides: true,
-//         speed: 300,
-//         grabCursor: true,
-//         parallax: true,
-//         mousewheel: {
-//             thresholdDelta: 70,
-//         },
-
-//         navigation: {
-//             nextEl: ".swiper-button-next",
-//             prevEl: ".swiper-button-prev"
-//         },
-//         pagination: {
-//             el: ".swiper-pagination",
-//             clickable: true,
-//         },
-//         keyboard: {
-//             enabled: true,
-//         },
-//         slideToClickedSlide: true
-//     });
-// }
-
-
-// function ch(){
-//     if(window.innerWidth <= 768){
-//         let gallerySlider = new Swiper(".swiper.is-gallery", {
-//             coverflowEffect: {
-//                 rotate: 0,
-//                 stretch: 30,
-//                 depth: 100,
-//                 modifier: 5,
-//                 slideShadows: true
-//             },
-//             effect: "coverflow",
-//             slidesPerView: 1,
-//             centeredSlides: true,
-//             speed: 300,
-//             grabCursor: true,
-//             parallax: true,
-//             mousewheel: {
-//                 thresholdDelta: 70,
-//             },
-//             navigation: {
-//                 nextEl: ".swiper-button-next",
-//                 prevEl: ".swiper-button-prev"
-//             },
-//             pagination: {
-//                 el: ".swiper-pagination",
-//                 clickable: true,
-//             },
-//             keyboard: {
-//                 enabled: true,
-//             },
-//             slideToClickedSlide: true,
-//             on: {
-//                 slideChange: function () {
-//                     // Loop through all slides
-//                     document.querySelectorAll('.swiper-slide').forEach(slide => {
-//                         if (!slide.classList.contains('swiper-slide-visible')) {
-//                             // Hide slides that are not visible
-//                             slide.style.opacity = '0';
-//                             slide.style.pointerEvents = 'none';
-//                         } else {
-//                             // Show slides when they become visible
-//                             slide.style.opacity = '1';
-//                             slide.style.pointerEvents = 'auto';
-//                         }
-//                     });
-//                 },
-//                 init: function () {
-//                     // Trigger the logic once at initialization
-//                     this.emit('slideChange');
-//                 }
-//             }
-//         });
-
-//     }
-
-// }
-
-// ch();
-
-
-// function sm() {
-//     if (window.innerWidth <= 768) {
-//         let gallerySlider = new Swiper(".swiper.is-gallery", {
-
-//             effect: "coverflow",
-//             slidesPerView: 1,
-//             centeredSlides: true,
-//             speed: 300,
-//             grabCursor: true,
-//             parallax: true,
-//             mousewheel: {
-//                 thresholdDelta: 70,
-//             },
-//             navigation: {
-//                 nextEl: ".swiper-button-next",
-//                 prevEl: ".swiper-button-prev"
-//             },
-//             pagination: {
-//                 el: ".swiper-pagination",
-//                 clickable: true,
-//             },
-//             keyboard: {
-//                 enabled: true,
-//             },
-//             slideToClickedSlide: true,
-//             on: {
-//                 slideChange: function () {
-//                     // Loop through all slides
-//                     document.querySelectorAll('.swiper-slide').forEach(slide => {
-//                         if (!slide.classList.contains('swiper-slide-visible')) {
-//                             // Hide slides that are not visible
-//                             slide.style.opacity = '0';
-//                             slide.style.pointerEvents = 'none';
-//                         } else {
-//                             // Show slides when they become visible
-//                             slide.style.opacity = '1';
-//                             slide.style.pointerEvents = 'auto';
-//                         }
-//                     });
-//                 },
-//                 init: function () {
-//                     // Trigger the logic once at initialization
-//                     this.emit('slideChange');
-//                 }
-//             }
-//         });
-//     }
-// }
-
-// window.onresize = function(){
-//     if (window.innerWidth <= 768) {
-//         sm();
-//     }else{
-//         lg();
-//     }
-// }
-
-// Recheck and reinitialize on window resize
-// window.addEventListener("resize", () => {
-//     if (window.innerWidth <= 768) {
-//         ch();
-//     }else{
-//         lg();
-//     }
-// });
-
-
 let gallerySlider; // Declare the Swiper instance globally to manage it properly
 
 function lg() {
@@ -397,23 +216,6 @@ window.addEventListener("resize", initializeSwiper);
 
 
 
-// $(document).ready(function(){
-//     $('.slider-nav').slick({
-//         infinite: false,
-//         centerMode: true,
-//         centerPadding: '0',
-//         slidesToShow: 5,
-//         focusOnSelect: true,
-//         autoplay: false,
-//         speed: 600,
-//         variableWidth: false,
-//         arrows: true,
-//         dots: false,
-
-//     });
-// });
-
-
 $(document).ready(function(){
     $('.slider-nav').slick({
         infinite: false,
@@ -455,7 +257,7 @@ function showDetails(detailId) {
     const heroHeight = document.querySelector('.container-0-').offsetHeight;
 
     caret.style.transition = 'top 0.3s ease-in-out';
-    caret.style.top = `${itemOffsetTop - heroHeight - 1110 + itemHeight /2 - caret.offsetHeight / .115}px`;
+    caret.style.top = `${itemOffsetTop - (heroHeight + itemHeight /.3 - caret.offsetHeight /.343 ) }px`;
 }
 
 const items = document.querySelectorAll('.left-panel ul li');
@@ -486,4 +288,27 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.log("Dropdown not found.");
     }
+});
+
+///////////////////////////////////////////
+// Resizing Slider
+
+const inputs = document.querySelectorAll("input");
+const div = document.querySelector("li");
+
+function handleInputChange() {
+    const units = this.dataset.units || "";
+
+    document.documentElement.style.setProperty(
+        `--${this.name}`,
+        this.value + units
+    );
+}
+
+inputs.forEach((input) => input.addEventListener("input", handleInputChange));
+var range = $("input#range"),
+    value = $(".range-value");
+value.html(range.attr("value"));
+range.on("input", function () {
+    value.html(this.value);
 });
