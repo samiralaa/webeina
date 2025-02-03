@@ -44,12 +44,10 @@
                     <h2 class="head">{{ __('messages.quick_links') }}</h2>
                     <ul class="footer-address-list link-hover">
                         <li><a class="lh" href="{{ route('about-us') }}" title="About WEBENIA">About</a></li>
-                        <li><a class="lh" href="#" title="Digital Transformation Services">Digital Transformation</a></li>
-                        <li><a class="lh" href="#" title="Web Solutions">Web Solutions</a></li>
-                        <li><a class="lh" href="#" title="Digital Marketing Services">Digital Marketing</a></li>
-                        <li><a class="lh" href="#" title="Mobile Solutions">Mobile Solutions</a></li>
-                        <li><a class="lh" href="#" title="Digital Content Services">Digital Content</a></li>
-                        <li><a class="lh" href="{{ route('contact') }}" title="Contact WEBENIA">Contact</a></li>
+                        @foreach ($services as $service)
+
+                        <li><a class="lh" href="{{ route('serves.details', ['id' => $service->slug]) }}" title="{{ $service->name[app()->getLocale()] }}" title="Digital Transformation Services"> {{ $service->name[app()->getLocale()] }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

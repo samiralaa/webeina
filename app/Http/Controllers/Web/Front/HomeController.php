@@ -35,7 +35,7 @@ class HomeController extends Controller
 
     public function servesDetails($slug)
     {
-        $service = Service::where('slug',$slug)->with('contents')->first();
+        $service = Service::where('slug', $slug)->with('contents')->first();
         return view('website.serves-details', compact('service'));
     }
 
