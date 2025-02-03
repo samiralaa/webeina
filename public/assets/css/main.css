@@ -410,3 +410,12 @@ button:hover .dot,
 .partner__slider:hover .circle {
     opacity: 0;
 }
+
+@media (max-width: 768px) {
+    .circle{
+        display: none;
+    }
+    .dot{
+        display: none;
+    }
+}
