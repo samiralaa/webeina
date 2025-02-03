@@ -45,6 +45,8 @@
     line-height: 1.6;
 }
 
+
+
 /* Feature */
 .container.features {
     max-width: 1200px;
@@ -95,6 +97,7 @@
     background-color: #18a686;
     position: relative;
     border-radius: 2px;
+    z-index: 2;
 }
 
 .verticalline .select {
@@ -107,8 +110,8 @@
     width: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     transition: top 0.3s ease;
+    z-index: 2;
 }
-
 
 .right-panel {
     display: flex;
@@ -117,9 +120,38 @@
     position: relative;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     padding: 30px;
     color: #555;
+    min-height: fit-content;
+
 }
+
+/*.right-panel {*/
+/*    position: relative;*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    padding: 20px;*/
+/*    color: white;*/
+/*}*/
+
+/* Optional: Overlay for readability */
+.right-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+    z-index: 1; /* Ensure it goes behind content */
+}
+
+.right-panel > * {
+    position: relative;
+    z-index: 2; /* Ensure content stays above the background */
+}
+
 
 .details {
     display: none;
@@ -132,16 +164,20 @@
 }
 
 .right-panel h2 {
-    margin: 0;
+    margin: 0 0 15px 0;
     font-size: 28px;
-    margin-bottom: 15px;
+    color: white;
 }
 
 .right-panel p {
     font-size: 16px;
     line-height: 1.6;
+    color: white;
 }
 
+
+
+/* Why Choose This Service */
 .service-description {
     background: #f8f9fa;
     padding: 80px 0;
@@ -198,6 +234,9 @@
     line-height: 1.5;
 }
 
+
+
+/* Industries */
 .features-section {
     background: #f8f9fa;
     padding: 80px 0;
@@ -259,7 +298,7 @@
 }
 
 @media (max-width: 768px) {
-    .container {
+    .features-section .container {
         flex-direction: column;
     }
     .left-panel ul li {
@@ -293,14 +332,8 @@
 }
 
 
-/* Steps Map */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
 
+/* Steps Map */
 .steps-map {
     background-image: linear-gradient(30deg, #076767 0%, #18a686 100%);
     background-repeat: no-repeat;
@@ -431,4 +464,42 @@
 .steps-item .periode {
     margin-top: 1rem;
     font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .steps-list::before {
+        left: 32px;
+    }
+
+    .steps-item {
+        width: 100%;
+        padding-left: 20px;
+        text-align: left;
+        float: none;
+        margin-bottom: 2rem;
+    }
+
+    .steps-item::before {
+        left: -1px;
+    }
+
+    .steps-item::after {
+        left: -6px;
+    }
+
+    .steps-progress-head h1 {
+        text-align: left;
+    }
+
+    .steps-item .head {
+        text-align: left;
+    }
+
+    .steps-item .location {
+        text-align: left;
+    }
+    .steps-item:hover:nth-child(even)::before,
+    .steps-item:hover:nth-child(odd)::before {
+        height: 123%;
+    }
 }
