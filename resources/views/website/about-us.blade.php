@@ -6,7 +6,7 @@
 @section('content')
 <!-- Hero -->
 <div class="container-0-">
-    <img class="background-img" src="{{ asset('assets/images/hero/about-hero.png') }}" alt="About-Us">
+    <img class="background-img" src="{{ asset('assets/images/hero/about-hero.png') }}" loading="lazy" alt="About-Us">
     <div class="container-0">
         <div class="container-1">
             <div class="text-2">{{ __('messages.about_us') }}</div>
@@ -28,14 +28,14 @@
                 </p>
             </div>
             <div class="col-lg-5">
-                <img src="{{ asset('assets/images/who-we-are.png') }}" alt="Our Story" class="img-fluid rounded">
+                <img src="{{ asset('assets/images/who-we-are.png') }}" alt="Our Story" loading="lazy" class="img-fluid rounded">
             </div>
         </div>
     </div>
     <div class="about container">
         <div class="row align-items-center">
             <div class="col-lg-5">
-                <img src="{{ asset('assets/images/why-choose-us.png') }}" alt="Our Story" class="img-fluid rounded">
+                <img src="{{ asset('assets/images/why-choose-us.png') }}" alt="Our Story" loading="lazy" class="img-fluid rounded">
             </div>
             <div class="col-lg-7">
                 <h2 class="fw-bold text-success mb-4">Why Choose Us?</h2>

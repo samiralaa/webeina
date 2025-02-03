@@ -11,21 +11,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+
 
 
 <footer class="pt-5 mt-5 pb-5" >
     <div class="container ">
       <div class="main row " style="display:flex ; align-items: flex-start;">
         <div class="about col-md-5">
-          <img class="" src="https://placehold.co/200x120" alt="">
+          <img class="" src="https://placehold.co/200x120" loading="lazy" alt="">
           <div>
             <p class="text-white-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur aliquid mollitia quo excepturi? Ratione corrupti ullam laborum aliquam dolore, explicabo, officia tempora nulla quis amet iure, tempore iste consectetur laudantium?</p>
             <p class="text-white-50"><i class="fa-solid fa-phone"></i> Lorem ipsum dolor sit amet consectetur. </p>
             <p class="text-white-50"><i class="fa-regular fa-envelope"></i> Lorem ipsum dolor sit amet consectetur. </p>
             <div class="map pt-3">
               <p class="text-white-50" style="display: flex; align-items: flex-start; gap: 8px;">
-                <img class="" src="https://placehold.co/90x90" alt="">
+                <img class="" src="https://placehold.co/90x90" loading="lazy" alt="">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur neque facere aspernatur harum, quam libero alias sit commodi molestiae, enim at voluptatem repellendus, vel non ab. Id amet quis architecto?</p>
             </div>
           </div>
@@ -64,7 +64,7 @@
       </div>
       <p  class="last mt-5 text-center">all copy right reserved &copy;   <span>webania-agency</span></p>
     </div>
-  
+
   </footer>
 </body>
 </html>

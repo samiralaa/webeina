@@ -9,7 +9,7 @@
 <body>
     <div class="container text-center mt-5">
         <h1>Welcome, {{ Auth::user()->name }}!</h1>
-        <img src="{{ Auth::user()->avatar }}" alt="Profile Picture" class="rounded-circle mt-3" width="150">
+        <img src="{{ Auth::user()->avatar }}" loading="lazy" alt="Profile Picture" class="rounded-circle mt-3" width="150">
         <p class="mt-3">{{ Auth::user()->email }}</p>
         <a href="{{ route('logout') }}" class="btn btn-danger mt-3">Logout</a>
     </div>

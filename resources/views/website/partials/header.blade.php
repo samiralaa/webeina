@@ -29,7 +29,7 @@
                         <nav class="navbar p-0">
                             <div class="navbar__logo">
                                 <a href="{{ route('home') }}" aria-label="go to home">
-                                    <img width="250px" style="height: 100px" height="100px" class="img-logo"
+                                    <img width="250px" style="height: 100px" height="100px" loading="lazy" class="img-logo"
                                         src="https://placehold.co/100x100.png" alt="Image" />
                                 </a>
                             </div>
@@ -52,7 +52,7 @@
                 <div class="offcanvas-menu__header nav-fade">
                     <div class="logo">
                         <a href="{{ route('home') }}">
-                            <img class="img-logo" src="https://placehold.co/100x100.png" alt=""
+                            <img class="img-logo" src="https://placehold.co/100x100.png" loading="lazy" alt=""
                                 title="" />
                         </a>
                     </div>

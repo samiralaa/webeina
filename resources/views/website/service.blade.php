@@ -6,7 +6,7 @@
 
 <!-- Hero -->
 <div class="container-0-">
-    <img class="background-img" src="{{ asset('assets/images/services.png') }}" alt="FAQ">
+    <img class="background-img" src="{{ asset('assets/images/services.png') }}" loading="lazy" alt="FAQ">
     <div class="container-0">
         <div class="container-1">
             <div class="text-2">{{ __('messages.services') }}</div>
@@ -49,7 +49,7 @@
 
         <div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
             <div class="itemCard__imageWrap">
-                <img class="itemCard__image  lazyloaded"
+                <img class="itemCard__image  lazyloaded" loading="lazy"
                     src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg"
                     alt="Drupal Entwicklung und Migration">
             </div>

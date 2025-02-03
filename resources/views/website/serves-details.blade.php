@@ -5,7 +5,7 @@
 @section('content')
 <!-- Hero -->
 <div class="container-0-">
-    <img class="background-img" src="{{ asset('assets/images/hero/about-hero.png') }}" alt="{{ $service->name[app()->getLocale()] }}">
+    <img class="background-img" src="{{ asset('assets/images/hero/about-hero.png') }}" loading="lazy" alt="{{ $service->name[app()->getLocale()] }}">
     <div class="container-0">
         <div class="container-1">
             <div class="text-2">{{ $service->name[app()->getLocale()] }}</div>

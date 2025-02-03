@@ -6,7 +6,7 @@
 
 <!-- Hero -->
 <div class="container-0-">
-    <img class="background-img" src="{{ asset('assets/images/hero/contact-hero.png') }}" alt="Contact-Us">
+    <img class="background-img" src="{{ asset('assets/images/hero/contact-hero.png') }}" loading="lazy" alt="Contact-Us">
     <div class="container-0">
         <div class="container-1">
             <div class="text-2">{{ __('messages.contact_us') }}</div>
