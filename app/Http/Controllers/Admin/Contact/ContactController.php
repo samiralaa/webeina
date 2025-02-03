@@ -42,6 +42,6 @@ public function create()
     {
         $data = request()->all();
         $this->contact->create($data);
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Contact created successfully!');
     }
 }

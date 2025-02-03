@@ -18,7 +18,12 @@
 </div>
 
 
-
+@if(session('success'))
+    <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> {{ session('success') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
 <!-- Features -->
 <div class="container pt-5 pb-5">
     <h1 class="text-captlize pb-4">Features</h1>
@@ -204,5 +209,14 @@
 </div>
 
 
-
+<script>
+        setTimeout(function() {
+            let alert = document.getElementById("success-alert");
+            if (alert) {
+                alert.style.transition = "opacity 0.5s";
+                alert.style.opacity = "0";
+                setTimeout(() => alert.remove(), 500); // Remove after fade out
+            }
+        }, 2000); // Message disappears after 3 seconds
+    </script>
 @endsection
