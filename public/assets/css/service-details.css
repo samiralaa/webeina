@@ -22,7 +22,6 @@
 .container-0{
     position: relative;
     width: 100%;
-    /*text-align: left;*/
 }
 
 .container-1{
@@ -291,4 +290,145 @@
     .feature-box {
         width: 90%;
     }
+}
+
+
+/* Steps Map */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.steps-map {
+    background-image: linear-gradient(30deg, #076767 0%, #18a686 100%);
+    background-repeat: no-repeat;
+    height: fit-content;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.steps-progress {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.steps-progress-head {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.steps-progress-head .head-item {
+    padding: 0.5rem 0.5rem;
+    margin: 0.3rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.steps-list {
+    width: 100%;
+    position: relative;
+    list-style: none;
+}
+
+.steps-list::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(50% + 16.5px);
+    width: 10px;
+    height: 100%;
+    border-left: 3px solid #fff;
+}
+
+.steps-item {
+    position: relative;
+    width: 50%;
+}
+
+.steps-item:hover:nth-child(even)::before,
+.steps-item:hover:nth-child(odd)::before {
+    height: 100%;
+}
+
+.steps-item:nth-child(even) {
+    padding-right: 20px;
+    text-align: right;
+    float: left;
+    clear: both;
+}
+
+.steps-item:nth-child(even)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -3px;
+    width: 3px;
+    height: 0;
+    background-color: #52c234;
+    display: inline-block;
+    transition: all 255ms ease-in-out;
+}
+
+.steps-item:nth-child(even)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -9px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.steps-item:nth-child(odd) {
+    float: right;
+    padding-left: 20px;
+    clear: both;
+}
+
+.steps-item:nth-child(odd)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background-color: #52c234;
+    display: inline-block;
+    transition: all 255ms ease-in-out;
+}
+
+.steps-item:nth-child(odd)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -6px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: inline-block;
+}
+
+.steps-item:not(:last-child) {
+    padding-bottom: 1rem;
+}
+
+.steps-item .location {
+    margin-top: 0.2rem;
+}
+
+.steps-item .periode {
+    margin-top: 1rem;
+    font-size: 0.8rem;
 }

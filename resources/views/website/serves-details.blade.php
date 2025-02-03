@@ -14,6 +14,82 @@
     </div>
 </div>
 
+<!-- Features -->
+<div class="container pt-5 pb-5">
+    <h1 class="text-captlize pb-4">Features</h1>
+</div>
+<section class="feature-section">
+    <div class="container features">
+        <div class="left-panel">
+            <!-- Dropdown for smaller screens -->
+            <select class="feature-dropdown" aria-label="Select a service" onchange="showDetails(this.value)">
+                @foreach ($service->contents as $content)
+                <option value="details{{ $content->id }}">{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</option>
+                @endforeach
+            </select>
+
+            <!-- Original list for larger screens -->
+            <ul class="feature-list">
+                @foreach ($service->contents as $content)
+                <li onclick="showDetails('details{{ $content->id }}')">{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</li>
+                @endforeach
+            </ul>
+        </div>
+
+        <div class="verticalline">
+            <div class="select"></div>
+        </div>
+
+        <div class="right-panel">
+            @foreach ($service->contents as $content)
+            <div id="details{{ $content->id }}" class="details">
+                <h2>{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</h2>
+                <p>{{ $content->description[app()->getLocale()] ?? $content->description['en'] }}</p>
+            </div>
+            @endforeach
+        </div>
+    </div>
+
+{{-- start Q-contact --}}
+    <div class="Q-contact pt-5 pb-5">
+
+        <div class="px-3 mt-5 d-flex justify-content-center">
+
+            <div class="col-12 col-md-6">
+                <h4 class="text-center text-capitalize">quick contact</h4>
+                <form action="{{route('contact.store')}}" method="post">
+                    @csrf
+                    <div class="mb-3 pt-2 d-flex gap-3 ">
+                        <div class="w-50">
+                            <label for="name" class="form-label text-capitalize fw-bold">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+
+                        </div>
+                        <div class="mb-3 w-50">
+                            <label for="email" class="form-label text-capitalize fw-bold">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <input type="text" name="service_id" value="{{ $service->id }}" hidden>
+                    <div class="mb-3">
+                        <label for="email" class="form-label text-capitalize fw-bold">Business email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label text-capitalize fw-bold">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="request-quote-btn quote" style="max-width: 200px;margin: 0">
+                        <span">Send Request</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
 <section class="service-description">
     <div class="container">
         <h1 class="service-title">Why Choose This Service?</h1>
@@ -57,6 +133,104 @@
     </div>
 </section>
 
+<!--<main>-->
+<!--    <ul class="infoGraphic">-->
+<!--        <li>-->
+<!--            <div class="numberWrap">-->
+<!--                <div class="number fontColor1">1</div>-->
+<!--                <div class="coverWrap">-->
+<!--                    <div class="numberCover"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="content">-->
+<!--                <div class="icon iconCodepen"></div>-->
+<!--                <h2>Develop</h2>-->
+<!--                <p>Sagittis, audantium sem eveniet lacus pede porttitor aenean.</p>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <div class="numberWrap">-->
+<!--                <div class="number fontColor2">2</div>-->
+<!--                <div class="coverWrap">-->
+<!--                    <div class="numberCover"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="content">-->
+<!--                <div class="icon iconSocial"></div>-->
+<!--                <h2>Engage</h2>-->
+<!--                <p>Sagittis, audantium sem eveniet lacus pede porttitor aenean.</p>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <div class="numberWrap">-->
+<!--                <div class="number  fontColor3">3</div>-->
+<!--                <div class="coverWrap">-->
+<!--                    <div class="numberCover"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="content">-->
+<!--                <div class="icon iconAirplane"></div>-->
+<!--                <h2>Deliver</h2>-->
+<!--                <p>Sagittis, audantium sem eveniet lacus pede porttitor aenean.</p>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <div class="numberWrap">-->
+<!--                <div class="number  fontColor4">4</div>-->
+<!--                <div class="coverWrap">-->
+<!--                    <div class="numberCover"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="content">-->
+<!--                <div class="icon iconMap"></div>-->
+<!--                <h2>Plan</h2>-->
+<!--                <p>Sagittis, audantium sem eveniet lacus pede porttitor aenean.</p>-->
+<!--            </div>-->
+<!--        </li>-->
+<!--        <li>-->
+<!--            <div class="numberWrap">-->
+<!--                <div class="number  fontColor5">5</div>-->
+<!--                <div class="coverWrap">-->
+<!--                    <div class="numberCover"></div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="content">-->
+<!--                <div class="icon iconBulb"></div>-->
+<!--                <h2>Educate</h2>-->
+<!--                <p>Sagittis, audantium sem eveniet lacus pede porttitor aenean.</p>-->
+<!--            </div>-->
+<!--        </li>-->
+<!---->
+<!--    </ul>-->
+<!---->
+<!--</main>-->
+
+<section class="steps-map">
+    <div class="steps-progress">
+        <div class="steps-progress-head">
+            <h1 class="text-captlize pb-4">Steps</h1>
+        </div>
+        <ul class="steps-list">
+            <li class="steps-item">
+                <h3 class="head">Strategy Development</h3>
+                <div class="location">The very first step of the app development process is, unsurprisingly, defining the strategy. At this point, you’ve got to start thinking carefully about your future application, its goals, capabilities, and business model.</div>
+            </li>
+            <li class="steps-item">
+                <h3 class="head">Analysis and Planning</h3>
+                <div class="location">The very first step of the app development process is, unsurprisingly, defining the strategy. At this point, you’ve got to start thinking carefully about your future application, its goals, capabilities, and business model.</div>
+            </li>
+            <li class="steps-item">
+                <h3 class="head">UI/UX Design</h3>
+                <div class="location">The very first step of the app development process is, unsurprisingly, defining the strategy. At this point, you’ve got to start thinking carefully about your future application, its goals, capabilities, and business model.</div>
+            </li>
+            <li class="steps-item">
+                <h3 class="head">App Development</h3>
+                <div class="location">The very first step of the app development process is, unsurprisingly, defining the strategy. At this point, you’ve got to start thinking carefully about your future application, its goals, capabilities, and business model.</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
 <section class="features-section">
     <div class="container">
         <h1 class="section-title text-capitalize ">get premium industiral services </h1>
@@ -83,90 +257,6 @@
             </div>
         </div>
     </div>
-</section>
-
-    <div class="container pt-5 pb-5">
-        <h1 class="text-captlize pb-4">Features</h1>
-    </div>
-<section class="feature-section">
-    <div class="container features">
-        <div class="left-panel">
-            <!-- Dropdown for smaller screens -->
-            <select class="feature-dropdown" aria-label="Select a service" onchange="showDetails(this.value)">
-                @foreach ($service->contents as $content)
-                <option value="details{{ $content->id }}">{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</option>
-                @endforeach
-            </select>
-
-            <!-- Original list for larger screens -->
-            <ul class="feature-list">
-                @foreach ($service->contents as $content)
-                <li onclick="showDetails('details{{ $content->id }}')">{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</li>
-                @endforeach
-            </ul>
-        </div>
-
-    <div class="verticalline">
-        <div class="select"></div>
-    </div>
-
-    <div class="right-panel">
-        @foreach ($service->contents as $content)
-        <div id="details{{ $content->id }}" class="details">
-            <h2>{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</h2>
-            <p>{{ $content->description[app()->getLocale()] ?? $content->description['en'] }}</p>
-        </div>
-        @endforeach
-    </div>
-    </div>
-
-
-      {{-- start Q-contact --}}
-
-      <div class="Q-contact pt-5 pb-5">
-
-         <div class="row mt-5 d-flex justify-content-center ">
-               {{-- <div class="col-12 col-md-6">
-               <img class="img-fluid" src="{{ asset('assets/images/contact-us.png') }}" alt="">
-               </div> --}}
-
-               <div class="col-12 col-md-6">
-                   <h4 class="text-center text-capitalize">quick contact</h4>
-                   <form action="{{route('contact.store')}}" method="post">
-                   @csrf
-                       <div class="mb-3 pt-2 d-flex gap-3 ">
-                           <div class="w-50">
-                               <label for="name" class="form-label text-capitalize fw-bold">Your Name</label>
-                           <input type="text" class="form-control" id="name" name="name" required>
-
-                           </div>
-                           <div class="mb-3 w-50">
-                               <label for="email" class="form-label text-capitalize fw-bold">Your Email</label>
-                               <input type="email" class="form-control" id="email" name="email" required>
-                           </div>
-                       </div>
-                       <input type="text" name="service_id" value="{{ $service->id }}" hidden>
-                       <div class="mb-3">
-                           <label for="email" class="form-label text-capitalize fw-bold">Business email</label>
-                           <input type="email" class="form-control" id="email" name="email" required>
-                       </div>
-                       <div class="mb-3">
-                           <label for="message" class="form-label text-capitalize fw-bold">Message</label>
-                           <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
-                       </div>
-                       <button type="submit" class="request-quote-btn quote" style="max-width: 200px;margin: 0">
-                           <span">Send Request</span>
-                       </button>
-                   </form>
-               </div>
-           </div>
-
-       </div>
-
-
-       {{-- end Q-contact --}}
-
-
 </section>
 
 @endsection
