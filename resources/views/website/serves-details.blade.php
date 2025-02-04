@@ -18,12 +18,26 @@
 </div>
 
 
-@if(session('success'))
+{{-- @if(session('success'))
     <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Success!</strong> {{ session('success') }}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    @endif
+    @endif --}}
+    @if(session('success'))
+    <div id="success-alert" class="alert alert-success alert-dismissible fade show"
+         role="alert">
+         <i class="fa-solid fa-check fs-1"></i>
+        <strong>Success!</strong>
+        <span id="alert-message">Your Message Sent Successfully.</span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
+
+
+
+
 <!-- Features -->
 <div class="container pt-5 pb-5">
     <h1 class="text-captlize pb-4">Features</h1>
@@ -210,6 +224,22 @@
 
 
 <script>
+
+
+document.addEventListener("DOMContentLoaded", function () {
+            let alertBox = document.getElementById("success-alert");
+            if (alertBox) {
+                alertBox.style.width = "310px";
+                alertBox.style.position = "fixed";
+                alertBox.style.top = "90px";
+                alertBox.style.right = "8 px";
+                alertBox.style.zIndex = "1050";
+                alertBox.style.borderLeft = "5px solid #076767";
+                alertBox.style.display = "flex";
+                alertBox.style.flexDirection = "column";
+            }
+        });
+
         setTimeout(function() {
             let alert = document.getElementById("success-alert");
             if (alert) {
@@ -217,6 +247,11 @@
                 alert.style.opacity = "0";
                 setTimeout(() => alert.remove(), 500); // Remove after fade out
             }
-        }, 2000); // Message disappears after 3 seconds
+        }, 90000); // Message disappears after 3 seconds
+
+
+
+
     </script>
+
 @endsection

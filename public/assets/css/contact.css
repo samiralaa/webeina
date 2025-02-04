@@ -85,6 +85,7 @@ form .listes .last_name select{
     border: var(--bs-border-width) solid var(--bs-border-color);
     border-radius: var(--bs-border-radius);
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    
 }
 form input[type="checkbox"] {
     accent-color: #076767;
