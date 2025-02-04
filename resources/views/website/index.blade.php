@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn-link" href="{{ route('serves.details', ['id' => $item->id]) }}" title="{{ $item->name[app()->getLocale()] }}">
+                <a class="btn-link" href="{{ route('serves.details', ['id' => $item->slug]) }}" title="{{ $item->name[app()->getLocale()] }}">
                     {{ $item->name[app()->getLocale()] }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>
             </div>
