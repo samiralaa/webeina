@@ -129,7 +129,7 @@
                 <div class="partner__slider" role="list" aria-label="List of Partners">
                     @foreach ($section->images as $image)
                     <div class="partner__slider-item slick-slide" role="listitem" aria-label="Microsoft">
-                        <img src="{{asset($image->image_path )}}" alt="Microsoft Official Logo" title="Microsoft Official Logo" loading="lazy">
+                        <img src="{{asset($image->image_path )}}" alt="Microsoft Official Logo" title="Microsoft Official Logo">
                     </div>
                     @endforeach
                 </div>
