@@ -18,7 +18,6 @@
     </div>
 </div>
 
-<link rel="stylesheet" href="{{ asset('assets/css/index.css') }}">
 
 <style>
     .bigtitle h1{
@@ -40,25 +39,21 @@
 
 
 
-<div class="container-fluid container mb--2">
+<section class="our_services container-fluid container mb--2 pt-5 pb-5" role="region" aria-label="Our Services Section">
     <div class="row">
         <!-- itemCard -->
         @if($serves)
         @foreach ($serves as $item)
-
-
-        <div class="col-12 col-sm-12 col-lg-6 col-xl-4 itemService">
+        <article class="services-items col-12 col-sm-12 col-lg-6 col-xl-4 itemService pb-5 pb-md-3" role="article" aria-label="{{ $item->name[app()->getLocale()] }}">
             <div class="itemCard__imageWrap">
-                <img class="itemCard__image  lazyloaded" loading="lazy"
-                    src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg"
-                    alt="Drupal Entwicklung und Migration">
+                <img class="itemCard__image lazyloaded" loading="lazy"
+                     src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg"
+                     alt="{{ $item->name[app()->getLocale()] }} - {{ __('messages.service_image') }}" title="{{ $item->name[app()->getLocale()] }}">
             </div>
             <div class="itemCard__header">
-                <h3 class="title title--h5 itemCard__title mt-3 mb-3">{{ $item->name[app()->getLocale()] }}
-                </h3>
+                <h3 class="title title--h5 itemCard__title mt-3 mb-3">{{ $item->name[app()->getLocale()] }}</h3>
                 <div class="flex max-w-full flex-col flex-grow">
-                    <div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal "
-                        dir="auto">
+                    <div class="min-h-8 text-message flex w-full flex-col items-end gap-2 whitespace-normal" dir="auto">
                         <div class="flex w-full flex-col gap-1 empty:hidden">
                             <div class="markdown prose w-full break-words dark:prose-invert light">
                                 <p>{{ $item->description[app()->getLocale()] }}</p>
@@ -66,10 +61,11 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn-link" href="#">{{
-                    $item->name[app()->getLocale()] }} <i class=" fa-solid fa-arrow-right"></i></a>
+                <a class="btn-link" href="{{ route('serves.details', ['id' => $item->id]) }}" title="{{ $item->name[app()->getLocale()] }}">
+                    {{ $item->name[app()->getLocale()] }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
             </div>
-        </div>
+        </article>
         @endforeach
         @endif
         <!-- /itemCard -->
@@ -80,6 +76,6 @@
 
         <!-- /itemCard -->
     </div>
-</div>
+</section>
 
 @endsection

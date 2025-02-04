@@ -586,7 +586,7 @@
             </div>
         </article>
         @endforeach
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-center pt-3">
             <a href="{{ route('user-profile') }}" class="request-quote-btn quote" style="max-width: 200px" title="See More Services">
                 <span>See More</span>
             </a>
@@ -603,11 +603,11 @@
     <div class="container pt-5 pb-5">
         <h2 class="text-capitalize pb-4">{{ __('messages.our_partners') }}</h2>
     </div>
-  
+
     <div class="container-fluid pb-5">
         <div class="row justify-content-center">
             <div class="col-12">
-          
+
                 <div class="partner__slider" role="list" aria-label="List of Partners">
                 @foreach ($section->images as $image)
                     <div class="partner__slider-item slick-slide" role="listitem" aria-label="Microsoft">
@@ -615,7 +615,7 @@
                     </div>
                     @endforeach
                 </div>
-              
+
             </div>
         </div>
     </div>
