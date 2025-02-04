@@ -102,7 +102,7 @@
             </div>
         </article>
         @endforeach
-        <div class="col-12">
+        <div class="col-12 d-flex justify-content-center pt-3">
             <a href="{{ route('user-profile') }}" class="request-quote-btn quote" style="max-width: 200px" title="See More Services">
                 <span>See More</span>
             </a>
