@@ -515,8 +515,7 @@
                         <input type="hidden" name="status" value="0">
                         <div class="form-group mb-3">
                             <label for="image" class="form-label">Agency Image</label>
-                            <input type="file" name="images[]" id="image" class="form-control" multiple>
-                            @error('images')
+                            <input type="file" name="images[]" id="image" class="form-control" multiple>                            @error('images')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>

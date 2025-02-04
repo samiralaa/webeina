@@ -35,7 +35,7 @@ class StoreContentRequest extends FormRequest
             'bottom_text.en' => 'nullable|string|max:255',
             'subtitle.ar' => 'nullable',
             'subtitle.en' => 'nullable',
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+            'images.*' => 'nullable|image',
             'slider_name.ar' => 'nullable|array',
             'slider_name.en' => 'nullable|array',
             'slider_name.ar.*' => 'nullable|string|max:255',

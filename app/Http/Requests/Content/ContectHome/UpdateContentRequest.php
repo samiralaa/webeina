@@ -35,7 +35,7 @@ class UpdateContentRequest extends FormRequest
             'bottom_text.en' => 'nullable|string|max:255',
             'subtitle.ar' => 'nullable',
             'subtitle.en' => 'nullable',
-            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:4048',
+            'images.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
             'slider_name.ar' => 'nullable|array',
             'slider_name.en' => 'nullable|array',
             'slider_name.ar.*' => 'nullable|string|max:255',
