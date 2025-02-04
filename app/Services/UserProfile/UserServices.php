@@ -20,7 +20,8 @@ class UserServices
 
     public function getAllServices()
     {
-        return $this->index($this->service, ['id', 'name', 'description', 'icon']);
+        return $this->index($this->service, ['id', 'name', 'description', 'icon','slug']);
+        
     }
 
     public function getPackageServices()

@@ -24,12 +24,6 @@
     </div>
 </section>
 
-@foreach ($sections as $section)
-
-{{-- hero --}}
-
-
-{{-- Description --}}
 <section class="description container pt-5 pb-5" role="region" aria-label="Description Section">
     <div class="row">
         {{-- Text Section --}}
@@ -70,9 +64,6 @@
         </div>
     </div>
 </section>
-
-
-{{-- Services --}}
 <section class="our_services container-fluid container mb--2 pt-5 pb-5" role="region" aria-label="Our Services Section">
     <h2 class="text-capitalize mb-5 mt-5">{{ __('messages.our_services') }}</h2>
     <div class="row">
@@ -110,6 +101,17 @@
         @endif
     </div>
 </section>
+
+@foreach ($sections as $section)
+
+{{-- hero --}}
+
+
+{{-- Description --}}
+
+
+{{-- Services --}}
+
 
 @if ($section->type == 'sponsor')
 
@@ -153,7 +155,13 @@
 </section>
 @endif
 
+
+
+{{-- Linkedin --}}
+
+@endforeach
 {{-- why work with webenia --}}
+
 <section class="work pt-5 pb-5 mt-5 mb-5 bg-light" role="region" aria-label="Why Work with Webenia Section">
     <h2 class="text-capitalize text-center">{{ __('messages.why_webenia') }}</h2>
     <div class="main-work container pt-5 d-flex justify-content-center">
@@ -204,8 +212,6 @@
     </div>
 </section>
 
-
-{{-- Linkedin --}}
 <section class="main-wrapper" role="region" aria-label="LinkedIn Section">
     <div class="section slideStyle">
         <div class="container pt-5">
@@ -549,4 +555,3 @@
         <div class="swiper-pagination pb-4 mt-4" role="navigation" aria-label="Slide Pagination"></div>
     </div>
 </section>
-@endforeach

@@ -15,7 +15,11 @@ class Service extends Model
         'description' => 'array',
     ];
 
-    
+    public function getRouteKeyName()
+{
+    return 'slug';
+}
+
 
     public function contents()
     {

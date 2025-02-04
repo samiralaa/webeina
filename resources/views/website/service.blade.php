@@ -12,24 +12,24 @@
             <div class="text-2">{{ __('messages.services') }}</div>
         </div>
         <div class="spase" style="height: 120px ;"></div>
-        <div class="logo-container" >
-            <p style="color: #8d99a7;font-size: 0.87rem;margin-left: 2rem;line-height: 1.6;font-weight: 400;letter-spacing: 0.1rem;margin-top: 0.62rem;margin-bottom: 0.62rem;text-transform: uppercase;"><span><span><a href="" class="text-white-50">{{ __('messages.home') }}</a></span> » <span ><strong>{{ __('messages.services') }}</strong></span></span></p>
+        <div class="logo-container">
+            <p style="color: #8d99a7;font-size: 0.87rem;margin-left: 2rem;line-height: 1.6;font-weight: 400;letter-spacing: 0.1rem;margin-top: 0.62rem;margin-bottom: 0.62rem;text-transform: uppercase;"><span><span><a href="" class="text-white-50">{{ __('messages.home') }}</a></span> » <span><strong>{{ __('messages.services') }}</strong></span></span></p>
         </div>
     </div>
 </div>
 
 
 <style>
-    .bigtitle h1{
+    .bigtitle h1 {
         font-size: 90px !important;
         font-weight: 300;
     }
-    @media (max-width: 767px) {
-      .bigtitle h1{
-        font-size: 60px !important;
-      }
-}
 
+    @media (max-width: 767px) {
+        .bigtitle h1 {
+            font-size: 60px !important;
+        }
+    }
 </style>
 
 
@@ -47,8 +47,8 @@
         <article class="services-items col-12 col-sm-12 col-lg-6 col-xl-4 itemService pb-5 pb-md-3" role="article" aria-label="{{ $item->name[app()->getLocale()] }}">
             <div class="itemCard__imageWrap">
                 <img class="itemCard__image lazyloaded" loading="lazy"
-                     src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg"
-                     alt="{{ $item->name[app()->getLocale()] }} - {{ __('messages.service_image') }}" title="{{ $item->name[app()->getLocale()] }}">
+                    src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg"
+                    alt="{{ $item->name[app()->getLocale()] }} - {{ __('messages.service_image') }}" title="{{ $item->name[app()->getLocale()] }}">
             </div>
             <div class="itemCard__header">
                 <h3 class="title title--h5 itemCard__title mt-3 mb-3">{{ $item->name[app()->getLocale()] }}</h3>
@@ -61,9 +61,14 @@
                         </div>
                     </div>
                 </div>
-                <a class="btn-link" href="{{ route('serves.details', ['id' => $item->id]) }}" title="{{ $item->name[app()->getLocale()] }}">
+                <a class="btn-link" href="{{ route('serves.details', ['id' => $item->slug]) }}"
+                    title="{{ $item->name[app()->getLocale()] }}">
                     {{ $item->name[app()->getLocale()] }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>
+
+
+
+
             </div>
         </article>
         @endforeach
