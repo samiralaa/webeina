@@ -68,6 +68,7 @@ class HomePageController extends Controller
 
         // Handle images
         if ($request->hasFile('images')) {
+            dd("testing");
             // احصل على جميع الصور القديمة
             $existingImages = ContentImage::where('section_id', $content->id)->get();
 
