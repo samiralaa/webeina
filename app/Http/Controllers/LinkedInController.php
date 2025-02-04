@@ -2,112 +2,42 @@
 
 namespace App\Http\Controllers;
 
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Http\Client\RequestException;
 
 class LinkedInController extends Controller
 {
     // Redirect to LinkedIn for OAuth Authentication
-    public function redirectToLinkedIn()
+    public function getCompanyPosts()
     {
-        $query = http_build_query([
-            'response_type' => 'code',
-            'client_id' => env('LINKEDIN_CLIENT_ID'),
-            'redirect_uri' => env('LINKEDIN_REDIRECT_URL'),
-            'scope' => 'r_liteprofile r_organization_social r_organization',
-        ]);
-
-        return response()->json([
-            'url' => "https://www.linkedin.com/oauth/v2/authorization?$query",
-        ]);
-    }
-
-    // Handle LinkedIn OAuth Callback
-    public function handleLinkedInCallback(Request $request)
-    {
-        $code = $request->input('code');
-
-        $response = Http::asForm()->post('https://www.linkedin.com/oauth/v2/accessToken', [
-            'grant_type' => 'authorization_code',
-            'code' => $code,
-            'redirect_uri' => env('LINKEDIN_REDIRECT_URL'),
-            'client_id' => env('LINKEDIN_CLIENT_ID'),
-            'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
-        ]);
-
-        $accessToken = $response->json()['access_token'];
-
-        // Store token in session or database for later use
-        session(['linkedin_access_token' => $accessToken]);
-
-        return response()->json(['access_token' => $accessToken]);
-    }
-
-    // Fetch Organizations Where the User Is an Admin
-    public function getOrganizations(Request $request)
-    {
-        $accessToken = session('linkedin_access_token');
-
-        if (!$accessToken) {
-            return response()->json(['error' => 'Authentication required.'], 401);
-        }
-
-        $response = Http::withToken($accessToken)
-            ->get('https://api.linkedin.com/v2/organizationAcls', [
-                'q' => 'roleAssignee',
-                'role' => 'ADMINISTRATOR',
+        $companyId = "2540234";
+        $companyUrn = "urn:li:organization:" . $companyId;
+        $url = "https://api.linkedin.com/v2/shares"; // Correct endpoint
+        $accessToken = 'AQXjSncUKtV2t1-eoCzmZ2z8K9VW2rTnUIND7KSw6lwCKMEZeu5sme7KUTI4ELlw-t3ak5lreNln0e1eJrDV5eslgUVGpdaQ_0eU4VJRJWbN2FhFqKNE9PoajmSqsXU8sGoKqMcyMAjPcKNvsAR6uzXS7tWqez9qEJ_KgGkcterPcHL5b_Mg5TmehWJDEKm9N_D08PWmwZVqIIQ7Ww2HbX7abZOKcXjSxybtC3gl12oHs7FGv5E7tX3VAnZWlzJRVMI8qUce_eGJQs7G22bIaWr89LKJ5J4OWL_gKnpNayFhwY3vWG4cC1kHW0L7IOl5nB_Uxb95wbj93AIF5Ex5BpFrujXOHw';
+    
+        $client = new Client();
+    
+        try {
+            $response = $client->get($url, [
+                'headers' => [
+                    'Authorization' => 'Bearer ' . $accessToken,
+                    'Content-Type' => 'application/json',
+                ],
+                'query' => [
+                    'q' => 'owners',
+                    'owners' => $companyUrn, // Use URN-formatted company ID
+                ],
             ]);
-
-        $data = $response->json();
-
-        if (empty($data['elements'])) {
-            return response()->json(['error' => 'No organizations found.']);
+    
+            $posts = json_decode($response->getBody(), true);
+            return response()->json($posts);
+        } catch (RequestException $e) {
+            return response()->json([
+                'error' => 'Failed to retrieve posts',
+                'message' => $e->getMessage(),
+            ], 500);
         }
-
-        $organizations = [];
-        foreach ($data['elements'] as $org) {
-            $organizations[] = $org['organization'];
-        }
-
-        return response()->json($organizations);
-    }
-
-    // Fetch Posts for a Specific Organization
-    public function getCompanyPosts(Request $request)
-    {
-        $accessToken = session('linkedin_access_token');
-        $organizationId = $request->input('organizationId');
-
-        if (!$accessToken) {
-            return response()->json(['error' => 'Authentication required.'], 401);
-        }
-
-        if (!$organizationId) {
-            return response()->json(['error' => 'organizationId is required.'], 400);
-        }
-
-        $posts = [];
-        $start = 0;
-        $count = 50;
-
-        do {
-            $response = Http::withToken($accessToken)
-                ->get('https://api.linkedin.com/v2/ugcPosts', [
-                    'q' => 'authors',
-                    'authors' => $organizationId,
-                    'start' => $start,
-                    'count' => $count,
-                ]);
-
-            $data = $response->json();
-
-            if (isset($data['elements'])) {
-                $posts = array_merge($posts, $data['elements']);
-            }
-
-            $start += $count;
-        } while (isset($data['paging']['links']) && count($data['paging']['links']) > 0);
-
-        return response()->json($posts);
     }
 }
