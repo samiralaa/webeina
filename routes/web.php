@@ -24,34 +24,43 @@ use App\Http\Controllers\Admin\Setting\FooterController;
 use App\Http\Controllers\Web\Setting\LanguageController;
 use App\Http\Controllers\Web\User\UserProfileController;
 use App\Http\Controllers\Admin\Contact\ContactController;
+use App\Http\Controllers\Admin\Project\ProjectController;
 use App\Http\Controllers\Admin\Service\ServiceController;
 use App\Http\Controllers\Admin\HomePage\HomePageController;
 use App\Http\Controllers\Admin\Quiz\QuizQuestionController;
 use App\Http\Controllers\Admin\CustomFiled\CustomController;
+use App\Http\Controllers\Admin\Portfolio\PortfolioController;
+
 use App\Http\Controllers\Api\Service\SubmitServiceController;
 use App\Http\Controllers\Notification\NotificationController;
-
 use App\Http\Controllers\Admin\Package\PackageRequestController;
 use App\Http\Controllers\Admin\CustomFiled\CustomFildDataController;
 use App\Http\Controllers\Web\Auth\UserController as AuthUserController;
+
+
+
+
+
 use App\Http\Controllers\Web\ActivityLogService\ActivityLogServiceController;
 use App\Http\Controllers\Web\Front\Home\HomeController as HomeHomeController;
-
-
-
-
-
 use App\Http\Controllers\Admin\Package\PackageController as AdmniPackageController;
-use App\Http\Controllers\Admin\Portfolio\PortfolioController;
-use App\Http\Controllers\Web\Portfolio\PortfolioController as WebPortfolioController;
 
 use App\Http\Controllers\Admin\Service\ServiceController as AdminServiceController;
+use App\Http\Controllers\Web\Portfolio\PortfolioController as WebPortfolioController;
 
 
 
 // AQU9uUZGYqSwhqp5EGwFYGYIVk6VVY6fcCJng6vCqb4mzEr05xc7PlaDbdpfbE_4rPv6234HsA5Phz20641s179VVE6NSPkTtIaH73SMPZMANaHprvCVcCH1FZ84sVMf3lFfxYop89LPDSvbjBv9hW1bIY0Hmd1P-8N2OQzsGnc-yijVdtKL34gUgZ7LXuF4yNjcCsTbjRXS6tHCVGHF0QMKcZaaWRIrONBOZ-KiOibBRfyz60GDj-ysi-i2DVGLWkst5Y5TNupojmeBiWHFvaPNBqDfjmqqretUXH1HCjKZdnyaV0MJFi_koosZ-k7taRhbfXhiW4qcSlm5hRZ1FYioMxUnbA
 Route::get('portfolio-admin', [PortfolioController::class, 'index'])->name('portfolio.index');
 Route::get('portfolio', [WebPortfolioController::class, 'index'])->name('portfolio');
+
+Route::get('project',[ProjectController::class,'index'])->name('project.index');
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
+Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
+Route::post('/projects', [ProjectController::class, 'store'])->name('projects.store');
+Route::get('/projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit');
+Route::put('/projects/{project}', [ProjectController::class, 'update'])->name('projects.update');
+Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
 Route::get('/linkedin/posts', [LinkedInController::class, 'getCompanyPosts']);
 
 Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
