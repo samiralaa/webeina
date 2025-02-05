@@ -20,4 +20,5 @@ return [
     'quick_links' => 'روابط سريعة',
     'locations' => 'موقعنا علي الخريطة',
     'contact_us' => 'تواصل معنا',
+    'portfolio' => 'ملفات الشركة',
 ];

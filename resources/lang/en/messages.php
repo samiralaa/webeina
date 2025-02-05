@@ -20,4 +20,5 @@ return [
     'quick_links' => 'Quick Links',
     'locations' => 'Locations',
     'contact_us' => 'Contact Us',
+    'portfolio' => 'Portfolio',
 ];
