@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\web\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Service;
 use App\Services\UserProfile\UserServices;
 use Illuminate\Http\Request;
 
@@ -17,7 +18,7 @@ class UserProfileController extends Controller
 
     public function index()
     {
-        $serves = $this->userServices->getAllServices();
+        $serves = Service::get();
 
         $packages = $this->userServices->getPackageServices();
         
