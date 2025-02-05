@@ -39,7 +39,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" title="Partners">{{ __('messages.portfolio') }}</a>
+                        <a class="nav-link" href="{{route('portfolio')}}" title="Partners">{{ __('messages.portfolio') }}</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="companyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Company">
