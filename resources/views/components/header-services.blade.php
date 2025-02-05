@@ -61,7 +61,11 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{route('contact')}}" class="request-quote-btn quote" title="Get in Touch">
+                            @if (app()->getLocale() === 'ar')
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                            @else
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            @endif
                             <span>{{ __('messages.get_in_touch') }}</span>
                         </a>
                     </li>
