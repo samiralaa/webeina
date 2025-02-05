@@ -165,7 +165,13 @@
                     <span>Home Page</span>
                 </a>
             </li>
-{{-- faq routs --}}
+            <li>
+                <a href="{{ route('projects.index') }}">
+                    <i class="fas fa-info-circle"></i> <!-- Icon for About Us -->
+                    <span>Projects</span>
+                </a>
+            </li>
+            {{-- faq routs --}}
             <li>
                 <a href="{{ route('faq.index') }}">
                     <i class="fas fa-question"></i> <!-- Icon for FAQ -->
