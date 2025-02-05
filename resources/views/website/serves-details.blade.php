@@ -225,6 +225,38 @@
 
 <script>
 
+const my_form  = document.querySelector("form");
+const my_name = document.getElementById("name");
+
+my_form.addEventListener("submit", function(event) {
+    const r = /[^a-z -]/ig;
+
+    if (r.test(my_name.value)) {
+        event.preventDefault();
+
+
+        let errorMessage = document.getElementById("name_error");
+        if (!errorMessage) {
+            errorMessage = document.createElement("p");
+            errorMessage.id = "name_error";
+            errorMessage.style.color = "red";
+            errorMessage.style.fontSize = "14px";
+            errorMessage.style.margin = "5px 0";
+            my_name.insertAdjacentElement("afterend", errorMessage);
+        }
+
+        my_name.style.border = "2px solid red";
+        errorMessage.textContent = "Your name must not have [1-9] or #$%*&@";
+    }
+});
+
+
+my_name.addEventListener("input", function() {
+    this.style.border = "";
+    const errorMessage = document.getElementById("name_error");
+    if (errorMessage) errorMessage.textContent = "";
+});
+
 
 document.addEventListener("DOMContentLoaded", function () {
             let alertBox = document.getElementById("success-alert");
@@ -232,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alertBox.style.width = "310px";
                 alertBox.style.position = "fixed";
                 alertBox.style.top = "90px";
-                alertBox.style.right = "8 px";
+                alertBox.style.right = "8px";
                 alertBox.style.zIndex = "1050";
                 alertBox.style.borderLeft = "5px solid #076767";
                 alertBox.style.display = "flex";
@@ -247,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert.style.opacity = "0";
                 setTimeout(() => alert.remove(), 500); // Remove after fade out
             }
-        }, 90000); // Message disappears after 3 seconds
+        }, 2000); // Message disappears after 3 seconds
 
 
 
