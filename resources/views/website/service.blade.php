@@ -73,13 +73,6 @@
         </article>
         @endforeach
         @endif
-        <!-- /itemCard -->
-        <!-- itemCard -->
-
-        <!-- /itemCard -->
-        <!-- itemCard -->
-
-        <!-- /itemCard -->
     </div>
 </section>
 
