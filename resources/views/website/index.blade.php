@@ -556,6 +556,4 @@
     </div>
 
 </section>
-@endforeach
-
 
