@@ -19,7 +19,7 @@
                     @else
                     <ul class="navbar-nav ms-auto" id="navbar">
                         @endif
-         <li class="nav-item">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{route('home')}}" aria-label="Home" aria-current="page">
                                 {{ __('messages.home') }}
                             </a>
