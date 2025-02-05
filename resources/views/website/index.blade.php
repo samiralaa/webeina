@@ -91,22 +91,22 @@
                     {{ $item->name[app()->getLocale()] }} <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>
             </div>
-<<<<<<< Updated upstream
+
         </article>
         @endforeach
         <div class="col-12 d-flex justify-content-center pt-3">
             <a href="{{ route('user-profile') }}" class="request-quote-btn quote" style="max-width: 200px" title="See More Services">
                 <span>See More</span>
             </a>
-=======
 
-            @endforeach
+
+       
             <a href="{{ route('user-profile') }}" >All services</a>
             @endif
 
->>>>>>> Stashed changes
+
         </div>
-        @endif
+   
     </div>
 </section>
 

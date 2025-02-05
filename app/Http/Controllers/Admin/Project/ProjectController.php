@@ -20,6 +20,7 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = $this->projectService->getAllProjects();
+       
         return view('admin.project.index', compact('projects'));
     }
 

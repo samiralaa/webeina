@@ -16,31 +16,36 @@
 <!-- Projects -->
 <div class="container py-5">
     <div class="row">
+        @foreach ($projects as $project)
         <div class="project-card col-6 d-flex flex-column">
             <div class="project-img">
-                <img src="https://innowise.com/wp-content/uploads/2025/01/Small-Cover-Automated-environmental-data-collection_-25-reduction-in-certification-costs-Anya-Kh.-Dasha-Tr.png" alt="">
+                <!-- Main Image -->
+                <img src="{{ asset('storage/' . $project->image) }}" alt="Project Image">
             </div>
 
             <div class="project-content p-4">
-                <h2 class="project-title">Automated environmental data collection</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus quo inventore eius ipsam itaque earum tempore voluptate nostrum dicta sed?</p>
+                <h2 class="project-title">
+                    {{ $project->title[app()->getLocale()] ?? $project->title['en'] }}
+                </h2>
+                <p>
+                    {{ $project->description[app()->getLocale()] ?? $project->description['en'] }}
+                </p>
+                <div>
+                @foreach ($project->images as $image)
+                    <div class="additional-image">
+                        <img src="{{ asset('storage/' . $image->path) }}" width="222" height="50" alt="Additional Project Image">
+                    </div>
+                @endforeach
             </div>
-        </div>
-        <div class="project-card col-6 d-flex flex-column">
-            <div class="project-img">
-                <img src="https://innowise.com/wp-content/uploads/2025/01/Small-Cover-Automated-environmental-data-collection_-25-reduction-in-certification-costs-Anya-Kh.-Dasha-Tr.png" alt="">
             </div>
 
-            <div class="project-content p-4">
-                <h2 class="project-title">Automated environmental data collection</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus quo inventore eius ipsam itaque earum tempore voluptate nostrum dicta sed?</p>
-            </div>
+           
+
+            <!-- Display all additional images for each project -->
+
         </div>
+        @endforeach
     </div>
 </div>
-
-
-
-
 
 @endsection

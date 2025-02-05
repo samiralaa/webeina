@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers\Web\Portfolio;
 
-use App\Http\Controllers\Controller;
+use App\Models\Project;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PortfolioController extends Controller
 {
-    public function index() 
+    public function index()
     {
-        return view('website.portfolio');
+
+        $projects = Project::with('images')->get();
+        return view('website.portfolio', compact('projects'));
     }
 }
