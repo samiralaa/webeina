@@ -23,6 +23,16 @@
                 <img src="{{ asset('storage/' . $project->image) }}" alt="Project Image">
             </div>
 
+            <div class="slideshow"   style="display: none;">
+                <div class="slider">
+                    @foreach ($project->images as $image)
+                    <div class="item">
+                        <img src="{{ asset('storage/' . $image->path) }}" />
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+
             <div class="project-content p-4">
                 <h2 class="project-title">
                     {{ $project->title[app()->getLocale()] ?? $project->title['en'] }}
@@ -31,15 +41,10 @@
                     {{ $project->description[app()->getLocale()] ?? $project->description['en'] }}
                 </p>
                 <div>
-                @foreach ($project->images as $image)
-                    <div class="additional-image">
-                        <img src="{{ asset('storage/' . $image->path) }}" width="222" height="50" alt="Additional Project Image">
-                    </div>
-                @endforeach
             </div>
             </div>
 
-           
+
 
             <!-- Display all additional images for each project -->
 

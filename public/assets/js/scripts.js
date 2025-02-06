@@ -312,3 +312,55 @@ value.html(range.attr("value"));
 range.on("input", function () {
     value.html(this.value);
 });
+
+
+// Projects //
+$(document).ready(function () {
+    $(".slider").each(function () {
+        $(this).slick({
+            draggable: true,
+            arrows: false,
+            fade: true,
+            speed: 1600,
+            infinite: true,
+            cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
+            autoplay: false, // Start autoplay only when hovered
+            autoplaySpeed: 1200,
+            pauseOnHover: false,
+            swipeToSlide: false,
+        });
+    });
+
+    $(".project-card").each(function () {
+        const $card = $(this);
+        const $staticImg = $card.find(".project-img");
+        const $slideshow = $card.find(".slideshow");
+        const $slider = $card.find(".slider");
+
+        $staticImg.show();
+        $slideshow.hide();
+
+        let isHovered = false;
+
+        $card.on("mouseenter", function () {
+            if (!isHovered) {
+                isHovered = true;
+                $staticImg.stop(true, true).fadeOut(300);
+                $slideshow.stop(true, true).fadeIn(300, function () {
+                    $slider.slick("slickGoTo", 0).slick("slickPlay");
+                });
+            }
+        });
+
+        $card.on("mouseleave", function () {
+            if (isHovered) {
+                isHovered = false;
+                $slider.slick("slickPause");
+                $slideshow.stop(true, true).fadeOut(300, function () {
+                    $staticImg.stop(true, true).fadeIn(300);
+                });
+            }
+        });
+    });
+});
+
