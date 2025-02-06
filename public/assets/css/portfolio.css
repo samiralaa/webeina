@@ -40,7 +40,7 @@
 
 /* Projects */
 .project-card{
-    min-height: 100vh;
+    min-height: 112.51vh;
     position: relative;
     transition: 0.9s ease-in-out;
     padding-top: 10px;
@@ -76,18 +76,24 @@
 }
 
 .project-img img{
+    position: relative;
     height: auto;
     width: 100%;
     border-style: none;
     vertical-align: bottom;
+    transition: opacity 0.1s ease;
+
 }
 
 .slideshow {
     position: relative;
-    z-index: 1;
     height: 100%;
     max-width: 100%;
     margin: 0;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+
 }
 
 
@@ -109,4 +115,9 @@
 
 .slideshow .item.slick-active img {
     transform: scale(1.02);
+}
+
+.project-card:hover .slideshow {
+    display: block;
+    opacity: 1;
 }

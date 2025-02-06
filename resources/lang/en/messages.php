@@ -21,4 +21,5 @@ return [
     'locations' => 'Locations',
     'contact_us' => 'Contact Us',
     'portfolio' => 'Portfolio',
+    'projects' => 'Projects',
 ];

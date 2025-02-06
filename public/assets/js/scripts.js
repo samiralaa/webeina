@@ -316,19 +316,43 @@ range.on("input", function () {
 
 // Projects //
 $(document).ready(function () {
+    // Check the language of the document
+    var isRTL = $('html').attr('lang') === 'ar';
+    const images = [
+        "Gallet_clamshell_600x600_1.jpg",
+        "Gallet_clamshell_600x600_9.jpg",
+        "images (1).jpeg",
+        "images.jpeg"
+    ];
+
+    images.forEach(function (src) {
+        const img = new Image();
+        img.src = src;
+    });
+
     $(".slider").each(function () {
-        $(this).slick({
-            draggable: true,
-            arrows: false,
-            fade: true,
-            speed: 1600,
-            infinite: true,
-            cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-            autoplay: false, // Start autoplay only when hovered
-            autoplaySpeed: 1200,
-            pauseOnHover: false,
-            swipeToSlide: false,
-        });
+        const $slider = $(this);
+        if (!$slider.hasClass('slick-initialized')) {
+            $slider.slick({
+                rtl: isRTL,
+                draggable: true,
+                arrows: false,
+                fade: true,
+                speed: 1600,
+                infinite: true,
+                cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
+                autoplay: false,
+                autoplaySpeed: 1200,
+                pauseOnHover: false,
+                swipeToSlide: false,
+            });
+            // Apply additional CSS for RTL if needed
+            if (isRTL) {
+                $('.partner__slider').css('direction', 'rtl');
+            } else {
+                $('.partner__slider').css('direction', 'ltr');
+            }
+        }
     });
 
     $(".project-card").each(function () {
@@ -346,7 +370,7 @@ $(document).ready(function () {
             if (!isHovered) {
                 isHovered = true;
                 $staticImg.stop(true, true).fadeOut(300);
-                $slideshow.stop(true, true).fadeIn(300, function () {
+                $slideshow.stop(true, true).fadeIn(100, function () {
                     $slider.slick("slickGoTo", 0).slick("slickPlay");
                 });
             }
@@ -363,4 +387,3 @@ $(document).ready(function () {
         });
     });
 });
-

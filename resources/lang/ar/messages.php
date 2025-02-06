@@ -21,4 +21,5 @@ return [
     'locations' => 'موقعنا علي الخريطة',
     'contact_us' => 'تواصل معنا',
     'portfolio' => 'ملفات الشركة',
+    'projects' => 'المشاريع'
 ];
