@@ -316,23 +316,11 @@ range.on("input", function () {
 
 // Projects //
 $(document).ready(function () {
-    // Check the language of the document
-    var isRTL = $('html').attr('lang') === 'ar';
-    const images = [
-        "Gallet_clamshell_600x600_1.jpg",
-        "Gallet_clamshell_600x600_9.jpg",
-        "images (1).jpeg",
-        "images.jpeg"
-    ];
-
-    images.forEach(function (src) {
-        const img = new Image();
-        img.src = src;
-    });
+    var isRTL = $("html").attr("lang") === "ar";
 
     $(".slider").each(function () {
         const $slider = $(this);
-        if (!$slider.hasClass('slick-initialized')) {
+        if (!$slider.hasClass("slick-initialized")) {
             $slider.slick({
                 rtl: isRTL,
                 draggable: true,
@@ -345,13 +333,8 @@ $(document).ready(function () {
                 autoplaySpeed: 1200,
                 pauseOnHover: false,
                 swipeToSlide: false,
+                lazyLoad: "progressive",
             });
-            // Apply additional CSS for RTL if needed
-            if (isRTL) {
-                $('.partner__slider').css('direction', 'rtl');
-            } else {
-                $('.partner__slider').css('direction', 'ltr');
-            }
         }
     });
 
@@ -361,29 +344,30 @@ $(document).ready(function () {
         const $slideshow = $card.find(".slideshow");
         const $slider = $card.find(".slider");
 
-        $staticImg.show();
-        $slideshow.hide();
-
-        let isHovered = false;
+        let hoverTimer;
 
         $card.on("mouseenter", function () {
-            if (!isHovered) {
-                isHovered = true;
-                $staticImg.stop(true, true).fadeOut(300);
-                $slideshow.stop(true, true).fadeIn(100, function () {
+            clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(() => {
+                $staticImg.css({ visibility: "hidden", opacity: 0 });
+                $slideshow.css({ visibility: "visible", opacity: 1 });
+
+                if ($slider.hasClass("slick-initialized")) {
                     $slider.slick("slickGoTo", 0).slick("slickPlay");
-                });
-            }
+                }
+            }, 150);
         });
 
         $card.on("mouseleave", function () {
-            if (isHovered) {
-                isHovered = false;
-                $slider.slick("slickPause");
-                $slideshow.stop(true, true).fadeOut(300, function () {
-                    $staticImg.stop(true, true).fadeIn(300);
-                });
-            }
+            clearTimeout(hoverTimer);
+            hoverTimer = setTimeout(() => {
+                if ($slider.hasClass("slick-initialized")) {
+                    $slider.slick("slickPause");
+                }
+                $slideshow.css({ visibility: "hidden", opacity: 0 });
+                $staticImg.css({ visibility: "visible", opacity: 1 });
+            }, 150);
         });
     });
 });
+
