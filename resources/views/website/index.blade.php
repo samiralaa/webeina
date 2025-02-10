@@ -247,7 +247,7 @@
                     <!-- Slide 1 -->
                     <div role="listitem" class="swiper-slide is-gallery">
                         <div class="gallery-img__wrapper">
-                            <div class="main slider mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                            <div class="main slider mt-2 gallery-img" data-swiper-parallax-x="0" loading="lazy">
                                 <article class="post" role="article" aria-label="LinkedIn Post 1">
                                     <div class="head_main">
                                         <div class="head-info">
@@ -290,7 +290,7 @@
                     <!-- Slide 2 -->
                     <div role="listitem" class="swiper-slide is-gallery">
                         <div class="gallery-img__wrapper">
-                            <div class="main slider mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                            <div class="main slider mt-2 gallery-img" data-swiper-parallax-x="0" loading="lazy">
                                 <article class="post" role="article" aria-label="LinkedIn Post 1">
                                     <div class="head_main">
                                         <div class="head-info">
@@ -333,7 +333,7 @@
                     <!-- Slide 3 -->
                     <div role="listitem" class="swiper-slide is-gallery">
                         <div class="gallery-img__wrapper">
-                            <div class="main slider mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                            <div class="main slider mt-2 gallery-img" data-swiper-parallax-x="0" loading="lazy">
                                 <article class="post" role="article" aria-label="LinkedIn Post 1">
                                     <div class="head_main">
                                         <div class="head-info">
@@ -376,7 +376,7 @@
                     <!-- Slide 4 -->
                     <div role="listitem" class="swiper-slide is-gallery">
                         <div class="gallery-img__wrapper">
-                            <div class="main slider mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                            <div class="main slider mt-2 gallery-img" data-swiper-parallax-x="0" loading="lazy">
                                 <article class="post" role="article" aria-label="LinkedIn Post 1">
                                     <div class="head_main">
                                         <div class="head-info">
@@ -419,7 +419,7 @@
                     <!-- Slide 5 -->
                     <div role="listitem" class="swiper-slide is-gallery">
                         <div class="gallery-img__wrapper">
-                            <div class="main slider mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                            <div class="main slider mt-2 gallery-img" data-swiper-parallax-x="0" loading="lazy">
                                 <article class="post" role="article" aria-label="LinkedIn Post 1">
                                     <div class="head_main">
                                         <div class="head-info">
@@ -462,7 +462,7 @@
                     <!-- Slide 6 -->
                     <div role="listitem" class="swiper-slide is-gallery">
                         <div class="gallery-img__wrapper">
-                            <div class="main slider mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                            <div class="main slider mt-2 gallery-img" data-swiper-parallax-x="0" loading="lazy">
                                 <article class="post" role="article" aria-label="LinkedIn Post 1">
                                     <div class="head_main">
                                         <div class="head-info">
@@ -505,7 +505,7 @@
                     <!-- Slide 7 -->
                     <div role="listitem" class="swiper-slide is-gallery">
                         <div class="gallery-img__wrapper">
-                            <div class="main slider mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                            <div class="main slider mt-2 gallery-img" data-swiper-parallax-x="0" loading="lazy">
                                 <article class="post" role="article" aria-label="LinkedIn Post 1">
                                     <div class="head_main">
                                         <div class="head-info">
@@ -548,7 +548,7 @@
                     <!-- Slide 8 -->
                     <div role="listitem" class="swiper-slide is-gallery">
                         <div class="gallery-img__wrapper">
-                            <div class="main slider mt-5 gallery-img" data-swiper-parallax-x="0" loading="lazy">
+                            <div class="main slider mt-2 gallery-img" data-swiper-parallax-x="0" loading="lazy">
                                 <article class="post" role="article" aria-label="LinkedIn Post 1">
                                     <div class="head_main">
                                         <div class="head-info">
