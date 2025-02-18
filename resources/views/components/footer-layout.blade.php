@@ -57,13 +57,13 @@
     <div class="footer-row2">
         <div class="container">
             <div class="footer-social-media-icons">
-                <a href="#" target="_blank" rel="nofollow" aria-label="Facebook"><i class="s-media fab fa-facebook"></i></a>
-                <a href="#" target="_blank" rel="nofollow" aria-label="Twitter"><i class="s-media fab fa-twitter"></i></a>
-                <a href="#" target="_blank" rel="nofollow" aria-label="Instagram"><i class="s-media fab fa-instagram"></i></a>
-                <a href="#" target="_blank" rel="nofollow" aria-label="LinkedIn"><i class="s-media fab fa-linkedin"></i></a>
-                <a href="#" target="_blank" rel="nofollow" aria-label="YouTube"><i class="s-media fab fa-youtube"></i></a>
-                <a href="#" target="_blank" rel="nofollow" aria-label="Snapchat"><i class="s-media fab fa-snapchat"></i></a>
-                <a href="#" target="_blank" rel="nofollow" aria-label="TikTok"><i class="s-media fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/webenia" target="_blank" rel="nofollow" aria-label="Facebook"><i class="s-media fab fa-facebook"></i></a>
+                <a href="https://x.com/WebeniaAgency" target="_blank" rel="nofollow" aria-label="Twitter"><i class="s-media fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/webeniaagency/" target="_blank" rel="nofollow" aria-label="Instagram"><i class="s-media fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/webenia/" target="_blank" rel="nofollow" aria-label="LinkedIn"><i class="s-media fab fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@Webenia" target="_blank" rel="nofollow" aria-label="YouTube"><i class="s-media fab fa-youtube"></i></a>
+                <a href="https://www.snapchat.com/add/webenia.com?share_id=vnUoHjOPTXY&locale=en-US " target="_blank" rel="nofollow" aria-label="Snapchat"><i class="s-media fab fa-snapchat"></i></a>
+                <a href="https://www.tiktok.com/@webenia.com?lang=en" target="_blank" rel="nofollow" aria-label="TikTok"><i class="s-media fab fa-tiktok"></i></a>
             </div>
             <p>
                 &copy; 2025 <a class="webenia" href="https://webenia.com" target="_blank" title="WEBENIA Official Website">WEBENIA</a>. All rights reserved.
