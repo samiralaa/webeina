@@ -14,7 +14,7 @@
             <video autoplay muted loop class="background-video" aria-label="Background video"
                 title="Background video showcasing our services" preload="auto"
                 poster="{{ asset('assets/images/video-thumbnail.jpg') }}">
-                <source src="{{ asset('assets/Videos/B-works-Schweiz-Video.mp4') }}" type="video/mp4">
+                <source src="{{ asset('assets/Videos/wbsite vid final.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             <div class="container-0-1-0" aria-hidden="true">
@@ -32,17 +32,13 @@
             <div class="big_title col-sm-12 col-md-6" role="heading" aria-level="1">
                 <h2 class="text-uppercase" style="font-weight: 900"
                     title="Top-rated Digital Marketing, Web, And Mobile App Development Company">
-                    Top-rated Digital Marketing, Web, And Mobile App Development Company
+                    State-of-the-art digital solutions tailored to your business needs
                 </h2>
             </div>
 
             <div class="sub_title col-sm-12 col-md-6" role="contentinfo">
                 <p class="text-capitalize text-black-50">
-                    A leading full-service Web Solutions and Digital Marketing agency, providing a comprehensive range
-                    of professional services such as Digital transformation, web design, web development, mobile app
-                    development, search engine optimization (SEO), e-commerce solutions, UI/UX design, pay-per-click
-                    advertising (PPC), social media marketing, video production, content creation, email marketing, and
-                    marketing automation.
+                A leading digital house, providing a comprehensive range of professional ranging from digital transformation, web design, web development, mobile app development, search engine optimization (SEO), e-commerce solutions, UI/UX design, pay-per-click advertising (PPC), social media marketing, video production, content creation, email marketing, and marketing automation.
                 </p>
             </div>
 
@@ -195,19 +191,20 @@
                                 <img alt="Experience Icon" class="mb-2 img-fluid"
                                     src="https://www.ipixtechnologies.com/images/web/images/menon.svg" loading="lazy"
                                     title="Experience Icon">
-                                <h3 class="text-white text-capitalize">We have a lot of experience</h3>
-                                <p>which means you will get the best results</p>
+                                <h3 class="text-white text-capitalize">Collaboration</h3>
+                                <p> Fostering teamwork and open communication within the organization and with clients</p>
                             </div>
                         </article>
                         <!-- Section 2 -->
                         <article class="col-md-9 col-12" role="article" aria-label="Projects Launched Section">
                             <div class="about-content-section rounded-4 p-4 about-content-third main-color">
                                 <div class="d-flex align-items-center">
-                                    <h3 class="text-white counter me-2 odometer" data-target="3000">200</h3>
-                                    <b>+</b>
+                                    <h3 class="text-white counter me-2 odometer" data-target="3000"> </h3>
+                                    <b> </b>
                                 </div>
-                                <h4 class="text-white">Projects Launched</h4>
-                                <p>With all these projects, we guarantee excellence</p>
+                                <h4 class="text-white">Excellence</h4>
+                                <p> Striving for the highest quality in all aspects of the business
+                                </p>
                             </div>
                         </article>
                     </div>
@@ -220,15 +217,16 @@
                                 <img alt="Leading IT Service Icon" class="mb-2 img-fluid"
                                     src="https://www.ipixtechnologies.com/images/web/images/menon-2.png" loading="lazy"
                                     title="Leading IT Service Icon">
-                                <h3 class="text-white text-capitalize">Leading IT Service Firm</h3>
-                                <p>Expertise in serving a wide variety of industries for technological advancement.</p>
+                                <h3 class="text-white text-capitalize">Results-Oriented</h3>
+                                <p> Focusing on delivering tangible outcomes and measurable results
+                                </p>
                             </div>
                         </article>
                         <!-- Section 4 -->
                         <article class="col-md-9 col-12" role="article" aria-label="Attention to Detail Section">
                             <div class="about-content-section rounded-4 p-4 about-content-fourth secend-color">
-                                <h3 class="text-white text-capitalize">We care about the smallest details</h3>
-                                <p>We care about everything about your product to make it the best in your field</p>
+                                <h3 class="text-white text-capitalize">Ethical Responsibility</h3>
+                                <p>Conducting business with integrity and considering the social and environmental impact</p>
                             </div>
                         </article>
                     </div>

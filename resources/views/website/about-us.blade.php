@@ -19,13 +19,17 @@
     <div class="about container">
         <div class="row align-items-center">
             <div class="col-lg-7">
-                <h2 class="fw-bold text-success mb-4">Who We Are?</h2>
+                <h2 class="fw-bold text-success mb-4">Our History</h2>
                 <p class="text-muted">
-                    Seyaha is dedicated to providing unparalleled travel experiences, bringing together adventure, luxury, and culture in unique ways. Our team of travel enthusiasts works tirelessly to curate packages that transform vacations into unforgettable journeys.
+                Since our establishment in 2017 as a government sector ERP contractor, we have broadened our services to align with the evolving UAE digital landscape. This includes adding, refining, and customizing our digital solutions to meet the needs of a wide range of businesses and organizations. We enthusiastically embrace digital transformation and endeavor to be a leader in realizing the strategic digital vision of the Gulf region
                 </p>
                 <p class="text-muted">
-                    Our mission is simple: to inspire and connect people through travel, delivering personalized experiences that create lasting memories.
-                </p>
+                 <span class="fw-bold">Vision Statement</span> <br>
+To be the undisputed leader in facilitating digital transformation within the region, setting the benchmark for innovation and excellence.
+</p>
+<p class="text-muted">
+                 <span class="fw-bold">Mission Statement</span> <br>
+                 We are committed to empowering businesses to reach their full potential by leveraging cutting-edge digital technologies and strategies.</p>
             </div>
             <div class="col-lg-5">
                 <img src="{{ asset('assets/images/who-we-are.png') }}" alt="Our Story" loading="lazy" class="img-fluid rounded">
@@ -38,13 +42,34 @@
                 <img src="{{ asset('assets/images/why-choose-us.png') }}" alt="Our Story" loading="lazy" class="img-fluid rounded">
             </div>
             <div class="col-lg-7">
-                <h2 class="fw-bold text-success mb-4">Why Choose Us?</h2>
+                <h2 class="fw-bold text-success  mb-4">Our Mission Encompasses:</h2>
+
                 <p class="text-muted">
-                    At Webenia, we specialize in combining expert programming and innovative marketing strategies to create customized solutions that deliver results. From cutting-edge technology to user-friendly designs, our work is tailored to meet your unique needs and help your brand stand out in today’s competitive landscape.
+                 <span class="fw-bold">Guiding and Supporting Businesses through Digital Transformation:</span> <br>
+                 We will act as a trusted partner, providing comprehensive guidance and support to businesses at every stage of their digital transformation journey.
+                 </p>
+
+                 <p class="text-muted">
+                 <span class="fw-bold">Crafting Tailored Digital Transformation Strategies:</span> <br>
+                 We recognize that each business is unique. Our team of experts will collaborate closely with clients to develop and implement customized digital transformation plans that align with their specific needs and objectives.
                 </p>
-                <p class="text-muted">
-                    With a proven track record and a client-first mindset, we’re committed to your success. Whether it’s building a seamless digital experience or driving data-driven marketing campaigns, Webenia is here to help your business thrive in the digital world.
+
+                 <p class="text-muted">
+                 <span class="fw-bold">Driving Sustainable Growth:</span> <br>
+                 We are focused on delivering solutions that generate measurable and sustainable growth for our clients, enabling them to thrive in the digital age.
                 </p>
+
+                 <p class="text-muted">
+                 <span class="fw-bold">Collaborating with Diverse Organizations</span> <br>
+                 We are committed to working with a wide range of organizations, including both private and public sector entities, to drive digital transformation across all sectors of the economy.
+                 </p>
+
+                 <p class="text-muted">
+                 <span class="fw-bold">Maximizing the Benefits of Digital Transformation:</span> <br>
+                 Our goal is to ensure that our clients fully realize the transformative potential of digital technologies, achieving optimal outcomes and maximizing their return on investment.
+                 </p>
+
+
             </div>
         </div>
     </div>
