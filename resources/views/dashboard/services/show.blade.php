@@ -43,5 +43,10 @@
         <a href="{{ route('services.create.content', $service->id) }}" class="btn btn-primary mt-3">
             <i class="fas fa-plus"></i> Add Content
         </a>
+        <a href="{{ route('admin.steps.create', $service->id) }}" class="btn btn-primary mt-3">
+            <i class="fas fa-plus"></i> Add Steps
+
+        </a>
+
     </div>
 @endsection

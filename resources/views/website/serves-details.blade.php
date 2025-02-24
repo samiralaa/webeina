@@ -130,23 +130,14 @@
         <div class="steps-progress-head">
             <h1 class="text-captlize pb-4">Steps</h1>
         </div>
+
         <ul class="steps-list">
+        @foreach ($service->steps as $step)
             <li class="steps-item">
-                <h3 class="head">Strategy Development</h3>
-                <div class="location">The very first step of the app development process is, unsurprisingly, defining the strategy. At this point, you’ve got to start thinking carefully about your future application, its goals, capabilities, and business model.</div>
+            {{ $step->title[app()->getLocale()] ?? json_encode($step->title) }}
+            <div class="location">   {{ $step->description[app()->getLocale()] ?? json_encode($step->title) }}</div>
             </li>
-            <li class="steps-item">
-                <h3 class="head">Analysis and Planning</h3>
-                <div class="location">The very first step of the app development process is, unsurprisingly, defining the strategy. At this point, you’ve got to start thinking carefully about your future application, its goals, capabilities, and business model.</div>
-            </li>
-            <li class="steps-item">
-                <h3 class="head">UI/UX Design</h3>
-                <div class="location">The very first step of the app development process is, unsurprisingly, defining the strategy. At this point, you’ve got to start thinking carefully about your future application, its goals, capabilities, and business model.</div>
-            </li>
-            <li class="steps-item">
-                <h3 class="head">App Development</h3>
-                <div class="location">The very first step of the app development process is, unsurprisingly, defining the strategy. At this point, you’ve got to start thinking carefully about your future application, its goals, capabilities, and business model.</div>
-            </li>
+          @endforeach
         </ul>
     </div>
 </section>

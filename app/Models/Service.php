@@ -8,7 +8,7 @@ class Service extends Model
 {
     protected $table = 'services';
 
-    protected $fillable = ['name', 'icon', 'description','slug'];
+    protected $fillable = ['name', 'icon', 'description', 'slug'];
 
     protected $casts = [
         'name' => 'array',
@@ -16,9 +16,9 @@ class Service extends Model
     ];
 
     public function getRouteKeyName()
-{
-    return 'slug';
-}
+    {
+        return 'slug';
+    }
 
 
     public function contents()
@@ -42,4 +42,8 @@ class Service extends Model
         return $this->hasMany(ActivityLog::class);
     }
 
+    public function steps()
+    {
+        return $this->hasMany(Steps::class);
+    }
 }

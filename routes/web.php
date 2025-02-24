@@ -37,6 +37,7 @@ use App\Http\Controllers\Admin\Package\PackageRequestController;
 use App\Http\Controllers\Admin\CustomFiled\CustomFildDataController;
 use App\Http\Controllers\Web\Auth\UserController as AuthUserController;
 
+use App\Http\Controllers\Admin\Step\StepController;
 
 
 
@@ -250,3 +251,14 @@ Route::get('/clear-all-cache', function () {
         'config_cache' => $exitCodeConfigCache,
     ]);
 });
+
+
+Route::prefix('admin/steps')->name('admin.steps.')->group(function () {
+    Route::get('/', [StepController::class, 'index'])->name('index');
+    Route::get('/create/{id}', [StepController::class, 'create'])->name('create');
+    Route::post('/', [StepController::class, 'store'])->name('store');
+    Route::get('/{id}/edit', [StepController::class, 'edit'])->name('edit');
+    Route::put('/{id}', [StepController::class, 'update'])->name('update');
+    Route::delete('/{id}', [StepController::class, 'destroy'])->name('destroy');
+});
+
