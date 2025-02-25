@@ -46,4 +46,9 @@ class Service extends Model
     {
         return $this->hasMany(Steps::class);
     }
+
+    public function choose()
+    {
+        return $this->hasMany(Choose::class);
+    }
 }

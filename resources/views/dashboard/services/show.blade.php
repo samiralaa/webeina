@@ -45,8 +45,9 @@
         </a>
         <a href="{{ route('admin.steps.create', $service->id) }}" class="btn btn-primary mt-3">
             <i class="fas fa-plus"></i> Add Steps
-
         </a>
-
+        <a href="{{ route('admin.choose.create', $service->id) }}" class="btn btn-primary mt-3">
+            <i class="fas fa-plus"></i> Add choose
+        </a>
     </div>
 @endsection

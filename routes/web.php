@@ -13,11 +13,13 @@ use App\Http\Controllers\Admin\FAQ\FAQController;
 use App\Http\Controllers\Web\Front\HomeController;
 
 use App\Http\Controllers\Admin\Auth\AuthController;
+use App\Http\Controllers\Admin\Step\StepController;
 use App\Http\Controllers\Admin\Users\UserController;
 use App\Http\Controllers\Admin\About\AboutController;
 use App\Http\Controllers\Admin\Quiz\AnswerController;
 use App\Http\Controllers\Admin\Quiz\ResultController;
 use App\Http\Controllers\Notofiction\ExcelController;
+use App\Http\Controllers\Admin\Choose\ChooseController;
 use App\Http\Controllers\Web\Package\PackageController;
 use App\Http\Controllers\Admin\Content\ContentCotroller;
 use App\Http\Controllers\Admin\Setting\FooterController;
@@ -28,24 +30,23 @@ use App\Http\Controllers\Admin\Project\ProjectController;
 use App\Http\Controllers\Admin\Service\ServiceController;
 use App\Http\Controllers\Admin\HomePage\HomePageController;
 use App\Http\Controllers\Admin\Quiz\QuizQuestionController;
+
 use App\Http\Controllers\Admin\CustomFiled\CustomController;
 use App\Http\Controllers\Admin\Portfolio\PortfolioController;
-
 use App\Http\Controllers\Api\Service\SubmitServiceController;
 use App\Http\Controllers\Notification\NotificationController;
 use App\Http\Controllers\Admin\Package\PackageRequestController;
+
 use App\Http\Controllers\Admin\CustomFiled\CustomFildDataController;
+
+
+
+
 use App\Http\Controllers\Web\Auth\UserController as AuthUserController;
-
-use App\Http\Controllers\Admin\Step\StepController;
-
-
-
-
 use App\Http\Controllers\Web\ActivityLogService\ActivityLogServiceController;
 use App\Http\Controllers\Web\Front\Home\HomeController as HomeHomeController;
-use App\Http\Controllers\Admin\Package\PackageController as AdmniPackageController;
 
+use App\Http\Controllers\Admin\Package\PackageController as AdmniPackageController;
 use App\Http\Controllers\Admin\Service\ServiceController as AdminServiceController;
 use App\Http\Controllers\Web\Portfolio\PortfolioController as WebPortfolioController;
 
@@ -262,3 +263,11 @@ Route::prefix('admin/steps')->name('admin.steps.')->group(function () {
     Route::delete('/{id}', [StepController::class, 'destroy'])->name('destroy');
 });
 
+Route::prefix('admin/choose')->name('admin.choose.')->group(function () {
+    Route::get('/', [ChooseController::class, 'index'])->name('index');
+    Route::get('/create/{id}', [ChooseController::class, 'create'])->name('create');
+    Route::post('/', [ChooseController::class, 'store'])->name('store');
+    Route::get('/{id}/edit', [ChooseController::class, 'edit'])->name('edit');
+    Route::put('/{id}', [ChooseController::class, 'update'])->name('update');
+    Route::delete('/{id}', [ChooseController::class, 'destroy'])->name('destroy');
+});
