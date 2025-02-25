@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 
 class ChooseController extends Controller
 {
-    public function index() {
-
+    public function index()
+    {
+        $data =  Choose::get();
+        return view('admin.choose.index', compact('data'));
     }
 
 
@@ -31,17 +33,17 @@ class ChooseController extends Controller
             'icon' => 'required'
         ]);
         if ($request->hasFile('icon')) {
-            $path = $request->file('icon')->store('icon', 'public');
-            
+            $path = $request->file('icon')->store('uploads', 'public');
         }
 
         $step = new Choose();
         $step->service_id = $request->service_id;
+        $step->icon = $path;
         $step->title = $request->title; // JSON format
         $step->description = $request->description; // JSON format
         $step->save();
 
-        return redirect()->route('admin.choose.index')->with('success', 'Step created successfully!');
+        return redirect()->route('admin.choose.index')->with('success', 'Choose created successfully!');
     }
     public function edit($id)
     {
@@ -63,11 +65,11 @@ class ChooseController extends Controller
         $step->description = $request->description; // JSON format
         $step->save();
 
-        return redirect()->route('admin.steps.index')->with('success', 'Step updated successfully!');
+        return redirect()->route('admin.choose.index')->with('success', 'Choose updated successfully!');
     }
     public function destroy($id)
     {
         Choose::destroy($id);
-        return redirect()->route('admin.choose.index')->with('success', 'Step deleted successfully!');
+        return redirect()->route('admin.choose.index')->with('success', 'Choose deleted successfully!');
     }
 }

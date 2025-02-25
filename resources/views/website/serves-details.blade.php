@@ -21,17 +21,17 @@
 {{-- @if(session('success'))
     <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>Success!</strong> {{ session('success') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-    @endif --}}
-    @if(session('success'))
-    <div id="success-alert" class="alert alert-success alert-dismissible fade show"
-         role="alert">
-         <i class="fa-solid fa-check fs-1"></i>
-        <strong>Success!</strong>
-        <span id="alert-message">Your Message Sent Successfully.</span>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+@endif --}}
+@if(session('success'))
+<div id="success-alert" class="alert alert-success alert-dismissible fade show"
+    role="alert">
+    <i class="fa-solid fa-check fs-1"></i>
+    <strong>Success!</strong>
+    <span id="alert-message">Your Message Sent Successfully.</span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
 @endif
 
 
@@ -85,41 +85,25 @@
         <p class="service-text">
             Build custom software solutions tailored to your business needs. We ensure secure, scalable, and efficient applications.
         </p>
-
+        <div>
+        @foreach ($service->choose as $choos)
         <div class="service-features">
+            
             <div class="feature-box ">
                 <div style="display: flex; align-items: center; gap: 30px;">
-                    <i class="fas fa-code"></i>
-                    <h2>Agile Development</h2>
+                <img src="{{ asset('storage/' . $choos->icon) }}" width="70" height="50" />
+                <h2>{{ $choos->title[app()->getLocale()] ?? $choos->title['en'] }}</h2>
                 </div>
-                <p>Flexible and iterative approach for seamless project execution.</p>
+                <p>{{ $choos->description[app()->getLocale()] ?? $choos->description['en'] }}.</p>
             </div>
-
-            <div class="feature-box ">
-                <div style="display: flex; align-items: center; gap: 30px;">
-                    <i class="fas fa-cloud"></i>
-                    <h2>Cloud-Based Solutions</h2>
-                </div>
-                <p>Scalable and secure cloud infrastructure for high availability.</p>
-            </div>
-
-            <div class="feature-box ">
-                <div style="display: flex; align-items: center; gap: 30px;">
-                    <i class="fas fa-robot"></i>
-                    <h2>AI & Automation</h2>
-                </div>
-                <p>Advanced AI algorithms to enhance productivity and efficiency.</p>
-            </div>
-
-            <div class="feature-box ">
-                <div style="display: flex; align-items: center; gap: 30px;">
-                    <i class="fas fa-lock"></i>
-                    <h2>End-to-End Security</h2>
-                </div>
-                <p>Robust security measures to protect sensitive data.</p>
-            </div>
+            
+            
+            
+        </div>
+        @endforeach
         </div>
     </div>
+ 
 </section>
 
 
@@ -132,12 +116,12 @@
         </div>
 
         <ul class="steps-list">
-        @foreach ($service->steps as $step)
+            @foreach ($service->steps as $step)
             <li class="steps-item">
-            {{ $step->title[app()->getLocale()] ?? json_encode($step->title) }}
-            <div class="location">   {{ $step->description[app()->getLocale()] ?? json_encode($step->title) }}</div>
+                {{ $step->title[app()->getLocale()] ?? json_encode($step->title) }}
+                <div class="location"> {{ $step->description[app()->getLocale()] ?? json_encode($step->title) }}</div>
             </li>
-          @endforeach
+            @endforeach
         </ul>
     </div>
 </section>
@@ -215,66 +199,61 @@
 
 
 <script>
+    const my_form = document.querySelector("form");
+    const my_name = document.getElementById("name");
 
-const my_form  = document.querySelector("form");
-const my_name = document.getElementById("name");
+    my_form.addEventListener("submit", function(event) {
+        const r = /[^a-z -]/ig;
 
-my_form.addEventListener("submit", function(event) {
-    const r = /[^a-z -]/ig;
-
-    if (r.test(my_name.value)) {
-        event.preventDefault();
+        if (r.test(my_name.value)) {
+            event.preventDefault();
 
 
-        let errorMessage = document.getElementById("name_error");
-        if (!errorMessage) {
-            errorMessage = document.createElement("p");
-            errorMessage.id = "name_error";
-            errorMessage.style.color = "red";
-            errorMessage.style.fontSize = "14px";
-            errorMessage.style.margin = "5px 0";
-            my_name.insertAdjacentElement("afterend", errorMessage);
+            let errorMessage = document.getElementById("name_error");
+            if (!errorMessage) {
+                errorMessage = document.createElement("p");
+                errorMessage.id = "name_error";
+                errorMessage.style.color = "red";
+                errorMessage.style.fontSize = "14px";
+                errorMessage.style.margin = "5px 0";
+                my_name.insertAdjacentElement("afterend", errorMessage);
+            }
+
+            my_name.style.border = "2px solid red";
+            errorMessage.textContent = "Your name must not have [1-9] or #$%*&@";
         }
-
-        my_name.style.border = "2px solid red";
-        errorMessage.textContent = "Your name must not have [1-9] or #$%*&@";
-    }
-});
+    });
 
 
-my_name.addEventListener("input", function() {
-    this.style.border = "";
-    const errorMessage = document.getElementById("name_error");
-    if (errorMessage) errorMessage.textContent = "";
-});
+    my_name.addEventListener("input", function() {
+        this.style.border = "";
+        const errorMessage = document.getElementById("name_error");
+        if (errorMessage) errorMessage.textContent = "";
+    });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-            let alertBox = document.getElementById("success-alert");
-            if (alertBox) {
-                alertBox.style.width = "310px";
-                alertBox.style.position = "fixed";
-                alertBox.style.top = "90px";
-                alertBox.style.right = "8px";
-                alertBox.style.zIndex = "1050";
-                alertBox.style.borderLeft = "5px solid #076767";
-                alertBox.style.display = "flex";
-                alertBox.style.flexDirection = "column";
-            }
-        });
+    document.addEventListener("DOMContentLoaded", function() {
+        let alertBox = document.getElementById("success-alert");
+        if (alertBox) {
+            alertBox.style.width = "310px";
+            alertBox.style.position = "fixed";
+            alertBox.style.top = "90px";
+            alertBox.style.right = "8px";
+            alertBox.style.zIndex = "1050";
+            alertBox.style.borderLeft = "5px solid #076767";
+            alertBox.style.display = "flex";
+            alertBox.style.flexDirection = "column";
+        }
+    });
 
-        setTimeout(function() {
-            let alert = document.getElementById("success-alert");
-            if (alert) {
-                alert.style.transition = "opacity 0.5s";
-                alert.style.opacity = "0";
-                setTimeout(() => alert.remove(), 500); // Remove after fade out
-            }
-        }, 2000); // Message disappears after 3 seconds
-
-
-
-
-    </script>
+    setTimeout(function() {
+        let alert = document.getElementById("success-alert");
+        if (alert) {
+            alert.style.transition = "opacity 0.5s";
+            alert.style.opacity = "0";
+            setTimeout(() => alert.remove(), 500); // Remove after fade out
+        }
+    }, 2000); // Message disappears after 3 seconds
+</script>
 
 @endsection
