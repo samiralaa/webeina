@@ -85,8 +85,9 @@
         <p class="service-text">
             Build custom software solutions tailored to your business needs. We ensure secure, scalable, and efficient applications.
         </p>
-        <div>
+        <div class="solve">
         @foreach ($service->choose as $choos)
+       
         <div class="service-features">
             
             <div class="feature-box ">
@@ -100,7 +101,9 @@
             
             
         </div>
+    
         @endforeach
+</div>
         </div>
     </div>
  
