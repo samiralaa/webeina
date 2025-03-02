@@ -14,7 +14,9 @@
 
 
                 <option value="portfolio">Portfolio</option>
+
                 <option value="sponsor">Sponsor</option>
+
 
             </select>
         </div>
@@ -36,44 +38,7 @@
             </form>
         </div>
 
-        <div id="swiperForm" class="section-form">
-            <h2 class="h4 mb-3 text-primary">Swiper Section</h2>
-            <form action="{{ route('add.content') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <input type="hidden" name="type" value="swipers">
-                <input type="hidden" name="status" value="0">
-
-                <!-- Slider Names and Links -->
-                <div id="slider-fields">
-                    <!-- Arabic Inputs -->
-                    <h3>Arabic Sliders</h3>
-                    <div class="slider-group">
-                        <label for="slider_name_ar">Slider Name (Arabic):</label>
-                        <input type="text" name="slider_name[ar][]" class="form-control mb-2"
-                            placeholder="Enter Arabic name" required>
-                        <label for="slider_link_ar">Slider Link (Arabic):</label>
-                        <input type="url" name="slider_link[ar][]" class="form-control mb-3"
-                            placeholder="Enter Arabic link">
-                    </div>
-
-                    <!-- English Inputs -->
-                    <h3>English Sliders</h3>
-                    <div class="slider-group">
-                        <label for="slider_name_en">Slider Name (English):</label>
-                        <input type="text" name="slider_name[en][]" class="form-control mb-2"
-                            placeholder="Enter English name" required>
-                        <label for="slider_link_en">Slider Link (English):</label>
-                        <input type="url" name="slider_link[en][]" class="form-control mb-3"
-                            placeholder="Enter English link">
-                    </div>
-                </div>
-
-                <!-- Add New Slider Button -->
-                <button type="button" id="add-slider" class="btn btn-secondary">Add Another Slider</button>
-
-                <button type="submit" class="btn btn-primary w-100 mt-3 py-2">Create</button>
-            </form>
-        </div>
+    
 
         <div id="formsContainer">
 
