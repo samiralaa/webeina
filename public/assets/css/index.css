@@ -98,10 +98,7 @@
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-.slick-list{
-    width: fit-content;
 
-}
 
 .slick-center {
     opacity: 1;

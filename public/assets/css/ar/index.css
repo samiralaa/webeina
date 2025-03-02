@@ -128,9 +128,6 @@
 }
 
 @media (max-width: 768px) {
-    .grid-card {
-        /*padding: 1rem;*/
-    }
     .image {
         width: 70px;
         height: 70px;
