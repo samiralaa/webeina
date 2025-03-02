@@ -11,15 +11,11 @@
             <label for="sectionType" class="h5">Select Section Type:</label>
             <select id="sectionType" class="form-select shadow-sm">
                 <option value="" selected disabled>Choose section type</option>
-                <option value="banner">Banner</option>
-                <option value="agency">About</option>
+
+
                 <option value="portfolio">Portfolio</option>
-                <option value="slider">Slider</option>
-                <option value="swiper">Swiper</option>
                 <option value="sponsor">Sponsor</option>
-                <option value="contact">contact</option>
-                <option value="blog">Blog</option>
-                <option value="service">service</option>
+
             </select>
         </div>
 
@@ -776,7 +772,7 @@
                             <input type="text" name="slider_name[ar][]" class="form-control mb-2" placeholder="Enter Arabic name" required>
                             <label>Slider Link (Arabic):</label>
                             <input type="url" name="slider_link[ar][]" class="form-control mb-3" placeholder="Enter Arabic link">
-        
+
                             <h3>New English Slider</h3>
                             <label>Slider Name (English):</label>
                             <input type="text" name="slider_name[en][]" class="form-control mb-2" placeholder="Enter English name" required>
@@ -802,7 +798,7 @@
                     'shadow-sm');
                 newSliderItem.innerHTML = `
                         <button type="button" class="btn-close float-end remove-slider" aria-label="Close"></button>
-        
+
                         <!-- Slider Titles -->
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -814,7 +810,7 @@
                                 <input type="text" name="sliders[${index}][title][en]" class="form-control shadow-sm" required>
                             </div>
                         </div>
-        
+
                         <!-- Slider Descriptions -->
                         <div class="row">
                             <div class="col-md-6 mb-3">
@@ -826,16 +822,16 @@
                                 <textarea name="sliders[${index}][description][en]" class="form-control shadow-sm" rows="3" required></textarea>
                             </div>
                         </div>
-        
+
                         <!-- Slider Subtitles -->
-                    
-        
+
+
                         <!-- Slider Image -->
                         <div class="mb-3">
                             <label class="form-label">Slider Image:</label>
                             <input type="file" name="sliders[${index}][image]" class="form-control shadow-sm">
                         </div>
-        
+
                         <!-- Slider Link -->
                         <div class="mb-3">
                             <label class="form-label">Slider Link:</label>
