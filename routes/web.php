@@ -234,6 +234,7 @@ Route::get('/admin/emails/notification', [NotificationController::class, 'emails
 Route::post('/send/emails/for/users/byexcel', [ExcelController::class, 'processUpload'])->name('upload-excel');
 Route::get('/show/upload/form/for/emails', [ExcelController::class, 'showUploadForm'])->name('show.uplode.from');
 // i user pages
+
 Route::get('/clear-all-cache', function () {
     $exitCodeCacheClear = Artisan::call('cache:clear');
     $exitCodeOptimize = Artisan::call('optimize');
@@ -241,17 +242,20 @@ Route::get('/clear-all-cache', function () {
     $exitCodeRouteClear = Artisan::call('route:clear');
     $exitCodeViewClear = Artisan::call('view:clear');
     $exitCodeConfigCache = Artisan::call('config:cache');
+    $exitCodeStorageLink = Artisan::call('storage:link');
 
     return response()->json([
-        'message' => 'All caches cleared and optimized.',
+        'message' => 'All caches cleared, storage linked, and system optimized.',
         'cache_clear' => $exitCodeCacheClear,
         'optimize' => $exitCodeOptimize,
         'route_cache' => $exitCodeRouteCache,
         'route_clear' => $exitCodeRouteClear,
         'view_clear' => $exitCodeViewClear,
         'config_cache' => $exitCodeConfigCache,
+        'storage_link' => $exitCodeStorageLink,
     ]);
 });
+
 
 
 Route::prefix('admin/steps')->name('admin.steps.')->group(function () {
