@@ -1,0 +1,125 @@
+/*  start servsis   */
+.primary-navbar{
+    background-color:black;
+}
+.servsis{
+    margin-top: 100px;
+
+}
+.servsis .items{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.servsis .item{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 270px;
+    border-radius: 4px;
+    background-color: #ffffff11;
+    /* background-color: red; */
+    height: fit-content;
+    padding: 10px;
+}
+.servsis .item img{
+    width:270px;
+    height: 200px;
+    border-radius: 4px;
+
+}
+.servsis .item p{
+
+ font-size: 16px;
+ line-height: 1.1;
+ color: #696969;
+}
+
+
+
+.servsis .items .cta{
+    width: fit-content;
+}
+.servsis .items .cta a{
+    font-size: 12px;
+    padding: 0;
+    text-transform: capitalize;
+    background-color: transparent;
+    transition: 0.5s ease-in-out ;
+}
+.servsis .items .cta:hover a,
+.servsis .items .cta:hover i {
+    color: #18A686;
+}
+.servsis .items .cta i{
+
+    transform: rotate(45deg);
+    height: 30px;
+    transition: 0.5s ease-in-out ;
+}
+/* end servsis  */
+
+
+
+
+.packages .items{
+    display: flex;
+    justify-content: flex-start;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+.packages .item img{
+    border-top-left-radius:8px ;
+    border-top-right-radius:8px ;
+    width: 300px;
+    height: 300px;
+}
+.packages .items .item{
+    width: 300px;
+    border-radius: 8px;
+    background-color: #ffffff21;
+    height: fit-content;
+
+}
+.packages .item .text{
+    padding: 8px;
+}
+.packages .item .text .title{
+    display: flex;
+    justify-content: space-between;
+
+}
+.packages .item .text .title .date{
+    color: #18A686;
+}
+.packages .item .text ul li{
+    color: rgba(255, 255, 255, 0.425);
+}
+.packages .item .text .action{
+    display: flex;
+    justify-content: end;
+}
+.packages .item .text .action button{
+    padding: 10px;
+    background-color: #18A686;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+
+}
+.packages .item .text .action button:hover{
+    background-color: #076767;
+    color: white;
+}
+
+
+.disconts{
+    background: linear-gradient(90deg, rgba(25,25,25,1) 0%, rgba(25,25,25,0.4906337535014006) 22%, rgba(25,25,25,0.4234068627450981) 76%, rgba(25,25,25,1) 100%);
+    border-radius: 8px;
+}
+.disconts .img img{
+    width: fit-content;
+    height: fit-content;
+}
