@@ -56,7 +56,7 @@ use App\Http\Controllers\Web\Portfolio\PortfolioController as WebPortfolioContro
 Route::get('portfolio-admin', [PortfolioController::class, 'index'])->name('portfolio.index');
 Route::get('portfolio', [WebPortfolioController::class, 'index'])->name('portfolio');
 
-Route::get('project',[ProjectController::class,'index'])->name('project.index');
+Route::get('project', [ProjectController::class, 'index'])->name('project.index');
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects.index');
 Route::get('/projects/create', [ProjectController::class, 'create'])->name('projects.create');
 Route::post('/projects', [ProjectController::class, 'store'])->name('projects.store');
@@ -275,3 +275,20 @@ Route::prefix('admin/choose')->name('admin.choose.')->group(function () {
     Route::put('/{id}', [ChooseController::class, 'update'])->name('update');
     Route::delete('/{id}', [ChooseController::class, 'destroy'])->name('destroy');
 });
+
+
+Route::get('solve', function () {
+
+    $data = [1, 3, 4, 5];
+    $n = 5;
+    function getNumber($arr, $n)
+    {
+        $expectedSum = ($n * ($n + 1)) / 2;
+        $actualSum  = array_sum($arr);
+        return $expectedSum - $actualSum; // العدد المفقود هو الفرق
+
+    }
+    
+    echo "العدد المفقود: " . getNumber($data, $n);
+});
+//
