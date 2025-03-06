@@ -22,20 +22,20 @@
             <div class="row" >
                 @foreach ($projects as $project)
                 <div class="project-card col-6 d-flex flex-column">
-                    <!-- Static img That Appear -->                     
+                    <!-- Static img That Appear -->
                     <div class="project-img">
-                        <img src="{{ asset('storage/' . $project->image) }}" alt="Project Image">
+                        <img src="{{ asset('public/storage/' . $project->image) }}" alt="Project Image">
                     </div>
                     <!-- img slider that appear when hover -->
                     <div class="slideshow">
                         <div class="slider">
                             @foreach ($project->images as $image)
                             <div class="item">
-                                <img src="{{ asset('storage/' . $image->path) }}" />
+                                <img src="{{ asset('public/storage/' . $image->path) }}" />
                             </div>
                             @endforeach
                         </div>
-                    </div>    
+                    </div>
                     <!-- The Content -->
                     <div class="project-content p-4">
                        <h2 class="project-title">{{ $project->title[app()->getLocale()] ?? $project->title['en'] }}</h2>
