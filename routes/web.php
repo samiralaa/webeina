@@ -199,6 +199,7 @@ Route::delete('/package/delete/{id}', [AdmniPackageController::class, 'destroy']
 Route::get('admin/fqa', [FAQController::class, 'index'])->name('faq.index');
 Route::get('admin/fqa/create', [FAQController::class, 'create'])->name('faq.create');
 Route::post('admin/fqa/store', [FAQController::class, 'store'])->name('faqs.store');
+Route::delete('admin/faq/delete/{id}',[FAQController::class, 'delete'])->name('faq.destroy');
 
 // website.package.order
 Route::prefix('services')->group(function () {
@@ -288,7 +289,7 @@ Route::get('solve', function () {
         return $expectedSum - $actualSum; // العدد المفقود هو الفرق
 
     }
-    
+
     echo "العدد المفقود: " . getNumber($data, $n);
 });
 //

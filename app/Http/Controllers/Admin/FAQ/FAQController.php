@@ -51,4 +51,13 @@ class FAQController extends Controller
         // Redirect to the FAQ index page with a success message
         return redirect()->route('faq.index')->with('success', 'FAQ added successfully!');
     }
+    public function delete($id)
+    {
+        if ($this->faqService->destroy($id)) {
+            return redirect()->route('faq.index')->with('success', 'FAQ deleted successfully!');
+        }
+
+        return redirect()->route('faq.index')->with('error', 'Failed to delete FAQ.');
+    }
+
 }
