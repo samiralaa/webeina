@@ -65,7 +65,7 @@ Route::put('/projects/{project}', [ProjectController::class, 'update'])->name('p
 Route::delete('/projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy');
 Route::get('/linkedin/posts', [LinkedInController::class, 'getCompanyPosts']);
 
-Route::get('/about-us', [HomeController::class, 'aboutUs'])->name('about-us');
+Route::get('/about', [HomeController::class, 'aboutUs'])->name('about-us');
 Route::get('/language/{locale}', [LanguageController::class, 'changeLanguage'])->name('language.change');
 
 Route::get('/login', [AuthController::class, 'loginForm'])->name('login');
