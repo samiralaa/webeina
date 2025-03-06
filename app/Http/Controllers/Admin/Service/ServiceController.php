@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Admin\Service;
 
-use App\Http\Controllers\Controller;
+use App\Models\Service;
 
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Traits\ImageUploadTrait;
+use App\Http\Controllers\Controller;
+use App\Repositories\ServiceRepositoryInterface;
 use App\Http\Requests\Web\Service\StoreServiceRequest;
 use App\Http\Requests\Web\Service\UpdateServiceRequest;
-use App\Models\Service;
-use App\Repositories\ServiceRepositoryInterface;
-use App\Traits\ImageUploadTrait;
-use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
@@ -45,6 +46,11 @@ class ServiceController extends Controller
             // Add the image path to the service data
             $data['icon'] = $imagePath;
         }
+        $slug = Str::slug($request->name['en']);
+        
+        $data['slug'] = $slug;
+        // Ensure the slug is unique
+
 
         // Create the service record with the data
         $service = $this->serviceRepository->create($data);
@@ -56,7 +62,7 @@ class ServiceController extends Controller
 
     public function show($id)
     {
-       
+
         $service = Service::with('contents')->findOrFail($id); // This ensures the contents are loaded along with the service
         return view('dashboard.services.show', compact('service'));
     }
