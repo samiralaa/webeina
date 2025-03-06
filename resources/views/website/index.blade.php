@@ -144,8 +144,8 @@
                             <div class="partner__slider" role="list" aria-label="List of Partners">
                                 @foreach ($section->images as $image)
                                     <div class="partner__slider-item slick-slide" role="listitem" aria-label="Microsoft">
-                                        <img src="{{ asset($image->image_path) }}" alt="Microsoft Official Logo"
-                                            title="Microsoft Official Logo">
+                                    <img src="{{ asset('public/' . $image->image_path) }}" alt="Microsoft Official Logo">
+
                                     </div>
                                 @endforeach
                             </div>
@@ -163,8 +163,10 @@
                     @foreach ($section->images as $image)
                         <div class="col-6 col-md-4 col-lg-3">
                             <div class="grid-card p-5 bg-white shadow-sm text-center" role="article" aria-label="Vue.js">
-                                <img class="img-fluid my-4" src="{{ $image->image_path }}" loading="lazy"
+                                <img class="img-fluid my-4" src="{{ asset('public/' . $image->image_path) }}" loading="lazy"
                                     alt="Vue.js official logo" title="Vue.js Official Logo">
+
+
                             </div>
                         </div>
                     @endforeach
