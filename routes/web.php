@@ -211,7 +211,7 @@ Route::prefix('services')->group(function () {
     Route::put('/update/{id}', [AdminServiceController::class, 'update'])->name('services.update');
     Route::delete('/delete/{id}', [AdminServiceController::class, 'destroy'])->name('services.destroy');
     Route::get('details/{id}', [HomeController::class, 'servesDetails'])->name('serves.details');
-    Route::get('user-profile', [UserProfileController::class, 'index'])->name('user-profile');
+    Route::get('', [UserProfileController::class, 'index'])->name('user-profile');
     Route::get('request', [SubmitServiceController::class, 'getAllRequest'])->name('services.request');
 });
 
