@@ -30,6 +30,7 @@
                             <td>{{ $contact->name }}</td>
 
                             <td>{{ $contact->email }}</td>
+                            <!-- test -->
                             <td>{{$contact->service->name['en'] ?? "test"}} </td>
                             <td>{{ Str::limit($contact->message, 50) }}</td>
                             <td>
