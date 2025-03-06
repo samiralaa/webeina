@@ -178,7 +178,7 @@
     @endforeach
     {{-- why work with webenia --}}
 
-    <section class="work pt-5 pb-5 mt-5 mb-5 bg-light" role="region" aria-label="Why Work with Webenia Section">
+    <section class="work pt-5 pb-5 bg-light" role="region" aria-label="Why Work with Webenia Section">
         <h2 class="text-capitalize text-center">{{ __('messages.why_webenia') }}</h2>
         <div class="main-work container pt-5 d-flex justify-content-center">
             <div class="col-lg-12">
