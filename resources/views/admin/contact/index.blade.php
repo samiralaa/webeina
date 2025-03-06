@@ -30,7 +30,7 @@
                             <td>{{ $contact->name }}</td>
 
                             <td>{{ $contact->email }}</td>
-                            <td>{{$contact->service->name['en']}} </td>
+                            <td>{{$contact->service->name['en'] ?? "test"}} </td>
                             <td>{{ Str::limit($contact->message, 50) }}</td>
                             <td>
                                 <a href="{{ route('admin.contact.show', $contact->id) }}" class="btn btn-primary btn-sm">
