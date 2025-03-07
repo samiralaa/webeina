@@ -90,10 +90,7 @@ Route::resource('footer', FooterController::class);
 
 
 // users crud
-Route::get('register/user', [AuthUserController::class, 'registerForm'])->name('register.user');
-Route::post('register/user', [AuthUserController::class, 'register'])->name('register.user.submit');
-Route::get('login/user', [AuthUserController::class, 'loginForm'])->name('login.user');
-Route::post('login/user', [AuthUserController::class, 'login'])->name('login.user.submit');
+
 // pages
 
 
@@ -133,6 +130,10 @@ Route::middleware(['isAdmin'])->group(function () {
     Route::get('contact', [ContactController::class, 'index'])->name('contact.index');
     Route::get('contacts/{id}', [ContactController::class, 'show'])->name('admin.contact.show');
     Route::delete('contacts/{id}', [ContactController::class, 'destroy'])->name('admin.contact.destroy');
+
+    //
+
+
 });
 
 
@@ -149,6 +150,17 @@ Route::post('/admin/sections/store', [HomeController::class, 'storeSection'])->n
 
 
 Route::middleware(['isAdmin'])->group(function () {
+    Route::prefix('services')->group(function () {
+        Route::get('/services', [AdminServiceController::class, 'index'])->name('services.index');
+        Route::get('/create', [AdminServiceController::class, 'create'])->name('services.create');
+        Route::post('/store', [AdminServiceController::class, 'store'])->name('services.store');
+        Route::get('/show/{id}', [AdminServiceController::class, 'show'])->name('services.show');
+        Route::get('/edit/{id}', [AdminServiceController::class, 'edit'])->name('services.edit');
+        Route::put('/update/{id}', [AdminServiceController::class, 'update'])->name('services.update');
+        Route::delete('/delete/{id}', [AdminServiceController::class, 'destroy'])->name('services.destroy');
+        Route::get('request', [SubmitServiceController::class, 'getAllRequest'])->name('services.request');
+    });
+
     Route::get('/admin/contact', [ContactController::class, 'index'])->name('admin.contact');
 
     // quiz routes by samir
@@ -203,16 +215,9 @@ Route::delete('admin/faq/delete/{id}',[FAQController::class, 'delete'])->name('f
 
 // website.package.order
 Route::prefix('services')->group(function () {
-    Route::get('/services', [AdminServiceController::class, 'index'])->name('services.index');
-    Route::get('/create', [AdminServiceController::class, 'create'])->name('services.create');
-    Route::post('/store', [AdminServiceController::class, 'store'])->name('services.store');
-    Route::get('/show/{id}', [AdminServiceController::class, 'show'])->name('services.show');
-    Route::get('/edit/{id}', [AdminServiceController::class, 'edit'])->name('services.edit');
-    Route::put('/update/{id}', [AdminServiceController::class, 'update'])->name('services.update');
-    Route::delete('/delete/{id}', [AdminServiceController::class, 'destroy'])->name('services.destroy');
+
     Route::get('details/{id}', [HomeController::class, 'servesDetails'])->name('serves.details');
     Route::get('', [UserProfileController::class, 'index'])->name('user-profile');
-    Route::get('request', [SubmitServiceController::class, 'getAllRequest'])->name('services.request');
 });
 
 // add content toserves

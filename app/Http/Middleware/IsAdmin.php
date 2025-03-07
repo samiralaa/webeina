@@ -8,12 +8,15 @@ use Symfony\Component\HttpFoundation\Response;
 
 class IsAdmin
 {
-
+    
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth()->check() && auth()->user()->is_admin == 0) {
+        if (auth()->check() && auth()->user()->is_admin != 0) {
+            return $next($request);
+        }else{
             return redirect('/');
         }
-        return $next($request);
-    }
+
+
+}
 }
