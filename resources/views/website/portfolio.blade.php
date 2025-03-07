@@ -28,7 +28,7 @@
                     </div>
                     <!-- img slider that appear when hover -->
                     <div class="slideshow">
-                        <div class="slider">
+                        <div class="slider-project">
                             @foreach ($project->images as $image)
                             <div class="item">
                                 <img src="{{ asset('public/storage/' . $image->path) }}" />

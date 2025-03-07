@@ -9,6 +9,43 @@ document.addEventListener("scroll", () => {
 })
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+    const closeMobileNav = document.getElementById("closeMobileNav");
+
+    // Open Mobile Menu
+    mobileMenuToggle.addEventListener("click", function () {
+        mobileNav.classList.add("active");
+    });
+
+    // Close Mobile Menu
+    closeMobileNav.addEventListener("click", function () {
+        mobileNav.classList.remove("active");
+    });
+
+    // Close Menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!mobileNav.contains(event.target) && !mobileMenuToggle.contains(event.target)) {
+            mobileNav.classList.remove("active");
+        }
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const mobileServices = document.getElementById("mobileServicesToggle");
+    
+    if (mobileServices) {
+        mobileServices.addEventListener("click", function(event) {
+            event.preventDefault();
+            this.parentElement.classList.toggle("active");
+        });
+    }
+});
+
+
+
 // Mouse Follow Effect //
 console.clear();
 
@@ -119,99 +156,65 @@ question.forEach(question => {
     })
 })
 
-let gallerySlider; // Declare the Swiper instance globally to manage it properly
+let gallerySlider;
 
-function lg() {
-    // Initialize Swiper for large screens
-    gallerySlider = new Swiper(".swiper.is-gallery", {
-        slidesPerView: 8,
-        centeredSlides: true,
-        speed: 300,
-        grabCursor: true,
-        parallax: true,
-        mousewheel: {
-            thresholdDelta: 70,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        keyboard: {
-            enabled: true,
-        },
-        slideToClickedSlide: true,
-    });
-
-}
-
-function sm() {
-    // Initialize Swiper for small screens
-    gallerySlider = new Swiper(".swiper.is-gallery", {
-
-        slidesPerView: 1,
-        centeredSlides: true,
-        speed: 100,
-        grabCursor: true,
-        parallax: true,
-        mousewheel: {
-            thresholdDelta: 70,
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        keyboard: {
-            enabled: true,
-        },
-        slideToClickedSlide: true,
-        on: {
-            slideChange: function () {
-                // Loop through all slides
-                document.querySelectorAll('.swiper-slide').forEach(slide => {
-                    if (!slide.classList.contains('swiper-slide-visible')) {
-                        // Hide slides that are not visible
-                        slide.style.opacity = '0';
-                        slide.style.pointerEvents = 'none';
-                    } else {
-                        // Show slides when they become visible
-                        slide.style.opacity = '1';
-                        slide.style.pointerEvents = 'auto';
-                    }
-                });
-            },
-            init: function () {
-                // Trigger the logic once at initialization
-                this.emit('slideChange');
-            },
-        },
-    });
-}
+const debounce = (func, delay = 300) => {
+    let timeout;
+    return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+};
 
 function initializeSwiper() {
-    if (window.innerWidth > 768) {
-        // Destroy existing instance if any, then initialize for large screens
-        if (gallerySlider) gallerySlider.destroy(true, true);
-        lg();
-    } else {
-        // Destroy existing instance if any, then initialize for small screens
-        if (gallerySlider) gallerySlider.destroy(true, true);
-        sm();
+    if (gallerySlider) {
+        gallerySlider.destroy(true, true);
     }
+
+    gallerySlider = new Swiper(".swiper.is-gallery", {
+        slidesPerView: "auto", // Auto ensures perfect centering
+        spaceBetween: 40,
+        centeredSlides: true, // Keeps active slide in center
+        initialSlide: 0, // Start from the first card
+        speed: 600,
+        grabCursor: true,
+        parallax: true,
+        loop: false,
+        mousewheel: {
+            forceToAxis: true,
+            releaseOnEdges: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        keyboard: { enabled: true },
+        slideToClickedSlide: true,
+        on: {
+            init: function () {
+                this.slideTo(0, 0, false);
+            },
+            slideChange: function () {
+                document.querySelectorAll(".swiper-slide").forEach(slide => {
+                    let isVisible = slide.classList.contains("swiper-slide-visible");
+                    slide.style.opacity = isVisible ? "1" : "0.5";
+                    slide.style.pointerEvents = isVisible ? "auto" : "none";
+                    slide.style.transform = isVisible ? "scale(1)" : "scale(0.85)";
+                });
+            },
+        },
+    });
 }
 
-// Run the appropriate function on load
-initializeSwiper();
+// Initialize Swiper on page load
+window.addEventListener("load", initializeSwiper);
+window.addEventListener("resize", debounce(initializeSwiper, 300));
 
-// Add resize event listener to reinitialize Swiper on screen size change
-window.addEventListener("resize", initializeSwiper);
 
 
 
@@ -318,7 +321,7 @@ range.on("input", function () {
 $(document).ready(function () {
     var isRTL = $("html").attr("lang") === "ar";
 
-    $(".slider").each(function () {
+    $(".slider-project").each(function () {
         const $slider = $(this);
         if (!$slider.hasClass("slick-initialized")) {
             $slider.slick({
@@ -342,7 +345,7 @@ $(document).ready(function () {
         const $card = $(this);
         const $staticImg = $card.find(".project-img");
         const $slideshow = $card.find(".slideshow");
-        const $slider = $card.find(".slider");
+        const $slider = $card.find(".slider-project");
 
         let hoverTimer;
 
