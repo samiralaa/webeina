@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-    protected $fillable = ['name', 'email', 'message','service_id'];
+    protected $fillable = ['name', 'email', 'message','service_id','business_email','company'];
 
     protected $casts = [
         'name' => UppercaseCast::class,

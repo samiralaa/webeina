@@ -18,6 +18,7 @@
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Company</th>
 <th> serves</th>
                             <th>Message</th>
                             <th>Actions</th>
@@ -29,7 +30,8 @@
                             <td>{{ $index + 1 }}</td>
                             <td>{{ $contact->name }}</td>
 
-                            <td>{{ $contact->email }}</td>
+                            <td>{{ $contact->email ?? $contact->business_email}}</td>
+                            <td>{{ $contact->company }}</td>
                             <!-- test -->
                             <td>{{$contact->service->name['en'] ?? "test"}} </td>
                             <td>{{ Str::limit($contact->message, 50) }}</td>

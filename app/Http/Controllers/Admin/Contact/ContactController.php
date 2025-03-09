@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Contact;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -16,7 +17,7 @@ class ContactController extends Controller
     }
     public function index()
     {
-    
+
           $contacts = $this->contact->all();
         return view('admin.contact.index', compact('contacts'));
     }
@@ -35,12 +36,18 @@ class ContactController extends Controller
     }
 public function create()
 {
-    return view('website.contact-us');
+    $serves = Service::get();
+    return view('website.contact-us',compact('serves'));
 }
 
     public function store()
     {
+
         $data = request()->all();
+        if(isset($data['first_name'])){
+            $data['name'] = request()->get('first_name') . ' ' . request()->get('last_name');
+        }
+
         $this->contact->create($data);
         return redirect()->back()->with('success', 'Contact created successfully!');
     }
