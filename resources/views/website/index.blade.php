@@ -74,7 +74,7 @@
                         role="article" aria-label="{{ $item->name[app()->getLocale()] }}">
                         <div class="itemCard__imageWrap">
                             <img class="itemCard__image lazyloaded" loading="lazy"
-                                src="{{ asset('public/' . $item->icon) }}"
+                                src="{{ asset('public/storage/' . $item->icon) }}"
                                 alt="{{ $item->name[app()->getLocale()] }} - {{ __('messages.service_image') }}"
                                 title="{{ $item->name[app()->getLocale()] }}">
                         </div>
