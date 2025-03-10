@@ -1,4 +1,7 @@
 <?php
+
+use Hamcrest\Description;
+
 return [
     'home' => 'Home',
     'services' => 'Services',
@@ -22,4 +25,11 @@ return [
     'contact_us' => 'Contact Us',
     'portfolio' => 'Portfolio',
     'projects' => 'Projects',
+    'email' => 'Email',
+    'skype' => 'Skype',
+    'footer-description' => 'is a virtual department that helps organizations expand their business by enhancing leads and sales from their website, focusing on maximizing ROI.',
+    'c-office' => 'Cairo Office',
+    'd-office' => 'Dubai Office',
+    'c-location' => 'Rayhana plaza Building C2-Zahraa El Maadi',
+    'd-location' => 'Office 43-44, Building of Dubai Municipality, Al-Fahidi, Bur Dubai, UAE',
 ];

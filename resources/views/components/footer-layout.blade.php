@@ -6,22 +6,20 @@
                     <a class="navbar-brand align-self-start" href="{{ route('home') }}" aria-label="Home">
                         <img src="{{ asset('/assets/images/logo.png') }}" alt="WEBENIA Logo - Digital Solutions Provider" title="WEBENIA Logo" width="100">
                     </a>
-                    <p>
-                        <span class="webenia">WEBENIA</span> is a virtual department that helps organizations expand their business by enhancing leads and sales from their website, focusing on maximizing ROI.
-                    </p>
+                    <p><span class="webenia">WEBENIA</span>{{ __('messages.footer-description') }}</p>
                     <h2 class="head">{{ __('messages.locations') }}</h2>
                     <div class="locations">
                         <div>
-                            <a href="https://maps.app.goo.gl/32MvC2fBcoVZseD1A" aria-label="Cairo Office Location">
-                                <i class="fa-solid fa-location-dot"></i> Cairo Office
+                            <a href="https://maps.app.goo.gl/hz7zB9gjAP6J4rxq5" aria-label="Cairo Office Location">
+                                <i class="fa-solid fa-location-dot"></i> {{ __('messages.c-office') }}
                             </a>
-                            <p>10 Doctor Hassan El-Sherif, Nasr City, Cairo</p>
+                            <p>{{ __('messages.c-location') }}</p>
                         </div>
                         <div>
                             <a href="#" aria-label="Dubai Office Location">
-                                <i class="fa-solid fa-location-dot"></i> Dubai Office
+                                <i class="fa-solid fa-location-dot"></i> {{ __('messages.d-office') }}
                             </a>
-                            <p>Office 43-44, Building of Dubai Municipality, Al-Fahidi, Bur Dubai, UAE</p>
+                            <p>{{ __('messages.d-location') }}</p>
                         </div>
                     </div>
                 </div>
@@ -31,11 +29,11 @@
                     <ul class="footer-address-list">
                         <li>
                             <i class="fas fa-envelope cicon"></i>
-                            <p>Email: <a href="mailto:info@webenia.com" title="Email WEBENIA">info@webenia.com</a></p>
+                            <p>{{ __('messages.email') }}: <a href="mailto:info@webenia.com" title="Email WEBENIA">info@webenia.com</a></p>
                         </li>
                         <li>
                             <i class="fab fa-skype cicon"></i>
-                            <p>Skype: <a href="skype:live:.cid.bedd6a433022c5ca?call" title="Call WEBENIA on Skype">webenia</a></p>
+                            <p>{{ __('messages.skype') }}: <a href="skype:live:.cid.bedd6a433022c5ca?call" title="Call WEBENIA on Skype">webenia</a></p>
                         </li>
                     </ul>
                 </div>
@@ -43,7 +41,7 @@
                 <div class="col-lg-4 col-md-6">
                     <h2 class="head">{{ __('messages.quick_links') }}</h2>
                     <ul class="footer-address-list link-hover">
-                        <li><a class="lh" href="{{ route('about-us') }}" title="About WEBENIA">About</a></li>
+                        <li><a class="lh" href="{{ route('about-us') }}" title="About WEBENIA">{{ __('messages.about-us') }}</a></li>
                         @foreach ($services as $service)
 
                         <li><a class="lh" href="{{ route('serves.details', ['id' => $service->slug]) }}" title="{{ $service->name[app()->getLocale()] }}" title="Digital Transformation Services"> {{ $service->name[app()->getLocale()] }}</a></li>
