@@ -72,7 +72,7 @@ class ServiceController extends Controller
     public function update(UpdateServiceRequest $request, $id)
     {
         $data = $request->validated();
-        $service = $this->serviceRepository->find($id); // Retrieve the existing service
+        $service = Service::with('contents')->findOrFail($id); // This ensures the contents are loaded along with the service
 
         if (!$service) {
             return redirect()->route('services.index')->with('error', 'Service not found.');
