@@ -95,26 +95,26 @@
         </p>
         <div class="solve">
         @foreach ($service->choose as $choos)
-       
+
         <div class="service-features">
-            
+
             <div class="feature-box ">
                 <div style="display: flex; align-items: center; gap: 30px;">
-                <img src="{{ asset('storage/' . $choos->icon) }}" width="70" height="50" />
+                <img src="{{ asset('public/storage/' . $choos->icon) }}" width="70" height="50" />
                 <h2>{{ $choos->title[app()->getLocale()] ?? $choos->title['en'] }}</h2>
                 </div>
                 <p>{{ $choos->description[app()->getLocale()] ?? $choos->description['en'] }}.</p>
             </div>
-            
-            
-            
+
+
+
         </div>
-    
+
         @endforeach
 </div>
         </div>
     </div>
- 
+
 </section>
 
 
