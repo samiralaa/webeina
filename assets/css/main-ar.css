@@ -14,7 +14,7 @@ html {
 body {
     font-family: 'cairo', 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #333;
     box-sizing: border-box;
     margin: 0;
@@ -63,7 +63,7 @@ body {
 
 
 .navbar.scrolling {
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
 
 .navbar.scrolling .container .collapse .navbar-nav .nav-item .nav-link,
@@ -72,7 +72,7 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link{
-    color: #f4f4f4;
+    color: #fff;
     font-size: 16px;
     padding: 10px 20px;
     text-decoration: none;
@@ -102,7 +102,7 @@ body {
 }
 
 .dropdown-item:hover {
-    background-color: #f8f9fa;
+    background-color: #fff;
     color: #18a686;
 }
 
@@ -132,14 +132,14 @@ body {
 .request-quote-btn:hover,
 .request-quote-btn:focus {
     background: linear-gradient(45deg, #076767, #18a686);
-    color: #f4f4f4;
+    color: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
 
 .request-quote-btn:active {
     background: #076767;
-    color: #e0e0e0;
+    color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transform: scale(0.98);
 }
@@ -197,7 +197,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f4f4f4;
+    background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -324,7 +324,7 @@ body {
 }
 
 .mobile-dropdown .dropdown-item:hover {
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #18a686;
 }
 
@@ -338,11 +338,9 @@ body {
     transform: rotate(180deg);
 }
 
-
-
 @media (max-width: 991.5px) {
     .navbar{
-        background-color: #f4f4f4;
+        background-color: #fff;
     }
     .navbar-nav .nav-item .nav-link{
         color: #333;
@@ -370,7 +368,7 @@ body {
         position: relative;
         border: none;
         box-shadow: none;
-        background-color: #f4f4f4 !important;
+        background-color: #fff !important;
     }
     .nav-item.dropdown .dropdown-menu {
         display: block;
@@ -392,7 +390,7 @@ body {
 /* Footer */
 footer {
     padding: 80px 20px 20px 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     color: #333;
 }
 
@@ -540,57 +538,35 @@ footer a:hover {
 }
 
 /* Mouse Follow Effect */
-.circle {
-    z-index: 999999999;
-    --circle-size: 40px;
+.circle, .dot {
     position: fixed;
-    height: var(--circle-size);
-    width: var(--circle-size);
-    border: 1px solid #076767;
-    border-radius: 100%;
-    background-color: transparent;
-    top: calc(var(--circle-size) / 2 * -1);
-    left: calc(var(--circle-size) / 2 * -1);
+    top: 0;
+    left: 0;
     pointer-events: none;
-    scale: 1;
-    transition: transform 0.09s, background-color 0.3s ease-in-out;
+    z-index: 999999999;
+    will-change: transform;
+    transition: transform 0.1s ease-out, background-color 0.1s ease-in-out, opacity 0.2s ease;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #076767;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: transform 0.25s ease-out, opacity 0.3s ease-in-out;
 }
 
 .dot {
-    z-index: 999999999;
-    --circle-size: 10px;
-    position: fixed;
+    width: 10px;
+    height: 10px;
     background-color: #076767;
-    height: var(--circle-size);
-    width: var(--circle-size);
-    border-radius: 100%;
-    top: calc(var(--circle-size) / 2 * -1);
-    left: calc(var(--circle-size) / 2 * -1);
-    pointer-events: none;
+    border-radius: 50%;
+    transition: transform 0.15s ease-out, opacity 0.3s ease-in-out;
 }
 
-.circle.big {
-    transform: scale(1.5);
-    background-color: #076767;
-    opacity: 0.5;
-    /*transition: opacity 0.3s ease;*/
-}
-
-.dot.vanish {
-    transform: scale(2);
-    opacity: 0;
-}
-
-a:hover .circle,
-button:hover .circle,
-.partner__slider-item.slick-slide:hover .circle {
-    transform: scale(1.5);
-    background-color: #076767;
-    opacity: 0.5;
-}
-
-a:hover .dot,
-button:hover .dot,
-.partner__slider-item.slick-slide:hover .circle {
-    opacity: 0;
+@media (max-width: 768px) {
+    .circle, .dot {
+        display: none;
+    }
 }

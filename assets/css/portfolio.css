@@ -111,7 +111,7 @@
 }
 
 .project-content:hover::before {
-    color: #f4f4f4;
+    color: #f8f8f8;
 }
 
 .project-card:hover::before {

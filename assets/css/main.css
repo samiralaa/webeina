@@ -12,7 +12,7 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #333;
     box-sizing: border-box;
     margin: 0;
@@ -59,7 +59,7 @@ body {
 }
 
 .navbar.scrolling{
-    background-color: #f4f4f4;
+    background-color: #fff;
 }
 
 .navbar.scrolling .container .collapse .navbar-nav .nav-item .nav-link {
@@ -67,7 +67,7 @@ body {
 }
 
 .navbar-nav .nav-item .nav-link {
-    color: #f4f4f4;
+    color: #fff;
     font-size: 16px;
     padding: 10px 20px;
     text-decoration: none;
@@ -97,7 +97,7 @@ body {
 }
 
 .dropdown-item:hover {
-    background-color: #f8f9fa;
+    background-color: #fff;
     color: #18a686;
 }
 
@@ -123,7 +123,7 @@ body {
 
 .request-quote-btn:hover {
     background: linear-gradient(45deg, #076767, #18a686);
-    color: #f4f4f4;
+    color: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
@@ -174,7 +174,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #f4f4f4;
+    background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -301,7 +301,7 @@ body {
 }
 
 .mobile-dropdown .dropdown-item:hover {
-    background-color: #f4f4f4;
+    background-color: #fff;
     color: #18a686;
 }
 
@@ -315,11 +315,9 @@ body {
     transform: rotate(180deg);
 }
 
-
-
 @media (max-width: 991.5px) {
     .navbar{
-        background-color: #f4f4f4;
+        background-color: #fff;
     }
     .navbar-nav .nav-item .nav-link{
         color: #333;
@@ -347,7 +345,7 @@ body {
         position: relative;
         border: none;
         box-shadow: none;
-        background-color: #f4f4f4 !important;
+        background-color: #fff !important;
     }
     .nav-item.dropdown .dropdown-menu {
         display: block;
@@ -371,7 +369,7 @@ body {
 /* Footer */
 footer {
     padding: 80px 20px 20px 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
     color: #333;
 }
 
@@ -519,63 +517,35 @@ footer a:hover {
 }
 
 /* Mouse Follow Effect */
+.circle, .dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 999999999;
+    will-change: transform;
+    transition: transform 0.2s ease-out, background-color 0.3s ease-in-out, opacity 0.2s ease;
+}
 
 .circle {
-    z-index: 999999999;
-    --circle-size: 40px;
-    position: fixed;
-    height: var(--circle-size);
-    width: var(--circle-size);
+    width: 30px;
+    height: 30px;
     border: 1px solid #076767;
-    border-radius: 100%;
-    top: calc(var(--circle-size) / 2 * -1);
-    left: calc(var(--circle-size) / 2 * -1);
-    pointer-events: none;
-    transition: transform 0.1s, opacity 0.2s;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: transform 0.25s ease-out, opacity 0.3s ease-in-out;
 }
 
 .dot {
-    z-index: 999999999;
-    --circle-size: 10px;
-    position: fixed;
+    width: 10px;
+    height: 10px;
     background-color: #076767;
-    height: var(--circle-size);
-    width: var(--circle-size);
-    border-radius: 100%;
-    top: calc(var(--circle-size) / 2 * -1);
-    left: calc(var(--circle-size) / 2 * -1);
-    pointer-events: none;
-}
-
-.circle.big {
-    transform: scale(1.5);
-    background-color: #076767;
-    opacity: 0.5;
-}
-
-.dot.vanish {
-    opacity: 0;
-}
-
-a:hover .circle,
-button:hover .circle,
-.partner__slider:hover .circle {
-    transform: scale(1.5);
-    background-color: #076767;
-    opacity: 0.5;
-}
-
-a:hover .dot,
-button:hover .dot,
-.partner__slider:hover .circle {
-    opacity: 0;
+    border-radius: 50%;
+    transition: transform 0.15s ease-out, opacity 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
-    .circle{
-        display: none;
-    }
-    .dot{
+    .circle, .dot {
         display: none;
     }
 }
