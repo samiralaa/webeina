@@ -38,32 +38,40 @@
 
 
 
-<!-- Features -->
+<!-- Features Section -->
 <div class="container pt-5 pb-5">
-    <h1 class="text-captlize pb-4">Features</h1>
+    <h1 class="text-capitalize pb-4">Features</h1>
 </div>
+
 <section class="feature-section">
     <div class="container features">
+        <!-- Left Panel (Feature Navigation) -->
         <div class="left-panel">
-            <!-- Dropdown for smaller screens -->
-            <select class="feature-dropdown" aria-label="Select a service" onchange="showDetails(this.value)">
+            <!-- Dropdown for mobile -->
+            <select class="feature-dropdown" aria-label="Select a service">
                 @foreach ($service->contents as $content)
-                <option value="details{{ $content->id }}">{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</option>
+                <option value="details{{ $content->id }}">
+                    {{ $content->title[app()->getLocale()] ?? $content->title['en'] }}
+                </option>
                 @endforeach
             </select>
 
-            <!-- Original list for larger screens -->
+            <!-- List for larger screens -->
             <ul class="feature-list">
                 @foreach ($service->contents as $content)
-                <li onclick="showDetails('details{{ $content->id }}')">{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</li>
+                <li data-detail="details{{ $content->id }}">
+                    {{ $content->title[app()->getLocale()] ?? $content->title['en'] }}
+                </li>
                 @endforeach
             </ul>
         </div>
 
+        <!-- Vertical Line -->
         <div class="verticalline">
             <div class="select"></div>
         </div>
 
+        <!-- Right Panel (Feature Details) -->
         <div class="right-panel" style="background-image: url('{{ asset('assets/images/hero/about-hero.png') }}');">
             @foreach ($service->contents as $content)
             <div id="details{{ $content->id }}" class="details">
@@ -73,8 +81,8 @@
             @endforeach
         </div>
     </div>
-
 </section>
+
 
 
 

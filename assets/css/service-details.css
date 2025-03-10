@@ -48,6 +48,7 @@
 
 
 /* Feature */
+/* Features Section */
 .container.features {
     max-width: 1200px;
     margin: 20px auto;
@@ -57,16 +58,27 @@
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 0;
+    flex-wrap: wrap;
+    height: fit-content;
 }
 
+/* Feature Dropdown (Hidden on Large Screens) */
 .feature-dropdown {
     display: none;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
+/* Left Panel */
 .left-panel {
     flex: 1;
+    height: fit-content;
     background-color: #f0f0f0;
     padding: 20px;
+    min-width: 250px;
 }
 
 .left-panel ul {
@@ -76,14 +88,15 @@
 }
 
 .left-panel ul li {
-    padding: 20px;
-    margin-bottom: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
     cursor: pointer;
     background-color: #e6e6e6;
     border-radius: 5px;
     font-weight: bold;
-    font-size: large;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out, color 0.3s;
+    text-align: center;
 }
 
 .left-panel ul li:hover,
@@ -92,6 +105,7 @@
     color: white;
 }
 
+/* Vertical Line */
 .verticalline {
     width: 5px;
     background-color: #18a686;
@@ -109,33 +123,25 @@
     height: 20px;
     width: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    transition: top 0.3s ease;
+    transition: top 0.3s ease-in-out;
     z-index: 2;
 }
 
+/* Right Panel */
 .right-panel {
+    flex: 2;
     display: flex;
     align-items: center;
-    flex: 2;
+    justify-content: center;
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 30px;
-    color: #555;
-    min-height: fit-content;
 
 }
 
-/*.right-panel {*/
-/*    position: relative;*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    padding: 20px;*/
-/*    color: white;*/
-/*}*/
-
-/* Optional: Overlay for readability */
+/* Overlay for Readability */
 .right-panel::before {
     content: '';
     position: absolute;
@@ -143,26 +149,29 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
-    z-index: 1; /* Ensure it goes behind content */
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
 }
 
 .right-panel > * {
     position: relative;
-    z-index: 2; /* Ensure content stays above the background */
+    z-index: 2;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
 }
 
-
+/* Feature Details */
 .details {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
-    height: 60%;
 }
 
 .details.active {
     display: block;
 }
 
+/* Text Styling */
 .right-panel h2 {
     margin: 0 0 15px 0;
     font-size: 28px;
@@ -174,6 +183,47 @@
     line-height: 1.6;
     color: white;
 }
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container.features {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-dropdown {
+        display: block;
+    }
+
+    .left-panel ul {
+        display: none;
+    }
+
+    .right-panel {
+        padding: 20px;
+    }
+
+    .right-panel h2 {
+        font-size: 24px;
+    }
+
+    .right-panel p {
+        font-size: 14px;
+    }
+}
+
 
 
 

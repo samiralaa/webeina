@@ -210,51 +210,32 @@ window.addEventListener("resize", debounce(initializeSwiper, 300));
 
 
 // Features //
-function showDetails(detailId) {
-    const details = document.querySelectorAll('.details');
-    details.forEach((detail) => {
-        detail.classList.remove('active');
-    });
-    const selectedDetail = document.getElementById(detailId);
-    selectedDetail.classList.add('active');
-    const items = document.querySelectorAll('.left-panel ul li');
-    items.forEach((item) => {
-        item.classList.remove('active');
-    });
-    const activeItem = document.querySelector(`[onclick="showDetails('${detailId}')"]`);
-    activeItem.classList.add('active');
-    const caret = document.querySelector('.verticalline .select');
-    const itemOffsetTop = activeItem.offsetTop;
-    const itemHeight = activeItem.offsetHeight;
-    const heroHeight = document.querySelector('.container-0-').offsetHeight;
-    caret.style.transition = 'top 0.3s ease-in-out';
-    caret.style.top = `${itemOffsetTop - (heroHeight + itemHeight /.3 - caret.offsetHeight /.343 ) }px`;
-}
-const items = document.querySelectorAll('.left-panel ul li');
-items.forEach((item) => {
-    item.setAttribute('tabindex', '0');
-    item.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            const detailId = item.getAttribute('onclick').match(/'(.+)'/)[1];
-            showDetails(detailId);
-        }
-    });
-});
 document.addEventListener('DOMContentLoaded', () => {
-    const firstItem = document.querySelector('.left-panel ul li');
-    if (firstItem) {
-        const firstDetailId = firstItem.getAttribute('onclick').match(/'(.+)'/)[1];
-        showDetails(firstDetailId);
-    }
+    const items = document.querySelectorAll('.feature-list li');
+    const details = document.querySelectorAll('.details');
     const dropdown = document.querySelector('.feature-dropdown');
-    if (dropdown) {
-        dropdown.addEventListener('change', (event) => {
-            const selectedDetailId = event.target.value;
-            showDetails(selectedDetailId);
-        });
-    } else {
-        console.log("Dropdown not found.");
+    const caret = document.querySelector('.verticalline .select');
+
+    function showDetails(detailId) {
+        details.forEach(detail => detail.classList.remove('active'));
+        document.getElementById(detailId).classList.add('active');
+        items.forEach(item => item.classList.remove('active'));
+        const activeItem = document.querySelector(`[data-detail="${detailId}"]`);
+        activeItem.classList.add('active');
+        const panelOffset = activeItem.parentElement.getBoundingClientRect().top;
+        const itemOffset = activeItem.getBoundingClientRect().top;
+        const itemHeight = activeItem.offsetHeight;
+        caret.style.transition = 'top 0.3s ease-in-out';
+        caret.style.top = `${itemOffset - panelOffset + itemHeight / 2 - caret.offsetHeight / 2 + 20}px`;
+    }
+    items.forEach(item => {
+        item.addEventListener('click', () => showDetails(item.dataset.detail));
+    });
+    dropdown.addEventListener('change', (event) => {
+        showDetails(event.target.value);
+    });
+    if (items.length > 0) {
+        showDetails(items[0].dataset.detail);
     }
 });
 
