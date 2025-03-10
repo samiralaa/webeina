@@ -387,6 +387,8 @@ body {
     }
 }
 
+
+
 /* Footer */
 footer {
     padding: 80px 20px 20px 20px;
@@ -418,13 +420,13 @@ footer a:hover {
     width: fit-content;
 }
 
-.locations a {
+.locations p {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 1.5rem;
     color: #333;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .locations a:hover {
@@ -482,7 +484,7 @@ footer a:hover {
 }
 
 .link-hover a:hover::before {
-    transform-origin: left;
+    transform-origin: right;
     transform: scaleX(1);
 }
 
@@ -545,7 +547,7 @@ footer a:hover {
     pointer-events: none;
     z-index: 999999999;
     will-change: transform;
-    transition: transform 0.1s ease-out, background-color 0.1s ease-in-out, opacity 0.2s ease;
+    transition: transform 0.2s ease-out, background-color 0.3s ease-in-out, opacity 0.2s ease;
 }
 
 .circle {
