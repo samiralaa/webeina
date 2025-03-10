@@ -47,8 +47,7 @@
 
 
 
-/* Feature */
-/* Features Section */
+/* Features */
 .container.features {
     max-width: 1200px;
     margin: 20px auto;
@@ -62,7 +61,6 @@
     height: fit-content;
 }
 
-/* Feature Dropdown (Hidden on Large Screens) */
 .feature-dropdown {
     display: none;
     width: 100%;
@@ -72,7 +70,6 @@
     font-size: 16px;
 }
 
-/* Left Panel */
 .left-panel {
     flex: 1;
     height: fit-content;
@@ -105,7 +102,6 @@
     color: white;
 }
 
-/* Vertical Line */
 .verticalline {
     width: 5px;
     background-color: #18a686;
@@ -127,7 +123,6 @@
     z-index: 2;
 }
 
-/* Right Panel */
 .right-panel {
     flex: 2;
     display: flex;
@@ -141,7 +136,6 @@
 
 }
 
-/* Overlay for Readability */
 .right-panel::before {
     content: '';
     position: absolute;
@@ -161,7 +155,6 @@
     max-width: 600px;
 }
 
-/* Feature Details */
 .details {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
@@ -171,7 +164,6 @@
     display: block;
 }
 
-/* Text Styling */
 .right-panel h2 {
     margin: 0 0 15px 0;
     font-size: 28px;
@@ -184,7 +176,6 @@
     color: white;
 }
 
-/* Fade-In Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -196,7 +187,6 @@
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .container.features {
         flex-direction: column;
@@ -261,10 +251,11 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    /* width: 40%;
-    min-width: 280px; */
     width: 100%;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: start;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -383,7 +374,6 @@
 }
 
 
-
 /* Steps Map */
 .steps-map {
     background-image: linear-gradient(30deg, #076767 0%, #18a686 100%);
@@ -397,163 +387,116 @@
 .steps-progress {
     width: 70%;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     color: #fff;
 }
 
 .steps-progress-head {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.steps-progress-head .head-item {
-    padding: 0.5rem 0.5rem;
-    margin: 0.3rem;
-    letter-spacing: 2px;
-    cursor: pointer;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .steps-list {
     width: 100%;
     position: relative;
     list-style: none;
+    padding: 0;
 }
 
 .steps-list::before {
-    display: inline-block;
     content: "";
     position: absolute;
-    top: 0;
-    left: calc(50% + 16.5px);
-    width: 10px;
-    height: 100%;
-    border-left: 3px solid #fff;
+    top: 2;
+    left: 50%;
+    width: 2px;
+    height: calc(100% - 2px);
+    background-color: #fff;
+    transform: translateX(-50%);
 }
 
 .steps-item {
-    position: relative;
     width: 50%;
+    position: relative;
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+    padding-top: 0;
 }
 
-.steps-item:hover:nth-child(even)::before,
-.steps-item:hover:nth-child(odd)::before {
-    height: 100%;
-}
-
+/* Alternating Left and Right */
 .steps-item:nth-child(even) {
-    padding-right: 20px;
-    text-align: right;
-    float: left;
-    clear: both;
-}
-
-.steps-item:nth-child(even)::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -3px;
-    width: 3px;
-    height: 0;
-    background-color: #52c234;
-    display: inline-block;
-    transition: all 255ms ease-in-out;
-}
-
-.steps-item:nth-child(even)::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -9px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #fff;
-    display: inline-block;
+    text-align: left;
+    margin-left: auto;
 }
 
 .steps-item:nth-child(odd) {
-    float: right;
-    padding-left: 20px;
-    clear: both;
+    text-align: right;
+    margin-right: auto;
+}
+
+/* Step Dots */
+.steps-item::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 3px solid #18a686;
+    transition: height 0.3s ease-in-out;
 }
 
 .steps-item:nth-child(odd)::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 0;
+    left: calc(100% - 6px);
+}
+
+.steps-item:nth-child(even)::before {
+    right: calc(100% - 6px);
+}
+
+
+/* Hover Effect - Old Style */
+.steps-item:hover::before {
+    height: calc(100% + 2px);
     background-color: #52c234;
-    display: inline-block;
-    transition: all 255ms ease-in-out;
 }
 
-.steps-item:nth-child(odd)::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -6px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #fff;
-    display: inline-block;
-}
-
-.steps-item:not(:last-child) {
-    padding-bottom: 1rem;
-}
-
-.steps-item .location {
-    margin-top: 0.2rem;
-}
-
-.steps-item .periode {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-}
-
+/* Responsive Fixes */
 @media (max-width: 768px) {
-    .steps-list::before {
-        left: 32px;
+    [dir='ltr'] .steps-list::before {
+        left: 20px;
     }
-
+    [dir='rtl'] .steps-list::before {
+        right: 20px;
+    }
     .steps-item {
         width: 100%;
-        padding-left: 20px;
         text-align: left;
-        float: none;
-        margin-bottom: 2rem;
+        padding-left: 40px;
     }
-
-    .steps-item::before {
-        left: -1px;
+    [dir='ltr'] .steps-item:nth-child(odd)::before {
+        left: 14.5;
     }
-
-    .steps-item::after {
-        left: -6px;
+    [dir='ltr'] .steps-item:nth-child(even)::before {
+        right: calc(100% - 26.5px);
     }
-
-    .steps-progress-head h1 {
-        text-align: left;
+    [dir='rtl'] .steps-item:nth-child(odd)::before {
+        right: 16;
     }
-
-    .steps-item .head {
-        text-align: left;
+    [dir='rtl'] .steps-item:nth-child(even)::before {
+        right: 16;
     }
-
-    .steps-item .location {
-        text-align: left;
+    .steps-item:nth-child(even) {
+        text-align: start;
+        margin-left: auto;
     }
-    .steps-item:hover:nth-child(even)::before,
-    .steps-item:hover:nth-child(odd)::before {
-        height: 123%;
+    .steps-item:nth-child(odd) {
+        text-align: start;
+        margin-right: auto;
     }
 }
+
 
 
 

@@ -100,7 +100,7 @@
 
             <div class="feature-box ">
                 <div style="display: flex; align-items: center; gap: 30px;">
-                <img src="{{ asset('public/storage/' . $choos->icon) }}" width="70" height="50" />
+                <img src="{{ asset('public/storage/' . $choos->icon) }}" width="50" height="50" />
                 <h2>{{ $choos->title[app()->getLocale()] ?? $choos->title['en'] }}</h2>
                 </div>
                 <p>{{ $choos->description[app()->getLocale()] ?? $choos->description['en'] }}.</p>
@@ -123,14 +123,18 @@
 <section class="steps-map">
     <div class="steps-progress">
         <div class="steps-progress-head">
-            <h1 class="text-captlize pb-4">Steps</h1>
+            <h1 class="text-capitalize pb-4">Steps</h1>
         </div>
-
+        
         <ul class="steps-list">
-            @foreach ($service->steps as $step)
-            <li class="steps-item">
-                {{ $step->title[app()->getLocale()] ?? json_encode($step->title) }}
-                <div class="location"> {{ $step->description[app()->getLocale()] ?? json_encode($step->title) }}</div>
+            @foreach ($service->steps as $index => $step)
+            <li class="steps-item {{ $index % 2 == 0 ? 'left' : 'right' }}">
+                <span class="step-title">
+                    {{ $step->title[app()->getLocale()] ?? json_encode($step->title) }}
+                </span>
+                <div class="location"> 
+                    {{ $step->description[app()->getLocale()] ?? json_encode($step->description) }}
+                </div>
             </li>
             @endforeach
         </ul>
