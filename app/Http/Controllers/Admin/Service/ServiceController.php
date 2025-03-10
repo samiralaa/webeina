@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Traits\ImageUploadTrait;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use App\Repositories\ServiceRepositoryInterface;
 use App\Http\Requests\Web\Service\StoreServiceRequest;
 use App\Http\Requests\Web\Service\UpdateServiceRequest;
@@ -47,7 +48,7 @@ class ServiceController extends Controller
             $data['icon'] = $imagePath;
         }
         $slug = Str::slug($request->name['en']);
-        
+
         $data['slug'] = $slug;
         // Ensure the slug is unique
 
@@ -71,10 +72,29 @@ class ServiceController extends Controller
     public function update(UpdateServiceRequest $request, $id)
     {
         $data = $request->validated();
+        $service = $this->serviceRepository->find($id); // Retrieve the existing service
 
-        $service = $this->serviceRepository->update($id, $data);
-        return redirect()->route('services.index');
+        if (!$service) {
+            return redirect()->route('services.index')->with('error', 'Service not found.');
+        }
+
+        if ($request->hasFile('icon')) {
+            // Delete old image if exists
+            if ($service->icon) {
+                Storage::disk('public')->delete($service->icon);
+            }
+
+            // Upload the new image and get the path
+            $imagePath = $this->uploadImage($request->file('icon'), 'public', 'services');
+            $data['icon'] = $imagePath;
+        }
+
+        // Update the service
+        $this->serviceRepository->update($id, $data);
+
+        return redirect()->route('services.index')->with('success', 'Service updated successfully.');
     }
+
 
     public function destroy($id)
     {
