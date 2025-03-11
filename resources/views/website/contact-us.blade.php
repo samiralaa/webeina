@@ -58,7 +58,7 @@
                     
                     <div class="mt-3">
                         <label for="message" class="form-label fw-bold">{{ __('messages.about-project') }}</label>
-                        <textarea class="form-control" id="message" name="message" rows="3" required placeholder="{{ __('messages.tell-us-more') }}"></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="3" required placeholder="{{ __('messages.about-project-placeholder') }}"></textarea>
                     </div>
                     
                     <button type="submit" class="btn btn-success mt-3">{{ __('messages.send-request') }}</button>

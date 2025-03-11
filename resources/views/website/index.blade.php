@@ -32,13 +32,13 @@
             <div class="big_title col-sm-12 col-md-6" role="heading" aria-level="1">
                 <h2 class="text-uppercase" style="font-weight: 900"
                     title="Top-rated Digital Marketing, Web, And Mobile App Development Company">
-                    State-of-the-art digital solutions tailored to your business needs
+                    {{ __('message.title') }}
                 </h2>
             </div>
 
             <div class="sub_title col-sm-12 col-md-6" role="contentinfo">
                 <p class="text-capitalize text-black-50">
-                A leading digital house, providing a comprehensive range of professional ranging from digital transformation, web design, web development, mobile app development, search engine optimization (SEO), e-commerce solutions, UI/UX design, pay-per-click advertising (PPC), social media marketing, video production, content creation, email marketing, and marketing automation.
+                    {{ __('message.description') }}
                 </p>
             </div>
 
@@ -46,19 +46,19 @@
             <div class="count col-12 d-flex pt-5 pb-5" role="group" aria-label="Statistics">
                 <div class="cards-block__item col-sm-3" role="listitem">
                     <h3 class="card-block__title fw-bold">950+</h3>
-                    <div class="card-block__content">successful projects</div>
+                    <div class="card-block__content">{{ __('message.stats.projects') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
                     <h3 class="card-block__title fw-bold">15+</h3>
-                    <div class="card-block__content">work in progress</div>
+                    <div class="card-block__content">{{ __('message.stats.progress') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
                     <h3 class="card-block__title fw-bold">1,800+</h3>
-                    <div class="card-block__content">employees</div>
+                    <div class="card-block__content">{{ __('message.stats.employees') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
                     <h3 class="card-block__title fw-bold">500+</h3>
-                    <div class="card-block__content">Web. Mobile. Graphic.</div>
+                    <div class="card-block__content">{{ __('message.stats.categories') }}</div>
                 </div>
             </div>
         </div>

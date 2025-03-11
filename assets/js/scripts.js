@@ -123,6 +123,7 @@ $(document).ready(function () {
     });
     if (isRTL) {
         $('.partner__slider').css('direction', 'rtl');
+        $('..slick-track').css('left', '-38px');
     } else {
         $('.partner__slider').css('direction', 'ltr');
     }

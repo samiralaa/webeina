@@ -66,4 +66,12 @@ return [
     'our-locations' => 'Our Locations',
     'dubai-office' => 'Dubai Office:',
     'cairo-office' => 'Cairo Office:',
+    'title' => 'State-of-the-art digital solutions tailored to your business needs',
+    'description' => 'A leading digital house, providing a comprehensive range of professional services ranging from digital transformation, web design, web development, mobile app development, search engine optimization (SEO), e-commerce solutions, UI/UX design, pay-per-click advertising (PPC), social media marketing, video production, content creation, email marketing, and marketing automation.',
+    'stats' => [
+        'projects' => 'successful projects',
+        'progress' => 'work in progress',
+        'employees' => 'employees',
+        'categories' => 'Web. Mobile. Graphic.',
+    ],
 ];
