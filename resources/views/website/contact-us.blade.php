@@ -17,8 +17,8 @@
 <!-- Contact Us -->
 <section class="contact-section py-5 mt-5">
     <div class="container">
-        <h2 class="text-center mb-1">{{ __('messages.get-in-touch') }}</h2>
-        <p class="text-center lead">{{ __('messages.get-in-touch-text') }}</p>
+        <h2 class="text-center mb-1">{{ __('messages.contact-section-title') }}</h2>
+        <p class="text-center lead">{{ __('messages.contact-section-subtitle') }}</p>
 
         <div class="row mt-5 d-flex justify-content-center">
             <div class="col-12 col-md-7">
