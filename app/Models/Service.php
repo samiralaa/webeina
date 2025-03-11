@@ -8,7 +8,7 @@ class Service extends Model
 {
     protected $table = 'services';
 
-    protected $fillable = ['name', 'icon', 'description', 'slug'];
+    protected $fillable = ['name', 'icon', 'description', 'slug','image_banar'];
 
     protected $casts = [
         'name' => 'array',

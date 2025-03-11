@@ -8,7 +8,7 @@
 
 <!-- Hero -->
 <div class="container-0-">
-    <img class="background-img" src="{{ asset('assets/images/hero/about-hero.png') }}" loading="lazy" alt="{{ $service->name[app()->getLocale()] }}">
+    <img class="background-img" src="{{ asset('public/storage/' . $service->image_banar) }}" loading="lazy" alt="{{ $service->name[app()->getLocale()] }}">
     <div class="container-0">
         <div class="container-1">
             <div class="text-2">{{ $service->name[app()->getLocale()] }}</div>
@@ -125,14 +125,14 @@
         <div class="steps-progress-head">
             <h1 class="text-capitalize pb-4">Steps</h1>
         </div>
-        
+
         <ul class="steps-list">
             @foreach ($service->steps as $index => $step)
             <li class="steps-item {{ $index % 2 == 0 ? 'left' : 'right' }}">
                 <span class="step-title">
                     {{ $step->title[app()->getLocale()] ?? json_encode($step->title) }}
                 </span>
-                <div class="location"> 
+                <div class="location">
                     {{ $step->description[app()->getLocale()] ?? json_encode($step->description) }}
                 </div>
             </li>

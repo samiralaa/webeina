@@ -47,6 +47,11 @@ class ServiceController extends Controller
             // Add the image path to the service data
             $data['icon'] = $imagePath;
         }
+        if($request->hasFile('image_banar'))
+        {
+            $imagePath = $this->uploadImage($request->file('image_banar'), 'public', 'services');
+            $data['image_banar'] = $imagePath;
+        }
         $slug = Str::slug($request->name['en']);
 
         $data['slug'] = $slug;
@@ -87,6 +92,17 @@ class ServiceController extends Controller
             // Upload the new image and get the path
             $imagePath = $this->uploadImage($request->file('icon'), 'public', 'services');
             $data['icon'] = $imagePath;
+        }
+        if($request->hasFile('image_banar'))
+        {
+            // Delete old image if exists
+            if ($service->image_banar) {
+                Storage::disk('public')->delete($service->image_banar);
+            }
+
+            // Upload the new image and get the path
+            $imagePath = $this->uploadImage($request->file('image_banar'), 'public','services');
+            $data['image_banar'] = $imagePath;
         }
 
         // Update the service

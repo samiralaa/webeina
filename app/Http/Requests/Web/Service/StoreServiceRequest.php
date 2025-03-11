@@ -28,6 +28,7 @@ class StoreServiceRequest extends FormRequest
             'description.en' => 'required|string|max:255',
             'description.ar' => 'required|string|max:255',
             'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:8048',
+            'image_banar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:8034',
         ];
     }
 }

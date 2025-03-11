@@ -10,6 +10,13 @@
                 @method('PUT')
             @endif
 
+            <div class="mb-4">
+                <label for="banner" class="form-label">Service Banner</label>
+                <input type="file" class="form-control" id="banner" name="image_banar" accept="image/*">
+                @error('banner')
+                    <div class="alert alert-danger mt-2">{{ $message }}</div>
+                @enderror
+            </div>
             <div class="mb-3">
                 <label for="name_ar" class="form-label">Service Name Ar</label>
                 <input type="text" class="form-control" id="name_ar" name="name[ar]"
