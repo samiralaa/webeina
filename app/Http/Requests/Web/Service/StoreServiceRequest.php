@@ -25,8 +25,8 @@ class StoreServiceRequest extends FormRequest
             // 'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'name.en' => 'required|string|max:255',
             'name.ar' => 'required|string|max:255',
-            'description.en' => 'required|string|max:255',
-            'description.ar' => 'required|string|max:255',
+            'description.en' => 'required|string|max:500',
+            'description.ar' => 'required|string|max:500',
             'icon' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:8048',
             'image_banar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:8034',
         ];
