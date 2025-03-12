@@ -50,7 +50,7 @@
                         <div class="d-flex flex-column">
                             @foreach ($serves as $ser)
                                 <label>
-                                    <input type="checkbox" name="service_id[]" value="{{$ser->id}}"> {{$ser->name['en'] ?? "test"}}
+                                    <input type="checkbox" name="service_id[]" value="{{$ser->id}}"> {{ $ser->name[app()->getLocale()] }}
                                 </label>
                             @endforeach
                         </div>
@@ -60,8 +60,9 @@
                         <label for="message" class="form-label fw-bold">{{ __('messages.about-project') }}</label>
                         <textarea class="form-control" id="message" name="message" rows="3" required placeholder="{{ __('messages.about-project-placeholder') }}"></textarea>
                     </div>
-                    
-                    <button type="submit" class="btn btn-success mt-3">{{ __('messages.send-request') }}</button>
+                    <button type="submit" class="request-quote-btn quote mt-3 mx-0">
+                        <span>{{ __('messages.send-request') }}</span>
+                    </button>
                 </form>
             </div>
         </div>
@@ -69,7 +70,7 @@
 
     <div class="our-locations pt-5">
         <h2 class="text-center">{{ __('messages.our-locations') }}</h2>
-        <div class="container d-flex flex-wrap justify-content-center" style="gap:80px; min-height: 500px;">
+        <div class="container d-flex justify-content-center" style="gap:80px; min-height: 500px;">
             <div class="location col-12 col-md-6">
                 <h5 class="mt-5 mb-2">{{ __('messages.dubai-office') }}</h5>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6906.826275125326!2d31.356819099999996!3d30.053690099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1734935392128!5m2!1sar!2seg" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
