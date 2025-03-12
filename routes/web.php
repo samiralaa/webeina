@@ -92,6 +92,7 @@ Route::resource('footer', FooterController::class);
 // users crud
 
 // pages
+Route::post('/services/update-order', [ServiceController::class, 'updateOrder'])->name('services.updateOrder');
 
 
 Route::middleware(['isAdmin'])->group(function () {
@@ -151,6 +152,7 @@ Route::post('/admin/sections/store', [HomeController::class, 'storeSection'])->n
 
 Route::middleware(['isAdmin'])->group(function () {
     Route::prefix('services')->group(function () {
+
         Route::get('/services', [AdminServiceController::class, 'index'])->name('services.index');
         Route::get('/create', [AdminServiceController::class, 'create'])->name('services.create');
         Route::post('/store', [AdminServiceController::class, 'store'])->name('services.store');

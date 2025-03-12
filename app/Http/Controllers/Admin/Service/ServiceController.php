@@ -35,35 +35,29 @@ class ServiceController extends Controller
         return view('dashboard.services.create');
     }
     public function store(StoreServiceRequest $request)
-    {
+{
+    $data = $request->validated();
 
-        $data = $request->validated();
-
-        // Handle file upload if icon is present
-        if ($request->hasFile('icon')) {
-            // Upload the image and get the path
-            $imagePath = $this->uploadImage($request->file('icon'), 'public', 'services');
-
-            // Add the image path to the service data
-            $data['icon'] = $imagePath;
-        }
-        if($request->hasFile('image_banar'))
-        {
-            $imagePath = $this->uploadImage($request->file('image_banar'), 'public', 'services');
-            $data['image_banar'] = $imagePath;
-        }
-        $slug = Str::slug($request->name['en']);
-
-        $data['slug'] = $slug;
-        // Ensure the slug is unique
-
-
-        // Create the service record with the data
-        $service = $this->serviceRepository->create($data);
-
-        // Return the service view with the created service
-        return view('dashboard.services.show', compact('service'));
+    if ($request->hasFile('icon')) {
+        $data['icon'] = $this->uploadImage($request->file('icon'), 'public', 'services');
     }
+
+    if ($request->hasFile('image_banar')) {
+        $data['image_banar'] = $this->uploadImage($request->file('image_banar'), 'public', 'services');
+    }
+
+    $data['slug'] = Str::slug($request->name['en']);
+
+    // تحديد الترتيب بناءً على آخر قيمة
+    $lastOrder = Service::max('order_by') ?? 0;
+    $data['order_by'] = $lastOrder + 1;
+
+    $service = $this->serviceRepository->create($data);
+
+    return view('dashboard.services.show', compact('service'));
+}
+
+
 
 
     public function show($id)
@@ -128,4 +122,22 @@ class ServiceController extends Controller
     {
         return view('dashboard.services.create_section');
     }
+
+    public function updateOrder(Request $request)
+    {
+        // Validate that 'order_by' is an array and contains the required fields
+        $validated = $request->validate([
+            'order_by' => 'required|array',
+            'order_by.*.id' => 'required|exists:services,id',
+            'order_by.*.order' => 'required|integer',
+        ]);
+
+        foreach ($validated['order_by'] as $item) {
+            Service::where('id', $item['id'])->update(['order_by' => $item['order']]);
+        }
+
+        return response()->json(['success' => true, 'message' => 'Order updated successfully']);
+    }
+
+
 }
