@@ -12,7 +12,7 @@ class HeaderServices extends Component
     public function __construct()
     {
         // Fetch all services from the database
-        $this->services = Service::orderBy('order_by', 'asc');
+        $this->services = Service::orderBy('order_by', 'asc')->get();
     }
 
     public function render()
