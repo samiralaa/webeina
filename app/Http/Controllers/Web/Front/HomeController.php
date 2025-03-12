@@ -161,7 +161,7 @@ class HomeController extends Controller
         $sections =  Section::with(['section_info', 'images', 'sliders'])
             ->orderBy('order', 'asc') // ترتيب تصاعدي (قم بتغيير asc إلى desc إذا كنت تريد تنازلياً)
             ->get();
-        $service = Service::paginate(3);
+        $service =  Service::orderBy('order_by', 'asc')->paginate(3);
 
         // dd($sections);
         return view('website.index', compact('sections', 'service'));
