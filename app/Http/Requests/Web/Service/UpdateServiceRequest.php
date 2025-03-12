@@ -24,8 +24,8 @@ class UpdateServiceRequest extends FormRequest
         return [
             'name.en' => 'required|string|max:255',
             'name.ar' => 'required|string|max:255',
-            'description.en' => 'required|string|max:255',
-            'description.ar' => 'required|string|max:255',
+            'description.en' => 'required|string|max:500',
+            'description.ar' => 'required|string|max:500',
             'icon' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8048',
         ];
     }

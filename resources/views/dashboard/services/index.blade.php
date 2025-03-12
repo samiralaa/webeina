@@ -15,14 +15,19 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
+                        <th>Order</th>
                         <th class="text-center">Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    @foreach ($services as $service)
-                        <tr>
+                <tbody id="sortable-table">
+                    @forelse ($services as $service)
+                        <tr data-id="{{ $service->id }}">
                             <td>{{ $service->id }}</td>
-                            <td>{{ $service->name['en'] }}</td>
+                            <td>{{ $service->name['en'] ?? 'N/A' }}</td>
+                            <td>
+                                <input type="number" class="form-control order-input"
+                                    value="{{ $service->order_by }}" data-id="{{ $service->id }}">
+                            </td>
                             <td class="text-center">
                                 <a href="{{ route('services.show', $service->id) }}" class="btn btn-info btn-sm me-2">
                                     <i class="fas fa-eye"></i> Show
@@ -48,8 +53,9 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="deleteModalLabel-{{ $service->id }}">Confirm
-                                                    Deletion</h5>
+                                                <h5 class="modal-title" id="deleteModalLabel-{{ $service->id }}">
+                                                    Confirm Deletion
+                                                </h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Close"></button>
                                             </div>
@@ -67,12 +73,57 @@
                                         </div>
                                     </div>
                                 </div>
-
                             </td>
                         </tr>
-                    @endforeach
+                    @empty
+                        <tr>
+                            <td colspan="4" class="text-center text-muted">No services available.</td>
+                        </tr>
+                    @endforelse
                 </tbody>
             </table>
+            @if ($services->isNotEmpty())
+                <button id="save-order" class="btn btn-primary mt-3">Save Order</button>
+            @endif
         </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        let saveOrderButton = document.getElementById('save-order');
+        if (saveOrderButton) {
+            saveOrderButton.addEventListener('click', function () {
+                let orderData = [];
+                document.querySelectorAll('.order-input').forEach(function (input) {
+                    orderData.push({
+                        id: input.getAttribute('data-id'),
+                        order: input.value
+                    });
+                });
+
+                fetch('{{ route('services.updateOrder') }}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    },
+                    body: JSON.stringify({ order_by: orderData }) // ✅ Fixed key name
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('Order updated successfully!');
+                        location.reload();
+                    } else {
+                        alert('Something went wrong!');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while updating the order.');
+                });
+            });
+        }
+    });
+    </script>
 @endsection

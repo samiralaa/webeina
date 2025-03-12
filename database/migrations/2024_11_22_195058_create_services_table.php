@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('icon');
             $table->string('slug')->unique();
             $table->json('description');
+            $table->string('image_banar');
+            $table->string('order_by');
             $table->timestamps();
         });
     }
