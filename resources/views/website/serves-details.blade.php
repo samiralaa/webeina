@@ -123,7 +123,7 @@
 <section class="steps-map">
     <div class="steps-progress">
         <div class="steps-progress-head">
-            <h1 class="text-capitalize pb-4">Steps</h1>
+            <h1 class="text-capitalize pb-4">{{ __('messages.steps')}}</h1>
         </div>
 
         <ul class="steps-list">
@@ -146,27 +146,27 @@
 <!-- Industries -->
 <section class="features-section">
     <div class="container">
-        <h1 class="section-title text-capitalize ">get premium industiral services </h1>
+        <h1 class="section-title text-capitalize ">{{ __('messages.industiral-services')}}</h1>
         <div class="features-grid">
             <div class="feature-card">
                 <i class="fa-solid fa-industry"></i>
-                <h2>Many Factory</h2>
-                <p>The development of web design has brought about a digital revolution in many</p>
+                <h2>{{ __('messages.many-factory')}}</h2>
+                <p>{{ __('messages.many-factory-description')}}</p>
             </div>
             <div class="feature-card">
                 <i class="fa-solid fa-sparkles"></i>
-                <h2>Digital Marketing</h2>
-                <p>Web design has brought about a major transformation in the marketing industry, as digital</p>
+                <h2>{{ __('messages.digital-marketing')}}</h2>
+                <p>{{ __('messages.digital-marketing-description')}}</p>
             </div>
             <div class="feature-card">
                 <i class="fa-solid fa-notes-medical"></i>
-                <h2>Helthing</h2>
-                <p>Design is revolutionizing the medical healthcare sector, where digital detection</p>
+                <h2>{{ __('messages.helthing')}}</h2>
+                <p>{{ __('messages.helthing-description')}}</p>
             </div>
             <div class="feature-card">
                 <i class="fa-solid fa-plane"></i>
-                <h2>Travellings</h2>
-                <p>Web design has brought about a major digital transformation in the field of travel</p>
+                <h2>{{ __('messages.travellings')}}</h2>
+                <p>{{ __('messages.travellings-description')}}</p>
             </div>
         </div>
     </div>
@@ -180,31 +180,31 @@
     <div class="px-3 mt-5 d-flex justify-content-center">
 
         <div class="col-12 col-md-6">
-            <h4 class="text-center text-capitalize">quick contact</h4>
+            <h4 class="text-center text-capitalize">{{ __('messages.q-contact')}}</h4>
             <form action="{{route('contact.store')}}" method="post">
                 @csrf
                 <div class="mb-3 pt-2 d-flex gap-3 ">
                     <div class="w-50">
-                        <label for="name" class="form-label text-capitalize fw-bold">Your Name</label>
+                        <label for="name" class="form-label text-capitalize fw-bold">{{ __('messages.your-name')}}</label>
                         <input type="text" class="form-control" id="name" name="name" required>
 
                     </div>
                     <div class="mb-3 w-50">
-                        <label for="email" class="form-label text-capitalize fw-bold">Your Email</label>
+                        <label for="email" class="form-label text-capitalize fw-bold">{{ __('messages.your-email')}}</label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                 </div>
                 <input type="text" name="service_id" value="{{ $service->id }}" hidden>
                 <div class="mb-3">
-                    <label for="email" class="form-label text-capitalize fw-bold">Business email</label>
+                    <label for="email" class="form-label text-capitalize fw-bold">{{ __('messages.business-email')}}</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="mb-3">
-                    <label for="message" class="form-label text-capitalize fw-bold">Message</label>
+                    <label for="message" class="form-label text-capitalize fw-bold">{{ __('messages.message')}}</label>
                     <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
                 </div>
                 <button type="submit" class="request-quote-btn quote" style="max-width: 200px;margin: 0">
-                    <span">Send Request</span>
+                    <span">{{ __('messages.send-message-btn')}}</span>
                 </button>
             </form>
         </div>
