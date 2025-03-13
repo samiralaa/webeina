@@ -99,7 +99,7 @@
         <div class="service-features">
 
             <div class="feature-box ">
-                <div style="display: flex; align-items: center; gap: 30px;">
+                <div style="display: flex; align-items: center; gap: 15px;">
                 <img src="{{ asset('public/storage/' . $choos->icon) }}" width="50" height="50" />
                 <h2>{{ $choos->title[app()->getLocale()] ?? $choos->title['en'] }}</h2>
                 </div>
