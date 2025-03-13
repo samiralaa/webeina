@@ -47,7 +47,7 @@
         <article class="services-items col-12 col-sm-12 col-lg-6 col-xl-4 itemService pb-5 pb-md-3" role="article" aria-label="{{ $item->name[app()->getLocale()] }}">
             <div class="itemCard__imageWrap">
                 <img class="itemCard__image lazyloaded" loading="lazy"
-                    src="https://b-works.io/wp-content/uploads/2021/03/CMS-Drupal-B-works.jpg"
+                    src="{{ asset('public/storage/' . $item->icon) }}"
                     alt="{{ $item->name[app()->getLocale()] }} - {{ __('messages.service_image') }}" title="{{ $item->name[app()->getLocale()] }}">
             </div>
             <div class="itemCard__header">
