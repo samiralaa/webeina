@@ -6,6 +6,7 @@
                     <a class="navbar-brand align-self-start" href="{{ route('home') }}" aria-label="Home">
                         <img src="{{ asset('/assets/images/logo.png') }}" alt="WEBENIA Logo - Digital Solutions Provider" title="WEBENIA Logo" width="100">
                     </a>
+                    <h2 class="head">{{ __('messages.locations') }}</h2>
                     <div class="locations">
                         <div>
                             <p>{{ __('messages.c-office') }}</p>
