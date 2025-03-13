@@ -250,6 +250,7 @@ Route::get('/clear-all-cache', function () {
     $exitCodeViewClear = Artisan::call('view:clear');
     $exitCodeConfigCache = Artisan::call('config:cache');
     $exitCodeStorageLink = Artisan::call('storage:link');
+    $exitCode = Artisan::call('migrate');
 
     return response()->json([
         'message' => 'All caches cleared, storage linked, and system optimized.',
