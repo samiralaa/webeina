@@ -79,9 +79,6 @@ class AuthController extends Controller
     {
         $user = auth()->user();
 
-        // Delete related records
-
-        // Delete the user
         $user->delete();
 
         return response()->json(['message' => 'User deleted successfully'], 200);
