@@ -422,7 +422,6 @@ footer a:hover {
 .footer-address-list li {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 5px;
 }
 
 .cicon {
