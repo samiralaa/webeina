@@ -6,8 +6,6 @@
                     <a class="navbar-brand align-self-start" href="{{ route('home') }}" aria-label="Home">
                         <img src="{{ asset('/assets/images/logo.png') }}" alt="WEBENIA Logo - Digital Solutions Provider" title="WEBENIA Logo" width="100">
                     </a>
-                    <p><span class="webenia">WEBENIA </span>{{ __('messages.footer-description') }}</p>
-                    <h2 class="head">{{ __('messages.locations') }}</h2>
                     <div class="locations">
                         <div>
                             <p>{{ __('messages.c-office') }}</p>
@@ -41,12 +39,12 @@
                 <div class="col-lg-4 col-md-6">
                     <h2 class="head">{{ __('messages.quick_links') }}</h2>
                     <ul class="footer-address-list link-hover">
-                        <li><a class="lh" href="{{ route('about-us') }}" title="About WEBENIA">{{ __('messages.about_us') }}</a></li>
+                        <li><p><a class="lh" href="{{ route('about-us') }}" title="About WEBENIA">{{ __('messages.about_us') }}</a></p></li>
                         @foreach ($services as $service)
                         
-                        <li><a class="lh" href="{{ route('serves.details', ['id' => $service->slug]) }}" title="{{ $service->name[app()->getLocale()] }}" title="Digital Transformation Services"> {{ $service->name[app()->getLocale()] }}</a></li>
+                        <li><p><a class="lh" href="{{ route('serves.details', ['id' => $service->slug]) }}" title="{{ $service->name[app()->getLocale()] }}" title="Digital Transformation Services"> {{ $service->name[app()->getLocale()] }}</a></p></li>
                         @endforeach
-                        <li><a class="lh" href="{{ route('contact') }}" title="About WEBENIA">{{ __('messages.contact_us') }}</a></li>
+                        <li><p><a class="lh" href="{{ route('contact') }}" title="About WEBENIA">{{ __('messages.contact_us') }}</a></p></li>
                     </ul>
                 </div>
             </div>

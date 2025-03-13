@@ -32,13 +32,13 @@
             <div class="big_title col-sm-12 col-md-6" role="heading" aria-level="1">
                 <h2 class="text-uppercase" style="font-weight: 900"
                     title="Top-rated Digital Marketing, Web, And Mobile App Development Company">
-                    {{ __('message.title') }}
+                    {{ __('messages.title') }}
                 </h2>
             </div>
 
             <div class="sub_title col-sm-12 col-md-6" role="contentinfo">
                 <p class="text-capitalize text-black-50">
-                    {{ __('message.description') }}
+                    {{ __('messages.description') }}
                 </p>
             </div>
 
@@ -46,19 +46,19 @@
             <div class="count col-12 d-flex pt-5 pb-5" role="group" aria-label="Statistics">
                 <div class="cards-block__item col-sm-3" role="listitem">
                     <h3 class="card-block__title fw-bold">950+</h3>
-                    <div class="card-block__content">{{ __('message.stats.projects') }}</div>
+                    <div class="card-block__content">{{ __('messages.stats.projects') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
                     <h3 class="card-block__title fw-bold">15+</h3>
-                    <div class="card-block__content">{{ __('message.stats.progress') }}</div>
+                    <div class="card-block__content">{{ __('messages.stats.progress') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
                     <h3 class="card-block__title fw-bold">1,800+</h3>
-                    <div class="card-block__content">{{ __('message.stats.employees') }}</div>
+                    <div class="card-block__content">{{ __('messages.stats.employees') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
                     <h3 class="card-block__title fw-bold">500+</h3>
-                    <div class="card-block__content">{{ __('message.stats.categories') }}</div>
+                    <div class="card-block__content">{{ __('messages.stats.categories') }}</div>
                 </div>
             </div>
         </div>
@@ -91,11 +91,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <a class="btn-link" href="{{ route('serves.details', ['id' => $item->slug]) }}"
-                                title="{{ $item->name[app()->getLocale()] }}">
-                                {{ $item->name[app()->getLocale()] }} <i class="fa-solid fa-arrow-right"
-                                    aria-hidden="true"></i>
-                            </a>
+                            <p>
+                                <a class="btn-link" href="{{ route('serves.details', ['id' => $item->slug]) }}"
+                                    title="{{ $item->name[app()->getLocale()] }}">
+                                    {{ $item->name[app()->getLocale()] }} <i class="fa-solid fa-arrow-right"
+                                        aria-hidden="true"></i>
+                                </a>
+                            </p>
                         </div>
 
                     </article>
