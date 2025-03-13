@@ -12,8 +12,7 @@
     <section class="hero" role="banner">
         <div class="container--0-">
             <video autoplay muted loop class="background-video" aria-label="Background video"
-                title="Background video showcasing our services" preload="auto"
-                poster="{{ asset('assets/images/video-thumbnail.jpg') }}">
+                title="Background video showcasing our services" preload="auto">
                 <source src="{{ asset('assets/Videos/wbsite vid final.mp4') }}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
