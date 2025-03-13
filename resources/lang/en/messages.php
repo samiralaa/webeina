@@ -76,6 +76,7 @@ return [
     ],
     'why-opting-in' => 'Why Opting In?',
     'why-opting-in-description' => 'The backbone of digital transformation starts here. Whether it’s software innovation, outsourcing for efficiency, or AI-powered intelligence, we ensure seamless business growth with cutting-edge technology.',
+    'industiral-services' => 'Get premium industiral services',
     'travellings' => 'Travellings',
     'travellings-description' => 'Web design has brought about a major digital transformation in the field of travel',
     'helthing' => 'Helthing',
