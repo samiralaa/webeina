@@ -14,6 +14,7 @@ use App\Http\Controllers\Web\Front\HomeController;
 
 use App\Http\Controllers\Admin\Auth\AuthController;
 use App\Http\Controllers\Admin\Step\StepController;
+use App\Http\Controllers\Admin\IndustiralController;
 use App\Http\Controllers\Admin\Users\UserController;
 use App\Http\Controllers\Admin\About\AboutController;
 use App\Http\Controllers\Admin\Quiz\AnswerController;
@@ -29,28 +30,26 @@ use App\Http\Controllers\Admin\Contact\ContactController;
 use App\Http\Controllers\Admin\Project\ProjectController;
 use App\Http\Controllers\Admin\Service\ServiceController;
 use App\Http\Controllers\Admin\HomePage\HomePageController;
-use App\Http\Controllers\Admin\Quiz\QuizQuestionController;
 
+use App\Http\Controllers\Admin\Quiz\QuizQuestionController;
 use App\Http\Controllers\Admin\CustomFiled\CustomController;
 use App\Http\Controllers\Admin\Portfolio\PortfolioController;
 use App\Http\Controllers\Api\Service\SubmitServiceController;
 use App\Http\Controllers\Notification\NotificationController;
+
 use App\Http\Controllers\Admin\Package\PackageRequestController;
 
+
+
+
 use App\Http\Controllers\Admin\CustomFiled\CustomFildDataController;
-
-
-
-
 use App\Http\Controllers\Web\Auth\UserController as AuthUserController;
 use App\Http\Controllers\Web\ActivityLogService\ActivityLogServiceController;
-use App\Http\Controllers\Web\Front\Home\HomeController as HomeHomeController;
 
+use App\Http\Controllers\Web\Front\Home\HomeController as HomeHomeController;
 use App\Http\Controllers\Admin\Package\PackageController as AdmniPackageController;
 use App\Http\Controllers\Admin\Service\ServiceController as AdminServiceController;
 use App\Http\Controllers\Web\Portfolio\PortfolioController as WebPortfolioController;
-
-
 
 // AQU9uUZGYqSwhqp5EGwFYGYIVk6VVY6fcCJng6vCqb4mzEr05xc7PlaDbdpfbE_4rPv6234HsA5Phz20641s179VVE6NSPkTtIaH73SMPZMANaHprvCVcCH1FZ84sVMf3lFfxYop89LPDSvbjBv9hW1bIY0Hmd1P-8N2OQzsGnc-yijVdtKL34gUgZ7LXuF4yNjcCsTbjRXS6tHCVGHF0QMKcZaaWRIrONBOZ-KiOibBRfyz60GDj-ysi-i2DVGLWkst5Y5TNupojmeBiWHFvaPNBqDfjmqqretUXH1HCjKZdnyaV0MJFi_koosZ-k7taRhbfXhiW4qcSlm5hRZ1FYioMxUnbA
 Route::get('portfolio-admin', [PortfolioController::class, 'index'])->name('portfolio.index');
@@ -282,6 +281,15 @@ Route::prefix('admin/choose')->name('admin.choose.')->group(function () {
     Route::get('/{id}/edit', [ChooseController::class, 'edit'])->name('edit');
     Route::put('/{id}', [ChooseController::class, 'update'])->name('update');
     Route::delete('/{id}', [ChooseController::class, 'destroy'])->name('destroy');
+});
+
+Route::prefix('admin/industrial')->name('admin.industrial.')->group(function () {
+    Route::get('/', [IndustiralController::class, 'index'])->name('index');
+    Route::get('/create/{id}', [IndustiralController::class, 'create'])->name('create');
+    Route::post('/', [IndustiralController::class, 'store'])->name('store');
+    Route::get('/{id}/edit', [IndustiralController::class, 'edit'])->name('edit');
+    Route::put('/{id}', [IndustiralController::class, 'update'])->name('update');
+    Route::delete('/{id}', [IndustiralController::class, 'destroy'])->name('destroy');
 });
 
 
