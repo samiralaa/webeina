@@ -89,9 +89,9 @@
 <!-- Why Choose This Service -->
 <section class="service-description">
     <div class="container">
-        <h1 class="service-title">Why Choose This Service?</h1>
+        <h1 class="service-title">{{ __('messages.why-opting-in')}}</h1>
         <p class="service-text">
-            Build custom software solutions tailored to your business needs. We ensure secure, scalable, and efficient applications.
+            {{ __('messages.why-opting-in-description')}}
         </p>
         <div class="solve">
         @foreach ($service->choose as $choos)

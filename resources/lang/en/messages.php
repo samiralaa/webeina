@@ -74,4 +74,6 @@ return [
         'employees' => 'employees',
         'categories' => 'Web. Mobile. Graphic.',
     ],
+    'why-opting-in' => 'Why Opting In?',
+    'why-opting-in-description' => 'The backbone of digital transformation starts here. Whether it’s software innovation, outsourcing for efficiency, or AI-powered intelligence, we ensure seamless business growth with cutting-edge technology.',
 ];
