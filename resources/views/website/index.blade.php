@@ -269,7 +269,7 @@
                                         <p class="post-content">Because we don’t just give you a mere website and a digital marketing kit. 
 We are obsessed with everything digital and move with the speed of culture. 
 We combine data, creativity and strategy to make your business stand out and drive your growth.</p>
-                                        <a href="#" class="toggle_link">...more</a>
+                                        <a href="https://www.linkedin.com/posts/webenia_because-we-dont-just-give-you-a-mere-website-activity-7295697550869712899-CIxG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6iMj8BMLJZCINzF80WrldS7lTH7c4BdDI" class="toggle_link">...more</a>
                                     </div>
                                     <div class="img_content">
                                         <a href="#">
@@ -326,7 +326,7 @@ Here are 4 essential metrics every e-commerce store should monitor:
 Measure, analyze, and grow! 🚀
 
 hashtag#ECommerceMetrics hashtag#DataDriven hashtag#GrowYourStore</p>
-                                        <a href="#" class="toggle_link">...more</a>
+                                        <a href="https://www.linkedin.com/posts/webenia_ecommercemetrics-datadriven-growyourstore-activity-7287377864755163136-V1uO?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6iMj8BMLJZCINzF80WrldS7lTH7c4BdDI" class="toggle_link">...more</a>
                                     </div>
                                     <div class="img_content">
                                         <a href="#">
@@ -372,7 +372,7 @@ hashtag#ECommerceMetrics hashtag#DataDriven hashtag#GrowYourStore</p>
 Position : Senior IT and System Administrator 💻 
 Branch : Cairo Egypt , Zahraa ElMaadi 
 Send Your CV to careers@webenia.com To Apply 💪</p>
-                                        <a href="#" class="toggle_link">...more</a>
+                                        <a href="https://www.linkedin.com/posts/webenia_we-are-hiring-position-senior-it-and-activity-7289614378952224768-kqvD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6iMj8BMLJZCINzF80WrldS7lTH7c4BdDI" class="toggle_link">...more</a>
                                     </div>
                                     <div class="img_content">
                                         <a href="#">
@@ -419,7 +419,7 @@ Position : Senior Sales Engineer 🔝
 Branch : Cairo Egypt , Zahraa ElMaadi 
 Send Your CV to careers@webenia.com To Apply 💪
 </p>
-                                        <a href="#" class="toggle_link">...more</a>
+                                        <a href="https://www.linkedin.com/posts/webenia_we-are-hiring-position-senior-sales-activity-7289568745788788736-hSBe?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6iMj8BMLJZCINzF80WrldS7lTH7c4BdDI" class="toggle_link">...more</a>
                                     </div>
                                     <div class="img_content">
                                         <a href="#">
@@ -472,7 +472,7 @@ Send Your CV to careers@webenia.com To Apply 💪
 
 These tweaks not only reduce friction but also boost customer satisfaction and conversion rates. Ready to optimize your checkout and grow your sales?
 hashtag#CheckoutOptimization hashtag#ECommerceSuccess hashtag#UserExperience</p>
-                                        <a href="#" class="toggle_link">...more</a>
+                                        <a href="https://www.linkedin.com/posts/webenia_checkoutoptimization-ecommercesuccess-userexperience-activity-7289177737112526848-BFyu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6iMj8BMLJZCINzF80WrldS7lTH7c4BdDI" class="toggle_link">...more</a>
                                     </div>
                                     <div class="img_content">
                                         <a href="#">
@@ -528,7 +528,7 @@ Highlight customer success stories with your product.
 Use visuals and videos to make your story come alive.
 
 Every product has a story—are you telling yours?</p>
-                                        <a href="#" class="toggle_link">...more</a>
+                                        <a href="https://www.linkedin.com/posts/webenia_storytelling-isnt-just-for-booksits-a-activity-7287097398487633920-kG7t?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6iMj8BMLJZCINzF80WrldS7lTH7c4BdDI" class="toggle_link">...more</a>
                                     </div>
                                     <div class="img_content">
                                         <a href="#">
@@ -582,7 +582,7 @@ Our App Development Service includes:
 ✅ Support & Maintenance: Ongoing assistance to ensure your app runs smoothly.
 
 Ready to transform your idea into a fully functional mobile app?</p>
-                                        <a href="#" class="toggle_link">...more</a>
+                                        <a href="https://www.linkedin.com/posts/webenia_at-webenia-we-turn-your-vision-into-a-powerful-activity-7279384297868869632-QCp_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6iMj8BMLJZCINzF80WrldS7lTH7c4BdDI" class="toggle_link">...more</a>
                                     </div>
                                     <div class="img_content">
                                         <a href="#">
@@ -633,7 +633,7 @@ Automate Workflows: Streamline customer interactions, from lead capture to order
 Analyze Insights: Use CRM data to personalize marketing and improve sales strategies.
 Enhance Customer Experience: Provide personalized service and support based on CRM insights.
 At Webenia, we ensure smooth CRM integration tailored to your business needs</p>
-                                        <a href="#" class="toggle_link">...more</a>
+                                        <a href="https://www.linkedin.com/posts/webenia_integrating-your-crm-with-your-e-commerce-activity-7279037775255945216-vQHj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE6iMj8BMLJZCINzF80WrldS7lTH7c4BdDI" class="toggle_link">...more</a>
                                     </div>
                                     <div class="img_content">
                                         <a href="#">
