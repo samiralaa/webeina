@@ -292,6 +292,7 @@
     height: auto;
     background-color:#f8f8f8;
     padding: 10px 10px;
+    border-radius: 20px;
 
   }
   .main .post .head_main{
@@ -334,14 +335,14 @@
     font-size: 13px;
     font-weight: 300;
   }
+  
   .main .post .text_content p{
     margin-bottom: 3px;
     margin-top: 5px;
-    font-size: 14px;
+    display: contents;
 
   }
   .main .post .text_content a{
-    text-transform: capitalize;
     text-decoration: none;
     color: rgb(124, 124, 124);
   }
