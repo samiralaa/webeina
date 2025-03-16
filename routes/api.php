@@ -34,7 +34,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
     // routes to user if he need request servev for mobile app
     // delete user account
-    Route::delete('delete-user', [AuthController::class, 'deleteUser']);
+    Route::post('delete-user', [AuthController::class, 'deleteUser'])->middleware('auth:sanctum');
     Route::post('mobile-submit/service', [SubmitServiceController::class, 'store']);
     // get User serves to user if he need request servev for mobile app
     Route::get('mobile-services/for/user/{lang}', [ServiceController::class, 'getServicesForUser']);
@@ -53,8 +53,10 @@ Route::middleware('auth:sanctum')->group(function () {
     // api to get all quiz questions for mobile app
 
     // api to delete user service
-    Route::delete('delete/service/{id}', [ServiceController::class, 'delete_service']);
+    Route::get('delete/service/{id}', [ServiceController::class, 'delete_service'])->middleware('auth:sanctum');
 });
 
+
+////////////////////////////////
 Route::get('/upload', [ExcelController::class, 'showUploadForm'])->name('upload.form');
 Route::post('/upload', [ExcelController::class, 'processUpload'])->name('upload.process');
