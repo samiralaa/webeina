@@ -139,5 +139,15 @@ class ServiceController extends Controller
         return response()->json(['success' => true, 'message' => 'Order updated successfully']);
     }
 
+    public function getContentToServes($id){
+        $service = Service::with('contents')->findOrFail($id);
+        return view('dashboard.services.data.content.index', compact('service'));
+    }
+
+    public function createContent($id){
+        $service = Service::with('contents')->findOrFail($id);
+        return view('dashboard.services.data.content.edit', compact('service'));
+    }
+
 
 }

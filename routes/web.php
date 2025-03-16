@@ -222,12 +222,12 @@ Route::prefix('services')->group(function () {
 });
 
 // add content toserves
-Route::get('/admin/serves', [ContentCotroller::class, 'index'])->name('serves.index');
+Route::get('/admin/serves', [ContentCotroller::class, 'index'])->name('services.index.content');
 Route::get('/admin/serves/create/{id}', [ContentCotroller::class, 'create'])->name('services.create.content');
 Route::post('/admin/serves/store/{id}', [ContentCotroller::class, 'store'])->name('contents.store');
-Route::get('/admin/serves/edit/{id}', [ContentCotroller::class, 'edit'])->name('serves.edit');
-Route::put('/admin/serves/update/{id}', [ContentCotroller::class, 'update'])->name('serves.update');
-Route::get('/admin/serves/delete/{id}', [ContentCotroller::class, 'destroy'])->name('serves.delete');
+Route::get('/admin/serves/edit/{id}', [ContentCotroller::class, 'edit'])->name('services.edit.content');
+Route::put('/admin/serves/update/{id}', [ContentCotroller::class, 'update'])->name('services.update.content');
+Route::get('/admin/serves/delete/{id}', [ContentCotroller::class, 'destroy'])->name('services.delete.content');
 
 
 // faqs front
@@ -293,6 +293,8 @@ Route::prefix('admin/industrial')->name('admin.industrial.')->group(function () 
     Route::delete('/{id}', [IndustiralController::class, 'destroy'])->name('destroy');
 });
 
+
+Route::get('getall-contents/{id}',[ServiceController::class, 'getContentToServes'])->name('getall');
 
 Route::get('solve', function () {
 
