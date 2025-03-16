@@ -180,59 +180,35 @@
         {{-- Linkedin --}}
     @endforeach
     {{-- why work with webenia --}}
-
-    <section class="work pt-5 pb-5 bg-light" role="region" aria-label="Why Work with Webenia Section">
-        <h2 class="text-capitalize text-center">{{ __('messages.why_webenia') }}</h2>
-        <div class="main-work container pt-5 d-flex justify-content-center">
-            <div class="col-lg-12">
-                <div class="row about-us-section text-white">
-                    <!-- Left Column -->
-                    <div class="col-md-6 d-flex flex-column align-items-end about-content-hover">
-                        <!-- Section 1 -->
-                        <article class="col-md-9 col-12 mb-5" role="article" aria-label="Experience Section">
-                            <div class="about-content-section rounded-4 p-4 about-content-first secend-color">
-                                <img alt="Experience Icon" class="mb-2 img-fluid"
-                                    src="https://www.ipixtechnologies.com/images/web/images/menon.svg" loading="lazy"
-                                    title="Experience Icon">
-                                <h3 class="text-white text-capitalize">Collaboration</h3>
-                                <p> Fostering teamwork and open communication within the organization and with clients</p>
-                            </div>
-                        </article>
-                        <!-- Section 2 -->
-                        <article class="col-md-9 col-12" role="article" aria-label="Projects Launched Section">
-                            <div class="about-content-section rounded-4 p-4 about-content-third main-color">
-                                <div class="d-flex align-items-center">
-                                    <h3 class="text-white counter me-2 odometer" data-target="3000"> </h3>
-                                    <b> </b>
-                                </div>
-                                <h4 class="text-white">Excellence</h4>
-                                <p> Striving for the highest quality in all aspects of the business
-                                </p>
-                            </div>
-                        </article>
+    <section class="container">
+        <h2 class="text-capitalize text-center mb-5">{{ __('messages.why_webenia') }}</h2>
+        <div class=" d-flex justify-content-center">
+            <div class="values-container">
+                <div class="value-box">
+                    <img alt="Leading IT Service Icon" class="mb-2 img-fluid"
+                        src="https://www.ipixtechnologies.com/images/web/images/menon-2.png" loading="lazy"
+                        title="Leading IT Service Icon">
+                    <h3 class="text-white text-capitalize">Results-Oriented</h3>
+                    <p> Focusing on delivering tangible outcomes and measurable results</p>
+                </div>
+                <div class="value-box">
+                    <img alt="Experience Icon" class="mb-2 img-fluid"
+                        src="https://www.ipixtechnologies.com/images/web/images/menon.svg" loading="lazy"
+                        title="Experience Icon">
+                    <h3 class="text-white text-capitalize">Collaboration</h3>
+                    <p> Fostering teamwork and open communication within the organization and with clients</p>
+                </div>
+                <div class="value-box">
+                    <div class="d-flex align-items-center">
+                    <h3 class="text-white counter me-2 odometer" data-target="3000"> </h3>
                     </div>
-                    <!-- Right Column -->
-                    <div class="col-md-6 about-content-hover-end">
-                        <!-- Section 3 -->
-                        <article class="col-md-9 col-12 mb-5" role="article"
-                            aria-label="Leading IT Service Firm Section">
-                            <div class="about-content-section rounded-4 p-4 mt-5 about-content-second main-color">
-                                <img alt="Leading IT Service Icon" class="mb-2 img-fluid"
-                                    src="https://www.ipixtechnologies.com/images/web/images/menon-2.png" loading="lazy"
-                                    title="Leading IT Service Icon">
-                                <h3 class="text-white text-capitalize">Results-Oriented</h3>
-                                <p> Focusing on delivering tangible outcomes and measurable results
-                                </p>
-                            </div>
-                        </article>
-                        <!-- Section 4 -->
-                        <article class="col-md-9 col-12" role="article" aria-label="Attention to Detail Section">
-                            <div class="about-content-section rounded-4 p-4 about-content-fourth secend-color">
-                                <h3 class="text-white text-capitalize">Ethical Responsibility</h3>
-                                <p>Conducting business with integrity and considering the social and environmental impact</p>
-                            </div>
-                        </article>
-                    </div>
+                    <h4 class="text-white">Excellence</h4>
+                    <p> Striving for the highest quality in all aspects of the business
+                    </p>
+                </div>
+                <div class="value-box">
+                    <h3 class="text-white text-capitalize">Ethical Responsibility</h3>
+                    <p>Conducting business with integrity and considering the social and environmental impact</p>
                 </div>
             </div>
         </div>
