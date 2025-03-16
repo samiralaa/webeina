@@ -53,7 +53,7 @@ Route::middleware('auth:sanctum')->group(function () {
     // api to get all quiz questions for mobile app
 
     // api to delete user service
-    Route::post('delete/service/{id}', [ServiceController::class, 'delete_service']);
+    Route::get('delete/service/{id}', [ServiceController::class, 'delete_service']);
 });
 
 Route::get('/upload', [ExcelController::class, 'showUploadForm'])->name('upload.form');
