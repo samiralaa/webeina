@@ -185,28 +185,23 @@
         <div class=" d-flex justify-content-center">
             <div class="values-container">
                 <div class="value-box">
-                    <img alt="Leading IT Service Icon" class="mb-2 img-fluid"
-                        src="https://www.ipixtechnologies.com/images/web/images/menon-2.png" loading="lazy"
-                        title="Leading IT Service Icon">
+                    <img alt="Leading IT Service Icon" class="mb-2 img-fluid" src="https://www.ipixtechnologies.com/images/web/images/menon-2.png" loading="lazy" title="Leading IT Service Icon" width="50" height="50">
                     <h3 class="text-white text-capitalize">Results-Oriented</h3>
                     <p> Focusing on delivering tangible outcomes and measurable results</p>
                 </div>
                 <div class="value-box">
-                    <img alt="Experience Icon" class="mb-2 img-fluid"
-                        src="https://www.ipixtechnologies.com/images/web/images/menon.svg" loading="lazy"
-                        title="Experience Icon">
+                    <img alt="Experience Icon" class="mb-2 img-fluid" src="https://www.ipixtechnologies.com/images/web/images/menon.svg" loading="lazy" title="Experience Icon" width="50" height="50">
                     <h3 class="text-white text-capitalize">Collaboration</h3>
                     <p> Fostering teamwork and open communication within the organization and with clients</p>
                 </div>
                 <div class="value-box">
-                    <div class="d-flex align-items-center">
-                    <h3 class="text-white counter me-2 odometer" data-target="3000"> </h3>
-                    </div>
+                    <img alt="Excellence Icon" class="mb-2 img-fluid" src="https://img.icons8.com/?size=100&id=pQijC3tkOnQa&format=png&color=FFFFFF" loading="lazy" title="Excellence Icon" width="50" height="50">
                     <h4 class="text-white">Excellence</h4>
                     <p> Striving for the highest quality in all aspects of the business
                     </p>
                 </div>
                 <div class="value-box">
+                    <img alt="Responsibility Icon" class="mb-2 img-fluid" src="https://img.icons8.com/?size=100&id=xqbsPiyyftq5&format=png&color=FFFFFF" loading="lazy" title="Responsibility Icon" width="50" height="50">
                     <h3 class="text-white text-capitalize">Ethical Responsibility</h3>
                     <p>Conducting business with integrity and considering the social and environmental impact</p>
                 </div>
