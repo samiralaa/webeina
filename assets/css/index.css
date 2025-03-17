@@ -283,10 +283,11 @@
     gap: 50px;
     column-gap: 20px;
     max-width: 900px;
+    margin-bottom: 50px;
 }
 .value-box {
     color: white;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     text-align: start;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -327,6 +328,16 @@
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    .value-box:nth-child(4n+2),
+    .value-box:nth-child(4n+4){
+        top: 0;
+    }
+    .values-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+    }
+}
 
 /* linked in posts style */
 
