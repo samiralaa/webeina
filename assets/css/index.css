@@ -536,16 +536,17 @@
 }
 
 [dir="rtl"] .our_services .services-items .itemCard__header .btn-link {
-    background-image: linear-gradient(to left, black 100%, transparent 0%);
+    background-image: linear-gradient(to left, #18a686 100%, transparent 0%);
     background-position: right bottom;
 }
 
 .our_services .services-items .itemCard__header .btn-link i{
-    transition: 0.4s ease-in-out,color 0s ease;
+    transform: rotate(180deg);
+    transition: 0.4s ease-in-out, color 0s ease;
 }
 
 .our_services .services-items .itemCard__header .btn-link:hover i {
-    transform: translateX(5px);
+    transform: translateX(5px) rotate(180deg);
 }
 
 
