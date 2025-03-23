@@ -321,6 +321,9 @@ body {
     text-decoration: none;
     display: block;
     transition: background 0.3s ease-in-out;
+    font-weight: normal;
+    text-align: center;
+    font-size: large;
 }
 
 .mobile-dropdown .dropdown-item:hover {
