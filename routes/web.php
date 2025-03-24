@@ -222,7 +222,7 @@ Route::prefix('services')->group(function () {
 });
 
 // add content toserves
-Route::get('/admin/serves', [ContentCotroller::class, 'index'])->name('services.index.content');
+Route::get('/admin/serves/{id}', [ContentCotroller::class, 'index'])->name('services.index.content');
 Route::get('/admin/serves/create/{id}', [ContentCotroller::class, 'create'])->name('services.create.content');
 Route::post('/admin/serves/store/{id}', [ContentCotroller::class, 'store'])->name('contents.store');
 Route::get('/admin/serves/edit/{id}', [ContentCotroller::class, 'edit'])->name('services.edit.content');

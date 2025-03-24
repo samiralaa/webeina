@@ -55,7 +55,7 @@
         <hr>
 
 
-        <a href="{{ route('services.create.content', $service->id) }}" class="btn btn-primary mt-3">
+        <a href="{{ route('services.index.content', $service->id) }}" class="btn btn-primary mt-3">
             <i class="fas fa-plus"></i> All Features
         </a>
         <a href="{{ route('admin.steps.create', $service->id) }}" class="btn btn-primary mt-3">

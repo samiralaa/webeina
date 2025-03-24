@@ -23,9 +23,9 @@ class ContentCotroller extends Controller
     public function store(StoreContentRequest $request, $id)
     {
 
-        
-        
-        
+
+
+
         $data = $request->validated();
         if (isset($data['questions'])) {
             $data['questions'] = json_encode($data['questions']);
@@ -34,13 +34,13 @@ class ContentCotroller extends Controller
 
         $content = $this->contentService->createToServesContent($data);
 
-        return view('admin.content.index', compact('content'));
+        return redirect()->route('services.index.content', ['id' => $id])->with('success', 'Content created successfully.');
     }
 
     // Get all content
-    public function index()
+    public function index($id)
     {
-        $contents = $this->contentService->getAllContent();
+        $contents = $this->contentService->getAllContent($id);
 
         return view('admin.content.index', compact('contents'));
     }
@@ -60,16 +60,29 @@ class ContentCotroller extends Controller
     // Update content
     public function update(UpdateContentRequest $request, Content $content)
     {
+        // Validate and retrieve data
         $data = $request->validated();
 
+        // Update content using the service layer
         $updatedContent = $this->contentService->updateContent($content, $data);
 
-        return view('admin.content.show', compact('updatedContent'));
+        // Redirect to index page with success message
+        return redirect()->route('services.index.content', $updatedContent->service_id)
+            ->with('success', 'Content updated successfully');
     }
-    public function edit(Content $content)
+
+    public function edit($id)
     {
+        $content = Content::findOrFail($id);
+
+        // Ensure title, description, and sub_title are decoded before passing to Blade
+        $content->title = is_string($content->title) ? json_decode($content->title, true) : $content->title;
+        $content->description = is_string($content->description) ? json_decode($content->description, true) : $content->description;
+        $content->sub_title = is_string($content->sub_title) ? json_decode($content->sub_title, true) : $content->sub_title;
+
         return view('admin.content.edit', compact('content'));
     }
+
     // Delete content
     public function destroy(Content $content)
     {

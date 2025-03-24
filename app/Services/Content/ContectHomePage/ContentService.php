@@ -46,10 +46,16 @@ class ContentService
 
     public function updateContent(Content $content, array $data): Content
     {
-        // Update the content with new data
+        // Convert title and description into JSON format
+        $data['title'] = json_encode(['en' => $data['title_en'], 'ar' => $data['title_ar']]);
+        $data['description'] = json_encode(['en' => $data['description_en'], 'ar' => $data['description_ar']]);
+
+        // Update content
         $content->update($data);
+
         return $content;
     }
+
 
     public function deleteContent(Content $content): bool
     {
@@ -57,10 +63,9 @@ class ContentService
         return $content->delete();
     }
 
-    public function getAllContent(): \Illuminate\Database\Eloquent\Collection
+    public function getAllContent($id)
     {
-        // Fetch all contents
-        return Content::all();
+        return Content::where('service_id', $id)->get();
     }
 
     public function getContentById(int $id): ?Content
