@@ -46,16 +46,10 @@ class ContentService
 
     public function updateContent(Content $content, array $data): Content
     {
-        // Convert title and description into JSON format
-        $data['title'] = json_encode(['en' => $data['title_en'], 'ar' => $data['title_ar']]);
-        $data['description'] = json_encode(['en' => $data['description_en'], 'ar' => $data['description_ar']]);
-
-        // Update content
+        // Update the content with new data
         $content->update($data);
-
         return $content;
     }
-
 
     public function deleteContent(Content $content): bool
     {
@@ -65,7 +59,8 @@ class ContentService
 
     public function getAllContent($id)
     {
-        return Content::where('service_id', $id)->get();
+        // Fetch all contents
+        return Content::where('service_id',$id)->get();
     }
 
     public function getContentById(int $id): ?Content

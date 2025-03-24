@@ -81,7 +81,7 @@
     @endif
 
     <div id="processForm" class="form-section">
-        <h3>UX Process Form</h3>
+        <h3>Add Featuer</h3>
         <form action="{{ route('contents.store', $service->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="text" name="type" value="Process" hidden>

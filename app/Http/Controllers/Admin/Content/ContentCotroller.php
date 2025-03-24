@@ -23,9 +23,6 @@ class ContentCotroller extends Controller
     public function store(StoreContentRequest $request, $id)
     {
 
-
-
-
         $data = $request->validated();
         if (isset($data['questions'])) {
             $data['questions'] = json_encode($data['questions']);
@@ -34,7 +31,9 @@ class ContentCotroller extends Controller
 
         $content = $this->contentService->createToServesContent($data);
 
-        return redirect()->route('services.index.content', ['id' => $id])->with('success', 'Content created successfully.');
+
+        return redirect()->route('services.index.content', $content->id)
+            ->with('success', 'Featuse successfully.');
     }
 
     // Get all content
@@ -42,7 +41,7 @@ class ContentCotroller extends Controller
     {
         $contents = $this->contentService->getAllContent($id);
 
-        return view('admin.content.index', compact('contents'));
+        return view('admin.content.index', compact('contents','id'));
     }
 
     // Get content by ID
@@ -58,31 +57,26 @@ class ContentCotroller extends Controller
     }
 
     // Update content
-    public function update(UpdateContentRequest $request, Content $content)
+    public function update(UpdateContentRequest $request,  $content)
     {
-        // Validate and retrieve data
+        $content = $this->contentService->getContentById($content);
         $data = $request->validated();
 
-        // Update content using the service layer
         $updatedContent = $this->contentService->updateContent($content, $data);
 
-        // Redirect to index page with success message
-        return redirect()->route('services.index.content', $updatedContent->service_id)
-            ->with('success', 'Content updated successfully');
+        return redirect()->route('services.index.content', $content->id)
+            ->with('success', 'Service updated successfully.');
     }
-
-    public function edit($id)
+    public function edit($content)
     {
-        $content = Content::findOrFail($id);
-
-        // Ensure title, description, and sub_title are decoded before passing to Blade
-        $content->title = is_string($content->title) ? json_decode($content->title, true) : $content->title;
-        $content->description = is_string($content->description) ? json_decode($content->description, true) : $content->description;
-        $content->sub_title = is_string($content->sub_title) ? json_decode($content->sub_title, true) : $content->sub_title;
+        $content = $this->contentService->getContentById($content);
+        if (!$content) {
+            return response()->json(['success' => false, 'message' => 'Content not found'], 404);
+        }
+        // Prepare questions if exist
 
         return view('admin.content.edit', compact('content'));
     }
-
     // Delete content
     public function destroy(Content $content)
     {

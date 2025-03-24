@@ -35,27 +35,27 @@ class ServiceController extends Controller
         return view('dashboard.services.create');
     }
     public function store(StoreServiceRequest $request)
-{
-    $data = $request->validated();
+    {
+        $data = $request->validated();
 
-    if ($request->hasFile('icon')) {
-        $data['icon'] = $this->uploadImage($request->file('icon'), 'public', 'services');
+        if ($request->hasFile('icon')) {
+            $data['icon'] = $this->uploadImage($request->file('icon'), 'public', 'services');
+        }
+
+        if ($request->hasFile('image_banar')) {
+            $data['image_banar'] = $this->uploadImage($request->file('image_banar'), 'public', 'services');
+        }
+
+        $data['slug'] = Str::slug($request->name['en']);
+
+        // تحديد الترتيب بناءً على آخر قيمة
+        $lastOrder = Service::max('order_by') ?? 0;
+        $data['order_by'] = $lastOrder + 1;
+
+        $service = $this->serviceRepository->create($data);
+
+        return view('dashboard.services.show', compact('service'));
     }
-
-    if ($request->hasFile('image_banar')) {
-        $data['image_banar'] = $this->uploadImage($request->file('image_banar'), 'public', 'services');
-    }
-
-    $data['slug'] = Str::slug($request->name['en']);
-
-    // تحديد الترتيب بناءً على آخر قيمة
-    $lastOrder = Service::max('order_by') ?? 0;
-    $data['order_by'] = $lastOrder + 1;
-
-    $service = $this->serviceRepository->create($data);
-
-    return view('dashboard.services.show', compact('service'));
-}
 
 
 
@@ -87,15 +87,14 @@ class ServiceController extends Controller
             $imagePath = $this->uploadImage($request->file('icon'), 'public', 'services');
             $data['icon'] = $imagePath;
         }
-        if($request->hasFile('image_banar'))
-        {
+        if ($request->hasFile('image_banar')) {
             // Delete old image if exists
             if ($service->image_banar) {
                 Storage::disk('public')->delete($service->image_banar);
             }
 
             // Upload the new image and get the path
-            $imagePath = $this->uploadImage($request->file('image_banar'), 'public','services');
+            $imagePath = $this->uploadImage($request->file('image_banar'), 'public', 'services');
             $data['image_banar'] = $imagePath;
         }
 
@@ -139,15 +138,15 @@ class ServiceController extends Controller
         return response()->json(['success' => true, 'message' => 'Order updated successfully']);
     }
 
-    public function getContentToServes($id){
+    public function getContentToServes($id)
+    {
         $service = Service::with('contents')->findOrFail($id);
         return view('dashboard.services.data.content.index', compact('service'));
     }
 
-    public function createContent($id){
+    public function createContent($id)
+    {
         $service = Service::with('contents')->findOrFail($id);
         return view('dashboard.services.data.content.edit', compact('service'));
     }
-
-
 }

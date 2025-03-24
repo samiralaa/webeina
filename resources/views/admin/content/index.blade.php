@@ -2,6 +2,8 @@
 
 @section('content')
     <div class="container">
+        <a href="{{ route('services.create.content',  $id ) }}" class="btn btn-success">Add New Content</a>
+
         <h2>Contents</h2>
         <table class="table">
             <thead>
@@ -43,6 +45,5 @@
         </table>
 
         <!-- Add New Content Button -->
-        <a href="{{ route('services.create.content',  $content->service_id ) }}" class="btn btn-success">Add New Content</a>
     </div>
 @endsection
