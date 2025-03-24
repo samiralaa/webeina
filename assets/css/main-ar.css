@@ -349,11 +349,8 @@ body {
 }
 
 @media (max-width: 991.5px) {
-    .navbar{
-        background-color: #fff;
-    }
     .navbar-nav .nav-item .nav-link{
-        color: #333;
+        color: #fff;
     }
     .navbar .container{
         flex-direction: row;
