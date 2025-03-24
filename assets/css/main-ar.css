@@ -256,12 +256,13 @@ body {
     border: none;
     cursor: pointer;
     font-size: 2rem;
-    color: #333;
-    transition: color 0.3s ease;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
 }
 
-.navbar-toggler:hover {
-    color: #18a686;
+.navbar-toggler i {
+    color: #fff;
+    transition: color 0.3s ease-in-out;
 }
 
 
@@ -270,17 +271,23 @@ body {
     justify-self: end;
 }
 
-.navbar-lang-switcher a {
+.navbar-lang-switcher a{
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #fff;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.navbar-lang-switcher a:hover {
+.navbar.scrolling .container .mobileview .navbar-lang-switcher a,
+.navbar.scrolling .container .mobileview .navbar-toggler i {
+    color: #333;
+}
+
+.navbar.scrolling .container .mobileview .navbar-lang-switcher a:hover,
+.navbar.scrolling .container .mobileview .navbar-toggler i:hover {
     color: #18a686;
 }
 

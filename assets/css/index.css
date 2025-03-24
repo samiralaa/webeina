@@ -541,15 +541,21 @@
 }
 
 .our_services .services-items .itemCard__header .btn-link i{
+    transition: 0.4s ease-in-out,color 0s ease;
+}
+
+.our_services .services-items .itemCard__header .btn-link:hover i {
+    transform: translateX(5px);
+}
+
+[dir="rtl"].our_services .services-items .itemCard__header .btn-link i{
     transform: rotate(180deg);
     transition: 0.4s ease-in-out, color 0s ease;
 }
 
-.our_services .services-items .itemCard__header .btn-link:hover i {
-    transform: translateX(5px) rotate(180deg);
+[dir="rtl"].our_services .services-items .itemCard__header .btn-link:hover i {
+    transform: translateX(-5px) rotate(180deg);
 }
-
-
 
 
 .secend-color{

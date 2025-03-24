@@ -6,7 +6,7 @@
             <a class="navbar-brand" href="{{route('home')}}">
                 <img src="{{asset('assets/images/logo.png')}}" alt="Company Logo" class="img-logo" width="150" height="50">
             </a>
-            <div class="d-flex align-items-center g-5">
+            <div class="mobileview d-flex align-items-center g-5">
 
                 <div class="navbar-lang-switcher d-lg-none">
                     @if (app()->getLocale() === 'ar')
