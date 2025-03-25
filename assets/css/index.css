@@ -548,20 +548,11 @@
     transform: translateX(5px);
 }
 
-[dir="rtl"].our_services .services-items .itemCard__header .btn-link i{
+[dir="rtl"] .our_services .services-items .itemCard__header .btn-link i{
     transform: rotate(180deg);
     transition: 0.4s ease-in-out, color 0s ease;
 }
 
-[dir="rtl"].our_services .services-items .itemCard__header .btn-link:hover i {
+[dir="rtl"] .our_services .services-items .itemCard__header .btn-link:hover i {
     transform: translateX(-5px) rotate(180deg);
-}
-
-
-.secend-color{
-    background-color: #076767;
-}
-
-.main-color{
-    background-color: #18a686;
 }

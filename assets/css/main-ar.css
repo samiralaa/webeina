@@ -110,6 +110,12 @@ body {
     text-align: right;
 }
 
+.dropdown-toggle::after{
+    vertical-align: .15em;
+    margin-left: 0%;
+    margin-right: .255em;
+}
+
 .request-quote-btn {
     padding: 12px 28px;
     font-size: 16px;

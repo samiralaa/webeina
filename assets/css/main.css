@@ -101,6 +101,10 @@ body {
     color: #18a686;
 }
 
+.dropdown-toggle::after{
+    vertical-align: .15em;
+}
+
 .request-quote-btn {
 
     padding: 12px 18px;

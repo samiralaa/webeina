@@ -70,8 +70,8 @@
 
 .our_services .services-items .itemCard__header .btn-link {
     display: inline;
-    position: relative;
     width: fit-content;
+    position: relative;
     text-decoration: none;
     color: #333;
     font-weight: bolder;
@@ -94,21 +94,18 @@
 }
 
 .our_services .services-items .itemCard__header .btn-link i{
+    transition: 0.4s ease-in-out,color 0s ease;
+}
+
+.our_services .services-items .itemCard__header .btn-link:hover i {
+    transform: translateX(5px);
+}
+
+[dir="rtl"] .our_services .services-items .itemCard__header .btn-link i{
     transform: rotate(180deg);
     transition: 0.4s ease-in-out, color 0s ease;
 }
 
-.our_services .services-items .itemCard__header .btn-link:hover i {
-    transform: translateX(5px) rotate(180deg);
-}
-
-
-
-
-.secend-color{
-    background-color: #076767;
-}
-
-.main-color{
-    background-color: #18a686;
+[dir="rtl"] .our_services .services-items .itemCard__header .btn-link:hover i {
+    transform: translateX(-5px) rotate(180deg);
 }
