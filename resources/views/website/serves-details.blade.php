@@ -72,7 +72,7 @@
         </div>
 
         <!-- Right Panel (Feature Details) -->
-        <div class="right-panel" style="background-image: url('{{ asset('assets/images/hero/about-hero.png') }}');">
+        <div class="right-panel" style="background-image: url('{{ asset('assets/images/features.jpg') }}');">
             @foreach ($service->contents as $content)
             <div id="details{{ $content->id }}" class="details">
                 <h2>{{ $content->title[app()->getLocale()] ?? $content->title['en'] }}</h2>
