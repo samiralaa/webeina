@@ -56,7 +56,8 @@ class IndustiralController extends Controller
     }
     public function destroy($id)
     {
-        Industiral::find($id)->delete();
-        return redirect()->route('admin.industrial.index')->with('success', 'Industrial deleted successfully');
+    $industrial = Industiral::find($id);
+    $industrial->delete();
+        return redirect()->route('admin.industrial.index',$industrial->service_id)->with('success', 'Industrial deleted successfully');
     }
 }
