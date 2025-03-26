@@ -2,7 +2,12 @@
 
 @section('content')
 <div class="container">
-    <h2>Steps List</h2>
+    <h2>Industrial List</h2>
+
+    <!-- Add New Button -->
+    <div class="mb-3">
+        <a href="{{ route('admin.industrial.create',$id) }}" class="btn btn-success">Add New</a>
+    </div>
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
@@ -22,8 +27,8 @@
             @foreach($industrial as $step)
             <tr>
                 <td>{{ $step->id }}</td>
-                <td>{{ json_encode($step->title) }}</td>
-                <td>{{ json_encode($step->description) }}</td>
+                <td>{{ json_encode($step->title['en']) }}</td>
+                <td>{{ json_encode($step->description['en']) }}</td>
                 <td>{{ $step->service_id }}</td>
                 <td>
                     <a href="{{ route('admin.industrial.edit', $step->id) }}" class="btn btn-warning">Edit</a>

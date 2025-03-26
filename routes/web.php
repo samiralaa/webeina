@@ -287,7 +287,7 @@ Route::prefix('admin/choose')->name('admin.choose.')->group(function () {
 });
 
 Route::prefix('admin/industrial')->name('admin.industrial.')->group(function () {
-    Route::get('/', [IndustiralController::class, 'index'])->name('index');
+    Route::get('/{id}', [IndustiralController::class, 'index'])->name('index');
     Route::get('/create/{id}', [IndustiralController::class, 'create'])->name('create');
     Route::post('/', [IndustiralController::class, 'store'])->name('store');
     Route::get('/{id}/edit', [IndustiralController::class, 'edit'])->name('edit');

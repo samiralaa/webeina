@@ -8,7 +8,8 @@
 
 <!-- Hero -->
 <div class="container-0-">
-    <img class="background-img" src="{{ asset('public/storage/' . $service->image_banar) }}" loading="lazy" alt="{{ $service->name[app()->getLocale()] }}">
+    <img class="background-img" src="{{ asset('public/storage/' . $service->image_banar) }}" loading="lazy"
+        alt="{{ $service->name[app()->getLocale()] }}">
     <div class="container-0">
         <div class="container-1">
             <div class="text-2">{{ $service->name[app()->getLocale()] }}</div>
@@ -19,14 +20,13 @@
 
 
 {{-- @if(session('success'))
-    <div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success!</strong> {{ session('success') }}
-<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> {{ session('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 @endif --}}
 @if(session('success'))
-<div id="success-alert" class="alert alert-success alert-dismissible fade show"
-    role="alert">
+<div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
     <i class="fa-solid fa-check fs-1"></i>
     <strong>Success!</strong>
     <span id="alert-message">Your Message Sent Successfully.</span>
@@ -94,25 +94,25 @@
             {{ __('messages.why-opting-in-description')}}
         </p>
         <div class="solve">
-        @foreach ($service->choose as $choos)
+            @foreach ($service->choose as $choos)
 
-        <div class="service-features">
+            <div class="service-features">
 
-            <div class="feature-box ">
-                <div style="display: flex; align-items: center; gap: 15px;">
-                <img src="{{ asset('public/storage/' . $choos->icon) }}" width="50" height="50" />
-                <h2>{{ $choos->title[app()->getLocale()] ?? $choos->title['en'] }}</h2>
+                <div class="feature-box ">
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <img src="{{ asset('public/storage/' . $choos->icon) }}" width="50" height="50" />
+                        <h2>{{ $choos->title[app()->getLocale()] ?? $choos->title['en'] }}</h2>
+                    </div>
+                    <p>{{ $choos->description[app()->getLocale()] ?? $choos->description['en'] }}.</p>
                 </div>
-                <p>{{ $choos->description[app()->getLocale()] ?? $choos->description['en'] }}.</p>
+
+
+
             </div>
 
-
-
+            @endforeach
         </div>
-
-        @endforeach
-</div>
-        </div>
+    </div>
     </div>
 
 </section>
@@ -147,27 +147,15 @@
 <section class="features-section">
     <div class="container">
         <h1 class="section-title text-capitalize ">{{ __('messages.industiral-services')}}</h1>
+        @foreach ($service->industiral as $index => $step)
         <div class="features-grid">
             <div class="feature-card">
-                <img src="{{ asset('/assets/images/004-goal.png') }}" width="50" height="50">
-                <h2>{{ __('messages.many-factory')}}</h2>
+                <img src="{{ asset('public/storage/' . $step->icon) }}" width="50" height="50" />
+                <h2>{{ $step->title[app()->getLocale()] ?? $choos->title['en'] }}</h2>
                 <p>{{ __('messages.many-factory-description')}}</p>
             </div>
-            <div class="feature-card">
-                <img src="{{ asset('/assets/images/004-goal.png') }}" width="50" height="50">
-                <h2>{{ __('messages.digital-marketing')}}</h2>
-                <p>{{ __('messages.digital-marketing-description')}}</p>
-            </div>
-            <div class="feature-card">
-                <img src="{{ asset('/assets/images/004-goal.png') }}" width="50" height="50">
-                <h2>{{ __('messages.helthing')}}</h2>
-                <p>{{ __('messages.helthing-description')}}</p>
-            </div>
-            <div class="feature-card">
-                <img src="{{ asset('/assets/images/004-goal.png') }}" width="50" height="50">
-                <h2>{{ __('messages.travellings')}}</h2>
-                <p>{{ __('messages.travellings-description')}}</p>
-            </div>
+
+            @endforeach
         </div>
     </div>
 </section>
@@ -185,18 +173,21 @@
                 @csrf
                 <div class="mb-3 pt-2 d-flex gap-3 ">
                     <div class="w-50">
-                        <label for="name" class="form-label text-capitalize fw-bold">{{ __('messages.your-name')}}</label>
+                        <label for="name" class="form-label text-capitalize fw-bold">{{
+                            __('messages.your-name')}}</label>
                         <input type="text" class="form-control" id="name" name="name" required>
 
                     </div>
                     <div class="mb-3 w-50">
-                        <label for="email" class="form-label text-capitalize fw-bold">{{ __('messages.your-email')}}</label>
+                        <label for="email" class="form-label text-capitalize fw-bold">{{
+                            __('messages.your-email')}}</label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                 </div>
                 <input type="text" name="service_id" value="{{ $service->id }}" hidden>
                 <div class="mb-3">
-                    <label for="email" class="form-label text-capitalize fw-bold">{{ __('messages.business-email')}}</label>
+                    <label for="email" class="form-label text-capitalize fw-bold">{{
+                        __('messages.business-email')}}</label>
                     <input type="email" class="form-control" id="email" name="email" required>
                 </div>
                 <div class="mb-3">

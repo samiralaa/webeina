@@ -56,4 +56,9 @@ class Service extends Model
     {
         return $this->hasMany(Choose::class);
     }
+
+    public function industiral()
+    {
+        return $this->hasMany(Industiral::class);
+    }
 }
