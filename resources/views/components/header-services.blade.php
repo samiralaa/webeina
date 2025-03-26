@@ -3,8 +3,11 @@
     <nav class="navbar navbar-expand-lg fixed-top sticky-navbar">
         <div class="container">
             <!-- Logo -->
+            <a class="navbar-brand d-none" href="{{route('home')}}">
+                <img src="{{asset('assets/images/black-logo.png')}}" alt="Company Logo" class="img-logo" width="150" height="50">
+            </a>
             <a class="navbar-brand" href="{{route('home')}}">
-                <img src="{{asset('assets/images/logo.png')}}" alt="Company Logo" class="img-logo" width="150" height="50">
+                <img src="{{asset('assets/images/white-logo.png')}}" alt="Company Logo" class="img-logo" width="150" height="50">
             </a>
             <div class="mobileview d-flex align-items-center g-5">
 
