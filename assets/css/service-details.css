@@ -311,9 +311,7 @@
     transform: translateY(-5px);
 }
 
-.feature-card i {
-    font-size: 2.5rem;
-    color: #18a686;
+.feature-card img {
     margin-bottom: 10px;
 }
 

@@ -149,22 +149,22 @@
         <h1 class="section-title text-capitalize ">{{ __('messages.industiral-services')}}</h1>
         <div class="features-grid">
             <div class="feature-card">
-                <i class="fa-solid fa-industry"></i>
+                <img src="{{ asset('/assets/images/004-goal.png') }}" width="50" height="50">
                 <h2>{{ __('messages.many-factory')}}</h2>
                 <p>{{ __('messages.many-factory-description')}}</p>
             </div>
             <div class="feature-card">
-                <i class="fa-solid fa-sparkles"></i>
+                <img src="{{ asset('/assets/images/004-goal.png') }}" width="50" height="50">
                 <h2>{{ __('messages.digital-marketing')}}</h2>
                 <p>{{ __('messages.digital-marketing-description')}}</p>
             </div>
             <div class="feature-card">
-                <i class="fa-solid fa-notes-medical"></i>
+                <img src="{{ asset('/assets/images/004-goal.png') }}" width="50" height="50">
                 <h2>{{ __('messages.helthing')}}</h2>
                 <p>{{ __('messages.helthing-description')}}</p>
             </div>
             <div class="feature-card">
-                <i class="fa-solid fa-plane"></i>
+                <img src="{{ asset('/assets/images/004-goal.png') }}" width="50" height="50">
                 <h2>{{ __('messages.travellings')}}</h2>
                 <p>{{ __('messages.travellings-description')}}</p>
             </div>
