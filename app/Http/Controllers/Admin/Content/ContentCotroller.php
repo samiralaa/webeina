@@ -32,13 +32,14 @@ class ContentCotroller extends Controller
         $content = $this->contentService->createToServesContent($data);
 
 
-        return redirect()->route('services.index.content', $content->id)
+        return redirect()->route('services.index.content', $content->service_id)
             ->with('success', 'Featuse successfully.');
     }
 
     // Get all content
     public function index($id)
     {
+
         $contents = $this->contentService->getAllContent($id);
 
         return view('admin.content.index', compact('contents','id'));
@@ -60,11 +61,12 @@ class ContentCotroller extends Controller
     public function update(UpdateContentRequest $request,  $content)
     {
         $content = $this->contentService->getContentById($content);
+
         $data = $request->validated();
 
         $updatedContent = $this->contentService->updateContent($content, $data);
 
-        return redirect()->route('services.index.content', $content->id)
+        return redirect()->route('services.index.content', $content->service_id)
             ->with('success', 'Service updated successfully.');
     }
     public function edit($content)
@@ -78,11 +80,14 @@ class ContentCotroller extends Controller
         return view('admin.content.edit', compact('content'));
     }
     // Delete content
-    public function destroy(Content $content)
+    public function destroy( $id)
     {
-        $this->contentService->deleteContent($content);
+        $contentId = $this->contentService->getContentById($id);
 
-        return response()->json(['success' => true], 200);
+        $content = $this->contentService->deleteContent($id);
+
+        return redirect()->route('services.index.content', $contentId->service_id)
+        ->with('success', 'Service updated successfully.');
     }
 
     public function create($id)

@@ -58,10 +58,10 @@
         <a href="{{ route('services.index.content', $service->id) }}" class="btn btn-primary mt-3">
             <i class="fas fa-plus"></i> All Features
         </a>
-        <a href="{{ route('admin.steps.create', $service->id) }}" class="btn btn-primary mt-3">
+        <a href="{{ route('admin.steps.index',$service->id) }}" class="btn btn-primary mt-3">
             <i class="fas fa-plus"></i> All Steps
         </a>
-        <a href="{{ route('admin.choose.create', $service->id) }}" class="btn btn-primary mt-3">
+        <a href="{{ route('admin.choose.index', $service->id) }}" class="btn btn-primary mt-3">
             <i class="fas fa-plus"></i> All choose
         </a>
         <a href="{{ route('admin.industrial.create', $service->id) }}" class="btn btn-primary mt-3">

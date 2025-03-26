@@ -10,7 +10,7 @@
 
     <div class="card shadow-sm">
         <div class="card-header bg-primary text-white text-center">
-            <h3>steps </h3>
+            <h3>Why Opting In section            </h3>
         </div>
         <div class="card-body">
             <form action="{{ route('admin.choose.store') }}" method="POST"  enctype="multipart/form-data">
@@ -48,7 +48,7 @@
                 <input type="file" name="icon">
                 <!-- steps -->
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Save UX Process</button>
+                    <button type="submit" class="btn btn-primary">Save</button>
                 </div>
             </form>
         </div>

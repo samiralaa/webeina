@@ -2,16 +2,19 @@
 
 namespace App\Http\Controllers\Admin\Choose;
 
-use App\Http\Controllers\Controller;
 use App\Models\Choose;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ChooseController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        $data =  Choose::get();
-        return view('admin.choose.index', compact('data'));
+
+        $data =  Choose::where('service_id',$id)->get();
+
+        return view('admin.choose.index', compact('data','id'));
     }
 
 
@@ -36,40 +39,64 @@ class ChooseController extends Controller
             $path = $request->file('icon')->store('uploads', 'public');
         }
 
-        $step = new Choose();
-        $step->service_id = $request->service_id;
-        $step->icon = $path;
-        $step->title = $request->title; // JSON format
-        $step->description = $request->description; // JSON format
-        $step->save();
+        $choose = new Choose();
+        $choose->service_id = $request->service_id;
+        $choose->icon = $path;
+        $choose->title = $request->title; // JSON format
+        $choose->description = $request->description; // JSON format
+        $choose->save();
 
-        return redirect()->route('admin.choose.index')->with('success', 'Choose created successfully!');
+        return redirect()->route('admin.choose.index',$choose->service_id)->with('success', 'Choose created successfully!');
     }
     public function edit($id)
     {
-        $step = Choose::findOrFail($id);
+        $choose = Choose::findOrFail($id);
 
-
-        return view('admin.steps.edit', compact('step'));
+        return view('admin.choose.edit', compact('choose'));
     }
+
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
+        $choose = Choose::findOrFail($id);
+
+        // Validate input
+        $validated = $request->validate([
+            'title.en' => 'required|string|max:255',
+            'title.ar' => 'required|string|max:255',
+            'description.en' => 'required|string',
+            'description.ar' => 'required|string',
+
+            'icon' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
+        // Update fields
+        $choose->title = $request->input('title');
+        $choose->description = $request->input('description');
 
-        $step = Choose::findOrFail($id);
-        $step->title = $request->title; // JSON format
-        $step->description = $request->description; // JSON format
-        $step->save();
 
-        return redirect()->route('admin.choose.index')->with('success', 'Choose updated successfully!');
+        // Handle icon upload
+        if ($request->hasFile('icon')) {
+            // Delete old icon if exists
+            if ($choose->icon) {
+                Storage::delete('public/' . $choose->icon);
+            }
+
+            // Store new icon
+            $path = $request->file('icon')->store('icons', 'public');
+            $choose->icon = $path;
+        }
+
+        $choose->save();
+
+        return redirect()->route('admin.choose.index',$choose->service_id)
+
+        ->with('success', 'Opting In section updated successfully.');
     }
+
     public function destroy($id)
     {
-        Choose::destroy($id);
-        return redirect()->route('admin.choose.index')->with('success', 'Choose deleted successfully!');
+        $choose= Choose::find($id);
+        $choose->delete();
+        return redirect()->route('admin.choose.index',$choose->service_id)->with('success', 'Choose deleted successfully!');
     }
 }

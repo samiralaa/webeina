@@ -4,7 +4,8 @@
     <div class="container">
         <a href="{{ route('services.create.content',  $id ) }}" class="btn btn-success">Add New Content</a>
 
-        <h2>Contents</h2>
+        <h2>Features
+        </h2>
         <table class="table">
             <thead>
                 <tr>
@@ -33,11 +34,12 @@
                             <a href="{{ route('services.edit.content', $content->id) }}" class="btn btn-primary btn-sm">Edit</a>
 
                             <!-- Delete Form -->
-                            <form action="{{ route('services.delete.content', $content->id) }}" method="POST" style="display:inline-block;">
+                            <form action="{{ route('services.delete.content', $content->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this content?');">Delete</button>
                             </form>
+
                         </td>
                     </tr>
                 @endforeach

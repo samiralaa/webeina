@@ -51,9 +51,9 @@ class ContentService
         return $content;
     }
 
-    public function deleteContent(Content $content): bool
+    public function deleteContent($id): bool
     {
-        // Deleting the content from the database
+      $content = Content::find($id);
         return $content->delete();
     }
 

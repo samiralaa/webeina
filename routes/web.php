@@ -229,7 +229,7 @@ Route::get('/admin/serves/edit/{id}', [ContentCotroller::class, 'edit'])->name('
 
 Route::put('/admin/serves/update/{id}', [ContentCotroller::class, 'update'])
     ->name('services.update.content');
-Route::get('/admin/serves/delete/{id}', [ContentCotroller::class, 'destroy'])->name('services.delete.content');
+Route::delete('admin/serves/delete/{id}', [ContentCotroller::class, 'destroy'])->name('services.delete.content');
 
 
 // faqs front
@@ -278,7 +278,7 @@ Route::prefix('admin/steps')->name('admin.steps.')->group(function () {
 });
 
 Route::prefix('admin/choose')->name('admin.choose.')->group(function () {
-    Route::get('/', [ChooseController::class, 'index'])->name('index');
+    Route::get('/{id}', [ChooseController::class, 'index'])->name('index');
     Route::get('/create/{id}', [ChooseController::class, 'create'])->name('create');
     Route::post('/', [ChooseController::class, 'store'])->name('store');
     Route::get('/{id}/edit', [ChooseController::class, 'edit'])->name('edit');
