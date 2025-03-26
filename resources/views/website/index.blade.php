@@ -44,15 +44,15 @@
             {{-- Count Numbers Section --}}
             <div class="count col-12 d-flex pt-5 pb-5" role="group" aria-label="Statistics">
                 <div class="cards-block__item col-sm-3" role="listitem">
-                    <h3 class="card-block__title fw-bold">950+</h3>
+                    <h3 class="card-block__title fw-bold">50+</h3>
                     <div class="card-block__content">{{ __('messages.stats.projects') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
-                    <h3 class="card-block__title fw-bold">15+</h3>
+                    <h3 class="card-block__title fw-bold">5+</h3>
                     <div class="card-block__content">{{ __('messages.stats.progress') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
-                    <h3 class="card-block__title fw-bold">1,800+</h3>
+                    <h3 class="card-block__title fw-bold">100+</h3>
                     <div class="card-block__content">{{ __('messages.stats.employees') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
