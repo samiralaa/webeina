@@ -72,7 +72,7 @@ return [
         'projects' => 'successful projects',
         'progress' => 'work in progress',
         'employees' => 'employees',
-        'categories' => 'Web. Mobile. Graphic.',
+        'categories' => 'Successful deployments',
     ],
     'why-opting-in' => 'Why Opting In?',
     'why-opting-in-description' => 'The backbone of digital transformation starts here. Whether it’s software innovation, outsourcing for efficiency, or AI-powered intelligence, we ensure seamless business growth with cutting-edge technology.',

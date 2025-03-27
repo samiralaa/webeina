@@ -56,7 +56,7 @@
                     <div class="card-block__content">{{ __('messages.stats.employees') }}</div>
                 </div>
                 <div class="cards-block__item col-sm-3" role="listitem">
-                    <h3 class="card-block__title fw-bold">500+</h3>
+                    <h3 class="card-block__title fw-bold">25+</h3>
                     <div class="card-block__content">{{ __('messages.stats.categories') }}</div>
                 </div>
             </div>
