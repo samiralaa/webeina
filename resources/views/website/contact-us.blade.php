@@ -77,7 +77,7 @@
             </div>
             <div class="location col-12 col-md-6">
                 <h5 class="mt-5 mb-2">{{ __('messages.cairo-office') }}</h5>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3453.4117809543673!2d31.356859999999998!3d30.053729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDAzJzEzLjQiTiAzMcKwMjEnMjQuNyJF!5e0!3m2!1sar!2seg!4v1737545059195!5m2!1sar!2seg" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d611.0558229509542!2d31.296905178337852!3d29.96063723174124!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjnCsDU3JzM3LjYiTiAzMcKwMTcnNDguMCJF!5e0!3m2!1sar!2seg!4v1743075458667!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
