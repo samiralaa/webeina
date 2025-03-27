@@ -147,16 +147,16 @@
 <section class="features-section">
     <div class="container">
         <h1 class="section-title text-capitalize ">{{ __('messages.industiral-services')}}</h1>
-        @foreach ($service->industiral as $index => $step)
         <div class="features-grid">
+            @foreach ($service->industiral as $index => $step)
             <div class="feature-card">
                 <img src="{{ asset('public/storage/' . $step->icon) }}" width="50" height="50" />
                 <h2>{{ $step->title[app()->getLocale()] ?? $choos->title['en'] }}</h2>
                 <p>{{ __('messages.many-factory-description')}}</p>
             </div>
 
+            @endforeach
         </div>
-        @endforeach
     </div>
 </section>
 
