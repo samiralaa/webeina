@@ -63,7 +63,7 @@ return [
     'your-email' => 'Your Email',
     'message' => 'Message',
     'send-message-btn' => 'Send Message',
-    'our-locations' => 'Our Locations',
+    'our-locations' => 'Our Location',
     'dubai-office' => 'Dubai Office:',
     'cairo-office' => 'Cairo Office:',
     'title' => 'State-of-the-art digital solutions tailored to your business needs',

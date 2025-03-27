@@ -63,7 +63,7 @@ return [
     'your-email' => 'بريدك الإلكتروني',
     'message' => 'الرسالة',
     'send-message-btn' => 'إرسال الرسالة',
-    'our-locations' => 'مواقعنا',
+    'our-locations' => 'موقعنا',
     'dubai-office' => 'مكتب دبي:',
     'cairo-office' => 'مكتب القاهرة:',
     'title' => 'حلول رقمية متطورة مصممة خصيصًا لتلبية احتياجات عملك',
