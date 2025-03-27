@@ -155,8 +155,8 @@
                 <p>{{ __('messages.many-factory-description')}}</p>
             </div>
 
-            @endforeach
         </div>
+        @endforeach
     </div>
 </section>
 
