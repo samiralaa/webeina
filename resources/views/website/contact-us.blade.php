@@ -69,10 +69,15 @@
     </div>
 
     <div class="our-locations pt-5">
-        <h2 class="text-center mb-4">{{ __('messages.our-locations') }}</h2>
-        <div class="d-flex justify-content-center" style="min-height: 600px;">
-            <div class="location" style="width:80%;">
+        <h2 class="text-center">{{ __('messages.our-locations') }}</h2>
+        <div class="container d-flex justify-content-center" style="gap:80px; min-height: 500px;">
+            <div class="location col-12 col-md-6">
+                <h5 class="mt-5 mb-2">{{ __('messages.dubai-office') }}</h5>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6906.826275125326!2d31.356819099999996!3d30.053690099999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1734935392128!5m2!1sar!2seg" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="location col-12 col-md-6">
+                <h5 class="mt-5 mb-2">{{ __('messages.cairo-office') }}</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3453.4117809543673!2d31.356859999999998!3d30.053729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDAzJzEzLjQiTiAzMcKwMjEnMjQuNyJF!5e0!3m2!1sar!2seg!4v1737545059195!5m2!1sar!2seg" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
