@@ -29,7 +29,7 @@
                 <span class="close-btn" id="closeMobileNav">&times;</span>
                 <ul class="mobile-menu">
                     <li><a href="{{route('home')}}">{{ __('messages.home') }}</a></li>
-                    
+
                 <!-- Mobile Services Dropdown (Inside Mobile Menu) -->
                 <li class="nav-item dropdown mobile-services">
                     <a class="nav-link dropdown-toggle" href="#" id="mobileServicesToggle">
@@ -47,13 +47,13 @@
                     <li><a href="{{ route('about-us') }}">{{ __('messages.about_us') }}</a></li>
                     <li><a href="{{ route('faqs.index') }}">{{ __('messages.faqs') }}</a></li>
                 </ul>
-                <a href="{{route('contact')}}" class="request-quote-btn quote" title="Get in Touch">
+                <a href="{{route('contact')}}" class="request-quote-btn quote" title="Contact Us">
                     @if (app()->getLocale() === 'ar')
                     <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                     @else
                     <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                    @endif    
-                    <span>{{ __('messages.get_in_touch') }}</span>
+                    @endif
+                    <span>{{ __('messages.contact_us') }}</span>
                 </a>
             </div>
 
@@ -103,7 +103,7 @@
                             <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                             @else
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                            @endif    
+                            @endif
                             <span>{{ __('messages.get_in_touch') }}</span>
                         </a>
                     </li>
