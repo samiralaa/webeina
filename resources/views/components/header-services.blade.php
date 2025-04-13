@@ -30,22 +30,23 @@
                 <ul class="mobile-menu">
                     <li><a href="{{route('home')}}">{{ __('messages.home') }}</a></li>
 
-                <!-- Mobile Services Dropdown (Inside Mobile Menu) -->
-                <li class="nav-item dropdown mobile-services">
-                    <a class="nav-link dropdown-toggle" href="#" id="mobileServicesToggle">
-                        {{ __('messages.services') }}
-                    </a>
-                    <ul class="dropdown-menu mobile-dropdown">
-                        @foreach ($services as $service)
-                        <li><a class="dropdown-item" href="{{ route('serves.details', ['id' => $service->slug]) }}">{{ $service->name[app()->getLocale()] }}</a></li>
-                        @endforeach
-                    </ul>
-                </li>
+                    <!-- Mobile Services Dropdown (Inside Mobile Menu) -->
+                    <li class="nav-item dropdown mobile-services">
+                        <a class="nav-link dropdown-toggle" href="#" id="mobileServicesToggle">
+                            {{ __('messages.services') }}
+                        </a>
+                        <ul class="dropdown-menu mobile-dropdown">
+                            @foreach ($services as $service)
+                            <li><a class="dropdown-item" href="{{ route('serves.details', ['id' => $service->slug]) }}">{{ $service->name[app()->getLocale()] }}</a></li>
+                            @endforeach
+                        </ul>
+                    </li>
 
 
                     <li><a href="{{route('portfolio')}}">{{ __('messages.portfolio') }}</a></li>
                     <li><a href="{{ route('about-us') }}">{{ __('messages.about_us') }}</a></li>
                     <li><a href="{{ route('faqs.index') }}">{{ __('messages.faqs') }}</a></li>
+                    <li><a href="C:\Users\Test\Desktop\test\webeina\resources\views\components\header-services.blade.php">{{ __('messages.schedule-meet') }}</a></li>
                 </ul>
                 <a href="{{route('contact')}}" class="request-quote-btn quote" title="Contact Us">
                     @if (app()->getLocale() === 'ar')
@@ -91,6 +92,9 @@
                         </ul>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="C:\Users\Test\Desktop\test\webeina\resources\views\components\header-services.blade.php">{{ __('messages.schedule-meet') }}</a>
+                    </li>
+                    <li class="nav-item">
                         @if (app()->getLocale() === 'ar')
                         <a href="{{ route('language.change', ['locale' => 'en']) }}" class="nav-link lang" rel="nofollow" title="Switch to English">en</a>
                         @else
@@ -104,7 +108,7 @@
                             @else
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             @endif
-                            <span>{{ __('messages.get_in_touch') }}</span>
+                            <span>{{ __('messages.contact_us') }}</span>
                         </a>
                     </li>
                 </ul>

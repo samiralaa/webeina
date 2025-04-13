@@ -87,4 +87,6 @@ return [
     'many-factory-description' => 'The development of web design has brought about a digital revolution in many',
     'steps' => 'Our process your roadmap',
     'q-contact' => 'Quick Contact',
+    'schedule-meet' => 'Schedule meeting',
+
 ];
