@@ -20,50 +20,79 @@
         <h2 class="text-center mb-1">{{ __('messages.contact-section-title') }}</h2>
         <p class="text-center lead">{{ __('messages.contact-section-subtitle') }}</p>
 
-        <div class="row mt-5 d-flex justify-content-center">
+        <div class="row mt-5 d-flex align-items-center">
             <div class="col-12 col-md-7">
                 <h4 class="mb-5">{{ __('messages.send-message') }}</h4>
+                <div class="card">
+                    <form action="{{route('contact.store')}}" method="post">
+                        @csrf
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="first_name" class="form-label fw-bold">{{ __('messages.first-name') }}</label>
+                                <input type="text" class="form-control" id="first_name" name="first_name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="last_name" class="form-label fw-bold">{{ __('messages.last-name') }}</label>
+                                <input type="text" class="form-control" id="last_name" name="last_name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="business_email" class="form-label fw-bold">{{ __('messages.business-email') }}</label>
+                                <input type="email" class="form-control" id="business_email" name="business_email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="company" class="form-label fw-bold">{{ __('messages.company') }}</label>
+                                <input type="text" class="form-control" id="company" name="company" required>
+                            </div>
+                        </div>
 
-                <form action="{{route('contact.store')}}" method="post">
-                    @csrf
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="first_name" class="form-label fw-bold">{{ __('messages.first-name') }}</label>
-                            <input type="text" class="form-control" id="first_name" name="first_name" required>
+                        <div class="mt-3">
+                            <label class="fw-bold">{{ __('messages.choose-services') }}</label>
+                            <div class="d-flex flex-column">
+                                @foreach ($serves as $ser)
+                                    <label>
+                                        <input type="checkbox" name="service_id[]" value="{{$ser->id}}"> {{ $ser->name[app()->getLocale()] }}
+                                    </label>
+                                @endforeach
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="last_name" class="form-label fw-bold">{{ __('messages.last-name') }}</label>
-                            <input type="text" class="form-control" id="last_name" name="last_name" required>
+
+                        <div class="mt-3">
+                            <label for="message" class="form-label fw-bold">{{ __('messages.about-project') }}</label>
+                            <textarea class="form-control" id="message" name="message" rows="3" required placeholder="{{ __('messages.about-project-placeholder') }}"></textarea>
                         </div>
-                        <div class="col-md-6">
-                            <label for="business_email" class="form-label fw-bold">{{ __('messages.business-email') }}</label>
-                            <input type="email" class="form-control" id="business_email" name="business_email" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="company" class="form-label fw-bold">{{ __('messages.company') }}</label>
-                            <input type="text" class="form-control" id="company" name="company" required>
+                        <button type="submit" class="request-quote-btn quote mt-3 mx-0">
+                            <span>{{ __('messages.send-request') }}</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+                <div class="contact-info">
+                    <div class="card">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="content">
+                            <h2>Call Us</h2>
+                            <p>+12345678912</p>
+                            <p>+12345678912</p>
                         </div>
                     </div>
-                    
-                    <div class="mt-3">
-                        <label class="fw-bold">{{ __('messages.choose-services') }}</label>
-                        <div class="d-flex flex-column">
-                            @foreach ($serves as $ser)
-                                <label>
-                                    <input type="checkbox" name="service_id[]" value="{{$ser->id}}"> {{ $ser->name[app()->getLocale()] }}
-                                </label>
-                            @endforeach
+                    <div class="card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="content">
+                            <h2>Email</h2>
+                            <p>info@webenia.com</p>
+                            <p>info@webenia.com</p>
                         </div>
                     </div>
-                    
-                    <div class="mt-3">
-                        <label for="message" class="form-label fw-bold">{{ __('messages.about-project') }}</label>
-                        <textarea class="form-control" id="message" name="message" rows="3" required placeholder="{{ __('messages.about-project-placeholder') }}"></textarea>
+                    <div class="card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="content">
+                            <h2>Address</h2>
+                            <p> Rayhana plaza Building C2-Zahraa El Maadi.</p>
+                            <p> Office 43-44, Building of Dubai Municipality, Al-Fahidi, Bur Dubai, UAE.</p>
+                        </div>
                     </div>
-                    <button type="submit" class="request-quote-btn quote mt-3 mx-0">
-                        <span>{{ __('messages.send-request') }}</span>
-                    </button>
-                </form>
+                </div>
             </div>
         </div>
     </div>
