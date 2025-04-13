@@ -98,367 +98,382 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize EmailJS with your Public Key
-        emailjs.init('o-EiqPujeP4o1EJQX');
+      // Initialize EmailJS with your Public Key
+      emailjs.init('o-EiqPujeP4o1EJQX'); // Replace with your actual EmailJS public key
 
-        // Calendar configuration (Sunday to Thursday)
-        const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu'];
-        const months = ['January', 'February', 'March', 'April', 'May', 'June',
-                       'July', 'August', 'September', 'October', 'November', 'December'];
+      // Calendar configuration (Sunday to Thursday)
+      const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu'];
+      const months = ['January', 'February', 'March', 'April', 'May', 'June',
+                     'July', 'August', 'September', 'October', 'November', 'December'];
 
-        let currentDate = new Date();
-        let selectedDate = new Date();
-        let bookedSlots = {};
+      let currentDate = new Date();
+      let selectedDate = new Date();
+      let bookedSlots = {};
 
-        // Initialize calendar
-        initCalendar();
+      // Initialize calendar
+      initCalendar();
 
-        function initCalendar() {
-            fetchBookedSlots();
-            renderCalendar();
+      function initCalendar() {
+        fetchBookedSlots();
+        renderCalendar();
 
-            // Set up event listeners
-            document.getElementById('prev-week').addEventListener('click', function() {
-                currentDate.setDate(currentDate.getDate() - 7);
-                renderCalendar();
-            });
+        // Set up event listeners
+        document.getElementById('prev-week').addEventListener('click', function() {
+          currentDate.setDate(currentDate.getDate() - 7);
+          renderCalendar();
+        });
 
-            document.getElementById('next-week').addEventListener('click', function() {
-                currentDate.setDate(currentDate.getDate() + 7);
-                renderCalendar();
-            });
+        document.getElementById('next-week').addEventListener('click', function() {
+          currentDate.setDate(currentDate.getDate() + 7);
+          renderCalendar();
+        });
 
-            document.getElementById('close-modal').addEventListener('click', function() {
-                document.getElementById('confirmation-modal').style.display = 'none';
-            });
+        document.getElementById('close-modal').addEventListener('click', function() {
+          document.getElementById('confirmation-modal').style.display = 'none';
+        });
 
-            document.getElementById('booking-form').addEventListener('submit', handleFormSubmit);
+        document.getElementById('booking-form').addEventListener('submit', handleFormSubmit);
+      }
+
+      // Fetch booked slots from localStorage
+      function fetchBookedSlots() {
+        const savedSlots = localStorage.getItem('webeniaBookedSlots');
+        bookedSlots = savedSlots ? JSON.parse(savedSlots) : {};
+
+        // Set some default booked slots for demo
+        if (Object.keys(bookedSlots).length === 0) {
+          const today = new Date();
+          const tomorrow = new Date(today);
+          tomorrow.setDate(today.getDate() + 1);
+
+          bookedSlots = {
+            [formatDateKey(today)]: ['10:00 AM', '2:00 PM'],
+            [formatDateKey(tomorrow)]: ['9:00 AM', '3:30 PM']
+          };
+          saveBookedSlots();
         }
+      }
 
-        // Fetch booked slots from localStorage
-        function fetchBookedSlots() {
-            const savedSlots = localStorage.getItem('webeniaBookedSlots');
-            bookedSlots = savedSlots ? JSON.parse(savedSlots) : {};
+      // Save booked slots to localStorage
+      function saveBookedSlots() {
+        localStorage.setItem('webeniaBookedSlots', JSON.stringify(bookedSlots));
+      }
 
-            // Set some default booked slots for demo
-            if (Object.keys(bookedSlots).length === 0) {
-                const today = new Date();
-                const tomorrow = new Date(today);
-                tomorrow.setDate(today.getDate() + 1);
+      // Render calendar function (Sunday to Thursday)
+      function renderCalendar() {
+        const calendarDays = document.getElementById('calendar-days');
+        const weekRange = document.getElementById('current-week-range');
 
-                bookedSlots = {
-                    [formatDateKey(today)]: ['10:00 AM', '2:00 PM'],
-                    [formatDateKey(tomorrow)]: ['9:00 AM', '3:30 PM']
-                };
-                saveBookedSlots();
-            }
-        }
+        // Clear existing days
+        calendarDays.innerHTML = '';
 
-        // Save booked slots to localStorage
-        function saveBookedSlots() {
-            localStorage.setItem('webeniaBookedSlots', JSON.stringify(bookedSlots));
-        }
+        // Calculate start of week (Sunday)
+        const startOfWeek = new Date(currentDate);
+        startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
 
-        // Render calendar function (Sunday to Thursday)
-        function renderCalendar() {
-            const calendarDays = document.getElementById('calendar-days');
-            const weekRange = document.getElementById('current-week-range');
+        // Calculate end of week (Thursday)
+        const endOfWeek = new Date(startOfWeek);
+        endOfWeek.setDate(startOfWeek.getDate() + 4); // Only show 5 days (Sun-Thu)
 
-            // Clear existing days
-            calendarDays.innerHTML = '';
+        // Update week range display
+        weekRange.textContent = `${months[startOfWeek.getMonth()]} ${startOfWeek.getDate()} - ${months[endOfWeek.getMonth()]} ${endOfWeek.getDate()}, ${endOfWeek.getFullYear()}`;
 
-            // Calculate start of week (Sunday)
-            const startOfWeek = new Date(currentDate);
-            startOfWeek.setDate(currentDate.getDate() - currentDate.getDay());
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
 
-            // Calculate end of week (Thursday)
-            const endOfWeek = new Date(startOfWeek);
-            endOfWeek.setDate(startOfWeek.getDate() + 4); // Only show 5 days (Sun-Thu)
+        // Create day elements (only Sunday to Thursday)
+        for (let i = 0; i < 5; i++) {
+          const day = new Date(startOfWeek);
+          day.setDate(startOfWeek.getDate() + i);
 
-            // Update week range display
-            weekRange.textContent = `${months[startOfWeek.getMonth()]} ${startOfWeek.getDate()} - ${months[endOfWeek.getMonth()]} ${endOfWeek.getDate()}, ${endOfWeek.getFullYear()}`;
+          const dayKey = formatDateKey(day);
+          const isBookedDay = isDayFullyBooked(dayKey);
 
-            const today = new Date();
-            today.setHours(0, 0, 0, 0);
+          const dayElement = document.createElement('div');
+          dayElement.className = 'col calendar-day';
 
-            // Create day elements (only Sunday to Thursday)
-            for (let i = 0; i < 5; i++) {
-                const day = new Date(startOfWeek);
-                day.setDate(startOfWeek.getDate() + i);
+          // Highlight if selected
+          if (day.toDateString() === selectedDate.toDateString()) {
+            dayElement.classList.add('active');
+          }
 
-                const dayKey = formatDateKey(day);
-                const isBookedDay = isDayFullyBooked(dayKey);
+          // Highlight if today
+          const dayForComparison = new Date(day);
+          dayForComparison.setHours(0, 0, 0, 0);
+          if (dayForComparison.getTime() === today.getTime()) {
+            dayElement.classList.add('today');
+          }
 
-                const dayElement = document.createElement('div');
-                dayElement.className = 'col calendar-day';
+          // Mark if fully booked
+          if (isBookedDay) {
+            dayElement.classList.add('booked');
+          }
 
-                // Highlight if selected
-                if (day.toDateString() === selectedDate.toDateString()) {
-                    dayElement.classList.add('active');
-                }
+          // Add day content
+          dayElement.innerHTML = `
+            <div class="small">${daysOfWeek[i]}</div>
+            <div class="fw-bold">${day.getDate()}</div>
+          `;
 
-                // Highlight if today
-                const dayForComparison = new Date(day);
-                dayForComparison.setHours(0, 0, 0, 0);
-                if (dayForComparison.getTime() === today.getTime()) {
-                    dayElement.classList.add('today');
-                }
+          // Add click handler if not booked
+          if (!isBookedDay) {
+            dayElement.addEventListener('click', function() {
+              selectedDate = new Date(day);
+              document.querySelectorAll('.calendar-day').forEach(el => el.classList.remove('active'));
+              this.classList.add('active');
+              renderTimeSlots();
+            });
+          }
 
-                // Mark if fully booked
-                if (isBookedDay) {
-                    dayElement.classList.add('booked');
-                }
-
-                // Add day content
-                dayElement.innerHTML = `
-                    <div class="small">${daysOfWeek[i]}</div>
-                    <div class="fw-bold">${day.getDate()}</div>
-                `;
-
-                // Add click handler if not booked
-                if (!isBookedDay) {
-                    dayElement.addEventListener('click', function() {
-                        selectedDate = new Date(day);
-                        document.querySelectorAll('.calendar-day').forEach(el => el.classList.remove('active'));
-                        this.classList.add('active');
-                        renderTimeSlots();
-                    });
-                }
-
-                calendarDays.appendChild(dayElement);
-            }
-
-            // Render time slots for selected day
-            renderTimeSlots();
+          calendarDays.appendChild(dayElement);
         }
 
         // Render time slots for selected day
-        function renderTimeSlots() {
-            const timeSlots = document.getElementById('time-slots');
-            timeSlots.innerHTML = '';
+        renderTimeSlots();
+      }
 
-            const selectedDayKey = formatDateKey(selectedDate);
-            const bookedSlotsForDay = bookedSlots[selectedDayKey] || [];
+      // Render time slots for selected day
+      function renderTimeSlots() {
+        const timeSlots = document.getElementById('time-slots');
+        timeSlots.innerHTML = '';
 
-            // Create time slots from 9AM to 5PM in 30-minute increments
-            for (let hour = 9; hour < 17; hour++) {
-                for (let minute = 0; minute < 60; minute += 30) {
-                    const timeString = formatTimeString(hour, minute);
-                    const isBooked = bookedSlotsForDay.includes(timeString);
+        const selectedDayKey = formatDateKey(selectedDate);
+        const bookedSlotsForDay = bookedSlots[selectedDayKey] || [];
 
-                    const slotElement = document.createElement('div');
-                    slotElement.className = 'col-6 col-md-4';
+        // Create time slots from 9AM to 5PM in 30-minute increments
+        for (let hour = 9; hour < 17; hour++) {
+          for (let minute = 0; minute < 60; minute += 30) {
+            const timeString = formatTimeString(hour, minute);
+            const isBooked = bookedSlotsForDay.includes(timeString);
 
-                    const timeSlotDiv = document.createElement('div');
-                    timeSlotDiv.className = `time-slot ${isBooked ? 'booked' : ''}`;
-                    timeSlotDiv.textContent = timeString;
+            const slotElement = document.createElement('div');
+            slotElement.className = 'col-6 col-md-4';
 
-                    if (!isBooked) {
-                        timeSlotDiv.addEventListener('click', function() {
-                            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
-                            this.classList.add('selected');
-                            document.getElementById('meeting-time-display').value =
-                                `${formatDisplayDate(selectedDate)} at ${timeString}`;
-                        });
-                    }
+            const timeSlotDiv = document.createElement('div');
+            timeSlotDiv.className = `time-slot ${isBooked ? 'booked' : ''}`;
+            timeSlotDiv.textContent = timeString;
 
-                    slotElement.appendChild(timeSlotDiv);
-                    timeSlots.appendChild(slotElement);
-                }
-            }
-        }
-
-        // Handle form submission with EmailJS
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const submitBtn = document.getElementById('submit-btn');
-            const formMessage = document.getElementById('form-message');
-
-            // Validate selection
-            const selectedTime = document.querySelector('.time-slot.selected');
-            if (!selectedTime) {
-                showMessage('Please select an available time slot', 'danger');
-                return;
+            if (!isBooked) {
+              timeSlotDiv.addEventListener('click', function() {
+                document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                this.classList.add('selected');
+                document.getElementById('meeting-time-display').value =
+                  `${formatDisplayDate(selectedDate)} at ${timeString}`;
+              });
             }
 
-            // Get form values
-            const fullName = document.getElementById('full-name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const notes = document.getElementById('notes').value.trim();
+            slotElement.appendChild(timeSlotDiv);
+            timeSlots.appendChild(slotElement);
+          }
+        }
+      }
 
-            // Validate email
-            if (!validateEmail(email)) {
-                showMessage('Please enter a valid email address', 'danger');
-                return;
-            }
+      // Handle form submission with EmailJS
+      function handleFormSubmit(e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById('submit-btn');
+        const formMessage = document.getElementById('form-message');
 
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = `
-                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                Booking...
-            `;
-
-            try {
-                const meetingLink = generateGoogleMeetLink(selectedDate, selectedTime.textContent.trim());
-                const calendarLink = generateCalendarLink(selectedDate, selectedTime.textContent.trim());
-
-                // Update booked slots
-                const dateKey = formatDateKey(selectedDate);
-                if (!bookedSlots[dateKey]) {
-                    bookedSlots[dateKey] = [];
-                }
-                bookedSlots[dateKey].push(selectedTime.textContent.trim());
-                saveBookedSlots();
-
-                const templateParams = {
-                    to_name: fullName,
-                    to_email: email,
-                    meeting_date: formatDisplayDate(selectedDate),
-                    meeting_time: selectedTime.textContent.trim(),
-                    meeting_link: meetingLink,
-                    meeting_notes: notes || "No additional notes",
-                    calendar_link: calendarLink
-                };
-
-                emailjs.send(
-                    'service_5gklc8j',
-                    'template_ur2iljh',
-                    templateParams
-                ).then(function(response) {
-                    console.log('Email sent successfully!', response.status, response.text);
-                    showConfirmation(
-                        fullName,
-                        formatDisplayDate(selectedDate),
-                        selectedTime.textContent.trim(),
-                        meetingLink,
-                        calendarLink,
-                        notes || "No additional notes"
-                    );
-
-                    resetForm();
-
-                    renderCalendar();
-                }, function(error) {
-                    console.error('Email failed to send:', error);
-                    showMessage('Failed to send confirmation email. Please try again.', 'danger');
-                });
-
-            } catch (error) {
-                console.error('Error:', error);
-                showMessage('Error booking meeting. Please try again.', 'danger');
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = `
-                    <i class="fas fa-calendar-check me-2"></i> Confirm Meeting
-                `;
-            }
+        // Validate selection
+        const selectedTime = document.querySelector('.time-slot.selected');
+        if (!selectedTime) {
+          showMessage('Please select an available time slot', 'danger');
+          return;
         }
 
-        // Show confirmation modal
-        function showConfirmation(name, date, time, meetLink, calendarLink, notes) {
-            const modal = document.getElementById('confirmation-modal');
-            const details = document.getElementById('confirmation-details');
-            const links = document.getElementById('confirmation-links');
+        // Get form values
+        const fullName = document.getElementById('full-name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const notes = document.getElementById('notes').value.trim();
 
-            // Set details
-            details.innerHTML = `
-                <p>Hello <strong>${name}</strong>,</p>
-                <p>Your meeting has been successfully scheduled for:</p>
-                <p><strong>${date} at ${time}</strong></p>
-                ${notes ? `<p><strong>Notes:</strong> ${notes}</p>` : ''}
-                <p class="mt-2">A confirmation email has been sent to your inbox.</p>
-            `;
-
-            // Set links
-            links.innerHTML = `
-                <a href="${meetLink}" class="btn btn-primary" target="_blank">
-                    <i class="fas fa-video me-1"></i> Join Meeting
-                </a>
-                <a href="${calendarLink}" class="btn btn-outline-primary" target="_blank">
-                    <i class="fas fa-calendar-plus me-1"></i> Add to Calendar
-                </a>
-            `;
-
-            // Show modal
-            modal.style.display = 'flex';
+        // Validate email
+        if (!validateEmail(email)) {
+          showMessage('Please enter a valid email address', 'danger');
+          return;
         }
 
-        // Helper functions
-        function formatDateKey(date) {
-            const year = date.getFullYear();
-            const month = String(date.getMonth() + 1).padStart(2, '0');
-            const day = String(date.getDate()).padStart(2, '0');
-            return `${year}-${month}-${day}`;
+        // Show loading state
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+          Booking...
+        `;
+
+        try {
+          // Generate meeting links (without backend)
+          const meetingLink = generateGoogleMeetLink(selectedDate, selectedTime.textContent.trim());
+          const calendarLink = generateCalendarLink(selectedDate, selectedTime.textContent.trim());
+
+          // Update booked slots
+          const dateKey = formatDateKey(selectedDate);
+          if (!bookedSlots[dateKey]) {
+            bookedSlots[dateKey] = [];
+          }
+          bookedSlots[dateKey].push(selectedTime.textContent.trim());
+          saveBookedSlots();
+
+          // Send email using EmailJS (without backend)
+          const templateParams = {
+            to_name: fullName,
+            to_email: email,
+            meeting_date: formatDisplayDate(selectedDate),
+            meeting_time: selectedTime.textContent.trim(),
+            meeting_link: meetingLink,
+            meeting_notes: notes || "No additional notes",
+            calendar_link: calendarLink
+          };
+
+          emailjs.send(
+            'service_5gklc8j', // Replace with your EmailJS service ID
+            'template_ur2iljh', // Replace with your EmailJS template ID
+            templateParams
+          ).then(function(response) {
+            console.log('Email sent successfully!', response.status, response.text);
+            // Show confirmation
+            showConfirmation(
+              fullName,
+              formatDisplayDate(selectedDate),
+              selectedTime.textContent.trim(),
+              meetingLink,
+              calendarLink,
+              notes || "No additional notes"
+            );
+
+            // Reset form
+            resetForm();
+
+            // Refresh calendar
+            renderCalendar();
+          }, function(error) {
+            console.error('Email failed to send:', error);
+            showMessage('Failed to send confirmation email. Please try again.', 'danger');
+          });
+
+        } catch (error) {
+          console.error('Error:', error);
+          showMessage('Error booking meeting. Please try again.', 'danger');
+        } finally {
+          // Reset button state
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = `
+            <i class="fas fa-calendar-check me-2"></i> Confirm Meeting
+          `;
         }
+      }
 
-        function formatTimeString(hour, minute) {
-            const displayHour = hour % 12 === 0 ? 12 : hour % 12;
-            const displayMinute = minute === 0 ? '00' : minute;
-            const ampm = hour < 12 ? 'AM' : 'PM';
-            return `${displayHour}:${displayMinute} ${ampm}`;
-        }
+      // Show confirmation modal
+      function showConfirmation(name, date, time, meetLink, calendarLink, notes) {
+        const modal = document.getElementById('confirmation-modal');
+        const details = document.getElementById('confirmation-details');
+        const links = document.getElementById('confirmation-links');
 
-        function formatDisplayDate(date) {
-            return date.toLocaleDateString('en-US', {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            });
-        }
+        // Set details
+        details.innerHTML = `
+          <p>Hello <strong>${name}</strong>,</p>
+          <p>Your meeting has been successfully scheduled for:</p>
+          <p><strong>${date} at ${time}</strong></p>
+          ${notes ? `<p><strong>Notes:</strong> ${notes}</p>` : ''}
+          <p class="mt-2">A confirmation email has been sent to your inbox.</p>
+        `;
 
-        function generateGoogleMeetLink(date, timeStr) {
-            return 'https://meet.google.com/new';
-        }
+        // Set links
+        links.innerHTML = `
+          <a href="${meetLink}" class="btn btn-primary" target="_blank">
+            <i class="fas fa-video me-1"></i> Join Meeting
+          </a>
+          <a href="${calendarLink}" class="btn btn-outline-primary" target="_blank">
+            <i class="fas fa-calendar-plus me-1"></i> Add to Calendar
+          </a>
+        `;
 
-        function generateCalendarLink(date, timeStr) {
-            const [time, modifier] = timeStr.split(' ');
-            let [hours, minutes] = time.split(':');
+        // Show modal
+        modal.style.display = 'flex';
+      }
 
-            hours = parseInt(hours);
-            if (modifier === 'PM' && hours < 12) hours += 12;
-            if (modifier === 'AM' && hours === 12) hours = 0;
+      // Helper functions
+      function formatDateKey(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const day = String(date.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+      }
 
-            const start = new Date(date);
-            start.setHours(hours, minutes, 0, 0);
+      function formatTimeString(hour, minute) {
+        const displayHour = hour % 12 === 0 ? 12 : hour % 12;
+        const displayMinute = minute === 0 ? '00' : minute;
+        const ampm = hour < 12 ? 'AM' : 'PM';
+        return `${displayHour}:${displayMinute} ${ampm}`;
+      }
 
-            const end = new Date(start);
-            end.setMinutes(end.getMinutes() + 30);
+      function formatDisplayDate(date) {
+        return date.toLocaleDateString('en-US', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+      }
 
-            const formatTime = (date) => date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+      // Generate Google Meet link without backend
+      function generateGoogleMeetLink(date, timeStr) {
+        // This creates a basic Google Meet link
+        // Note: In a real implementation, you would need the Google API to create actual meeting links
+        // This is a simplified version that just links to the "new meeting" page
+        return 'https://meet.google.com/new';
+      }
 
-            return `https://calendar.google.com/calendar/render?action=TEMPLATE` +
-                `&dates=${formatTime(start)}/${formatTime(end)}` +
-                `&text=Meeting+with+Webenia` +
-                `&details=Meeting+with+Webenia+team` +
-                `&location=Online+Meeting`;
-        }
+      // Generate Google Calendar link without backend
+      function generateCalendarLink(date, timeStr) {
+        const [time, modifier] = timeStr.split(' ');
+        let [hours, minutes] = time.split(':');
 
-        function isDayFullyBooked(dayKey) {
-            return bookedSlots[dayKey] && bookedSlots[dayKey].length >= 3;
-        }
+        // Convert to 24-hour format
+        hours = parseInt(hours);
+        if (modifier === 'PM' && hours < 12) hours += 12;
+        if (modifier === 'AM' && hours === 12) hours = 0;
 
-        function showMessage(text, type) {
-            const formMessage = document.getElementById('form-message');
-            formMessage.innerHTML = `
-                <div class="alert alert-${type} alert-dismissible fade show" role="alert">
-                    ${text}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            `;
-        }
+        // Create start/end times (30min duration)
+        const start = new Date(date);
+        start.setHours(hours, minutes, 0, 0);
 
-        function resetForm() {
-            document.getElementById('booking-form').reset();
-            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
-            document.getElementById('meeting-time-display').value = '';
-        }
+        const end = new Date(start);
+        end.setMinutes(end.getMinutes() + 30);
 
-        function validateEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
+        // Format for Google Calendar
+        const formatTime = (date) => date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z';
+
+        return `https://calendar.google.com/calendar/render?action=TEMPLATE` +
+          `&dates=${formatTime(start)}/${formatTime(end)}` +
+          `&text=Meeting+with+Webenia` +
+          `&details=Meeting+with+Webenia+team` +
+          `&location=Online+Meeting`;
+      }
+
+      function isDayFullyBooked(dayKey) {
+        return bookedSlots[dayKey] && bookedSlots[dayKey].length >= 3;
+      }
+
+      function showMessage(text, type) {
+        const formMessage = document.getElementById('form-message');
+        formMessage.innerHTML = `
+          <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+            ${text}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        `;
+      }
+
+      function resetForm() {
+        document.getElementById('booking-form').reset();
+        document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+        document.getElementById('meeting-time-display').value = '';
+      }
+
+      function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      }
     });
-</script>
+  </script>
 
 
 @endsection
