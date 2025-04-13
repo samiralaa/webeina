@@ -1,39 +1,58 @@
-:root {
-  --primary: #18a686;
-  --primary-dark: #076767;
-  --primary-light: #10b981;
-  --secondary: #10b981;
-  --secondary-dark: #059669;
-  --dark: #054a4a;
-  --darker: #043434;
-  --light: #f8fafc;
-  --gray: #e2e8f0;
-  --gray-dark: #94a3b8;
-  --radius: 0.5rem;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+/* hero */
+.container-0- {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: rgba(11, 11, 11, 0.32);
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container-0 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.container-1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.text-2 {
+    font-size: 5rem;
+    font-weight: bolder;
+    color: #fff;
+    text-align: center;
 }
 
 /* Cards */
 .card {
   border: none;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition: var(--transition);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 20px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
 .card-header {
-  background-color: var(--primary);
+  background-color: #18a686;
   color: white;
   font-weight: 600;
-  border-radius: var(--radius) var(--radius) 0 0 !important;
+  border-radius: 0.5rem 0.5rem 0 0 !important;
   padding: 15px 20px;
 }
 
@@ -41,10 +60,10 @@
 .calendar-nav-btn {
   background: none;
   border: none;
-  color: var(--primary);
+  color: #18a686;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: 2.2rem;
   height: 2.2rem;
   border-radius: 50%;
@@ -69,8 +88,8 @@
 .calendar-day {
   cursor: pointer;
   padding: 0.75rem 0.5rem;
-  border-radius: var(--radius);
-  transition: var(--transition);
+  border-radius: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   background-color: white;
 }
@@ -80,7 +99,7 @@
 }
 
 .calendar-day.active {
-  background-color: var(--primary);
+  background-color: #18a686;
   color: white;
   font-weight: 600;
 }
@@ -96,7 +115,7 @@
   position: absolute;
   top: 2px;
   right: 2px;
-  background-color: var(--gray-dark);
+  background-color: #94a3b8;
   color: white;
   font-size: 0.6rem;
   padding: 0.1rem 0.3rem;
@@ -112,7 +131,7 @@
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: var(--secondary);
+  background-color: #10b981;
   color: white;
   font-size: 0.6rem;
   padding: 0.1rem 0.3rem;
@@ -123,24 +142,24 @@
 .time-slot {
   padding: 0.75rem;
   margin-bottom: 0.75rem;
-  border: 1px solid var(--gray);
-  border-radius: var(--radius);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
   text-align: center;
   cursor: pointer;
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: white;
   position: relative;
 }
 
 .time-slot:hover {
-  border-color: var(--primary);
-  color: var(--primary);
+  border-color: #18a686;
+  color: #18a686;
 }
 
 .time-slot.selected {
-  background-color: var(--primary);
+  background-color: #18a686;
   color: white;
-  border-color: var(--primary);
+  border-color: #18a686;
   box-shadow: 0 2px 8px rgba(24, 166, 134, 0.3);
 }
 
@@ -154,7 +173,7 @@
 .time-slot.booked::after {
   content: "Booked";
   display: inline-block;
-  background-color: var(--gray-dark);
+  background-color: #94a3b8;
   color: white;
   padding: 0.1rem 0.4rem;
   border-radius: 0.25rem;
@@ -163,30 +182,34 @@
   vertical-align: middle;
 }
 
+.time-slots-wrapper {
+    display: none;
+}
+
 /* Form */
 .form-control {
   padding: 0.75rem 1rem;
-  border: 1px solid var(--gray);
-  border-radius: var(--radius);
-  transition: var(--transition);
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-control:focus {
-  border-color: var(--primary);
+  border-color: #18a686;
   box-shadow: 0 0 0 0.25rem rgba(24, 166, 134, 0.25);
 }
 
 .btn-primary {
-  background-color: var(--primary);
-  border-color: var(--primary);
+  background-color: #18a686;
+  border-color: #18a686;
   padding: 0.75rem 1.5rem;
   font-weight: 500;
-  transition: var(--transition);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
-  border-color: var(--primary-dark);
+  background-color: #076767;
+  border-color: #076767;
   transform: translateY(-2px);
 }
 
@@ -199,7 +222,7 @@
 
 /* Alert */
 .alert {
-  border-radius: var(--radius);
+  border-radius: 0.5rem;
 }
 
 /* Confirmation Modal */
@@ -219,10 +242,10 @@
 .modal-content {
   background-color: white;
   padding: 2rem;
-  border-radius: var(--radius);
+  border-radius: 0.5rem;
   max-width: 500px;
   width: 90%;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
 /* Responsive */
