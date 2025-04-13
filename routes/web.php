@@ -295,7 +295,10 @@ Route::prefix('admin/industrial')->name('admin.industrial.')->group(function () 
     Route::delete('/{id}', [IndustiralController::class, 'destroy'])->name('destroy');
 });
 
-
+Route::get('schedule-meet',function()
+{
+return view('website.schedule-meet');
+})->name('schedule-meet');
 Route::get('getall-contents/{id}',[ServiceController::class, 'getContentToServes'])->name('getall');
 
 Route::get('solve', function () {

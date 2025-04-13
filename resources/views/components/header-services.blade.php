@@ -46,7 +46,7 @@
                     <li><a href="{{route('portfolio')}}">{{ __('messages.portfolio') }}</a></li>
                     <li><a href="{{ route('about-us') }}">{{ __('messages.about_us') }}</a></li>
                     <li><a href="{{ route('faqs.index') }}">{{ __('messages.faqs') }}</a></li>
-                    <li><a href="C:\Users\Test\Desktop\test\webeina\resources\views\components\header-services.blade.php">{{ __('messages.schedule-meet') }}</a></li>
+                    <li><a href="{{ route('schedule-meet') }}">{{ __('messages.schedule-meet') }}</a></li>
                 </ul>
                 <a href="{{route('contact')}}" class="request-quote-btn quote" title="Contact Us">
                     @if (app()->getLocale() === 'ar')
@@ -92,7 +92,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="C:\Users\Test\Desktop\test\webeina\resources\views\components\header-services.blade.php">{{ __('messages.schedule-meet') }}</a>
+                        <a class="nav-link" href="{{ route('schedule-meet') }}">{{ __('messages.schedule-meet') }}</a>
                     </li>
                     <li class="nav-item">
                         @if (app()->getLocale() === 'ar')
