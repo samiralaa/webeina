@@ -23,7 +23,7 @@
         <div class="row mt-5 d-flex align-items-center">
             <div class="col-12 col-md-7">
                 <h4 class="mb-5">{{ __('messages.send-message') }}</h4>
-                <div class="card">
+                <div class="form-card card">
                     <form action="{{route('contact.store')}}" method="post">
                         @csrf
                         <div class="row g-3">
