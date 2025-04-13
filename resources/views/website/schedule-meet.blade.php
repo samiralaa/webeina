@@ -37,7 +37,7 @@
                     </div>
 
                     <!-- Calendar Days (Sunday to Thursday) -->
-                    <div class="row row-cols-5 g-2 mb-4 text-center" id="calendar-days">
+                    <div class="row g-3 mb-4 text-center" id="calendar-days">
                         <!-- Days will be populated by JavaScript -->
                     </div>
 
@@ -95,7 +95,6 @@
         <button class="btn btn-primary mt-3 w-100" id="close-modal">Close</button>
     </div>
 </div>
-
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -303,6 +302,7 @@
                 const meetingLink = generateGoogleMeetLink(selectedDate, selectedTime.textContent.trim());
                 const calendarLink = generateCalendarLink(selectedDate, selectedTime.textContent.trim());
 
+                // Update booked slots
                 const dateKey = formatDateKey(selectedDate);
                 if (!bookedSlots[dateKey]) {
                     bookedSlots[dateKey] = [];
