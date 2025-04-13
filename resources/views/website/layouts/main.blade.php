@@ -67,6 +67,8 @@
     <script src="{{ asset('assets/vendor/overlay-widget/overlay-widget.js') }}"></script>
     <!-- overlay widget js -->
     <script src="{{ asset('assets/vendor/swiper/js/swiper-bundle.min.js') }}"></script>
+    <!-- Email js -->
+    <script src="{{ asset('assets/vendor/email-js/js/email-js.js')}}"></script>
     <!-- ==== / js dependencies end ==== -->
     <!-- main js -->
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
