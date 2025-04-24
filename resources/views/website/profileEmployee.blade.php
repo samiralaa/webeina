@@ -11,7 +11,7 @@
     <div class="profile-fade-top"></div>
     <div class="profile-content">
         <div class="profile-header">
-<img src="{{ asset('uploads/' . $profile->image) }}" alt="Profile Image">
+<img src="{{ asset('public/uploads/' . $profile->image) }}" alt="Profile Image">
             <div class="profile-info">
                 <div class="profile-name">{{ $profile->name }}</div>
                 <div class="profile-title">{{ $profile->job_title }}</div>
