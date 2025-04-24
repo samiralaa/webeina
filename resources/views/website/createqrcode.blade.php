@@ -92,12 +92,8 @@
 
             <!-- Select User Type -->
             <div class="mb-3">
-                <label for="type" class="form-label">Select Type</label>
-                <select id="type" name="type" class="form-control" onchange="toggleSocialFields()">
-                    <option value="">-- Select --</option>
-                    <option value="user">User</option>
-                    <option value="company">Company</option>
-                </select>
+                <input type="hidden" name="type" value="company" >
+                 
             </div>
             <div class="mb-3">
         <label for="image">Profile Image</label>
