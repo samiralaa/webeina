@@ -22,7 +22,7 @@
 
         <div class="row mt-5 d-flex align-items-center">
             <div class="col-12 col-md-7">
-                <h4 class="mb-5">{{ __('messages.send-message') }}</h4>
+                <h4 class="mb-4">{{ __('messages.send-message') }}</h4>
                 <div class="form-card card">
                     <form action="{{route('contact.store')}}" method="post">
                         @csrf
@@ -72,24 +72,23 @@
                         <i class="fa-solid fa-phone"></i>
                         <div class="content">
                             <h2>Call Us</h2>
-                            <p>+12345678912</p>
-                            <p>+12345678912</p>
+                            <p>+971 50 533 5465</p>
+                            <p>+20 111 084 4484</p>
                         </div>
                     </div>
                     <div class="card">
                         <i class="fa-solid fa-envelope"></i>
                         <div class="content">
                             <h2>Email</h2>
-                            <p>info@webenia.com</p>
-                            <p>info@webenia.com</p>
+                            <p>sales@webenia.com</p>
                         </div>
                     </div>
                     <div class="card">
                         <i class="fa-solid fa-location-dot"></i>
                         <div class="content">
                             <h2>Address</h2>
-                            <p> Rayhana plaza Building C2-Zahraa El Maadi.</p>
-                            <p> Office 43-44, Building of Dubai Municipality, Al-Fahidi, Bur Dubai, UAE.</p>
+                            <p>Remah Tower, Zayed The First Street, Abu Dhabi, UAE</p>
+                            <p>Zahraa El-Maadi, Rehana Plaza, Maamer El-Morshedy Group, Building C, Second Floor, Cairo, Egypt</p>
                         </div>
                     </div>
                 </div>

@@ -148,13 +148,13 @@ form{
 }
 
 .form-card{
-    padding: 20px;
+    padding: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 20px;
-    border: none;
-    box-shadow: 0 10px 20px #2334de1a;
+    border: none !important;
+    box-shadow: -5px 5px 20px 10px #2334de1a;
 }
 
 .contact-info .card {
@@ -174,5 +174,5 @@ form{
 }
 
 .contact-info .card i{
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
