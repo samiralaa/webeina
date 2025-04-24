@@ -1,8 +1,8 @@
 @extends('website.layouts.main')
-<link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
 @section('title', 'Portfolio Page')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
 <!-- Hero -->
 <div class="container-0-">
     <img class="background-img" src="{{ asset('assets/images/banner/portofolio.jpg') }}" alt="portfolio">
