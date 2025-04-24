@@ -78,7 +78,7 @@ public function generateQRCode(Request $request)
     ]);
 
     // Generate profile URL
-    $profileUrl = route('profile.show', $profile->id);
+    $profileUrl = route('profile.show', $profile->name);
 
     // Generate QR code image
     $qrCode = new QrCode($profileUrl);
@@ -89,7 +89,7 @@ public function generateQRCode(Request $request)
         File::makeDirectory($qrCodePath, 0755, true);
     }
 
-    $fileName = $profile->id . '_profile_qrcode.png';
+    $fileName = $profile->name . '_profile_qrcode.png';
     $filePath = $qrCodePath . '/' . $fileName;
 
     $writer->write($qrCode)->saveToFile($filePath);
