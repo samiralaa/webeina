@@ -11,7 +11,7 @@ class QrcodeController extends Controller
 {
 public function show($id)
 {
-    $profile = ProfileEmployee::findOrFail($id);
+    $profile = ProfileEmployee::where('name', $id)->firstOrFail();
   
     return view('website.profileEmployee', compact('profile'));
 }
