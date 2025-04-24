@@ -1,8 +1,9 @@
-@extends('website.layouts.main')
-<link rel="stylesheet" href="{{ asset('assets/css/profile.css') }}">
-@section('title', 'Profile Page')
 
-@section('content')
+
+<link rel="stylesheet" href="{{ asset('assets/css/profile.css') }}">
+
+
+
 <div class="header">
     <img src="Pic 500-04.jpg" alt="Header Background">
 </div>
@@ -73,4 +74,4 @@
         </div>
     </div>
 </div>
-@endsection
+

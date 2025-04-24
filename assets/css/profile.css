@@ -253,23 +253,4 @@
     height: 20px;
 }
 
-@media (max-width: 768px) {
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
 
-    .profile-header img {
-        transform: translateY(-70px);
-    }
-
-    .profile-info {
-        transform: translateY(-50px);
-        text-align: center;
-    }
-
-    .tabs {
-        justify-content: center;
-    }
-}
