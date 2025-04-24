@@ -1,6 +1,6 @@
 @extends('website.layouts.main')
 <link rel="stylesheet" href="{{ asset('assets/css/portfolio.css') }}">
-@section('title', 'Home Page')
+@section('title', 'Portfolio Page')
 
 @section('content')
 <!-- Hero -->

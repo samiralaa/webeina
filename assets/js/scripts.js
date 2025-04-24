@@ -314,3 +314,17 @@ $(document).ready(function () {
     });
 });
 
+// Profile Employee //
+function switchTab(tabName) {
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+    });
+
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    document.getElementById(tabName + '-tab').classList.add('active');
+
+    event.currentTarget.classList.add('active');
+}
