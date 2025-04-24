@@ -4,7 +4,7 @@ use App\Models\Content;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\Admin\Qrcode\QrcodeController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\LinkedInController;
@@ -301,18 +301,4 @@ return view('website.schedule-meet');
 })->name('schedule-meet');
 Route::get('getall-contents/{id}',[ServiceController::class, 'getContentToServes'])->name('getall');
 
-Route::get('solve', function () {
-
-    $data = [1, 3, 4, 5];
-    $n = 5;
-    function getNumber($arr, $n)
-    {
-        $expectedSum = ($n * ($n + 1)) / 2;
-        $actualSum  = array_sum($arr);
-        return $expectedSum - $actualSum; // العدد المفقود هو الفرق
-
-    }
-
-    echo "العدد المفقود: " . getNumber($data, $n);
-});
-//
+Route::get('generate-qrcode', [QrcodeController::class, 'index'])->name('generate-qrcode');
