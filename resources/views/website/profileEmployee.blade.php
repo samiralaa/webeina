@@ -19,7 +19,7 @@
 </head>
 <body>
     <div class="header">
-    <img src="{{ asset('/uploads/images/Pic 500-04.jpg') }}" alt="Header Background">
+    <img src="{{ asset('public/uploads/assets/images/Pic 500-04.jpg') }}" alt="Header Background">
     </div>
 
     <div class="profile-card">
