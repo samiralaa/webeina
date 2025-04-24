@@ -187,6 +187,8 @@ Route::middleware(['isAdmin'])->group(function () {
         Route::post('data/custom-field', [CustomFildDataController::class, 'store'])->name('custom.data.store');
     });
 });
+Route::get('/profile', [UserProfileController::class, 'show'])->name('profile.show');
+
 //ActivityLogService
 Route::group(['prefix' => 'activity-log'], function () {
     Route::get('', [ActivityLogServiceController::class, 'index'])->name('activity-log.index');
@@ -302,3 +304,7 @@ return view('website.schedule-meet');
 Route::get('getall-contents/{id}',[ServiceController::class, 'getContentToServes'])->name('getall');
 
 Route::get('generate-qrcode', [QrcodeController::class, 'index'])->name('generate-qrcode');
+Route::get('create/generate-qrcode', [QrcodeController::class, 'create'])->name('generate-qrcode');
+Route::post('store/generate-qrcode', [QrcodeController::class, 'generateQRCode'])->name('generate.qrcode');
+
+Route::get('/profile/{id}', [QrcodeController::class, 'show'])->name('profile.show');
