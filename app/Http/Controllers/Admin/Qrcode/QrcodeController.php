@@ -38,7 +38,7 @@ public function generateQRCode(Request $request)
     // Default or user-inputted social links
     if ($type === 'company') {
         $facebook = 'http://facebook.com/webenia';
-        $twitter = 'https://www.instagram.com/webeniaagency/';
+        $twitter = 'https://x.com/WebeniaAgency/';
         $linkedin = 'https://www.linkedin.com/company/webenia/posts/?feedView=all';
         $website = 'https://webenia.com/';
     } else {
