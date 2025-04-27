@@ -72,6 +72,7 @@
     <!-- ==== / js dependencies end ==== -->
     <!-- main js -->
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
+    <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -81,9 +82,14 @@
         t.src=v;s=b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '1211407723662265');
+        fbq('init', '1073441617305507');
         fbq('track', 'PageView');
     </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1073441617305507&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
     <noscript>
         <img
             height="1"
