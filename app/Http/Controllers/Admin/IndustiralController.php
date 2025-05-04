@@ -50,9 +50,29 @@ class IndustiralController extends Controller
     }
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'icon' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048'
+        ]);
+
         $industrial = Industiral::find($id);
-        $industrial->update($request->all());
-        return redirect()->route('industrial.index')->with('success', 'Industrial updated successfully');
+        
+        if ($request->hasFile('icon')) {
+            // Delete old image if exists
+            if ($industrial->icon && file_exists(storage_path('app/public/' . $industrial->icon))) {
+                unlink(storage_path('app/public/' . $industrial->icon));
+            }
+            // Store new image
+            $path = $request->file('icon')->store('uploads', 'public');
+            $industrial->icon = $path;
+        }
+
+        $industrial->title = $request->title;
+        $industrial->description = $request->description;
+        $industrial->save();
+
+        return redirect()->route('admin.industrial.index', $industrial->service_id)->with('success', 'Industrial updated successfully');
     }
     public function destroy($id)
     {
