@@ -14,6 +14,7 @@ return [
     'hero_subtitle' => 'Our innovative platform empowers you to create stunning websites effortlessly. Experience seamless design and functionality tailored to your unique vision.',
     'our_services' => 'Our Services',
     'our_partners' => 'Our Partners',
+    'our_clients' => 'Our Our Clients',
     'technologies' => 'Technologies',
     'why_webenia' => 'Why Webenia?',
     'linkedin' => 'LinkedIn',
