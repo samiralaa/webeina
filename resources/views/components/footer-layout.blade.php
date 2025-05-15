@@ -42,7 +42,7 @@
                     <ul class="footer-address-list link-hover">
                         <li><p><a class="lh" href="{{ route('about-us') }}" title="About WEBENIA">{{ __('messages.about_us') }}</a></p></li>
                         @foreach ($services as $service)
-                        
+
                         <li><p><a class="lh" href="{{ route('serves.details', ['id' => $service->slug]) }}" title="{{ $service->name[app()->getLocale()] }}" title="Digital Transformation Services"> {{ $service->name[app()->getLocale()] }}</a></p></li>
                         @endforeach
                         <li><p><a class="lh" href="{{ route('contact') }}" title="About WEBENIA">{{ __('messages.contact_us') }}</a></p></li>
@@ -55,8 +55,8 @@
     <div class="footer-row2">
         <div class="container">
             <div class="footer-social-media-icons">
-                <a href="https://www.facebook.com/webenia" target="_blank" rel="nofollow" aria-label="Facebook"><i class="s-media fab fa-facebook"></i></a>
-                <a href="https://x.com/WebeniaAgency" target="_blank" rel="nofollow" aria-label="Twitter"><i class="s-media fab fa-twitter"></i></a>
+                <a href="https://web.facebook.com/webenia" target="_blank" rel="nofollow" aria-label="Facebook"><i class="s-media fab fa-facebook"></i></a>
+                <a href="https://x.com/WebeniaAgency" target="_blank" rel="nofollow" aria-label="Twitter"><i class="s-media fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/webeniaagency/" target="_blank" rel="nofollow" aria-label="Instagram"><i class="s-media fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/webenia/" target="_blank" rel="nofollow" aria-label="LinkedIn"><i class="s-media fab fa-linkedin"></i></a>
                 <a href="https://www.youtube.com/@Webenia" target="_blank" rel="nofollow" aria-label="YouTube"><i class="s-media fab fa-youtube"></i></a>
